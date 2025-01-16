@@ -1694,7 +1694,7 @@
   {
     "index": 142,
     "rightPos": 0,
-    "questiona": ". B\u0259dii \u00FCslubun \u0259n az t\u0259sir g\u00F6st\u0259rdiyi \u00FCslublar hans\u0131lard\u0131r?[1- Elmi, 2]",
+    "questiona": ". B\u0259dii \u00FCslubun \u0259n az t\u0259sir g\u00F6st\u0259rdiyi \u00FCslublar hans\u0131lard\u0131r?\n[1-Elmi],\n[2-Publisistik],\n[3-Rəsmi-işgüzar],\n[4-Məişət]",
     "answersa": [
       "1,3",
       "2, 4",
