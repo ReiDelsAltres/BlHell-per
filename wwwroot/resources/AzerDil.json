@@ -1430,7 +1430,7 @@
   {
     "index": 120,
     "rightPos": 0,
-    "questiona": ".Me\u015F\u0259l\u0259r! Me\u015F\u0259l\u0259r! Do\u011Frudan da sizYayda da, q\u0131\u015Fda da bir bahars\u0131n\u0131z.N\u00FCmun\u0259d\u0259ki \u201CMe\u015F\u0259l\u0259r! Me\u015F\u0259l\u0259r!\u201D s\u00F6zl\u0259ri hans\u0131 b\u0259dii ifad\u0259 vasit\u0259sidir?",
+    "questiona": ".Me\u015F\u0259l\u0259r! Me\u015F\u0259l\u0259r! Do\u011Frudan da siz\nYayda da, q\u0131\u015Fda da bir bahars\u0131n\u0131z.\nN\u00FCmun\u0259d\u0259ki \u201CMe\u015F\u0259l\u0259r! Me\u015F\u0259l\u0259r!\u201D s\u00F6zl\u0259ri hans\u0131 b\u0259dii ifad\u0259 vasit\u0259sidir?",
     "answersa": [
       "Anafora",
       "Metonimiya",
@@ -2546,7 +2546,7 @@
   {
     "index": 213,
     "rightPos": 0,
-    "questiona": "Referat\u0131n struktur ard\u0131c\u0131ll\u0131\u011F\u0131n\u0131 tamamlay\u0131nTitul v\u0259r\u0259qi- M\u00FCnd\u0259ricat - ?",
+    "questiona": "Referat\u0131n struktur ard\u0131c\u0131ll\u0131\u011F\u0131n\u0131 tamamlay\u0131n\nTitul v\u0259r\u0259qi- M\u00FCnd\u0259ricat - ?",
     "answersa": [
       "Giri\u015F",
       "\u018Flav\u0259",
