@@ -1730,7 +1730,7 @@
   {
     "index": 145,
     "rightPos": 0,
-    "questiona": ". Bunlardan ikisi daha \u00E7ox elmi \u00FCslub \u00FC\u00E7\u00FCn \u0259lam\u0259tdard\u0131r:[1- M\u0259cazilik, 2]",
+    "questiona": ". Bunlardan ikisi daha \u00E7ox elmi \u00FCslub \u00FC\u00E7\u00FCn \u0259lam\u0259tdard\u0131r:\n[1-M\u0259cazilik],\n[2-Obrazlılıq],\n[3-Mürəkkəb cümlə tiplərindən daha çox istifadə],\n[4-Bədii təsvir və ifadə vasitələrindən istifadə],\n[5-Termin sıxlığı],\n[6-Dialektizm və loru sözlərin işlənməsi]",
     "answersa": [
       "3, 5",
       "1, 6",
