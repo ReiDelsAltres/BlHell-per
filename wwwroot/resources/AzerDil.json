@@ -1754,7 +1754,7 @@
   {
     "index": 147,
     "rightPos": 0,
-    "questiona": ". Bu \u0259lam\u0259tl\u0259r hans\u0131 \u00FCslubda \u00F6z\u00FCn\u00FC g\u00F6st\u0259rir?[1- xalq dan\u0131\u015F\u0131q dilin\u0259 aid s\u00F6zl\u0259rd\u0259n daha \u00E7ox istifad\u0259][2- dialoji nitq formas\u0131n\u0131n daha \u00E7ox i\u015Fl\u0259dilm\u0259si][3- ba\u011Flay\u0131c\u0131 m\u0259zmununun daha \u00E7ox intonasiya il\u0259 \u00E7atd\u0131r\u0131lmas\u0131][4- yar\u0131m\u00E7\u0131q c\u00FCml\u0259l\u0259rin i\u015Fl\u0259dilm\u0259si]",
+    "questiona": ". Bu \u0259lam\u0259tl\u0259r hans\u0131 \u00FCslubda \u00F6z\u00FCn\u00FC g\u00F6st\u0259rir?\n[1- xalq dan\u0131\u015F\u0131q dilin\u0259 aid s\u00F6zl\u0259rd\u0259n daha \u00E7ox istifad\u0259],\n[2- dialoji nitq formas\u0131n\u0131n daha \u00E7ox i\u015Fl\u0259dilm\u0259si],\n[3- ba\u011Flay\u0131c\u0131 m\u0259zmununun daha \u00E7ox intonasiya il\u0259 \u00E7atd\u0131r\u0131lmas\u0131],\n[4- yar\u0131m\u00E7\u0131q c\u00FCml\u0259l\u0259rin i\u015Fl\u0259dilm\u0259si]",
     "answersa": [
       "m\u0259i\u015F\u0259t",
       "elmi",
