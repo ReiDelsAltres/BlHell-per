@@ -1382,7 +1382,7 @@
   {
     "index": 116,
     "rightPos": 0,
-    "questiona": " Da\u015F q\u0259lbli insanlar\u0131 neyl\u0259rdin, ilahi?Bizd\u0259 bu soyuq qanlar\u0131 neyl\u0259rdin, ilahi?",
+    "questiona": " Da\u015F q\u0259lbli insanlar\u0131 neyl\u0259rdin, ilahi?\nBizd\u0259 bu soyuq qanlar\u0131 neyl\u0259rdin, ilahi?",
     "answersa": [
       "Epitet",
       "T\u0259\u015Fbeh",
@@ -1634,7 +1634,7 @@
   {
     "index": 137,
     "rightPos": 0,
-    "questiona": ". Verilmi\u015F c\u00FCml\u0259 hans\u0131 \u00FCslubdad\u0131r?\u201CNitqin ifad\u0259liliyi dedikd\u0259 \u0259n m\u0259qs\u0259d\u0259uy\u011Fun, \u00FCslub bax\u0131m\u0131ndan \u0259n u\u011Furlu olan dil  vasit\u0259l\u0259rini tap\u0131b  i\u015Fl\u0259tm\u0259k ba\u015Fa d\u00FC\u015F\u00FCl\u00FCr\u201D",
+    "questiona": ". Verilmi\u015F c\u00FCml\u0259 hans\u0131 \u00FCslubdad\u0131r?\n\u201CNitqin ifad\u0259liliyi dedikd\u0259 \u0259n m\u0259qs\u0259d\u0259uy\u011Fun, \u00FCslub bax\u0131m\u0131ndan \u0259n u\u011Furlu olan dil  vasit\u0259l\u0259rini tap\u0131b  i\u015Fl\u0259tm\u0259k ba\u015Fa d\u00FC\u015F\u00FCl\u00FCr\u201D",
     "answersa": [
       "elmi",
       "m\u0259i\u015F\u0259t",
@@ -1802,7 +1802,7 @@
   {
     "index": 151,
     "rightPos": 0,
-    "questiona": ". M\u0259tn hans\u0131 \u00FCslubdad\u0131r?\u201CDill\u0259rin qohumluq prinsipind\u0259n ba\u015Fqa, bir d\u0259 tipoloji b\u00F6lg\u00FCs\u00FC var. Bu b\u00F6lg\u00FCd\u0259 dild\u0259ki s\u00F6zl\u0259rin morfoloji qurulu\u015Fu \u0259sas g\u00F6t\u00FCr\u00FCl\u00FCr.\u201D",
+    "questiona": ". M\u0259tn hans\u0131 \u00FCslubdad\u0131r?\n\u201CDill\u0259rin qohumluq prinsipind\u0259n ba\u015Fqa, bir d\u0259 tipoloji b\u00F6lg\u00FCs\u00FC var. Bu b\u00F6lg\u00FCd\u0259 dild\u0259ki s\u00F6zl\u0259rin morfoloji qurulu\u015Fu \u0259sas g\u00F6t\u00FCr\u00FCl\u00FCr.\u201D",
     "answersa": [
       "elmi",
       "b\u0259dii",
