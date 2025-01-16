@@ -1,7 +1,63 @@
 ﻿@page "/"
+@using BlHell_per.BlazorClasses
+@inject NavigationManager Navigation
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>BlHell-per</h1>
 
-Welcome to your new app.
+<div class="nn">Выберите предмет для проверки.</div>
+
+<button class="btn btn-primary" @onclick="@(e => {
+    string name = "History";
+    setItem(name);
+    showPopup(name);
+})">История</button>
+<button class="btn btn-primary" @onclick="@(e => {
+    string name = "AzerDil";
+    setItem(name);
+    showPopup(name);
+})">Азербайджанский</button>
+<button class="btn btn-primary" @onclick="@(e => {
+    string name = "Inform";
+    setItem(name);
+    showPopup(name);
+})">Информатика (Эльчин)</button>
+<button class="btn btn-primary" @onclick="@(e => {
+    string name = "Biznes";
+    setItem(name);
+    showPopup(name);
+})">Biznes statistika</button>
+<button class="btn btn-primary" @onclick="@(e => {
+    string name = "Ginekologiya";
+    setItem(name);
+    showPopup(name);
+})">Ginekologiya</button>
+
+<Popup @ref="popupRef">
+    Выберите количество тестов для тестирования
+    <input type="number" @bind-value="num">
+    <button class="btn btn-primary" @onclick="@(e => routeToTest())">Подтвердить</button>
+</Popup>
+
+@code {
+    [SupplyParameterFromForm]
+    private int num { get; set; }
+
+    private string item;
+
+    private Popup popupRef;
+    private void showPopup(string name)
+    {
+        popupRef.Show();
+    }
+
+    private void setItem(string name) 
+    {
+        this.item = name;
+    }
+    private void routeToTest()
+    {
+        Navigation.NavigateTo($"Test/{this.item}/{this.num}");
+    }
+}

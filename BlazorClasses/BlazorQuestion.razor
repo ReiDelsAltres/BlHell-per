@@ -1,0 +1,30 @@
+﻿@* <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="me-auto">@index)@questiona</strong>
+    </div>
+
+    <div class="toast-body">
+        <button class="btn btn-primary" @onclick="@(e => questionAnswered(0))">@styled[0] @shuffledAnswer[0]</button>
+        <button class="btn btn-primary" @onclick="@(e => questionAnswered(1))">@styled[1] @shuffledAnswer[1]</button>
+        <button class="btn btn-primary" @onclick="@(e => questionAnswered(2))">@styled[2] @shuffledAnswer[2]</button>
+        <button class="btn btn-primary" @onclick="@(e => questionAnswered(3))">@styled[3] @shuffledAnswer[3]</button>
+        <button class="btn btn-primary" @onclick="@(e => questionAnswered(4))">@styled[4] @shuffledAnswer[4]</button>
+        <button class="btn btn-primary" @onclick="@(e => questionAnswered(5))">@styled[5] @shuffledAnswer[5]</button>
+    </div>
+</div>
+
+@code {
+    private string[] shuffledAnswer { get; set; }
+
+    private void questionAnswered(int buttonIndex) 
+    {
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        string[] toShuffle = [$"{this.answersa[0]}", $"{this.answersa[1]}", $"{this.answersa[2]}", $"{this.answersa[3]}", $"{this.answersa[4]}"];
+        toShuffle.Shuffle();
+        shuffledAnswer = [toShuffle[0], toShuffle[1], toShuffle[2], toShuffle[3], toShuffle[4], $"{"Пропустить вопрос"}"];
+    }
+} *@

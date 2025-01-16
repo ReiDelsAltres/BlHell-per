@@ -1,0 +1,178 @@
+﻿@page "/Test/{name}/{num:int}"
+
+@using BlHell_per.BlazorClasses
+@using System.Web
+@using System.Text.RegularExpressions;
+
+@inject HttpClient Http
+
+<h3>TestingPage - @name @num</h3>
+
+@if (questions == null || questions.Count == 0) 
+{
+
+} else {
+    <div class="question-grid" style="display:grid">
+        @for (int j = 0; j < questions.Count; j++)
+        {
+            Question question = questions[j];
+            int ind = j + 1;
+
+            <div class="question border" role="gridcell" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto" style="white-space: pre-line">@ind.(@question.index).@question.questiona</strong>
+                </div>
+
+                <div class="toast-body">
+                    @for (int i = 0; i < 6; i++)
+                    {
+                        List<ButtonContext> contexts = doubleContextsList[j];
+                        ButtonContext context = contexts[i];
+
+                        int js = j;
+
+                        <button class="btn btn-primary" 
+                        style="white-space: pre-line; background-color:@context.color; border-color:@context.color" 
+                        disabled="@context.isDisabled" @onclick="@(e => questionAnswered(context,contexts,js))">
+                            @question.answersa[i]
+                        </button>
+                    }
+                </div>
+
+                @switch (statuses[j])
+                {
+                    case 0:
+                        <div class="local-result" style="color:@colors[0]">Верно</div>
+                        break;
+                    case 2:
+                        <div class="local-result" style="color:@colors[2]">Неверно</div>
+                        break;
+                    case 1:
+                        <div class="local-result" style="color:@colors[1]">Пропущено</div>
+                        break;
+                    default: break;
+
+                }
+            </div>
+        }
+
+        @if (statuses.FindAll(e => e == -1).Count == 0) 
+        {
+            <div class="result" style="color:@colors[0]">Верно: @statuses.FindAll(e => e == 0).Count</div>
+            <div class="result" style="color:@colors[2]">Ошибочно: @statuses.FindAll(e => e == 2).Count</div>
+            <div class="result" style="color:@colors[1]">Пропущено: @statuses.FindAll(e => e == 1).Count</div>
+        }
+
+    </div>
+}
+
+@code {
+    private record ButtonContext {
+        public required int index { get; set; }
+        public required string color { get; set; }
+        public required bool isDisabled { get; set; }
+        public required Question question { get; set; }
+    }
+    private string[] colors =
+    {
+        "#2ecc71",
+        "#d4ac0d",
+        "#c0392b"
+    };
+
+    [Parameter]
+    public string name { get; set; }
+    [Parameter]
+    public int num { get; set; }
+
+    private int answeredNum;
+
+    private List<Question>? questions;
+    private List<List<ButtonContext>> doubleContextsList;
+    private List<int> statuses;
+
+    private void questionAnswered(ButtonContext context, List<ButtonContext> contexts,int idx)
+    {
+        int crunchStatus = -1;
+        foreach (ButtonContext buttonContext in contexts) 
+        {
+            if (buttonContext == context) 
+            {
+                if (buttonContext.index == buttonContext.question.rightPos) 
+                {
+                    buttonContext.color = "#2ecc71";
+                    crunchStatus = 0;
+                } else if (buttonContext.index == 5) 
+                {
+                    buttonContext.color = "#d4ac0d";
+                    crunchStatus = 1;
+                } else
+                {
+                    buttonContext.color = "#c0392b";
+                    crunchStatus = 2;
+                }
+            } else 
+            {
+                buttonContext.color = buttonContext.index == buttonContext.question.rightPos ? "#2ecc71" : buttonContext.color;
+            }
+
+            buttonContext.isDisabled = true;
+        }
+        this.statuses[idx] = crunchStatus;
+
+        this.answeredNum++;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        List<Question> questions = await Http.GetFromJsonAsync<List<Question>>($"resources/{name}.json");
+        List<Question> choose = questions.GetRange(0, questions.Count);
+        choose.Shuffle();
+
+        this.questions = new List<Question>();
+
+        for(int i = 0; i< num; i++) 
+        {
+            Question question = choose[i];
+
+            string[] answersa = question.answersa;
+            string[] toShuffle = [$"{answersa[0]}", $"{answersa[1]}", $"{answersa[2]}", $"{answersa[3]}", $"{answersa[4]}"];
+            toShuffle.Shuffle();
+            string[] shuffledAnswer = [toShuffle[0], toShuffle[1], toShuffle[2], toShuffle[3], toShuffle[4], $"{"Пропустить вопрос"}"];
+
+            byte rightIndex = 9;
+            for (byte j = 0;j<shuffledAnswer.Length;j++) {
+                string ss = shuffledAnswer[j];
+                if (ss.Equals(answersa[question.rightPos])) 
+                {
+                    rightIndex = j;
+                    break;
+                }
+            }
+
+            this.questions.Add(new Question(question.index,rightIndex,question.questiona,shuffledAnswer));
+        }
+        this.doubleContextsList = new List<List<ButtonContext>>();
+        this.statuses = new List<int>();
+        for (int j = 0; j < this.questions.Count; j++) 
+        {
+            this.statuses.Add(-1);
+            Question question = this.questions[j];
+            List<ButtonContext> contexts = new List<ButtonContext>();
+
+            for (int i = 0; i < 6; i++) 
+            {
+                contexts.Add(new ButtonContext
+                    {
+                        color = "#7fb3d5",
+                        index = i,
+                        isDisabled = false,
+                        question = question
+                    });
+            }
+            this.doubleContextsList.Add(contexts);
+        }
+
+        await base.OnInitializedAsync();
+    }
+}
