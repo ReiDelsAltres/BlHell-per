@@ -58,9 +58,19 @@
 
         @if (statuses.FindAll(e => e == -1).Count == 0) 
         {
-            <div class="result" style="color:@colors[0]">Верно: @statuses.FindAll(e => e == 0).Count</div>
-            <div class="result" style="color:@colors[2]">Ошибочно: @statuses.FindAll(e => e == 2).Count</div>
-            <div class="result" style="color:@colors[1]">Пропущено: @statuses.FindAll(e => e == 1).Count</div>
+            int right = statuses.FindAll(e => e == 0).Count;
+            int wrong = statuses.FindAll(e => e == 2).Count;
+            int skip = statuses.FindAll(e => e == 1).Count;
+
+            <div class="result" style="color:@colors[0]">Верно: @right</div>
+            <div class="result" style="color:@colors[2]">Ошибочно: @wrong</div>
+            <div class="result" style="color:@colors[1]">Пропущено: @skip</div>
+
+            if (statuses.Count == 25) 
+            {
+                int score = Math.Max((right * 2) - wrong,0);
+                <div class="result" style="color:#8e44ad">Набранный балл: @score</div>
+            }
         }
 
     </div>
