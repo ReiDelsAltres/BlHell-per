@@ -2102,7 +2102,7 @@
   {
     "index": 176,
     "rightPos": 0,
-    "questiona": "Uy\u011Funlu\u011Fu tamamlay\u0131n Bir fikir  = bir slaydBir slayd  = ?",
+    "questiona": "Uy\u011Funlu\u011Fu tamamlay\u0131n \nBir fikir  = bir slayd\nBir slayd  = ?",
     "answersa": [
       "1 d\u0259qiq\u0259 ",
       "5 d\u0259qiq\u0259",
@@ -3866,13 +3866,13 @@
   {
     "index": 323,
     "rightPos": 0,
-    "questiona": ".Elmi tezis yazark\u0259n a\u015Fag\u0131dak\u0131lardan hans\u0131na ehtiyac yoxdur?he\u00E7 biri.",
+    "questiona": ".Elmi tezis yazark\u0259n a\u015Fag\u0131dak\u0131lardan hans\u0131na ehtiyac yoxdur?",
     "answersa": [
+      "heç biri",
       "sxem",
-      "c\u0259dv\u0259l",
+      "cədvəl",
       "qrafik",
-      "d\u00FCstur",
-      ""
+      "düstur"
     ]
   },
   {
