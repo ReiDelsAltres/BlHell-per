@@ -1,5 +1,5 @@
 ﻿@page "/Test/{name}/{num:int}/{ai:bool}"
-@inherits MathJaxContentComponent
+@inherits MathJaxContentComponentFixed
 
 @using BlHell_per.BlazorClasses
 @using System.Web
@@ -145,6 +145,17 @@
 
         this.answeredNum++;
     }
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        Task task = new Task(()=> { });
+        try 
+        { 
+            task = base.OnAfterRenderAsync(firstRender); 
+        }
+        catch (Exception _) {}
+        return task;
+    }
+
 
     protected override async Task OnInitializedAsync()
     {
