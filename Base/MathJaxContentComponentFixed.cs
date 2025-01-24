@@ -27,6 +27,7 @@ namespace BlHell_per
             {
                 module = await JSRuntimeExtensions.InvokeAsync<IJSObjectReference>(jsRuntime, "import", new object[1] { "./_content/MathJaxBlazor/mathJaxBlazor.js" });
             }
+            while (module == null) module = await JSRuntimeExtensions.InvokeAsync<IJSObjectReference>(jsRuntime, "import", new object[1] { "./_content/MathJaxBlazor/mathJaxBlazor.js" });
             if (module != null) await module.InvokeVoidAsync("typesetPromise");
 
             await base.OnAfterRenderAsync(firstRender);
