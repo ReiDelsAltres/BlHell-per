@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MathJaxBlazor" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.12" PrivateAssets="all" />
+    <PackageReference Include="OpenAI" Version="2.1.0" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
   </ItemGroup>
 

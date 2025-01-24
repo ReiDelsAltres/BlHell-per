@@ -1,63 +1,40 @@
 ﻿@page "/"
 @using BlHell_per.BlazorClasses
 @inject NavigationManager Navigation
-
 <PageTitle>Home</PageTitle>
 
 <h1>BlHell-per</h1>
 
-<div class="nn">Выберите предмет для проверки.</div>
+<h2>Выберите предмет для проверки</h2>
+<h3 class="text-center">Normal</h3>
+<div class="container px-4 border-secondary">
+    <SmartButton @ref="this.smartButtons[0]" name="History" Count="517" Text="История" onClickCallback="@(arg => onClickUnited(arg,0))"></SmartButton>
+    <SmartButton @ref="this.smartButtons[1]" name="AzerDil" Count="357" Text="Азерб" onClickCallback="@(arg => onClickUnited(arg,1))"></SmartButton>
+    <SmartButton @ref="this.smartButtons[2]" name="Inform" Count="361" Text="Информатика (Эльчин)" onClickCallback="@(arg => onClickUnited(arg,2))"></SmartButton>
+    <SmartButton @ref="this.smartButtons[3]" name="Biznes" Count="200" Text="Biznes" onClickCallback="@(arg => onClickUnited(arg,3))"></SmartButton>
+    <SmartButton @ref="this.smartButtons[4]" name="Ginekologiya" Count="135" Text="Ginekologiya" onClickCallback="@(arg => onClickUnited(arg,4))"></SmartButton>
+</div>
 
-<button class="btn btn-primary" @onclick="@(e => {
-    string name = "History";
-    setItem(name);
-    showPopup(name);
-})">История</button>
-<button class="btn btn-primary" @onclick="@(e => {
-    string name = "AzerDil";
-    setItem(name);
-    showPopup(name);
-})">Азербайджанский</button>
-<button class="btn btn-primary" @onclick="@(e => {
-    string name = "Inform";
-    setItem(name);
-    showPopup(name);
-})">Информатика (Эльчин)</button>
-<button class="btn btn-primary" @onclick="@(e => {
-    string name = "Biznes";
-    setItem(name);
-    showPopup(name);
-})">Biznes statistika</button>
-<button class="btn btn-primary" @onclick="@(e => {
-    string name = "Ginekologiya";
-    setItem(name);
-    showPopup(name);
-})">Ginekologiya</button>
-
-<Popup @ref="popupRef">
-    Выберите количество тестов для тестирования
-    <input type="number" @bind-value="num">
-    <button class="btn btn-primary" @onclick="@(e => routeToTest())">Подтвердить</button>
-</Popup>
+<h3 class="text-center">Extended - (Beta)</h3>
+<div class="container px-4 border-secondary">
+    <SmartButton style="background-color:darkslateblue" @ref="this.smartButtons[0]" name="Math" Count="335" Text="(LaTeX) Math" onClickCallback="@(arg => onClickUnited(arg,0))"></SmartButton>
+</div>
 
 @code {
-    [SupplyParameterFromForm]
-    private int num { get; set; }
+    private SmartButton[] smartButtons = new SmartButton[5];
 
-    private string item;
-
-    private Popup popupRef;
-    private void showPopup(string name)
+    private void onClickUnited(SmartButton.MouseEventArgsLocal args,Int32 index) 
     {
-        popupRef.Show();
-    }
-
-    private void setItem(string name) 
-    {
-        this.item = name;
-    }
-    private void routeToTest()
-    {
-        Navigation.NavigateTo($"Test/{this.item}/{this.num}");
+        for (int i = 0; i< this.smartButtons.Length; i++)
+        {
+            SmartButton button = this.smartButtons[i];
+            if (button.popupRef.isVisible())
+            {
+                button.popupRef.Close();
+            } else if (index == i)
+            {
+                button.popupRef.Show();
+            }
+        }
     }
 }

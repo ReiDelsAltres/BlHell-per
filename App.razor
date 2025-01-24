@@ -1,4 +1,6 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿﻿<MathJaxSettings Tex="texSettings" />
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
@@ -10,3 +12,15 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+
+    TexInputSettings texSettings = new TexInputSettings();
+
+    protected override Task OnInitializedAsync()
+    {
+        texSettings.InlineMath.Add(new string[] { "$", "$" });
+        return base.OnInitializedAsync();
+    }
+
+}

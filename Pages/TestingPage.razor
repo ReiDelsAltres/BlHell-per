@@ -1,8 +1,10 @@
-﻿@page "/Test/{name}/{num:int}"
+﻿@page "/Test/{name}/{num:int}/{ai:bool}"
+@inherits MathJaxContentComponent
 
 @using BlHell_per.BlazorClasses
 @using System.Web
 @using System.Text.RegularExpressions;
+@using OpenAI.Chat;
 
 @inject HttpClient Http
 
@@ -10,8 +12,13 @@
 
 @if (questions == null || questions.Count == 0) 
 {
-
-} else {
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+} else 
+{
     <div class="question-grid" style="display:grid">
         @for (int j = 0; j < questions.Count; j++)
         {
@@ -21,11 +28,15 @@
             <div class="question border" role="gridcell" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <strong class="me-auto" style="white-space: pre-line">@ind.(@question.index).@question.questiona</strong>
+
                 </div>
 
                 <div class="toast-body">
-                    @for (int i = 0; i < 6; i++)
+                    @for (int i = 0; i < question.answersa.Length; i++)
                     {
+                        string? answer = question.answersa[i];
+                        if (answer == null || answer == "") continue;
+
                         List<ButtonContext> contexts = doubleContextsList[j];
                         ButtonContext context = contexts[i];
 
@@ -89,7 +100,8 @@
         "#d4ac0d",
         "#c0392b"
     };
-
+    [Parameter]
+    public bool ai { get; set; }
     [Parameter]
     public string name { get; set; }
     [Parameter]
@@ -148,7 +160,14 @@
             string[] answersa = question.answersa;
             string[] toShuffle = [$"{answersa[0]}", $"{answersa[1]}", $"{answersa[2]}", $"{answersa[3]}", $"{answersa[4]}"];
             toShuffle.Shuffle();
-            string[] shuffledAnswer = [toShuffle[0], toShuffle[1], toShuffle[2], toShuffle[3], toShuffle[4], $"{"Пропустить вопрос"}"];
+            string[] shuffledAnswer;
+            if (toShuffle.ToList().FindAll(s => !s.Equals("")).Count >= 2) 
+            {
+                shuffledAnswer = [toShuffle[0], toShuffle[1], toShuffle[2], toShuffle[3], toShuffle[4], $"{"Пропустить вопрос"}"];
+            } else 
+            {
+                shuffledAnswer = [];
+            }
 
             byte rightIndex = 9;
             for (byte j = 0;j<shuffledAnswer.Length;j++) {
@@ -182,6 +201,31 @@
             }
             this.doubleContextsList.Add(contexts);
         }
+
+        if (ai)
+        {
+            ChatClient client = new ChatClient(model: "gpt-4o-mini", apiKey: Environment.GetEnvironmentVariable("OPENAI_KEY"));
+
+            for (int i = 0; i < this.questions.Count; i++) 
+            {
+                Question question = this.questions[i];
+                ChatCompletion completion;
+                for(int j = 0; j < question.answersa.Length; j++) 
+                {
+                    string answer = question.answersa[j];
+                    if (answer != "") continue;
+
+                    if (j == question.rightPos) 
+                    {
+                        completion = await client.CompleteChatAsync($"Write right answer to the question: [5+5]");
+                    } else 
+                    {
+                        completion = await client.CompleteChatAsync($"Write wrong answer to the question: [{question.questiona}]");
+                    }
+                    question.answersa[j] = completion.Content[0].Text;
+                }
+            }
+    }
 
         await base.OnInitializedAsync();
     }

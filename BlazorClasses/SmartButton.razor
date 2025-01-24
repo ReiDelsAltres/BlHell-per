@@ -1,0 +1,51 @@
+﻿@using BlHell_per.BlazorClasses
+@inject NavigationManager Navigation
+
+
+<div class="d-inline-flex" style="z-index:0">
+	<button class="btn btn-primary position-relative" @attributes="AdditionalAttributes"
+			@onclick="@(arg => onClickCallback.InvokeAsync(new MouseEventArgsLocal(arg,this.popupRef)))">
+		@Text
+		@if (Count != 0)
+		{
+			<span class="badge text-bg-primary position-absolute top-0 translate-middle rounded-pill" style="background-color:dimgrey">@Count</span>
+		}
+	</button>
+	<div class="z-1 overflow-visible position-absolute" style="z-index:1; transform:translateY(50px)">
+		<Popup @ref="popupRef">
+			Выберите количество тестов для тестирования
+			<LimitedInputNumber DisplayName="Число" @bind-Value="num" Min=1 Max=this.Count />
+			<button class="btn btn-primary" @onclick="@onSubmitPopup">Подтвердить</button>
+		</Popup>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public int? num { get; set; } = 5;
+	public Popup popupRef;
+	public struct MouseEventArgsLocal(MouseEventArgs args, Popup popup)
+	{
+		public MouseEventArgs args { get; set; }
+		public Popup popup { get; set; }
+	}
+	[Parameter(CaptureUnmatchedValues = true)]
+	public Dictionary<string, object> AdditionalAttributes { get; set; }
+	[Parameter]
+	public EventCallback<MouseEventArgsLocal> onClickCallback { get; set; }
+	[Parameter]
+	public string Text { get; set; }
+	[Parameter]
+	public string name { get; set; }
+	[Parameter]
+	public int Count { get; set; }
+
+	internal async void onSubmitPopup(MouseEventArgs args)
+	{
+		Navigation.NavigateTo($"Test/{this.name}/{this.num}/{false}");
+	}
+	internal async void onClick(MouseEventArgs args) 
+	{
+		popupRef.Show();
+	}
+}

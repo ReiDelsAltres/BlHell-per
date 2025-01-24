@@ -1,23 +1,30 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Components.Forms;
+@inherits ComponentBase
+
+@{
     var showClass = IsVisible ? "d-block" : "d-none";
 }
+<div class="@this.CssClass">
+    <div class="toast-container p-3 @showClass" data-bs-autohide="true" data-bs-delay="5000">
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">@HeaderText</strong>
+                <button type="button" class="btn-close" aria-label="Close" @onclick="Close"></button>
+            </div>
 
-<div class="toast-container p-3 @showClass" data-bs-autohide="true" data-bs-delay="5000">
-    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <strong class="me-auto">@HeaderText</strong>
-            <button type="button" class="btn-close" aria-label="Close" @onclick="Close"></button>
-        </div>
-
-        <div class="toast-body">
-            @ChildContent
+            <div class="toast-body">
+                @ChildContent
+            </div>
         </div>
     </div>
 </div>
 
 @code {
+    [Parameter] 
+    public string CssClass { get; set; } = "";
+
     [Parameter]
-    public bool IsVisible { get; set; }
+    public bool IsVisible { get; set; } = false;
 
     [Parameter]
     public EventCallback<bool> IsVisibleChanged { get; set; }
@@ -32,6 +39,10 @@
     {
         //base.header = "Setting header for the parent"
     }
+    public bool isVisible() 
+    {
+        return this.IsVisible;
+    }
 
     public void Show(string headerText = "")
     {
@@ -41,7 +52,7 @@
         StateHasChanged();
     }
 
-    private void Close()
+    public void Close()
     {
         HeaderText = string.Empty;
         //BodyText = null;
