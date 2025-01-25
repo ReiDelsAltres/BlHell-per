@@ -4,7 +4,7 @@
 
 <div class="d-inline-flex" style="z-index:0">
 	<button class="btn btn-primary position-relative" @attributes="AdditionalAttributes"
-			@onclick="@(arg => onClickCallback.InvokeAsync(new MouseEventArgsLocal(arg,this.popupRef)))">
+	@onclick="@(arg => onClickCallback.InvokeAsync(new MouseEventArgsLocal(arg,this.popupRef)))">
 		@Text
 		@if (Count != 0)
 		{
@@ -13,9 +13,16 @@
 	</button>
 	<div class="z-1 overflow-visible position-absolute" style="z-index:1; transform:translateY(50px)">
 		<Popup @ref="popupRef">
-			Выберите количество тестов для тестирования
-			<LimitedInputNumber DisplayName="Число" @bind-Value="num" Min=1 Max=this.Count />
-			<button class="btn btn-primary" @onclick="@onSubmitPopup">Подтвердить</button>
+			<div>
+				<div>Выборка из предела:</div>
+				<LimitedInputNumber DisplayName="Начало" @bind-Value="min" Min=0 Max=this.max.GetValueOrDefault()-1 />
+				<LimitedInputNumber DisplayName="Конец" @bind-Value="max" Min=this.min.GetValueOrDefault()+1 Max=this.Count />
+			</div>
+			<div>
+				<div>Количество тестов:</div>
+				<LimitedInputNumber DisplayName="Число" @bind-Value="num" Min=1 Max=this.max.GetValueOrDefault()-this.min.GetValueOrDefault() />
+				<button class="btn btn-primary" @onclick="@onSubmitPopup">Подтвердить</button>
+			</div>
 		</Popup>
 	</div>
 </div>
@@ -23,6 +30,11 @@
 @code {
 	[SupplyParameterFromForm]
 	public int? num { get; set; } = 5;
+	[SupplyParameterFromForm]
+	public int? min { get; set; } = 0;
+	[SupplyParameterFromForm]
+	public int? max { get; set; }
+
 	public Popup popupRef;
 	public struct MouseEventArgsLocal(MouseEventArgs args, Popup popup)
 	{
@@ -40,9 +52,15 @@
 	[Parameter]
 	public int Count { get; set; }
 
+	protected override Task OnInitializedAsync()
+	{
+		this.max = this.Count;
+		return base.OnInitializedAsync();
+	}
+
 	internal async void onSubmitPopup(MouseEventArgs args)
 	{
-		Navigation.NavigateTo($"Test/{this.name}/{this.num}/{false}");
+		Navigation.NavigateTo($"Test/{this.name}/{this.num}/{this.min}/{this.max}/{false}");
 	}
 	internal async void onClick(MouseEventArgs args) 
 	{

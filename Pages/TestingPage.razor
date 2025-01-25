@@ -1,4 +1,4 @@
-﻿@page "/Test/{name}/{num:int}/{ai:bool}"
+﻿@page "/Test/{name}/{num:int}/{min:int}/{max:int}/{ai:bool}"
 @inherits MathJaxContentComponentFixed
 
 @using BlHell_per.BlazorClasses
@@ -105,8 +105,13 @@
     public bool ai { get; set; }
     [Parameter]
     public string name { get; set; }
+
     [Parameter]
     public int num { get; set; }
+    [Parameter]
+    public int min { get; set; }
+    [Parameter]
+    public int max { get; set; }
 
     private int answeredNum;
 
@@ -160,7 +165,7 @@
     protected override async Task OnInitializedAsync()
     {
         List<Question> questions = await Http.GetFromJsonAsync<List<Question>>($"resources/{name}.json");
-        List<Question> choose = questions.GetRange(0, questions.Count);
+        List<Question> choose = questions.GetRange(this.min, this.max);
         choose.Shuffle();
 
         this.questions = new List<Question>();

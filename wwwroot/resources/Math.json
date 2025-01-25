@@ -507,24 +507,24 @@
         "index": 43,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{sinx}{x}}$",
-        "answersa": [
-            "π",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "index": 44,
-        "rightPos": 0,
-        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{cosx}{x}}$",
       "answersa": [
         "$\\frac{2}{π}$",
         "0",
         "$-\\frac{2}{π}$",
         "1",
         "π"
+      ]
+    },
+    {
+        "index": 44,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{cosx}{x}}$",
+      "answersa": [
+        "0",
+        "π",
+        "-1",
+        "$\\frac{1}{π}$",
+        "1"
       ]
     },
     {
