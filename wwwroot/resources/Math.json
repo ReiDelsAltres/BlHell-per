@@ -723,84 +723,84 @@
         "index": 61,
         "rightPos": 0,
         "questiona": "Вычислите предел.  $\\lim\\limits_{x\\rightarrow-2}{(\\frac{1}{x+2}}+\\frac{4}{x^2-4})$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{3}{4}$",
+        "-1",
+        "$\\frac{3}{4}$",
+        "0",
+        "$-\\frac{1}{4}$"
+      ]
     },
     {
         "index": 62,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^{2x}-1}{x}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "2",
+        "1",
+        "0",
+        "e",
+        "-2"
+      ]
     },
     {
         "index": 63,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^{-3x}-1}{x}}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-3",
+            "3",
+            "0",
+            "-1",
+            "1"
         ]
     },
     {
         "index": 64,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^\\frac{x}{2}-1}{x}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "2",
+        "0",
+        "$-\\frac{1}{2}$",
+        "1"
+      ]
     },
     {
         "index": 65,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt{1+x}-1}{x}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "0",
+        "1",
+        "$-\\frac{1}{2}$",
+        "2"
+      ]
     },
     {
         "index": 66,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt[3]{1+2x}-1}{x}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "2",
+        "$\\frac{2}{3}$",
+        "0",
+        "-2",
+        "3"
+      ]
     },
     {
         "index": 67,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1+2x)}{x}}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "2",
+            "1",
+            "0",
+            "-2",
+            "e"
         ]
     },
     {
@@ -808,11 +808,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1-3x)}{x}}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-3",
+            "3",
+            "0",
+            "-1",
+            "-2"
         ]
     },
     {
@@ -820,24 +820,24 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1-5x)}{x}}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-5",
+            "5",
+            "0",
+            "-1",
+            "-3"
         ]
     },
     {
         "index": 70,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{{(1+\\frac{1}{x})}^{2x}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$e^2$",
+        "e",
+        "1",
+        "$e^3$",
+        "0"
+      ]
     },
     {
         "index": 71,
