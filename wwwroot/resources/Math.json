@@ -4,11 +4,11 @@
         "rightPos": 0,
         "questiona": "Найдите область определения функции. $f(x) = \\sqrt{x-2}+\\ \\sqrt{5-x}$",
       "answersa": [
-        "2≤x≤5",
-        "−∞<x≤5",
-        "x≥2",
-        "2≤x<5",
-        "x≤5"
+        "x∈[2;5]",
+        "x∈(−∞;5]",
+        "x∈[2;∞)",
+        "x∈[2;5)",
+        "x∈(−∞;2]"
       ]
     },
     {
@@ -16,11 +16,11 @@
         "rightPos": 0,
         "questiona": "Найдите область определения функции. $f(x) = \\sqrt{3-x}+\\ \\sqrt{x-1}$",
       "answersa": [
-        "1≤x≤3",
-        "x>1",
-        "x≤3",
-        "1<x<3",
-        "x≥3"
+        "x∈[1;3]",
+        "x∈[3;∞)",
+        "x∈(-∞;3]",
+        "x∈(1;3)",
+        "x∈[1;3)"
       ]
     },
     {
@@ -28,11 +28,11 @@
         "rightPos": 0,
         "questiona": "Найдите область определения функции. $f(x) = \\frac{\\sqrt{4-x}}{\\sqrt{x+1}}$",
       "answersa": [
-        "−1<x≤4",
-        "−1≤x≤4",
-        "x≥−1",
-        "−1≤x<4",
-        "x≤4"
+        "x∈[-1;4)",
+        "x∈[-1;4]",
+        "x∈[-1;∞)",
+        "x∈[4;∞)",
+        "x∈(-∞;3]"
       ]
     },
     {
@@ -40,11 +40,11 @@
         "rightPos": 0,
         "questiona": "Найдите область определения функции. $f(x) = \\sqrt{x^2-2x-3}$",
       "answersa": [
-        "x≤−1 или x≥3",
-        "x>3",
-        "x≥−1",
-        "−3≤x≤1",
-        "x≤−3"
+        "x∈(−∞,−1)∪(3,∞)",
+        "x∈[-1;3)",
+        "x∈(−∞,−1]∪[3,∞)",
+        "x∈[-3;-1)",
+        "x∈[-4;-1)"
       ]
     },
     {
@@ -55,20 +55,20 @@
         "x∈(−∞,−1)∪(1,∞)",
         "x>1",
         "x≥−1",
-        "x≤−1 или x≥1",
+        "x∈(−∞,−1]∪[1,∞)",
         "x∈(−∞,1]"
       ]
     },
   {
     "index": 6,
     "rightPos": 0,
-    "questiona": "Вычислите произведение f (1) * f (3) для функции $f(x) = \\begin{cases}  -2x + 1, & x \\leq 2, \\\\ x^2, & x > 2. \\end{cases}    $",
+    "questiona": "Вычислите произведение f (1) * f (3) для функции $f(x) = \\begin{cases}  -2x + 1, & x \\leq 2, \\\\ x^2, & x > 2. \\end{cases}$",
     "answersa": [
-      "−126",
-      "-63",
+      "−9",
+      "-12",
       "126",
       "-90",
-      "90"
+      "9"
     ]
   },
   {
@@ -100,10 +100,10 @@
     "rightPos": 0,
     "questiona": "Вычислите произведение f (3) * f (-1) для функции. $f(x) =\\begin{cases} 2x - 1, & x \\leq 2, \\\\x + 1, & x > 2.\\end{cases}$",
     "answersa": [
-      "-12",
+      "-6",
       "-9",
       "-12",
-      "12",
+      "6",
       "4"
     ]
   },
@@ -112,9 +112,9 @@
     "rightPos": 0,
     "questiona": "Вычислите произведение f (-2) * f (1) для функции. $f(x) =\\begin{cases} 2 - x, & x \\leq 0, \\\\3x + 2, & x > 0.\\end{cases}$",
     "answersa": [
-      "20",
+      "10",
       "24",
-      "-20",
+      "-10",
       "15",
       "-24"
     ]
@@ -184,9 +184,9 @@
         "rightPos": 0,
         "questiona": "предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2n^2-n+1}{n^2}}$",
         "answersa": [
-            "2",
-            "1",
             "0",
+            "1",
+            "1",
             "3",
             "-2"
         ]
@@ -244,10 +244,10 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow2}{\\frac{x-2}{x^2+x-6}}$",
       "answersa": [
-        "$\\frac{1}{6}$",
+        "$\\frac{1}{5}$",
         "0",
-        "$-\\frac{1}{6}$",
-        "$\\frac{1}{3}$",
+        "$-\\frac{1}{5}$",
+        "$\\frac{1}{6}$",
         "$\\frac{2}{3}$"
       ]
     },
@@ -280,10 +280,10 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-3}{\\frac{x^2+2x-3}{x^2+5x+6}}$",
       "answersa": [
-        "$-\\frac{1}{2}$",
+        "4",
         "0",
-        "$\\frac{1}{2}$",
-        "$-\\frac{2}{3}$",
+        "$-\\frac{1}{3}$",
+        "-4",
         "-1"
       ]
     },
@@ -448,9 +448,9 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt{1+x}-2}{x-3}}$",
       "answersa": [
-        "$-\\frac{1}{3}$",
-        "0",
         "$\\frac{1}{3}$",
+        "0",
+        "$-\\frac{1}{3}$",
         "-1",
         "$-\\frac{2}{3}$"
       ]
@@ -460,8 +460,8 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{sin\\pi x}{x}}$",
       "answersa": [
-        "π",
         "0",
+        "π",
         "-π",
         "1",
         "2π"
@@ -472,11 +472,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{1}{2}}{\\frac{sin\\pi x}{x}}$",
       "answersa": [
-        "2π",
+        "2",
         "0",
         "-π",
-        "π",
-        "4π"
+        "$\\frac{1}{2}$",
+        "2π"
       ]
     },
     {
@@ -484,11 +484,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{1}{6}}{\\frac{sin\\pi x}{x}}$",
       "answersa": [
-        "6π",
+        "3",
         "0",
-        "-π",
-        "3π",
-        "12π"
+        "6",
+        "-3",
+        "$\\frac{π}{6}$"
       ]
     },
     {
@@ -496,11 +496,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{cos\\pi x}{x}}$",
       "answersa": [
-        "$-\\frac{1}{π}$",
-        "0",
         "-1",
+        "0",
+        "1",
         "$\\frac{1}{π}$",
-        "π"
+        "$-\\frac{1}{π}$"
       ]
     },
     {
@@ -676,10 +676,10 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{1-cos2x}{sinx}}$",
         "answersa": [
-            "2x",
-            "x",
             "0",
-            "-2x",
+            "2",
+            "$\\frac{1}{2}$",
+            "-2",
             "1"
         ]
     },
@@ -688,10 +688,10 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{(\\frac{1}{x-1}}-\\frac{2}{x^2-1})$",
       "answersa": [
-        "$-\\frac{3}{2}$",
-        "-3",
-        "-1",
-        "$\\frac{3}{2}$",
+        "$\\frac{1}{2}$",
+        "-2",
+        "$-\\frac{2}{3}$",
+        "$-\\frac{1}{2}$",
         "0"
       ]
     },
@@ -700,10 +700,10 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-1}{(\\frac{1}{x+1}}+\\frac{2}{x^2-1})$",
       "answersa": [
-        "-3",
-        "3",
+        "$-\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
         "0",
-        "$-\\frac{3}{2}$",
+        "$\\frac{1}{2}$",
         "1"
       ]
     },
@@ -712,11 +712,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow2}{(\\frac{1}{x-2}}-\\frac{4}{x^2-4})$",
       "answersa": [
-        "$-\\frac{3}{4}$",
-        "0",
+        "$\\frac{1}{4}$",
+        "2",
         "$-\\frac{1}{4}$",
-        "-1",
-        "$\\frac{3}{4}$"
+        "-2",
+        "$\\frac{1}{2}$"
       ]
     },
     {
@@ -724,11 +724,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел.  $\\lim\\limits_{x\\rightarrow-2}{(\\frac{1}{x+2}}+\\frac{4}{x^2-4})$",
       "answersa": [
-        "$-\\frac{3}{4}$",
-        "-1",
-        "$\\frac{3}{4}$",
-        "0",
-        "$-\\frac{1}{4}$"
+        "$-\\frac{1}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "2",
+        "$-\\frac{1}{2}$"
       ]
     },
     {
@@ -784,9 +784,9 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt[3]{1+2x}-1}{x}}$",
       "answersa": [
-        "2",
         "$\\frac{2}{3}$",
-        "0",
+        "2",
+        "$\\frac{3}{2}$",
         "-2",
         "3"
       ]
@@ -835,7 +835,7 @@
         "$e^2$",
         "e",
         "1",
-        "$e^3$",
+        "$e^x$",
         "0"
       ]
     },
@@ -843,24 +843,24 @@
         "index": 71,
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{{(1-\\frac{1}{x})}^x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "-e",
+        "e",
+        "1",
+        "$e^x$",
+        "$e^2x$"
+      ]
     },
     {
         "index": 72,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(-2)$ для функции $f\\left(x\\right)=\\frac{1}{2}x^2-x+3$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-3",
+            "7",
+            "-7",
+            "-2",
+            "2"
         ]
     },
     {
@@ -868,11 +868,11 @@
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(-1)$ для функции $f\\left(x\\right)=\\frac{1}{3}x^3-x^2+3x-1$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "6",
+            "3",
+            "9",
+            "-6",
+            "-3"
         ]
     },
     {
@@ -880,47 +880,47 @@
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(-1)$ для функции $f\\left(x\\right)=x^4-\\frac{1}{3}x^3+x^2-1$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-7",
+            "6",
+            "8",
+            "14",
+            "-6"
         ]
     },
     {
         "index": 75,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{4})$ для функции $f\\left(x\\right)={sin}^2x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "1",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{4}$",
+        "-1"
+      ]
     },
     {
         "index": 76,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{4})$ для функции $f\\left(x\\right)={cos}^2x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "1",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{4}$",
+        "-1"
+      ]
     },
     {
         "index": 77,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(1)$ для функции $f\\left(x\\right)={(3x-2)}^{10}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "30",
+            "126",
+            "-126",
+            "-30",
+            "-33"
         ]
     },
     {
@@ -928,95 +928,95 @@
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(2)$ для функции $f\\left(x\\right)={(3x-4)}^4$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "96",
+            "-96",
+            "32",
+            "-32",
+            "64"
         ]
     },
     {
         "index": 79,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(\\frac{1}{3})$ для функции $f\\left(x\\right)=e^{3x-1}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "3",
+        "9",
+        "-3",
+        "-9",
+        "e^3"
+      ]
     },
     {
         "index": 80,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(\\frac{1}{2})$ для функции $f\\left(x\\right)=e^{-2x+1}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-2",
+            "2",
+            "1",
+            "-1",
+            "$e^2$"
         ]
     },
     {
         "index": 81,
         "rightPos": 0,
         "questiona": "Вычислите  $f^\\prime(-1)$ для функции $f\\left(x\\right)=e^{x^2-1}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "-2",
+        "2",
+        "1",
+        "-1",
+        "$e^2$"
+      ]
     },
     {
         "index": 82,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(0)$ для функции $f\\left(x\\right)=3^{sinx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$ln(3)$",
+        "1",
+        "0",
+        "$\\frac{1}{3}$",
+        "$-ln(3)$"
+      ]
     },
     {
         "index": 83,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{2})$ для функции $f\\left(x\\right)={10}^{cosx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-ln(10)$",
+        "$ln(10)$",
+        "10",
+        "1",
+        "0"
+      ]
     },
     {
         "index": 84,
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(1)$ для функции $f\\left(x\\right)=2^{3x-2}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$6ln(2)$",
+        "$-6ln(2)$",
+        "$ln(2)$",
+        "6",
+        "-6"
+      ]
     },
     {
         "index": 85,
         "rightPos": 0,
         "questiona": "Вычислить $f^\\prime(\\frac{\\pi}{3})$ для функции $f\\left(x\\right)=tg3x$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "3",
+            "-3",
+            "6",
+            "9",
+            "-6"
         ]
     },
     {
@@ -1024,120 +1024,120 @@
         "rightPos": 0,
         "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{4})$ для функции $f\\left(x\\right)=ctg2x$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-2",
+            "2",
+            "3",
+            "4",
+            "-4"
         ]
     },
     {
         "index": 87,
         "rightPos": 0,
         "questiona": "Вычислите  $f^\\prime(1)$ для функции $f\\left(x\\right)=\\ln\\funcapply(1+3x)$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{3}{4}$",
+        "$-\\frac{3}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{4}{3}$",
+        "$-\\frac{4}{3}$"
+      ]
     },
     {
         "index": 88,
         "rightPos": 0,
         "questiona": "Вычислите  $f^\\prime(-1)$ для функции $f\\left(x\\right)=\\ln(1-3x)$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{3}{4}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{4}{3}$",
+        "$-\\frac{4}{3}$"
+      ]
     },
     {
         "index": 89,
         "rightPos": 0,
         "questiona": "Вычислите  $f^\\prime(0)$ для функции $f\\left(x\\right)=\\log_2{(1+x)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{ln(2)}$",
+        "$ln(2)$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{ln(3)}$",
+        "$-\\frac{1}{ln(2)}$"
+      ]
     },
     {
         "index": 90,
         "rightPos": 0,
         "questiona": "Вычислите  $f^\\prime(0)$ для функции $f\\left(x\\right)=\\log_2{(1-x)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{1}{ln(2)}$",
+        "$ln(2)$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{ln(3)}$",
+        "$\\frac{1}{ln(2)}$"
+      ]
     },
     {
         "index": 91,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= \\frac{cosx}{1+sinx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{-(sin(x)+1)}{(1+sin(x))^2}$",
+        "$\\frac{sin(x)-1}{(1+sin(x))^2}$",
+        "$\\frac{1-cos(x)}{(1+sin(x))^2}$",
+        "$\\frac{1-cos(x)}{cos(x)^2}$",
+        "$\\frac{-(sin(x)+1)}{cos(x)^2}$"
+      ]
     },
     {
         "index": 92,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= \\frac{sinx}{1+cosx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{cos(x)+1}{(1+cos(x))^2}$",
+        "$\\frac{-(cos(x)+1)}{(1+cos(x))^2}$",
+        "$\\frac{sin(x)+1}{(1-sin(x))^2}$",
+        "$\\frac{sin(x)+cos(x)}{sin(x)^2}$",
+        "$\\frac{sin(x)-cos(x)}{sin(x)^2}$"
+      ]
     },
     {
         "index": 93,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= {sin}^4x+{cos}^4x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "4sin(x)cos(x)cos(2x)",
+        "4sin(x)cos(x)sin^2(x)*cos^2(x)",
+        "4sin(x)cos(x)",
+        "-2sin(x)cos(x)cos(2x)",
+        "-2sin(x)cos(x)sin^2(x)*cos^2(x)"
+      ]
     },
     {
         "index": 94,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= {sin}^4x-{cos}^4x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "4sin(x)cos(x)",
+        "4sin(x)cos(x)sin^2(x)*cos^2(x)",
+        "4sin(x)cos(x)cos(2x)",
+        "-2sin(x)cos(x)cos(2x)",
+        "-2sin(x)cos(x)sin^2(x)*cos^2(x)"
+      ]
     },
     {
         "index": 95,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln\\frac{1-x}{1+x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{-2}{1-x^2}$",
+        "$\\frac{-2}{(1-x)^2}$",
+        "$\\frac{-1+x}{(1-x)^2}$",
+        "$\\frac{-1+x}{1-x^2}$",
+        "$-\\frac{2}{x^2}$"
+      ]
     },
     {
         "index": 96,
