@@ -200,7 +200,7 @@
             "1",
             "2",
             "$e^2$",
-            "$ln e$"
+            "$ln(e)$"
         ]
     },
     {
@@ -794,7 +794,7 @@
     {
         "index": 67,
         "rightPos": 0,
-        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1+2x)}{x}}$",
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1+2x)}{x}}$",
         "answersa": [
             "2",
             "1",
@@ -806,7 +806,7 @@
     {
         "index": 68,
         "rightPos": 0,
-        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1-3x)}{x}}$",
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1-3x)}{x}}$",
         "answersa": [
             "-3",
             "3",
@@ -818,7 +818,7 @@
     {
         "index": 69,
         "rightPos": 0,
-        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1-5x)}{x}}$",
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1-5x)}{x}}$",
         "answersa": [
             "-5",
             "5",
@@ -1096,11 +1096,11 @@
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= \\frac{sinx}{1+cosx}$",
       "answersa": [
-        "$\\frac{cos(x)+1}{(1+cos(x))^2}$",
-        "$\\frac{-(cos(x)+1)}{(1+cos(x))^2}$",
-        "$\\frac{sin(x)+1}{(1-sin(x))^2}$",
-        "$\\frac{sin(x)+cos(x)}{sin(x)^2}$",
-        "$\\frac{sin(x)-cos(x)}{sin(x)^2}$"
+        "$\\frac{cos(x)+1}{{(1+cos(x))}^2}$",
+        "$\\frac{-(cos(x)+1)}{{(1+cos(x))}^2}$",
+        "$\\frac{sin(x)+1}{{(1-sin(x))}^2}$",
+        "$\\frac{sin(x)+cos(x)}{{sin(x)}^2}$",
+        "$\\frac{sin(x)-cos(x)}{{sin(x)}^2}$"
       ]
     },
     {
@@ -1108,11 +1108,11 @@
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= {sin}^4x+{cos}^4x$",
       "answersa": [
-        "4sin(x)cos(x)cos(2x)",
-        "4sin(x)cos(x)sin^2(x)*cos^2(x)",
-        "4sin(x)cos(x)",
-        "-2sin(x)cos(x)cos(2x)",
-        "-2sin(x)cos(x)sin^2(x)*cos^2(x)"
+        "$4sin(x)cos(x)cos(2x)$",
+        "$4sin(x)cos(x){sin}^2(x)*{cos}^2(x)$",
+        "$4sin(x)cos(x)$",
+        "$-2sin(x)cos(x)cos(2x)$",
+        "$-2sin(x)cos(x){sin}^2(x)*{cos}^2(x)$"
       ]
     },
     {
@@ -1120,11 +1120,11 @@
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= {sin}^4x-{cos}^4x$",
       "answersa": [
-        "4sin(x)cos(x)",
-        "4sin(x)cos(x)sin^2(x)*cos^2(x)",
-        "4sin(x)cos(x)cos(2x)",
-        "-2sin(x)cos(x)cos(2x)",
-        "-2sin(x)cos(x)sin^2(x)*cos^2(x)"
+        "$4sin(x)cos(x)$",
+        "$4sin(x)cos(x){sin}^2(x)*{cos}^2(x)$",
+        "$4sin(x)cos(x)cos(2x)$",
+        "$-2sin(x)cos(x)cos(2x)$",
+        "$-2sin(x)cos(x){sin}^2(x)*{cos}^2(x)$"
       ]
     },
     {
@@ -1132,624 +1132,624 @@
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln\\frac{1-x}{1+x}$",
       "answersa": [
-        "$\\frac{-2}{1-x^2}$",
-        "$\\frac{-2}{(1-x)^2}$",
-        "$\\frac{-1+x}{(1-x)^2}$",
-        "$\\frac{-1+x}{1-x^2}$",
-        "$-\\frac{2}{x^2}$"
+        "$\\frac{-2}{1-{x}^2}$",
+        "$\\frac{-2}{{(1-x)}^2}$",
+        "$\\frac{-1+x}{{(1-x)}^2}$",
+        "$\\frac{-1+x}{1-{x}^2}$",
+        "$-\\frac{2}{{x}^2}$"
       ]
     },
     {
         "index": 96,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= \\ln{sin2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$2ctg(2x)$",
+        "${ctg}^2(x)$",
+        "$2sin(2x)$",
+        "$2cos(2x)$",
+        "$-2sin(2x)$"
+      ]
     },
     {
         "index": 97,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= \\ln{cos2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-2tg(2x)$",
+        "${ctg}^2(x)$",
+        "$2sin(2x)$",
+        "$2cos(2x)$",
+        "$-2sin(2x)$"
+      ]
     },
     {
         "index": 98,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= e^{{sin}^2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$e^{sin^2(x)}*sin(2x)$",
+        "$e^{cos^2(x)}*cos(2x)$",
+        "$e^{sin^2(x)}*cos(2x)sin(2x)$",
+        "$sin^2(x)sin(2x)$",
+        "$e^{sin^2(x)}*cos(2x)$"
+      ]
     },
     {
         "index": 99,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= e^{{cos}^2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-e^{cos^2(x)}*2cos(x)sin(x)$",
+        "$e^{cos^2(x)}*cos(2x)$",
+        "$-e^{sin^2(x)}*cos(2x)sin(2x)$",
+        "$sin^2(x)sin(2x)$",
+        "$e^{sin^2(x)}*cos(2x)$"
+      ]
     },
     {
         "index": 100,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= {(1+2x^2)}^5$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$20x{(1+{2x}^2)}^4$",
+        "$5{(1+{2x}^2)}^4$",
+        "$20{(1+{2x}^2)}^5$",
+        "$20{(1+{2x}^2)}^4$",
+        "$20{(1+{2x})}^5$"
+      ]
     },
     {
         "index": 101,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln({tgx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{cos(x)sin(x)}$",
+        "$\\frac{cos(2x)}{cos(x)sin(x)}$",
+        "$\\frac{1}{sin(x)}$",
+        "$\\frac{1}{cos(x)}$",
+        "$-\\frac{1}{sin(x)}$"
+      ]
     },
     {
         "index": 102,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= {sin}^2x+{cos}^2x$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "0",
+            "1",
+            "sin(x)cos(x)",
+            "2six(x)cos(x)",
+            "six(2x)"
         ]
     },
     {
         "index": 103,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln({ctgx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{cos(x)sin(x)}$",
+        "$\\frac{cos(2x)}{cos(x)sin(x)}$",
+        "$\\frac{1}{sin(x)}$",
+        "$\\frac{1}{cos(x)}$",
+        "$-\\frac{1}{sin(x)}$"
+      ]
     },
     {
         "index": 104,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln\\frac{1+2x}{1-2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{4}{1-{4x}^2}$",
+        "$\\frac{1}{1-{4x}^2}$",
+        "$\\frac{2-2x}{1-{4x}^2}$",
+        "$\\frac{4}{1+{4x}^2}$",
+        "$\\frac{2-2x}{1+{4x}^2}$"
+      ]
     },
     {
         "index": 105,
         "rightPos": 0,
         "questiona": "Вычислите производную функции.  $y= ln\\frac{1+sinx}{1-sinx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{2}{cos(x)}$",
+        "$\\frac{1}{cos(x)}$",
+        "$\\frac{1}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{2}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{2cos(x)}{(1-sin(x))*(1+sin(x))}$"
+      ]
     },
     {
         "index": 106,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln\\frac{1-sinx}{1+sinx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{-2}{cos(x)}$",
+        "$-\\frac{1}{cos(x)}$",
+        "$\\frac{1}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{-2}{(1-sin(x))*(1+sin(x))}$",
+        "$-\\frac{2cos(x)}{(1-sin(x))*(1+sin(x))}$"
+      ]
     },
     {
         "index": 107,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln\\frac{1-2x}{1+2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{-4}{1-{4x}^2}$",
+        "$\\frac{-4}{1-{2x}^2}$",
+        "$\\frac{4}{1-2x}$",
+        "$\\frac{2}{1-{2x}^2}$",
+        "$\\frac{1}{1-2x}$"
+      ]
     },
     {
         "index": 108,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln({sinx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$ctg(x)$",
+        "$tg(x)$",
+        "$2tg(x)$",
+        "$sin(x)cos(x)$",
+        "$2{sin}^2(x)$"
+      ]
     },
     {
         "index": 109,
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln({cosx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$tg(x)$",
+        "$ctg(x)$",
+        "$2tg(x)$",
+        "$sin(x)cos(x)$",
+        "$2{sin}^2(x)$"
+      ]
     },
     {
         "index": 110,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0=\\frac{1}{2}$   на графике функции $y={(3x-1)}^4$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{3}{2}$",
+        "$\\frac{1}{4}$",
+        "2",
+        "$-\\frac{3}{2}$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 111,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= -1$ на графике функции $y=\\frac{x+1}{x-1}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{3}{4}$",
+        "$\\frac{1}{4}$"
+      ]
     },
     {
         "index": 112,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{4}$ на графике функции $y= \\ln{(tgx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$2$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{3}{4}$",
+        "$0$"
+      ]
     },
     {
         "index": 113,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{6}$ на графике функции $y= \\ln{(sinx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
     },
     {
         "index": 114,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{3}$ на графике функции $y=  \\ln{(sinx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
     },
     {
         "index": 115,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{3}$ на графике функции $y=  \\ln{(cosx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
     },
     {
         "index": 116,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{6}$  на графике функции $y= \\ln{(cosx)}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
     },
     {
         "index": 117,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\pi$  на графике функции $y= e^{sinx}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "-1",
+            "1",
+            "2",
+            "-2",
+            "-3"
         ]
     },
     {
         "index": 118,
         "rightPos": 0,
         "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0=\\ \\frac{\\pi}{2}$ на графике функции $y= e^{cosx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "-1",
+        "1",
+        "2",
+        "-2",
+        "-3"
+      ]
     },
     {
         "index": 119,
         "rightPos": 0,
         "questiona": "Напишите уравнение касательной в точке $x = 1$ кривой $y=x^3-2x+2$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$y=x$",
+        "$y=x+2$",
+        "$y=x^2+2$",
+        "$y=x^3-3+3$",
+        "$y=2x-1$"
+      ]
     },
     {
         "index": 120,
         "rightPos": 0,
         "questiona": "Напишите уравнение касательной в точке $x = -3$ кривой $y=\\frac{x-1}{x+1}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$y=\\frac{1}{2}x+\\frac{7}{2}$",
+        "$y=\\frac{1}{3}x+\\frac{5}{2}$",
+        "$y=\\frac{1}{2}x+\\frac{9}{2}$",
+        "$y=\\frac{1}{2}x+\\frac{3}{2}$",
+        "$y=x+2$"
+      ]
     },
     {
         "index": 121,
         "rightPos": 0,
         "questiona": "Напишите уравнение касательной в точке $x = 8$ кривой $y=\\sqrt[3]{x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$y=\\frac{1}{12}x-\\frac{4}{3}$",
+        "$y=\\frac{1}{6}x+\\frac{5}{3}$",
+        "$y=\\frac{1}{3}x+\\frac{7}{2}$",
+        "$y=\\frac{1}{4}x+\\frac{9}{4}$",
+        "$y=\\frac{1}{8}x+\\frac{3}{2}$"
+      ]
     },
     {
         "index": 122,
         "rightPos": 0,
         "questiona": "Напишите уравнение касательной в точке $x = 2$ кривой $y=e^{x^2-2x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$y=2x-3$",
+        "$y=x+1$",
+        "$y=3x+2$",
+        "$y=x^2-2x+4$",
+        "$y=x^3-5x+7$"
+      ]
     },
     {
         "index": 123,
         "rightPos": 0,
         "questiona": "Напишите уравнение касательной в точке $x = 2$ кривой $y=\\frac{2x-1}{x+1}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$y=\\frac{1}{3}x+\\frac{1}{3}$",
+        "$y=\\frac{2}{3}x+\\frac{2}{3}$",
+        "$y=\\frac{1}{2}x+1$",
+        "$y=x+1$",
+        "$y=\\frac{1}{3}x-1$"
+      ]
     },
     {
         "index": 124,
         "rightPos": 0,
         "questiona": "Напишите уравнение касательной в точке $x = 1$ кривой $y={(3x-2)}^5$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$y=15x-14$",
+        "$y=15x-10$",
+        "$y=5x-14$",
+        "$y=10x-14$",
+        "$y=15x-20$"
+      ]
     },
     {
         "index": 125,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y=2x^3-3x^2$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "$(-\\infty;0)U(1;\\infty)$",
+            "$(-\\infty;1)U(1;\\infty)$",
+            "$(0;1)$",
+            "$(-1;1)$",
+            "$(-\\infty;-1)U(1;\\infty)$"
         ]
     },
     {
         "index": 126,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y=2x^3-3x^2$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(0;1)$",
+        "$(-1;1)$",
+        "$(-\\infty;0)U(1;\\infty)$",
+        "$(-\\infty;1)$",
+        "$(-\\infty;-1)U(1;\\infty)$"
+      ]
     },
     {
         "index": 127,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y=x^2-6x+7$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(3;\\infty)$",
+        "$(0;3)$",
+        "$(-\\infty;3)U(3;\\infty)$",
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(-33;\\infty)$"
+      ]
     },
     {
         "index": 128,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y=x^2-6x+7$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;3)$",
+        "$(0;3)$",
+        "$(-\\infty;3)U(3;\\infty)$",
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(-33;\\infty)$"
+      ]
     },
     {
         "index": 129,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y={xe}^x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-1;\\infty)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(1;\\infty)$",
+        "$-\\infty;0)U(1;\\infty)$"
+      ]
     },
     {
         "index": 130,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y={xe}^x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;1)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(1;\\infty)$",
+        "$-\\infty;0)U(1;\\infty)$"
+      ]
     },
     {
         "index": 131,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y={xe}^{-x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;1)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(1;\\infty)$",
+        "$-\\infty;0)U(1;\\infty)$"
+      ]
     },
     {
         "index": 132,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y={xe}^{-x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(1;\\infty)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(-1;\\infty)$",
+        "$-\\infty;1)$"
+      ]
     },
     {
         "index": 133,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y=2x^3-6x^2-18x+21$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;-1)U(3;\\infty)$",
+        "$(-\\infty;1)U(3;\\infty)$",
+        "$(-\\infty;-3)U(1;\\infty)$",
+        "$(-3;1)$",
+        "$(-1;3)$"
+      ]
     },
     {
         "index": 134,
         "rightPos": 0,
         "questiona": "Найдите интервалы убывания функции $y=2x^3-6x^2-18x+21$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-1;3)$",
+        "$(-\\infty;1)U(3;\\infty)$",
+        "$(-\\infty;-3)U(1;\\infty)$",
+        "$(-3;1)$",
+        "$(-\\infty;-1)U(3;\\infty)$"
+      ]
     },
     {
         "index": 135,
         "rightPos": 0,
         "questiona": "Найдите интервалы возрастания функции $y=\\frac{x}{x^2+4}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)U(-2;\\infty)$",
+        "$(-\\infty;2)$",
+        "$(2;\\infty)$"
+      ]
     },
     {
         "index": 136,
         "rightPos": 0,
         "questiona": "Найдите интервалы убывания функции $y=\\frac{x}{x^2+4}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(-2;\\infty)$",
+        "$(-\\infty;2)$",
+        "$(2;\\infty)$"
+      ]
     },
     {
         "index": 137,
         "rightPos": 0,
         "questiona": "Найдите интервалы возрастания функции $y=\\frac{x}{x^2+9}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-3;3)$",
+        "$(0;3)$",
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(-\\infty;3)U(6;\\infty)$",
+        "$(-\\infty;3)$"
+      ]
     },
     {
         "index": 138,
         "rightPos": 0,
         "questiona": "Найдите интервалы возрастания функции $y=\\frac{x}{x^2+9}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(0;3)$",
+        "$(-3;3)$",
+        "$(-\\infty;3)U(6;\\infty)$",
+        "$(-\\infty;3)$"
+      ]
     },
     {
         "index": 139,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y=x^2e^x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;-2)U(0;\\infty)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)$",
+        "$(-2;0)$",
+        "$(-2;2)$"
+      ]
     },
     {
         "index": 140,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y=x^2e^x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)$",
+        "$(-2;0)$",
+        "$(-\\infty;-2)U(0;\\infty)$"
+      ]
     },
     {
         "index": 141,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y=x^2e^{-x}$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "$(0;2)$",
+            "$(-\\infty;0)U(2;\\infty)$",
+            "$(-2;2)$",
+            "$(-\\infty;-2)U(2;\\infty)$",
+            "$(-\\infty;-2)U(0;\\infty)$"
         ]
     },
     {
         "index": 142,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y=x^2e^{-x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;0)U(2;\\infty)$",
+        "$(0;2)$",
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)U(0;\\infty)$"
+      ]
     },
     {
         "index": 143,
         "rightPos": 0,
         "questiona": "Найти интервалы возрастания функции $y=x^3-3x^2-9x+1$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-\\infty;-1)U(3;\\infty)$",
+        "$(-1;3)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(1;3)$",
+        "$(-\\infty;1)U(3;\\infty)$"
+      ]
     },
     {
         "index": 144,
         "rightPos": 0,
         "questiona": "Найдите интервалы убывания функции $y=x^3-3x^2-9x+1$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-1;3)$",
+        "$(-\\infty;-1)U(3;\\infty)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(1;3)$",
+        "$(-\\infty;1)U(3;\\infty)$"
+      ]
     },
     {
         "index": 145,
         "rightPos": 0,
         "questiona": "Найдите интервалы возрастания функции $y=x^3-3x^2-24x+3$",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "$(-\\infty;-2)U(4;\\infty)$",
+            "$(-2;4)$",
+            "$(-\\infty;2)U(2;\\infty)$",
+            "$(-2;2)$",
+            "$(0;2)$"
         ]
     },
     {
         "index": 146,
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y=x^3-3x^2-24x+3$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$(-2;4)$",
+        "$(-\\infty;-2)U(4;\\infty)$",
+        "$(-\\infty;2)U(2;\\infty)$",
+        "$(-2;2)$",
+        "$(0;2)$"
+      ]
     },
     {
         "index": 147,
