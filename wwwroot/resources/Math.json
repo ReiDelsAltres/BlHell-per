@@ -2511,217 +2511,217 @@
         "index": 211,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{(1+x)\\sqrt x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$2\\arctan(\\sqrt{x})+C$",
+        "$-\\arcctan(\\sqrt{x})+C$",
+        "$\\sqrt{x}+C$",
+        "$\\arctan(\\frac{1}{sqrt{x}})+C$",
+        "$\\frac{1}{2}\\arctan(\\frac{1}{sqrt{x}})+C$"
+      ]
     },
     {
         "index": 212,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{(4+x)\\sqrt x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\arctan(\\frac{\\sqrt{x}}{2})+C$",
+        "$-\\arcctan(\\sqrt{x})+C$",
+        "$\\sqrt{x}+C$",
+        "$\\arctan(\\frac{1}{sqrt{x}})+C$",
+        "$\\frac{1}{2}\\arctan(\\frac{1}{sqrt{x}})+C$"
+      ]
     },
     {
         "index": 213,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int l n x d x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$x\\ln(x)-x+C$",
+        "$\\ln(x)-x+C$",
+        "$x\\ln(\\frac{x}{2})+C$",
+        "$\\ln(\\frac{x}{2})+C$",
+        "$-\\ln(\\frac{x}{2})+C$"
+      ]
     },
     {
         "index": 214,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int x l n x d x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{x^2}{2}(\\ln(x)-\\frac{1}{2})+C$",
+        "$x^2(\\ln(x)-\\frac{1}{2})+C$",
+        "$-\\frac{x^2}{2}(\\ln(x)-\\frac{1}{2})+C$",
+        "$x^2(\\ln(x)+\\frac{1}{2})+C$",
+        "$\\frac{x^2}{2}(\\ln(x)-\\frac{1}{4})+C$"
+      ]
     },
     {
         "index": 215,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{xe^x}dx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$e^x(x-1)+C$",
+        "$e^x(x+1)+C$",
+        "$e^{x^2+x}+C$",
+        "$e^x$",
+        "$e^x(x+1)+C$"
+      ]
     },
     {
         "index": 216,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int x s i n x dx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-xcos(x)+sin(x)+C$",
+        "$-xcos(\\frac{1}{x})+sin(\\frac{1}{x})+C$",
+        "$xcos(\\frac{1}{x})+sin(\\frac{1}{x})+C$",
+        "$-xsin(x)+cos(x)+C$",
+        "$xsin(x)+cos(x)+C$"
+      ]
     },
     {
         "index": 217,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{lnx}{x}dx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{{(\\ln(x))}^2}{2}$",
+        "$\\frac{{(\\ln(x))}^3}{3}$",
+        "$\\frac{\\ln(x)}{2}$",
+        "$\\frac{\\ln(x)}{3}$",
+        "$-\\frac{\\ln(x)}{2}$"
+      ]
     },
     {
         "index": 218,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{sin}^3xcosxdx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{{sin}^4(x)}{4}+C$",
+        "$\\frac{{sin}^2(x)}{2}+C$",
+        "$-\\frac{{sin}^2(x)}{2}+C$",
+        "$\\frac{{cos}^2(x)}{2}+C$",
+        "$-\\frac{{cos}^2(x)}{2}+C$"
+      ]
     },
     {
         "index": 219,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{x^2e^{x^3}dx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{3}e^{x^3}+C$",
+        "$\\frac{1}{2}e^{x^2}+C$",
+        "$-3e^{x^3}+C$",
+        "$-2e^{x^2}+C$",
+        "$\\frac{1}{3}e^3+C$"
+      ]
     },
     {
         "index": 220,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{\\frac{cosx}{1+{sin}^2x}dx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\arctan(sin(x))+C$",
+        "$\\arcctan(sin(x))+C$",
+        "$-\\arctan(sin(x))+C$",
+        "$\\arctan(cos(x))+C$",
+        "$-\\arctan(cos(x))+C$"
+      ]
     },
     {
         "index": 221,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{xe^{x^2}dx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{2}e^{x^2}+C$",
+        "$\\frac{1}{3}e^{x^3}+C$",
+        "$-3e^{x^3}+C$",
+        "$-2e^{x^2}+C$",
+        "$\\frac{1}{3}e^3+C$"
+      ]
     },
     {
         "index": 222,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{e^{sinx}dx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{e^{sin(x)}}{sin(x)}+C$",
+        "$\\frac{e^{cos(x)}}{cos(x)}+C$",
+        "$\\frac{e^{sin(x)}}{cos(x)}+C$",
+        "$\\frac{e^{cos(x)}}{sin(x)}+C$",
+        "$-\\frac{e^{sin(x)}}{sin(x)}+C$"
+      ]
     },
     {
         "index": 223,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int2sin4xcos2xdx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{1}{6}cos(6x)-\\frac{1}{2}cos(2)+C$",
+        "$\\frac{1}{6}cos(6x)+\\frac{1}{2}cos(2)+C$",
+        "$-\\frac{1}{3}cos(3x)-\\frac{1}{2}cos(2)+C$",
+        "$\\frac{1}{3}cos(6x)+\\frac{1}{2}cos(2)+C$",
+        "$\\frac{1}{3}cos(6x)+\\frac{1}{4}cos(4)+C$"
+      ]
     },
     {
         "index": 224,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{\\sqrt{9-x^2}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\arcsin(\\frac{x}{3})+C$",
+        "$\\arcsin(\\frac{x}{2})+C$",
+        "$\\arcsin(\\frac{x}{\\sqrt{3}})+C$",
+        "$\\arccos(\\frac{x}{3})+C$",
+        "$-\\arccos(\\frac{x}{3})+C$"
+      ]
     },
     {
         "index": 225,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{\\sqrt{3-x^2}}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\arcsin(\\frac{x}{\\sqrt{3}})+C$",
+        "$\\arccos(\\frac{x}{3})+C$",
+        "$-\\arccos(\\frac{x}{3})+C$",
+        "$\\arcsin(\\frac{x}{3})+C$",
+        "$\\arcsin(\\frac{x}{2})+C$"
+      ]
     },
     {
         "index": 226,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{3-5x}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{1}{5}\\ln|3-5x|+C$",
+        "$-\\frac{1}{3}\\ln|3-5x|+C$",
+        "$\\frac{1}{5}\\ln|3-5x|+C$",
+        "$\\frac{1}{3}\\ln|3-5x|+C$",
+        "$\\frac{1}{3}\\ln|5-3x|+C$"
+      ]
     },
     {
         "index": 227,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{\\frac{5x^8-3}{x^4}dx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$x^5+\\frac{1}{x^3}+C$",
+        "$x^3+\\frac{1}{x^3}+C$",
+        "$x^3-\\frac{1}{x^3}+C$",
+        "$x^5-\\frac{1}{x^3}+C$",
+        "$5x+x^3+C$"
+      ]
     },
     {
         "index": 228,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{e^{cosx}sinxdx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-e^{cos(x)}+C$",
+        "$e^{cos(x)}+C$",
+        "$-e^{sin(x)}+C$",
+        "$e^{sin(x)}+C$",
+        "$-e^{\\tan(x)}+C$"
+      ]
     },
     {
         "index": 229,
@@ -3844,167 +3844,167 @@
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{2^nx^n}$?",
         "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "$\\frac{1}{2}$",
+            "$\\infty$",
+            "$0$",
+            "$-\\frac{1}{2}$",
+            "$2$"
         ]
     },
     {
         "index": 323,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{2^n}$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$2$",
+        "$\\infty$",
+        "$0$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 324,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{\\frac{n}{n+1}x^n}$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 325,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{nx}^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 326,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{n^2x}^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 327,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n}$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 328,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{n!x}^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$0$",
+        "$\\infty$",
+        "$1$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
     },
     {
         "index": 329,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{{10}^nx}^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{10}$",
+        "$\\infty$",
+        "$1$",
+        "$2$",
+        "$-\\frac{1}{10}$"
+      ]
     },
     {
         "index": 330,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n\\left(n+1\\right)}$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
     },
     {
         "index": 331,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n^2}$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
     },
     {
         "index": 332,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n!}$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\infty$",
+        "$1$",
+        "$0$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
     },
     {
         "index": 333,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{n}{2^n}x^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$2$",
+        "$1$",
+        "$\\infty$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
     },
     {
         "index": 334,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{2^n}{n}x^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\infty$",
+        "$-\\frac{1}{2}$",
+        "$0$"
+      ]
     },
     {
         "index": 335,
         "rightPos": 0,
         "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{n!}{3^n}x^n$?",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$0$",
+        "$1$",
+        "$\\infty$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
     }
 ]
