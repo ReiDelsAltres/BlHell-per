@@ -2727,217 +2727,217 @@
         "index": 229,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{tgx}{{cos}^2x}dx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{1}{2{cos}^{2}(x)}+C$",
+        "$\\frac{1}{2{cos}^{2}(x)}+C$",
+        "$-\\frac{1}{4{cos}^{4}(x)}+C$",
+        "$-\\frac{1}{2cos(x)}+C$",
+        "$\\frac{1}{cos^{2}(x)}+C$"
+      ]
     },
     {
         "index": 230,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int2sin3xcos2xdx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{5}cos(5x)-cos(x)+C$",
+        "$\\frac{1}{5}cos(x)-cos(5x)+C$",
+        "$cos(x)-\\frac{1}{5}cos(5x)+C$",
+        "$cos(5x)-\\frac{1}{5}cos(x)+C$",
+        "$cos(x)+\\frac{1}{5}cos(5x)+C$"
+      ]
     },
     {
         "index": 231,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int2^{-x}dx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$-\\frac{2^{-x}}{\\ln|2|}+C$",
+        "$\\frac{2^{-x}}{\\ln|2|}+C$",
+        "$-\\frac{2^{-x}}{\\2ln|2|}+C$",
+        "$-\\frac{2^{-x}}{\\-2ln|2|}+C$",
+        "$-\\frac{2^{-2x}}{\\2ln|2|}+C$"
+      ]
     },
     {
         "index": 232,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\frac{x}{{cos}^2x}dx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$x\\tan(x)+\\ln|cos(x)|+C$",
+        "$-x\\tan(x)+\\ln|cos(x)|+C$",
+        "$x\\tan(x)-\\ln|sin(x)|+C$",
+        "$x\\tan(x)+\\ln|sin(x)|+C$",
+        "$x\\tan(x)\\ln|cos(x)|+C$"
+      ]
     },
     {
         "index": 233,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{sin}^2xdx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{x}{2}-\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}-\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{2}sin(2x)+C$"
+      ]
     },
     {
         "index": 234,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int{cos}^2xdx$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{x}{2}+\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}-\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}-\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{2}sin(2x)+C$"
+      ]
     },
     {
         "index": 235,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\frac{1}{2}\\int{\\frac{\\sqrt x}{1+x}dx}$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\sqrt{x}-\\arctan(\\sqrt{x})+C$",
+        "$\\sqrt{x}+\\arctan(\\sqrt{x})+C$",
+        "$x-\\arctan(x)+C$",
+        "$x+\\arctan(x)+C$",
+        "$\\sqrt{x}-\\arctan(x)+C$"
+      ]
     },
     {
         "index": 236,
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int x c o s x d x$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$xsin(x)+cos(x)+C$",
+        "$xsin(x)+sin(x)+C$",
+        "$sin(\\frac{1}{x})+sin(\\frac{1}{x})+C$",
+        "$sin(\\frac{1}{x})-sin(\\frac{1}{x})+C$",
+        "$xcos(x)+cos(x)+C$"
+      ]
     },
     {
         "index": 237,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\sqrt x$, проходящей через точку $(1; frac{8}{3})$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{2}{3}x^{\\frac{3}{2}}+2$",
+        "$\\frac{2}{3}x^{\\frac{3}{2}}+\\frac{3}{8}$",
+        "$\\frac{2}{3}x^{\\frac{2}{3}}+2$",
+        "$\\frac{3}{2}x^{\\frac{3}{2}}+2$",
+        "$\\frac{2}{3}x^{\\frac{3}{2}}-2$"
+      ]
     },
     {
         "index": 238,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{\\sqrt{2x-1}}$, проходящей через точку $(5;2)$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\sqrt{2x-1}-1$",
+        "$\\sqrt{x-1}-1$",
+        "$\\sqrt{2x}+1$",
+        "$\\sqrt{x}+1$",
+        "$2x+3$"
+      ]
     },
     {
         "index": 239,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f(x)=(2x-1)4$, проходящей через точку $(1; 2.1)$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{{(2x-1)}^5}{10}+2$",
+        "$\\frac{{(2x-1)}^5}{10}+5$",
+        "$\\frac{{(2x-1)}^5}{5}+2$",
+        "$\\frac{{(x-1)}^5}{5}+2$",
+        "$\\frac{{(x-1)}^5}{5}+5$"
+      ]
     },
     {
         "index": 240,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{4+x^2}$ , проходящей через точку $(2;\\ \\frac{\\pi}{4})$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{2}\\arctan(\\frac{x}{2})+\\frac{\\pi}{8}$",
+        "$2\\arctan(\\frac{x}{2})+\\frac{\\pi}{8}$",
+        "$\\frac{1}{2}\\arctan(\\frac{x}{2})+\\frac{\\pi}{4}$",
+        "$2\\arctan(\\frac{x}{4})+\\frac{\\pi}{8}$",
+        "$\\frac{1}{2}\\arctan(\\frac{x}{4})+\\frac{\\pi}{8}$"
+      ]
     },
     {
         "index": 241,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)=e^{2x-1}$, проходящей через точку $(\\frac{1}{2};\\ 3\\frac{1}{2}\\ )$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{e^{2x-1}}{2}+2$",
+        "$\\frac{e^{2x+1}}{2}+2$",
+        "$\\frac{e^{2x}}{2}+2$",
+        "$\\frac{e^{2x}}{2}-2$",
+        "$\\frac{e^2}{2}+2$"
+      ]
     },
     {
         "index": 242,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{3x-2}$, проходящей через точку $(1;2)$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{3}\\ln|3x-2|+2$",
+        "$\\frac{1}{2}\\ln|2x-2|+2$",
+        "$\\frac{1}{2}\\ln|3x-2|+4$",
+        "$\\frac{1}{3}\\ln|3x-2|+4$",
+        "$\\frac{1}{2}\\ln|4x-2|+4$"
+      ]
     },
     {
         "index": 243,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)={cos}^2\\frac{x}{2}$, проходящей через точку $(\\pi\\ ;\\frac{3\\pi}{2})$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}+\\pi$",
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}+2$",
+        "$\\frac{x}{2}-\\frac{sin(x)}{2}+\\pi$",
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}-2\\pi$",
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}-2$"
+      ]
     },
     {
         "index": 244,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{\\sqrt{1-4x^2}}$  , проходящей через точку $(\\frac{1}{4}\\ ;\\frac{13\\pi}{12})$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{1}{2}\\arcsin(2x)+\\pi$",
+        "$\\frac{1}{4}\\arcsin(4x)+\\pi$",
+        "$\\frac{1}{4}\\arcsin(2x)+\\pi$",
+        "$-\\frac{1}{2}\\arcsin(2x)+\\pi$",
+        "$\\frac{1}{2}\\arcsin(4x)-\\pi$"
+      ]
     },
     {
         "index": 245,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f\\left(x\\right)={sin}^2\\frac{x}{2}$ , проходящей через точку $(\\pi\\ ;\\frac{3\\pi}{2})$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "$\\frac{x}{2}-\\frac{1}{2}sin(x)+\\pi$",
+        "$\\frac{x}{2}+\\frac{1}{2}sin(x)+\\pi$",
+        "$\\frac{x}{4}-\\frac{1}{4}sin(x)+\\pi$",
+        "$\\frac{x}{4}-\\frac{1}{2}sin(x)+\\pi$",
+        "$\\frac{x}{2}-\\frac{1}{4}sin(x)+\\pi$"
+      ]
     },
     {
         "index": 246,
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f(x) = ctgx$, проходящей через точку $(\\frac{\\pi}{2}\\ ;-1)$",
-        "answersa": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+      "answersa": [
+        "\\ln|\\sin(\\frac{\\pi}{2})|-1",
+        "\\ln|\\sin(\\frac{\\pi}{2})|+1",
+        "\\ln|\\cos(\\frac{\\pi}{2})|+1",
+        "\\ln|\\cos(\\frac{\\pi}{2})|-1",
+        "\\ln|\\cos(\\pi)|+1"
+      ]
     },
     {
         "index": 247,
