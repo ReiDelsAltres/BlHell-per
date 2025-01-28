@@ -2358,7 +2358,7 @@
       "answersa": [
         "$\\arcsin(2x)+C$",
         "$\\arccos(2x)+C$",
-        "$\\tg(2x)+C$",
+        "$\\tan(2x)+C$",
         "$\\cos(2x)+C$",
         "$\\arccos(4x)+C$"
       ]
