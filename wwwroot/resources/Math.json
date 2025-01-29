@@ -449,9 +449,9 @@
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt{1+x}-2}{x-3}}$",
       "answersa": [
         "$\\frac{1}{3}$",
-        "0",
+        "$0$",
         "$-\\frac{1}{3}$",
-        "-1",
+        "$-1$",
         "$-\\frac{2}{3}$"
       ]
     },
@@ -460,11 +460,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{sin\\pi x}{x}}$",
       "answersa": [
-        "0",
-        "π",
-        "-π",
-        "1",
-        "2π"
+        "$0$",
+        "$π$",
+        "$-\\pi$",
+        "$1$",
+        "$2\\pi$"
       ]
     },
     {
@@ -472,11 +472,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{1}{2}}{\\frac{sin\\pi x}{x}}$",
       "answersa": [
-        "2",
-        "0",
-        "-π",
+        "$2$",
+        "$0$",
+        "$-\\pi$",
         "$\\frac{1}{2}$",
-        "2π"
+        "$2\\pi$"
       ]
     },
     {
@@ -484,11 +484,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{1}{6}}{\\frac{sin\\pi x}{x}}$",
       "answersa": [
-        "3",
-        "0",
-        "6",
-        "-3",
-        "$\\frac{π}{6}$"
+        "$3$",
+        "$0$",
+        "$6$",
+        "$-3$",
+        "$\\frac{\\pi}{6}$"
       ]
     },
     {
@@ -496,11 +496,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{cos\\pi x}{x}}$",
       "answersa": [
-        "-1",
-        "0",
-        "1",
-        "$\\frac{1}{π}$",
-        "$-\\frac{1}{π}$"
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$\\frac{1}{\\pi}$",
+        "$-\\frac{1}{\\pi}$"
       ]
     },
     {
@@ -508,11 +508,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{sinx}{x}}$",
       "answersa": [
-        "$\\frac{2}{π}$",
-        "0",
-        "$-\\frac{2}{π}$",
-        "1",
-        "π"
+        "$\\frac{2}{\\pi}$",
+        "$0$",
+        "$-\\frac{2}{\\pi}$",
+        "$1$",
+        "$\\pi$"
       ]
     },
     {
@@ -520,11 +520,11 @@
         "rightPos": 0,
         "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{cosx}{x}}$",
       "answersa": [
-        "0",
-        "π",
-        "-1",
-        "$\\frac{1}{π}$",
-        "1"
+        "$0$",
+        "$\\pi$",
+        "$-1$",
+        "$\\frac{1}{\\pi}$",
+        "$1$"
       ]
     },
     {
@@ -3338,7 +3338,7 @@
     {
         "index": 280,
         "rightPos": 0,
-        "questiona": "Найдите $\\frac{\\partial u}{\\partial x}:\\frac{\\partial u}{\\partial y}$ для функций $u=\\ln\\funcapply(xy)$",
+        "questiona": "Найдите $\\frac{\\partial u}{\\partial x}:\\frac{\\partial u}{\\partial y}$ для функций $u=\\ln(xy)$",
       "answersa": [
         "$\\frac{y}{x}$",
         "$\\frac{x}{y}$",
