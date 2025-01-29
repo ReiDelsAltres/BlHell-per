@@ -1228,7 +1228,7 @@
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln({ctgx)}$",
       "answersa": [
-        "$\\frac{1}{cos(x)sin(x)}$",
+        "$-\\frac{1}{cos(x)sin(x)}$",
         "$\\frac{cos(2x)}{cos(x)sin(x)}$",
         "$\\frac{1}{sin(x)}$",
         "$\\frac{1}{cos(x)}$",
