@@ -110,7 +110,7 @@
   {
     "index": 10,
     "rightPos": 0,
-    "questiona": "Вычислите произведение f (-2) * f (1) для функции. $f(x) =\\begin{cases} 2 - x, & x \\leq 0, \\\\3x + 2, & x > 0.\\end{cases}$",
+    "questiona": "Вычислите произведение f (-2) * f (1) для функции. $f(x) =\\begin{cases} \\sqrt{2-x}, & x \\leq 0, \\\\3x + 2, & x > 0.\\end{cases}$",
     "answersa": [
       "$10$",
       "$24$",
