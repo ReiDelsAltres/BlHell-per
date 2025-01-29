@@ -1268,7 +1268,7 @@
         "$-\\frac{1}{cos(x)}$",
         "$\\frac{1}{(1-sin(x))*(1+sin(x))}$",
         "$\\frac{-2}{(1-sin(x))*(1+sin(x))}$",
-        "$-\\frac{2cos(x)}{(1-sin(x))*(1+sin(x))}$"
+        "$\\frac{2cos(x)}{(1-sin(x))*(1+sin(x))}$"
       ]
     },
     {
