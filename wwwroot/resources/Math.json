@@ -2188,11 +2188,11 @@
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int\\left(3x-1\\right)^9dx$",
       "answersa": [
-        "$\\frac{{3x-1}^10}{30}+C$",
-        "$\\frac{{3x-1}^10}{9}+C$",
-        "$\\frac{{3x-1}^11}{33}+C$",
+        "$\\frac{{3x-1}^{10}}{30}+C$",
+        "$\\frac{{3x-1}^{10}}{9}+C$",
+        "$\\frac{{3x-1}^{11}}{33}+C$",
         "$\\frac{{3x-1}^9}{27}+C$",
-        "$\\frac{{3x-1}^10}{3}+C$"
+        "$\\frac{{3x-1}^{10}}{3}+C$"
       ]
     },
     {
@@ -3230,7 +3230,7 @@
     {
         "index": 271,
         "rightPos": 0,
-        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=-x+5$, $y=\\frac{2}{3}x$ и $x=0$",
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=e^x$, $x=0$, $x=ln3$ и $y=0$",
       "answersa": [
         "$\\frac{15}{2}$",
         "$\\frac{11}{2}$",
@@ -3280,11 +3280,11 @@
         "rightPos": 0,
         "questiona": "Найдите площадь фигуры, ограниченную линиями $y=e^x$, $x=0$, $x=ln3$ и $y=0$",
         "answersa": [
-            "$0$",
+            "$2$",
             "$1$",
             "$\\frac{1}{2}$",
             "$-\\frac{1}{2}$",
-            "$-1$"
+            "$0$"
         ]
     },
     {
@@ -3388,11 +3388,11 @@
         "rightPos": 0,
         "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=sin(x-y)$",
       "answersa": [
-        "0",
-        "-\\cos(x-y)",
-        "\\cos(x-y)",
-        "-\\sin(x-y)",
-        "\\sin(x-y)"
+        "$0",
+        "$-\\cos(x-y)$",
+        "$\\cos(x-y)$",
+        "$-\\sin(x-y)$",
+        "$\\sin(x-y)$"
       ]
     },
     {
@@ -3400,11 +3400,11 @@
         "rightPos": 0,
         "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=sin(2x-3y)$",
       "answersa": [
-        "-\\cos(2x-3y)",
-        "0",
-        "\\cos(2x-3y)",
-        "-\\sin(2x-3y)",
-        "\\sin(2x-3y)"
+        "$-\\cos(2x-3y)$",
+        "$0$",
+        "$\\cos(2x-3y)$",
+        "$-\\sin(2x-3y)$",
+        "$\\sin(2x-3y)$"
       ]
     },
     {
@@ -3412,11 +3412,11 @@
         "rightPos": 0,
         "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=cos(x-y)$",
       "answersa": [
-        "0",
-        "-\\cos(x-y)",
-        "\\cos(x-y)",
-        "-\\sin(x-y)",
-        "\\sin(x-y)"
+        "$0$",
+        "$-\\cos(x-y)$",
+        "$\\cos(x-y)$",
+        "$-\\sin(x-y)$",
+        "$\\sin(x-y)$"
       ]
     },
     {
@@ -3424,11 +3424,11 @@
         "rightPos": 0,
         "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=cos (2x-3y)$",
       "answersa": [
-        "\\sin(2x-3y)",
-        "0",
-        "-\\cos(2x-3y)",
-        "-\\sin(2x-3y)",
-        "\\cos(2x-3y)"
+        "$\\sin(2x-3y)$",
+        "$0$",
+        "$-\\cos(2x-3y)$",
+        "$-\\sin(2x-3y)$",
+        "$\\cos(2x-3y)$"
       ]
     },
     {
@@ -3436,11 +3436,11 @@
         "rightPos": 0,
         "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u={sin}^2(x-y)$",
       "answersa": [
-        "0",
-        "-\\frac{\\cos2(x-y)}{2}",
-        "\\frac{\\cos(x-y)}{2}",
-        "-\\sin(x-y)",
-        "\\sin(x-y)"
+        "$0",
+        "$-\\frac{\\cos2(x-y)}{2}$",
+        "$\\frac{\\cos(x-y)}{2}$",
+        "$-\\sin(x-y)$",
+        "$\\sin(x-y)$"
       ]
     },
     {
