@@ -1552,7 +1552,7 @@
         "rightPos": 0,
         "questiona": "Найти интервалы убывания функции $y={xe}^x$",
       "answersa": [
-        "$(-\\infty;1)$",
+        "$(-\\infty;-1)$",
         "$(-\\infty;-1)U(1;\\infty)$",
         "$(-\\infty;-1)U(-1;\\infty)$",
         "$(1;\\infty)$",
