@@ -2740,7 +2740,7 @@
         "rightPos": 0,
         "questiona": "Вычислить интеграл. $\\int2sin3xcos2xdx$",
       "answersa": [
-        "$\\frac{1}{5}cos(5x)-cos(x)+C$",
+        "$-\\frac{1}{5}cos(5x)-cos(x)+C$",
         "$\\frac{1}{5}cos(x)-cos(5x)+C$",
         "$cos(x)-\\frac{1}{5}cos(5x)+C$",
         "$cos(5x)-\\frac{1}{5}cos(x)+C$",
@@ -2932,11 +2932,11 @@
         "rightPos": 0,
         "questiona": "Найдите первообразной функции $f(x) = ctgx$, проходящей через точку $(\\frac{\\pi}{2}\\ ;-1)$",
       "answersa": [
-        "\\ln|\\sin(\\frac{\\pi}{2})|-1",
-        "\\ln|\\sin(\\frac{\\pi}{2})|+1",
-        "\\ln|\\cos(\\frac{\\pi}{2})|+1",
-        "\\ln|\\cos(\\frac{\\pi}{2})|-1",
-        "\\ln|\\cos(\\pi)|+1"
+        "$\\ln|\\sin(\\frac{\\pi}{2})|-1$",
+        "$\\ln|\\sin(\\frac{\\pi}{2})|+1$",
+        "$\\ln|\\cos(\\frac{\\pi}{2})|+1$",
+        "$\\ln|\\cos(\\frac{\\pi}{2})|-1$",
+        "$\\ln|\\cos(\\pi)|+1$"
       ]
     },
     {
