@@ -3362,13 +3362,13 @@
     {
         "index": 282,
         "rightPos": 0,
-        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=ln(x2 – y2)$",
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=ln(x^2 – y^2)$",
       "answersa": [
         "$\\frac{2(x-y)}{x^2-y^2}$",
         "$\\frac{2(x+y)}{x^2+y^2}$",
         "$0$",
         "$\\frac{x-y}{x^2-y^2}$",
-        "$-\\frac{x+y)}{x^2+y^2}$"
+        "$-\\frac{x+y}{x^2+y^2}$"
       ]
     },
     {
