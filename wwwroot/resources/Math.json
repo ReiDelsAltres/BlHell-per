@@ -184,7 +184,7 @@
         "rightPos": 0,
         "questiona": "предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2n^2-n+1}{n^2}}$",
         "answersa": [
-            "$0$",
+            "$2$",
             "$1$",
             "$-1$",
             "$3$",
