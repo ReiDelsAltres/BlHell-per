@@ -2150,7 +2150,7 @@
     {
         "index": 181,
         "rightPos": 0,
-        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln\\funcapply(1+sinx)}{x}}$",
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1+sinx)}{x}}$",
       "answersa": [
         "$1$",
         "$\\frac{1}{2}$",
@@ -2370,7 +2370,7 @@
       "answersa": [
         "$\\arcsin(3x)+C$",
         "$\\arccos(3x)+C$",
-        "$\\tg(3x)+C$",
+        "$\\tan(3x)+C$",
         "$\\cos(3x)+C$",
         "$\\arccos(9x)+C$"
       ]
@@ -2513,7 +2513,7 @@
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{(1+x)\\sqrt x}$",
       "answersa": [
         "$2\\arctan(\\sqrt{x})+C$",
-        "$-\\arcctan(\\sqrt{x})+C$",
+        "$-\\arccot(\\sqrt{x})+C$",
         "$\\sqrt{x}+C$",
         "$\\arctan(\\frac{1}{sqrt{x}})+C$",
         "$\\frac{1}{2}\\arctan(\\frac{1}{sqrt{x}})+C$"
@@ -2525,7 +2525,7 @@
         "questiona": "Вычислить интеграл. $\\int\\frac{dx}{(4+x)\\sqrt x}$",
       "answersa": [
         "$\\arctan(\\frac{\\sqrt{x}}{2})+C$",
-        "$-\\arcctan(\\sqrt{x})+C$",
+        "$-\\arccot(\\sqrt{x})+C$",
         "$\\sqrt{x}+C$",
         "$\\arctan(\\frac{1}{sqrt{x}})+C$",
         "$\\frac{1}{2}\\arctan(\\frac{1}{sqrt{x}})+C$"
