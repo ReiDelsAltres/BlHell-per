@@ -19,6 +19,9 @@
 				<LimitedInputNumber DisplayName="Конец" @bind-Value="max" Min=this.min.GetValueOrDefault()+1 Max=this.Count />
 			</div>
 			<div>
+				<input class="let_it_be" type="checkbox" @bind-value="random" checked> Перемешать?
+			</div>
+			<div>
 				<div>Количество тестов:</div>
 				<LimitedInputNumber DisplayName="Число" @bind-Value="num" Min=1 Max=this.max.GetValueOrDefault()-this.min.GetValueOrDefault() />
 				<button class="btn btn-primary" @onclick="@onSubmitPopup">Подтвердить</button>
@@ -34,6 +37,8 @@
 	public int? min { get; set; } = 0;
 	[SupplyParameterFromForm]
 	public int? max { get; set; }
+	[SupplyParameterFromForm]
+	public bool? random { get; set; } = true;
 
 	public Popup popupRef;
 	public struct MouseEventArgsLocal(MouseEventArgs args, Popup popup)
@@ -60,7 +65,7 @@
 
 	internal async void onSubmitPopup(MouseEventArgs args)
 	{
-		Navigation.NavigateTo($"Test/{this.name}/{this.num}/{this.min}/{this.max}/{false}");
+		Navigation.NavigateTo($"Test/{this.name}/{this.num}/{this.min}/{this.max}/{this.random}");
 	}
 	internal async void onClick(MouseEventArgs args) 
 	{

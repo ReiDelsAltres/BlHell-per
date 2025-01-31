@@ -1,4 +1,4 @@
-﻿@page "/Test/{name}/{num:int}/{min:int}/{max:int}/{ai:bool}"
+﻿@page "/Test/{name}/{num:int}/{min:int}/{max:int}/{random:bool}"
 @inherits MathJaxContentComponentFixed
 
 @using BlHell_per.BlazorClasses
@@ -102,7 +102,7 @@
         "#c0392b"
     };
     [Parameter]
-    public bool ai { get; set; }
+    public bool random { get; set; }
     [Parameter]
     public string name { get; set; }
 
@@ -164,9 +164,10 @@
 
     protected override async Task OnInitializedAsync()
     {
+
         List<Question> questions = await Http.GetFromJsonAsync<List<Question>>($"resources/{name}.json");
         List<Question> choose = questions.GetRange(this.min, this.max);
-        choose.Shuffle();
+        if (random) choose.Shuffle();
 
         this.questions = new List<Question>();
 
@@ -218,31 +219,6 @@
             }
             this.doubleContextsList.Add(contexts);
         }
-
-        if (ai)
-        {
-            ChatClient client = new ChatClient(model: "gpt-4o-mini", apiKey: Environment.GetEnvironmentVariable("OPENAI_KEY"));
-
-            for (int i = 0; i < this.questions.Count; i++) 
-            {
-                Question question = this.questions[i];
-                ChatCompletion completion;
-                for(int j = 0; j < question.answersa.Length; j++) 
-                {
-                    string answer = question.answersa[j];
-                    if (answer != "") continue;
-
-                    if (j == question.rightPos) 
-                    {
-                        completion = await client.CompleteChatAsync($"Write right answer to the question: [5+5]");
-                    } else 
-                    {
-                        completion = await client.CompleteChatAsync($"Write wrong answer to the question: [{question.questiona}]");
-                    }
-                    question.answersa[j] = completion.Content[0].Text;
-                }
-            }
-    }
 
         await base.OnInitializedAsync();
     }
