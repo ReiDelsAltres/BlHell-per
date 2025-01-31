@@ -1034,7 +1034,7 @@
     {
         "index": 87,
         "rightPos": 0,
-        "questiona": "Вычислите  $f^\\prime(1)$ для функции $f\\left(x\\right)=\\ln\\funcapply(1+3x)$",
+        "questiona": "Вычислите  $f^\\prime(1)$ для функции $f\\left(x\\right)=\\ln(1+3x)$",
       "answersa": [
         "$\\frac{3}{4}$",
         "$-\\frac{3}{4}$",
@@ -2102,7 +2102,7 @@
     {
         "index": 177,
         "rightPos": 0,
-        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{\\frac{\\lnx}{x}}$",
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{\\frac{\\ln(x)}{x}}$",
       "answersa": [
         "$0$",
         "$\\frac{1}{2}$",
@@ -2621,7 +2621,7 @@
         "questiona": "Вычислить интеграл. $\\int{\\frac{cosx}{1+{sin}^2x}dx}$",
       "answersa": [
         "$\\arctan(sin(x))+C$",
-        "$\\arcctan(sin(x))+C$",
+        "$\\arccot(sin(x))+C$",
         "$-\\arctan(sin(x))+C$",
         "$\\arctan(cos(x))+C$",
         "$-\\arctan(cos(x))+C$"
@@ -3388,7 +3388,7 @@
         "rightPos": 0,
         "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=sin(x-y)$",
       "answersa": [
-        "$0",
+        "$0$",
         "$-\\cos(x-y)$",
         "$\\cos(x-y)$",
         "$-\\sin(x-y)$",
