@@ -1300,7 +1300,7 @@
         "rightPos": 0,
         "questiona": "Вычислите производную функции. $y= ln({cosx)}$",
       "answersa": [
-        "$tg(x)$",
+        "$-tg(x)$",
         "$ctg(x)$",
         "$2tg(x)$",
         "$sin(x)cos(x)$",
