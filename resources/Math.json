@@ -1,0 +1,4010 @@
+[
+    {
+        "index": 1,
+        "rightPos": 0,
+        "questiona": "Найдите область определения функции. $f(x) = \\sqrt{x-2}+\\ \\sqrt{5-x}$",
+      "answersa": [
+        "$x∈[2;5]$",
+        "$x∈(−\\infty;5]$",
+        "$x∈[2;\\infty)$",
+        "$x∈[2;5)$",
+        "$x∈(−\\infty;2]$"
+      ]
+    },
+    {
+        "index": 2,
+        "rightPos": 0,
+        "questiona": "Найдите область определения функции. $f(x) = \\sqrt{3-x}+\\ \\sqrt{x-1}$",
+      "answersa": [
+        "$x∈[1;3]$",
+        "$x∈[3;\\infty)$",
+        "$x∈(-\\infty;3]$",
+        "$x∈(1;3)$",
+        "$x∈[1;3)$"
+      ]
+    },
+    {
+        "index": 3,
+        "rightPos": 0,
+        "questiona": "Найдите область определения функции. $f(x) = \\frac{\\sqrt{4-x}}{\\sqrt{x+1}}$",
+      "answersa": [
+        "$x∈(-1;4]$",
+        "$x∈[-1;4)$",
+        "$x∈[-1;\\infty)$",
+        "$x∈[4;\\infty)$",
+        "$x∈(-\\infty;3]$"
+      ]
+    },
+    {
+        "index": 4,
+        "rightPos": 0,
+        "questiona": "Найдите область определения функции. $f(x) = \\sqrt{x^2-2x-3}$",
+      "answersa": [
+        "$x∈(−\\infty,−1]∪[3,\\infty)$",
+        "$x∈[-1;3)$",
+        "$x∈(−\\infty,−1)∪(3,\\infty)$",
+        "$x∈[-3;-1)$",
+        "$x∈[-4;-1)$"
+      ]
+    },
+    {
+        "index": 5,
+        "rightPos": 0,
+        "questiona": "Найдите область определения функции. $f(x) = \\log_2{(x^2-1)}$",
+      "answersa": [
+        "$x∈(−\\infty,−1)∪(1,\\infty)$",
+        "$x>1$",
+        "$x≥−1$",
+        "$x∈(−\\infty,−1]∪[1,\\infty)$",
+        "$x∈(−\\infty,1]$"
+      ]
+    },
+  {
+    "index": 6,
+    "rightPos": 0,
+    "questiona": "Вычислите произведение f (1) * f (3) для функции $f(x) = \\begin{cases}  -2x + 1, & x \\leq 2, \\\\ x^2, & x > 2. \\end{cases}$",
+    "answersa": [
+      "$−9$",
+      "$-12$",
+      "$126$",
+      "$-90$",
+      "$9$"
+    ]
+  },
+  {
+    "index": 7,
+    "rightPos": 0,
+    "questiona": "Вычислите произведение f (-1) * f (2) для функции $f(x) = \\begin{cases} 3x - 1, & x \\leq -1, \\\\x^2 + 1, & x > -1.\\end{cases}$",
+    "answersa": [
+      "$-20$",
+      "$-15$",
+      "$20$",
+      "$-16$",
+      "$15$"
+    ]
+  },
+  {
+    "index": 8,
+    "rightPos": 0,
+    "questiona": "Вычислите произведение f (-2) * f (0) для функции $f(x) =\\begin{cases} x^2 - 1, & x \\leq -1, \\\\4x + 3, & x > -1.\\end{cases}$",
+    "answersa": [
+      "$9$",
+      "$6$",
+      "$-9$",
+      "$3$",
+      "$-3$"
+    ]
+  },
+  {
+    "index": 9,
+    "rightPos": 0,
+    "questiona": "Вычислите произведение f (3) * f (-1) для функции. $f(x) =\\begin{cases} 2x - 1, & x \\leq 2, \\\\x + 1, & x > 2.\\end{cases}$",
+    "answersa": [
+      "$-12$",
+      "$-9$",
+      "$-6$",
+      "$6$",
+      "$4$"
+    ]
+  },
+  {
+    "index": 10,
+    "rightPos": 0,
+    "questiona": "Вычислите произведение f (-2) * f (1) для функции. $f(x) =\\begin{cases} \\sqrt{2-x}, & x \\leq 0, \\\\3x + 2, & x > 0.\\end{cases}$",
+    "answersa": [
+      "$10$",
+      "$24$",
+      "$-10$",
+      "$15$",
+      "$-24$"
+    ]
+  },
+    {
+        "index": 11,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2-n}{3n+1}}$",
+      "answersa": [
+        "$-\\frac{1}{3}$",
+        "$\\frac{1}{3}$",
+        "$0$",
+        "$-\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 12,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{3n-1}{2n+1}}$",
+      "answersa": [
+        "$\\frac{3}{2}$",
+        "$1$",
+        "$2$",
+        "$\\frac{1}{2}$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 13,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2n-1}{n^2-3n+4}}$",
+      "answersa": [
+        "$0$",
+        "$2$",
+        "$-1$",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 14,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2n^2-5n+1}{{3n}^2+2n-4}}$",
+      "answersa": [
+        "$\\frac{2}{3}$",
+        "$2$",
+        "$\\frac{3}{2}$",
+        "$1$",
+        "$\\frac{5}{3}$"
+      ]
+    },
+    {
+        "index": 15,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{-n^2+2n-1}{{4n}^2-n+2}}$",
+      "answersa": [
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{2}$",
+        "$0$",
+        "$\\frac{1}{4}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 16,
+        "rightPos": 0,
+        "questiona": "предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2n^2-n+1}{n^2}}$",
+        "answersa": [
+            "$2$",
+            "$1$",
+            "$-1$",
+            "$3$",
+            "$-2$"
+        ]
+    },
+    {
+        "index": 17,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{{(1+\\frac{1}{n})}^n}$",
+        "answersa": [
+            "$e$",
+            "$1$",
+            "$2$",
+            "$e^2$",
+            "$ln(e)$"
+        ]
+    },
+    {
+        "index": 18,
+        "rightPos": 0,
+        "questiona": "Вычислите предел последовательности. $\\lim\\limits_{n\\rightarrow\\infty}{\\frac{2n^2+3n+1}{n^2+1}}$",
+        "answersa": [
+            "$2$",
+            "$3$",
+            "$1$",
+            "$0$",
+            "$4$"
+        ]
+    },
+    {
+        "index": 19,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{n\\rightarrow2}{\\frac{x^2+x+3}{x+1}}$",
+        "answersa": [
+            "$3$",
+            "$5$",
+            "$4$",
+            "$2$",
+            "$6$"
+        ]
+    },
+    {
+        "index": 20,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-3}{\\frac{x^2-9}{x+3}}$",
+        "answersa": [
+            "$-6$",
+            "$6$",
+            "$0$",
+            "$-9$",
+            "$-3$"
+        ]
+    },
+    {
+        "index": 21,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow2}{\\frac{x-2}{x^2+x-6}}$",
+      "answersa": [
+        "$\\frac{1}{5}$",
+        "$0$",
+        "$-\\frac{1}{5}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{2}{3}$"
+      ]
+    },
+    {
+        "index": 22,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow2}{\\frac{x^3-8}{x-2}}$",
+        "answersa": [
+            "$12$",
+            "$8$",
+            "$6$",
+            "$10$",
+            "$14$"
+        ]
+    },
+    {
+        "index": 23,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-2}{\\frac{x^3+8}{x+2}}$",
+        "answersa": [
+            "$12$",
+            "$-12$",
+            "$0$",
+            "$10$",
+            "$14$"
+        ]
+    },
+    {
+        "index": 24,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-3}{\\frac{x^2+2x-3}{x^2+5x+6}}$",
+      "answersa": [
+        "$4$",
+        "$0$",
+        "$-\\frac{1}{3}$",
+        "$-4$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 25,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\infty}{\\frac{2x-1}{3x+4}}$",
+      "answersa": [
+        "$\\frac{2}{3}$",
+        "$2$",
+        "$1$",
+        "$\\frac{3}{2}$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 26,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\infty}{\\frac{3-2x}{4+5x}}$",
+      "answersa": [
+        "$-\\frac{2}{5}$",
+        "$\\frac{2}{5}$",
+        "$-\\frac{3}{4}$",
+        "$0$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 27,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\infty}{\\frac{x^2-x+4}{{6x}^2-2x+1}}$",
+      "answersa": [
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{2}{6}$",
+        "$0$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 28,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\infty}{\\frac{{10x}^2-7x+1}{{5x}^2+x-1}}$",
+      "answersa": [
+        "$2$",
+        "$1$",
+        "$0$",
+        "$3$",
+        "$\\frac{5}{2}$"
+      ]
+    },
+    {
+        "index": 29,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\infty}{\\frac{1+x-2x^2}{2-x+x^2}}$",
+        "answersa": [
+            "$-2$",
+            "$2$",
+            "$-1$",
+            "$0$",
+            "$-3$"
+        ]
+    },
+    {
+        "index": 30,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\infty}{\\frac{1+x}{x^2-x-1}}$",
+      "answersa": [
+        "$0$",
+        "$1$",
+        "$-1$",
+        "$\\infty$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 31,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{x^3-1}{x^2-1}}$",
+      "answersa": [
+        "$\\frac{3}{2}$",
+        "$2$",
+        "$1$",
+        "$0$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 32,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-1}{\\frac{x^3+1}{x^2-1}}$",
+      "answersa": [
+        "$-\\frac{3}{2}$",
+        "$0$",
+        "$-2$",
+        "$\\frac{1}{2}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 33,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{\\sqrt x-1}{x-1}}$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "$2$",
+        "$1$",
+        "$0$",
+        "-$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 34,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt{1+x}-1}{x}}$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "$2$",
+        "$1$",
+        "$0$",
+        "$-\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 35,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{(\\sqrt{x+1}}-\\sqrt x$",
+      "answersa": [
+        "$0$",
+        "$1$",
+        "$-1$",
+        "$\\infty$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 36,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{n\\rightarrow+\\infty}{(\\sqrt{n+1}}-\\sqrt n$",
+      "answersa": [
+        "$0$",
+        "$1$",
+        "$-1$",
+        "$\\infty$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 37,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow2}{\\frac{x-2}{x^2+3x-10}}$",
+      "answersa": [
+        "$\\frac{1}{7}$",
+        "$0$",
+        "$-\\frac{1}{7}$",
+        "$\\frac{1}{5}$",
+        "$-\\frac{1}{5}$"
+      ]
+    },
+    {
+        "index": 38,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt{1+x}-2}{x-3}}$",
+      "answersa": [
+        "$\\frac{1}{3}$",
+        "$0$",
+        "$-\\frac{1}{3}$",
+        "$-1$",
+        "$-\\frac{2}{3}$"
+      ]
+    },
+    {
+        "index": 39,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{sin\\pi x}{x}}$",
+      "answersa": [
+        "$0$",
+        "$π$",
+        "$-\\pi$",
+        "$1$",
+        "$2\\pi$"
+      ]
+    },
+    {
+        "index": 40,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{1}{2}}{\\frac{sin\\pi x}{x}}$",
+      "answersa": [
+        "$2$",
+        "$0$",
+        "$-\\pi$",
+        "$\\frac{1}{2}$",
+        "$2\\pi$"
+      ]
+    },
+    {
+        "index": 41,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{1}{6}}{\\frac{sin\\pi x}{x}}$",
+      "answersa": [
+        "$3$",
+        "$0$",
+        "$6$",
+        "$-3$",
+        "$\\frac{\\pi}{6}$"
+      ]
+    },
+    {
+        "index": 42,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{\\frac{cos\\pi x}{x}}$",
+      "answersa": [
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$\\frac{1}{\\pi}$",
+        "$-\\frac{1}{\\pi}$"
+      ]
+    },
+    {
+        "index": 43,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{sinx}{x}}$",
+      "answersa": [
+        "$\\frac{2}{\\pi}$",
+        "$0$",
+        "$-\\frac{2}{\\pi}$",
+        "$1$",
+        "$\\pi$"
+      ]
+    },
+    {
+        "index": 44,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{2}}{\\frac{cosx}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\pi$",
+        "$-1$",
+        "$\\frac{1}{\\pi}$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 45,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{sin3x}{x}}$",
+        "answersa": [
+            "3",
+            "1",
+            "0",
+            "-3",
+            "6"
+        ]
+    },
+    {
+        "index": 46,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{sin5x}{x}}$",
+        "answersa": [
+            "5",
+            "1",
+            "0",
+            "-5",
+            "10"
+        ]
+    },
+    {
+        "index": 47,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{sin2x}{sin3x}}$",
+      "answersa": [
+        "$\\frac{2}{3}$",
+        "1",
+        "$-\\frac{2}{3}$",
+        "0",
+        "$\\frac{3}{2}$"
+      ]
+    },
+    {
+        "index": 48,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{tg5x}{x}}$",
+        "answersa": [
+            "5",
+            "1",
+            "0",
+            "-5",
+            "10"
+        ]
+    },
+    {
+        "index": 49,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{sin10x}{sin5x}}$",
+        "answersa": [
+            "2",
+            "1",
+            "0",
+            "-2",
+            "5"
+        ]
+    },
+    {
+        "index": 50,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{cos3x}{cosx}}$",
+        "answersa": [
+            "1",
+            "0",
+            "-1",
+            "3",
+            "2"
+        ]
+    },
+    {
+        "index": 51,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{1-cos2x}{x^2}}$",
+        "answersa": [
+            "2",
+            "1",
+            "4",
+            "0",
+            "-2"
+        ]
+    },
+    {
+        "index": 52,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{sin\\frac{x}{4}}{x}}$",
+      "answersa": [
+        "$\\frac{1}{4}$",
+        "4",
+        "0",
+        "$-\\frac{1}{4}$",
+        "1"
+      ]
+    },
+    {
+        "index": 53,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{1-cos2x}{xsinx}}$",
+        "answersa": [
+            "2",
+            "1",
+            "0",
+            "-2",
+            "4"
+        ]
+    },
+    {
+        "index": 54,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{x}{sin4x}}$",
+      "answersa": [
+        "$\\frac{1}{4}$",
+        "4",
+        "0",
+        "$-\\frac{1}{4}$",
+        "1"
+      ]
+    },
+    {
+        "index": 55,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{sin\\frac{2x}{3}}{x}}$",
+      "answersa": [
+        "$\\frac{2}{3}$",
+        "1",
+        "0",
+        "$\\frac{3}{2}$",
+        "$-\\frac{2}{3}$"
+      ]
+    },
+    {
+        "index": 56,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{tg3x}{x}}$",
+        "answersa": [
+            "3",
+            "1",
+            "0",
+            "-3",
+            "6"
+        ]
+    },
+    {
+        "index": 57,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{1-cos2x}{sinx}}$",
+        "answersa": [
+            "0",
+            "2",
+            "$\\frac{1}{2}$",
+            "-2",
+            "1"
+        ]
+    },
+    {
+        "index": 58,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow1}{(\\frac{1}{x-1}}-\\frac{2}{x^2-1})$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "-2",
+        "$-\\frac{2}{3}$",
+        "$-\\frac{1}{2}$",
+        "0"
+      ]
+    },
+    {
+        "index": 59,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow-1}{(\\frac{1}{x+1}}+\\frac{2}{x^2-1})$",
+      "answersa": [
+        "$-\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "0",
+        "$\\frac{1}{2}$",
+        "1"
+      ]
+    },
+    {
+        "index": 60,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow2}{(\\frac{1}{x-2}}-\\frac{4}{x^2-4})$",
+      "answersa": [
+        "$\\frac{1}{4}$",
+        "2",
+        "$-\\frac{1}{4}$",
+        "-2",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 61,
+        "rightPos": 0,
+        "questiona": "Вычислите предел.  $\\lim\\limits_{x\\rightarrow-2}{(\\frac{1}{x+2}}+\\frac{4}{x^2-4})$",
+      "answersa": [
+        "$-\\frac{1}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "2",
+        "$-\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 62,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^{2x}-1}{x}}$",
+      "answersa": [
+        "2",
+        "1",
+        "0",
+        "e",
+        "-2"
+      ]
+    },
+    {
+        "index": 63,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^{-3x}-1}{x}}$",
+        "answersa": [
+            "-3",
+            "3",
+            "0",
+            "-1",
+            "1"
+        ]
+    },
+    {
+        "index": 64,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^\\frac{x}{2}-1}{x}}$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "2",
+        "0",
+        "$-\\frac{1}{2}$",
+        "1"
+      ]
+    },
+    {
+        "index": 65,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt{1+x}-1}{x}}$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "0",
+        "1",
+        "$-\\frac{1}{2}$",
+        "2"
+      ]
+    },
+    {
+        "index": 66,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\sqrt[3]{1+2x}-1}{x}}$",
+      "answersa": [
+        "$\\frac{2}{3}$",
+        "2",
+        "$\\frac{3}{2}$",
+        "-2",
+        "3"
+      ]
+    },
+    {
+        "index": 67,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1+2x)}{x}}$",
+        "answersa": [
+            "2",
+            "1",
+            "0",
+            "-2",
+            "e"
+        ]
+    },
+    {
+        "index": 68,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1-3x)}{x}}$",
+        "answersa": [
+            "-3",
+            "3",
+            "0",
+            "-1",
+            "-2"
+        ]
+    },
+    {
+        "index": 69,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1-5x)}{x}}$",
+        "answersa": [
+            "-5",
+            "5",
+            "0",
+            "-1",
+            "-3"
+        ]
+    },
+    {
+        "index": 70,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{{(1+\\frac{1}{x})}^{2x}}$",
+      "answersa": [
+        "$e^2$",
+        "e",
+        "1",
+        "$e^x$",
+        "0"
+      ]
+    },
+    {
+        "index": 71,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{{(1-\\frac{1}{x})}^x}$",
+      "answersa": [
+        "-e",
+        "e",
+        "1",
+        "$e^x$",
+        "$e^2x$"
+      ]
+    },
+    {
+        "index": 72,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(-2)$ для функции $f\\left(x\\right)=\\frac{1}{2}x^2-x+3$",
+        "answersa": [
+            "-3",
+            "7",
+            "-7",
+            "-2",
+            "2"
+        ]
+    },
+    {
+        "index": 73,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(-1)$ для функции $f\\left(x\\right)=\\frac{1}{3}x^3-x^2+3x-1$",
+        "answersa": [
+            "6",
+            "3",
+            "9",
+            "-6",
+            "-3"
+        ]
+    },
+    {
+        "index": 74,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(-1)$ для функции $f\\left(x\\right)=x^4-\\frac{1}{3}x^3+x^2-1$",
+        "answersa": [
+            "-7",
+            "6",
+            "8",
+            "14",
+            "-6"
+        ]
+    },
+    {
+        "index": 75,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{4})$ для функции $f\\left(x\\right)={sin}^2x$",
+      "answersa": [
+        "1",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$\\frac{1}{4}$",
+        "-1"
+      ]
+    },
+    {
+        "index": 76,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{4})$ для функции $f\\left(x\\right)={cos}^2x$",
+      "answersa": [
+        "1",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{4}$",
+        "-1"
+      ]
+    },
+    {
+        "index": 77,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(1)$ для функции $f\\left(x\\right)={(3x-2)}^{10}$",
+        "answersa": [
+            "30",
+            "126",
+            "-126",
+            "-30",
+            "-33"
+        ]
+    },
+    {
+        "index": 78,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(2)$ для функции $f\\left(x\\right)={(3x-4)}^4$",
+        "answersa": [
+            "96",
+            "-96",
+            "32",
+            "-32",
+            "64"
+        ]
+    },
+    {
+        "index": 79,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(\\frac{1}{3})$ для функции $f\\left(x\\right)=e^{3x-1}$",
+      "answersa": [
+        "3",
+        "9",
+        "-3",
+        "-9",
+        "e^3"
+      ]
+    },
+    {
+        "index": 80,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(\\frac{1}{2})$ для функции $f\\left(x\\right)=e^{-2x+1}$",
+        "answersa": [
+            "-2",
+            "2",
+            "1",
+            "-1",
+            "$e^2$"
+        ]
+    },
+    {
+        "index": 81,
+        "rightPos": 0,
+        "questiona": "Вычислите  $f^\\prime(-1)$ для функции $f\\left(x\\right)=e^{x^2-1}$",
+      "answersa": [
+        "-2",
+        "2",
+        "1",
+        "-1",
+        "$e^2$"
+      ]
+    },
+    {
+        "index": 82,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(0)$ для функции $f\\left(x\\right)=3^{sinx}$",
+      "answersa": [
+        "$ln(3)$",
+        "1",
+        "0",
+        "$\\frac{1}{3}$",
+        "$-ln(3)$"
+      ]
+    },
+    {
+        "index": 83,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{2})$ для функции $f\\left(x\\right)={10}^{cosx}$",
+      "answersa": [
+        "$-ln(10)$",
+        "$ln(10)$",
+        "10",
+        "1",
+        "0"
+      ]
+    },
+    {
+        "index": 84,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(1)$ для функции $f\\left(x\\right)=2^{3x-2}$",
+      "answersa": [
+        "$6ln(2)$",
+        "$-6ln(2)$",
+        "$ln(2)$",
+        "6",
+        "-6"
+      ]
+    },
+    {
+        "index": 85,
+        "rightPos": 0,
+        "questiona": "Вычислить $f^\\prime(\\frac{\\pi}{3})$ для функции $f\\left(x\\right)=tg3x$",
+        "answersa": [
+            "3",
+            "-3",
+            "6",
+            "9",
+            "-6"
+        ]
+    },
+    {
+        "index": 86,
+        "rightPos": 0,
+        "questiona": "Вычислите $f^\\prime(\\frac{\\pi}{4})$ для функции $f\\left(x\\right)=ctg2x$",
+        "answersa": [
+            "-2",
+            "2",
+            "3",
+            "4",
+            "-4"
+        ]
+    },
+    {
+        "index": 87,
+        "rightPos": 0,
+        "questiona": "Вычислите  $f^\\prime(1)$ для функции $f\\left(x\\right)=\\ln(1+3x)$",
+      "answersa": [
+        "$\\frac{3}{4}$",
+        "$-\\frac{3}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{4}{3}$",
+        "$-\\frac{4}{3}$"
+      ]
+    },
+    {
+        "index": 88,
+        "rightPos": 0,
+        "questiona": "Вычислите  $f^\\prime(-1)$ для функции $f\\left(x\\right)=\\ln(1-3x)$",
+      "answersa": [
+        "$-\\frac{3}{4}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{4}{3}$",
+        "$-\\frac{4}{3}$"
+      ]
+    },
+    {
+        "index": 89,
+        "rightPos": 0,
+        "questiona": "Вычислите  $f^\\prime(0)$ для функции $f\\left(x\\right)=\\log_2{(1+x)}$",
+      "answersa": [
+        "$\\frac{1}{ln(2)}$",
+        "$ln(2)$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{ln(3)}$",
+        "$-\\frac{1}{ln(2)}$"
+      ]
+    },
+    {
+        "index": 90,
+        "rightPos": 0,
+        "questiona": "Вычислите  $f^\\prime(0)$ для функции $f\\left(x\\right)=\\log_2{(1-x)}$",
+      "answersa": [
+        "$-\\frac{1}{ln(2)}$",
+        "$ln(2)$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{ln(3)}$",
+        "$\\frac{1}{ln(2)}$"
+      ]
+    },
+    {
+        "index": 91,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= \\frac{cosx}{1+sinx}$",
+      "answersa": [
+        "$\\frac{-(sin(x)+1)}{(1+sin(x))^2}$",
+        "$\\frac{sin(x)-1}{(1+sin(x))^2}$",
+        "$\\frac{1-cos(x)}{(1+sin(x))^2}$",
+        "$\\frac{1-cos(x)}{cos(x)^2}$",
+        "$\\frac{-(sin(x)+1)}{cos(x)^2}$"
+      ]
+    },
+    {
+        "index": 92,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= \\frac{sinx}{1+cosx}$",
+      "answersa": [
+        "$\\frac{cos(x)+1}{{(1+cos(x))}^2}$",
+        "$\\frac{-(cos(x)+1)}{{(1+cos(x))}^2}$",
+        "$\\frac{sin(x)+1}{{(1-sin(x))}^2}$",
+        "$\\frac{sin(x)+cos(x)}{{sin(x)}^2}$",
+        "$\\frac{sin(x)-cos(x)}{{sin(x)}^2}$"
+      ]
+    },
+    {
+        "index": 93,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= {sin}^4x+{cos}^4x$",
+      "answersa": [
+        "$4sin(x)cos(x)cos(2x)$",
+        "$4sin(x)cos(x){sin}^2(x)*{cos}^2(x)$",
+        "$4sin(x)cos(x)$",
+        "$-2sin(x)cos(x)cos(2x)$",
+        "$-2sin(x)cos(x){sin}^2(x)*{cos}^2(x)$"
+      ]
+    },
+    {
+        "index": 94,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= {sin}^4x-{cos}^4x$",
+      "answersa": [
+        "$4sin(x)cos(x)$",
+        "$4sin(x)cos(x){sin}^2(x)*{cos}^2(x)$",
+        "$4sin(x)cos(x)cos(2x)$",
+        "$-2sin(x)cos(x)cos(2x)$",
+        "$-2sin(x)cos(x){sin}^2(x)*{cos}^2(x)$"
+      ]
+    },
+    {
+        "index": 95,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln\\frac{1-x}{1+x}$",
+      "answersa": [
+        "$\\frac{-2}{1-{x}^2}$",
+        "$\\frac{-2}{{(1-x)}^2}$",
+        "$\\frac{-1+x}{{(1-x)}^2}$",
+        "$\\frac{-1+x}{1-{x}^2}$",
+        "$-\\frac{2}{{x}^2}$"
+      ]
+    },
+    {
+        "index": 96,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= \\ln{sin2x}$",
+      "answersa": [
+        "$2ctg(2x)$",
+        "${ctg}^2(x)$",
+        "$2sin(2x)$",
+        "$2cos(2x)$",
+        "$-2sin(2x)$"
+      ]
+    },
+    {
+        "index": 97,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= \\ln{cos2x}$",
+      "answersa": [
+        "$-2tg(2x)$",
+        "${ctg}^2(x)$",
+        "$2sin(2x)$",
+        "$2cos(2x)$",
+        "$-2sin(2x)$"
+      ]
+    },
+    {
+        "index": 98,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= e^{{sin}^2x}$",
+      "answersa": [
+        "$e^{sin^2(x)}*sin(2x)$",
+        "$e^{cos^2(x)}*cos(2x)$",
+        "$e^{sin^2(x)}*cos(2x)sin(2x)$",
+        "$sin^2(x)sin(2x)$",
+        "$e^{sin^2(x)}*cos(2x)$"
+      ]
+    },
+    {
+        "index": 99,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= e^{{cos}^2x}$",
+      "answersa": [
+        "$-e^{cos^2(x)}*2cos(x)sin(x)$",
+        "$e^{cos^2(x)}*cos(2x)$",
+        "$-e^{sin^2(x)}*cos(2x)sin(2x)$",
+        "$sin^2(x)sin(2x)$",
+        "$e^{sin^2(x)}*cos(2x)$"
+      ]
+    },
+    {
+        "index": 100,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= {(1+2x^2)}^5$",
+      "answersa": [
+        "$20x{(1+{2x}^2)}^4$",
+        "$5{(1+{2x}^2)}^4$",
+        "$20{(1+{2x}^2)}^5$",
+        "$20{(1+{2x}^2)}^4$",
+        "$20{(1+{2x})}^5$"
+      ]
+    },
+    {
+        "index": 101,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln({tgx)}$",
+      "answersa": [
+        "$\\frac{1}{cos(x)sin(x)}$",
+        "$\\frac{cos(2x)}{cos(x)sin(x)}$",
+        "$\\frac{1}{sin(x)}$",
+        "$\\frac{1}{cos(x)}$",
+        "$-\\frac{1}{sin(x)}$"
+      ]
+    },
+    {
+        "index": 102,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= {sin}^2x+{cos}^2x$",
+        "answersa": [
+            "0",
+            "1",
+            "sin(x)cos(x)",
+            "2six(x)cos(x)",
+            "six(2x)"
+        ]
+    },
+    {
+        "index": 103,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln({ctgx)}$",
+      "answersa": [
+        "$-\\frac{1}{cos(x)sin(x)}$",
+        "$\\frac{cos(2x)}{cos(x)sin(x)}$",
+        "$\\frac{1}{sin(x)}$",
+        "$\\frac{1}{cos(x)}$",
+        "$-\\frac{1}{sin(x)}$"
+      ]
+    },
+    {
+        "index": 104,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln\\frac{1+2x}{1-2x}$",
+      "answersa": [
+        "$\\frac{4}{1-{4x}^2}$",
+        "$\\frac{1}{1-{4x}^2}$",
+        "$\\frac{2-2x}{1-{4x}^2}$",
+        "$\\frac{4}{1+{4x}^2}$",
+        "$\\frac{2-2x}{1+{4x}^2}$"
+      ]
+    },
+    {
+        "index": 105,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции.  $y= ln\\frac{1+sinx}{1-sinx}$",
+      "answersa": [
+        "$\\frac{2}{cos(x)}$",
+        "$\\frac{1}{cos(x)}$",
+        "$\\frac{1}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{2}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{2cos(x)}{(1-sin(x))*(1+sin(x))}$"
+      ]
+    },
+    {
+        "index": 106,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln\\frac{1-sinx}{1+sinx}$",
+      "answersa": [
+        "$\\frac{-2}{cos(x)}$",
+        "$-\\frac{1}{cos(x)}$",
+        "$\\frac{1}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{-2}{(1-sin(x))*(1+sin(x))}$",
+        "$\\frac{2cos(x)}{(1-sin(x))*(1+sin(x))}$"
+      ]
+    },
+    {
+        "index": 107,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln\\frac{1-2x}{1+2x}$",
+      "answersa": [
+        "$\\frac{-4}{1-{4x}^2}$",
+        "$\\frac{-4}{1-{2x}^2}$",
+        "$\\frac{4}{1-2x}$",
+        "$\\frac{2}{1-{2x}^2}$",
+        "$\\frac{1}{1-2x}$"
+      ]
+    },
+    {
+        "index": 108,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln({sinx)}$",
+      "answersa": [
+        "$ctg(x)$",
+        "$tg(x)$",
+        "$2tg(x)$",
+        "$sin(x)cos(x)$",
+        "$2{sin}^2(x)$"
+      ]
+    },
+    {
+        "index": 109,
+        "rightPos": 0,
+        "questiona": "Вычислите производную функции. $y= ln({cosx)}$",
+      "answersa": [
+        "$-tg(x)$",
+        "$ctg(x)$",
+        "$2tg(x)$",
+        "$sin(x)cos(x)$",
+        "$2{sin}^2(x)$"
+      ]
+    },
+    {
+        "index": 110,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0=\\frac{1}{2}$   на графике функции $y={(3x-1)}^4$",
+      "answersa": [
+        "$\\frac{3}{2}$",
+        "$\\frac{1}{4}$",
+        "2",
+        "$-\\frac{3}{2}$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 111,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= -1$ на графике функции $y=\\frac{x+1}{x-1}$",
+      "answersa": [
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{3}{4}$",
+        "$\\frac{1}{4}$"
+      ]
+    },
+    {
+        "index": 112,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{4}$ на графике функции $y= \\ln{(tgx)}$",
+      "answersa": [
+        "$2$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{3}{4}$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 113,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{6}$ на графике функции $y= \\ln{(sinx)}$",
+      "answersa": [
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
+    },
+    {
+        "index": 114,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{3}$ на графике функции $y=  \\ln{(sinx)}$",
+      "answersa": [
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
+    },
+    {
+        "index": 115,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{3}$ на графике функции $y=  \\ln{(cosx)}$",
+      "answersa": [
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
+    },
+    {
+        "index": 116,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\frac{\\pi}{6}$  на графике функции $y= \\ln{(cosx)}$",
+      "answersa": [
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$3$",
+        "$\\frac{1}{3}$"
+      ]
+    },
+    {
+        "index": 117,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0= \\pi$  на графике функции $y= e^{sinx}$",
+        "answersa": [
+            "-1",
+            "1",
+            "2",
+            "-2",
+            "-3"
+        ]
+    },
+    {
+        "index": 118,
+        "rightPos": 0,
+        "questiona": "Найти угловой коэффициент касательной, проведенной в точке $x0=\\ \\frac{\\pi}{2}$ на графике функции $y= e^{cosx}$",
+      "answersa": [
+        "-1",
+        "1",
+        "2",
+        "-2",
+        "-3"
+      ]
+    },
+    {
+        "index": 119,
+        "rightPos": 0,
+        "questiona": "Напишите уравнение касательной в точке $x = 1$ кривой $y=x^3-2x+2$",
+      "answersa": [
+        "$y=x$",
+        "$y=x+2$",
+        "$y=x^2+2$",
+        "$y=x^3-3+3$",
+        "$y=2x-1$"
+      ]
+    },
+    {
+        "index": 120,
+        "rightPos": 0,
+        "questiona": "Напишите уравнение касательной в точке $x = -3$ кривой $y=\\frac{x-1}{x+1}$",
+      "answersa": [
+        "$y=\\frac{1}{2}x+\\frac{7}{2}$",
+        "$y=\\frac{1}{3}x+\\frac{5}{2}$",
+        "$y=\\frac{1}{2}x+\\frac{9}{2}$",
+        "$y=\\frac{1}{2}x+\\frac{3}{2}$",
+        "$y=x+2$"
+      ]
+    },
+    {
+        "index": 121,
+        "rightPos": 0,
+        "questiona": "Напишите уравнение касательной в точке $x = 8$ кривой $y=\\sqrt[3]{x}$",
+      "answersa": [
+        "$y=\\frac{1}{12}x+\\frac{4}{3}$",
+        "$y=\\frac{1}{6}x+\\frac{5}{3}$",
+        "$y=\\frac{1}{3}x+\\frac{7}{2}$",
+        "$y=\\frac{1}{4}x+\\frac{9}{4}$",
+        "$y=\\frac{1}{8}x+\\frac{3}{2}$"
+      ]
+    },
+    {
+        "index": 122,
+        "rightPos": 0,
+        "questiona": "Напишите уравнение касательной в точке $x = 2$ кривой $y=e^{x^2-2x}$",
+      "answersa": [
+        "$y=2x-3$",
+        "$y=x+1$",
+        "$y=3x+2$",
+        "$y=x^2-2x+4$",
+        "$y=x^3-5x+7$"
+      ]
+    },
+    {
+        "index": 123,
+        "rightPos": 0,
+        "questiona": "Напишите уравнение касательной в точке $x = 2$ кривой $y=\\frac{2x-1}{x+1}$",
+      "answersa": [
+        "$y=\\frac{1}{3}x+\\frac{1}{3}$",
+        "$y=\\frac{2}{3}x+\\frac{2}{3}$",
+        "$y=\\frac{1}{2}x+1$",
+        "$y=x+1$",
+        "$y=\\frac{1}{3}x-1$"
+      ]
+    },
+    {
+        "index": 124,
+        "rightPos": 0,
+        "questiona": "Напишите уравнение касательной в точке $x = 1$ кривой $y={(3x-2)}^5$",
+      "answersa": [
+        "$y=15x-14$",
+        "$y=15x-10$",
+        "$y=5x-14$",
+        "$y=10x-14$",
+        "$y=15x-20$"
+      ]
+    },
+    {
+        "index": 125,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y=2x^3-3x^2$",
+        "answersa": [
+            "$(-\\infty;0)U(1;\\infty)$",
+            "$(-\\infty;1)U(1;\\infty)$",
+            "$(0;1)$",
+            "$(-1;1)$",
+            "$(-\\infty;-1)U(1;\\infty)$"
+        ]
+    },
+    {
+        "index": 126,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y=2x^3-3x^2$",
+      "answersa": [
+        "$(0;1)$",
+        "$(-1;1)$",
+        "$(-\\infty;0)U(1;\\infty)$",
+        "$(-\\infty;1)$",
+        "$(-\\infty;-1)U(1;\\infty)$"
+      ]
+    },
+    {
+        "index": 127,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y=x^2-6x+7$",
+      "answersa": [
+        "$(3;\\infty)$",
+        "$(0;3)$",
+        "$(-\\infty;3)U(3;\\infty)$",
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(-33;\\infty)$"
+      ]
+    },
+    {
+        "index": 128,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y=x^2-6x+7$",
+      "answersa": [
+        "$(-\\infty;3)$",
+        "$(0;3)$",
+        "$(-\\infty;3)U(3;\\infty)$",
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(-33;\\infty)$"
+      ]
+    },
+    {
+        "index": 129,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y={xe}^x$",
+      "answersa": [
+        "$(-1;\\infty)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(1;\\infty)$",
+        "$-\\infty;0)U(1;\\infty)$"
+      ]
+    },
+    {
+        "index": 130,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y={xe}^x$",
+      "answersa": [
+        "$(-\\infty;-1)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(1;\\infty)$",
+        "$-\\infty;0)U(1;\\infty)$"
+      ]
+    },
+    {
+        "index": 131,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y={xe}^{-x}$",
+      "answersa": [
+        "$(-\\infty;1)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(1;\\infty)$",
+        "$-\\infty;0)U(1;\\infty)$"
+      ]
+    },
+    {
+        "index": 132,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y={xe}^{-x}$",
+      "answersa": [
+        "$(1;\\infty)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(-\\infty;-1)U(-1;\\infty)$",
+        "$(-1;\\infty)$",
+        "$-\\infty;1)$"
+      ]
+    },
+    {
+        "index": 133,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y=2x^3-6x^2-18x+21$",
+      "answersa": [
+        "$(-\\infty;-1)U(3;\\infty)$",
+        "$(-\\infty;1)U(3;\\infty)$",
+        "$(-\\infty;-3)U(1;\\infty)$",
+        "$(-3;1)$",
+        "$(-1;3)$"
+      ]
+    },
+    {
+        "index": 134,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы убывания функции $y=2x^3-6x^2-18x+21$",
+      "answersa": [
+        "$(-1;3)$",
+        "$(-\\infty;1)U(3;\\infty)$",
+        "$(-\\infty;-3)U(1;\\infty)$",
+        "$(-3;1)$",
+        "$(-\\infty;-1)U(3;\\infty)$"
+      ]
+    },
+    {
+        "index": 135,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы возрастания функции $y=\\frac{x}{x^2+4}$",
+      "answersa": [
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)U(-2;\\infty)$",
+        "$(-\\infty;2)$",
+        "$(2;\\infty)$"
+      ]
+    },
+    {
+        "index": 136,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы убывания функции $y=\\frac{x}{x^2+4}$",
+      "answersa": [
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(-2;\\infty)$",
+        "$(-\\infty;2)$",
+        "$(2;\\infty)$"
+      ]
+    },
+    {
+        "index": 137,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы возрастания функции $y=\\frac{x}{x^2+9}$",
+      "answersa": [
+        "$(-3;3)$",
+        "$(0;3)$",
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(-\\infty;3)U(6;\\infty)$",
+        "$(-\\infty;3)$"
+      ]
+    },
+    {
+        "index": 138,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы возрастания функции $y=\\frac{x}{x^2+9}$",
+      "answersa": [
+        "$(-\\infty;-3)U(3;\\infty)$",
+        "$(0;3)$",
+        "$(-3;3)$",
+        "$(-\\infty;3)U(6;\\infty)$",
+        "$(-\\infty;3)$"
+      ]
+    },
+    {
+        "index": 139,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y=x^2e^x$",
+      "answersa": [
+        "$(-\\infty;-2)U(0;\\infty)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)$",
+        "$(-2;0)$",
+        "$(-2;2)$"
+      ]
+    },
+    {
+        "index": 140,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y=x^2e^x$",
+      "answersa": [
+        "$(-2;0)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)$",
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(0;\\infty)$"
+      ]
+    },
+    {
+        "index": 141,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y=x^2e^{-x}$",
+        "answersa": [
+            "$(0;2)$",
+            "$(-\\infty;0)U(2;\\infty)$",
+            "$(-2;2)$",
+            "$(-\\infty;-2)U(2;\\infty)$",
+            "$(-\\infty;-2)U(0;\\infty)$"
+        ]
+    },
+    {
+        "index": 142,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y=x^2e^{-x}$",
+      "answersa": [
+        "$(-\\infty;0)U(2;\\infty)$",
+        "$(0;2)$",
+        "$(-2;2)$",
+        "$(-\\infty;-2)U(2;\\infty)$",
+        "$(-\\infty;-2)U(0;\\infty)$"
+      ]
+    },
+    {
+        "index": 143,
+        "rightPos": 0,
+        "questiona": "Найти интервалы возрастания функции $y=x^3-3x^2-9x+1$",
+      "answersa": [
+        "$(-\\infty;-1)U(3;\\infty)$",
+        "$(-1;3)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(1;3)$",
+        "$(-\\infty;1)U(3;\\infty)$"
+      ]
+    },
+    {
+        "index": 144,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы убывания функции $y=x^3-3x^2-9x+1$",
+      "answersa": [
+        "$(-1;3)$",
+        "$(-\\infty;-1)U(3;\\infty)$",
+        "$(-\\infty;-1)U(1;\\infty)$",
+        "$(1;3)$",
+        "$(-\\infty;1)U(3;\\infty)$"
+      ]
+    },
+    {
+        "index": 145,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы возрастания функции $y=x^3-3x^2-24x+3$",
+        "answersa": [
+            "$(-\\infty;-2)U(4;\\infty)$",
+            "$(-2;4)$",
+            "$(-\\infty;2)U(2;\\infty)$",
+            "$(-2;2)$",
+            "$(0;2)$"
+        ]
+    },
+    {
+        "index": 146,
+        "rightPos": 0,
+        "questiona": "Найти интервалы убывания функции $y=x^3-3x^2-24x+3$",
+      "answersa": [
+        "$(-2;4)$",
+        "$(-\\infty;-2)U(4;\\infty)$",
+        "$(-\\infty;2)U(2;\\infty)$",
+        "$(-2;2)$",
+        "$(0;2)$"
+      ]
+    },
+    {
+        "index": 147,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы возрастания функции $y = xlnx$",
+      "answersa": [
+        "$(\\frac{1}{e};\\infty)$",
+        "$(0;\\frac{1}{e})$",
+        "$(\\frac{1}{e};1)$",
+        "$(\\frac{1}{e};e)$",
+        "$(\\frac{1}{e};\\frac{2}{e})$"
+      ]
+    },
+    {
+        "index": 148,
+        "rightPos": 0,
+        "questiona": "Найдите интервалы убывания функции $y = xlnx + 1$",
+      "answersa": [
+        "$(0;\\frac{1}{e})$",
+        "$(\\frac{1}{e};\\infty)$",
+        "$(\\frac{1}{e};1)$",
+        "$(\\frac{1}{e};e)$",
+        "$(\\frac{1}{e};\\frac{2}{e})$"
+      ]
+    },
+    {
+        "index": 150,
+        "rightPos": 0,
+        "questiona": "Найти точку максимума функции $y={2x}^3-3x^2+5$",
+        "answersa": [
+            "$(0;5)$",
+            "$(0;1)$",
+            "$(1;5)$",
+            "$(-1;0)$",
+            "$(-1;5)$"
+        ]
+    },
+    {
+        "index": 151,
+        "rightPos": 0,
+        "questiona": "Найти точку минимума функции $y={2x}^3-3x^2-4$",
+      "answersa": [
+        "$(1;-5)$",
+        "$(0;1)$",
+        "$(1;5)$",
+        "$(-1;0)$",
+        "$(-1;5)$"
+      ]
+    },
+    {
+        "index": 152,
+        "rightPos": 0,
+        "questiona": "Найти точку минимума функции $y=x^2-6x+7$",
+        "answersa": [
+            "$(3;-2)$",
+            "$(3;2)$",
+            "$(4;3)$",
+            "$(-4;3)$",
+            "$(3;-4)$"
+        ]
+    },
+    {
+        "index": 153,
+        "rightPos": 0,
+        "questiona": "Найдите точку минимума функции $y={xe}^x$",
+      "answersa": [
+        "$(-1;-\\frac{1}{e})$",
+        "$(1;-\\frac{1}{e})$",
+        "$(-1;e)$",
+        "$(-1;e^{-1})$",
+        "$(1;e^{-1})$"
+      ]
+    },
+    {
+        "index": 154,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y={2x}^3-6x^2-18x+21$",
+        "answersa": [
+            "$(-1;31)$",
+            "$(-1;-31)$",
+            "$(3;36)$",
+            "$(-3;49)$",
+            "$(-1;3)$"
+        ]
+    },
+    {
+        "index": 155,
+        "rightPos": 0,
+        "questiona": "Найти точку минимума функции $y={2x}^3-6x^2-18x+5$",
+      "answersa": [
+        "$(3;-49)$",
+        "$(-1;-31)$",
+        "$(3;36)$",
+        "$(-3;49)$",
+        "$(-1;3)$"
+      ]
+    },
+    {
+        "index": 156,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y=\\frac{x}{x^2+4}$",
+        "answersa": [
+            "$(2;\\frac{1}{4})$",
+            "$(-2;\\frac{1}{4})$",
+            "$(-2;2)$",
+            "$(0;-2)$",
+            "$(-2;\\frac{1}{2})$"
+        ]
+    },
+    {
+        "index": 157,
+        "rightPos": 0,
+        "questiona": "Найдите точку минимума функции $y=\\frac{x}{x^2+4}$",
+      "answersa": [
+        "$(-2;-\\frac{1}{4})$",
+        "$(-2;2)$",
+        "$(0;-2)$",
+        "$(-2;\\frac{1}{2})$",
+        "$(2;\\frac{1}{4})$"
+      ]
+    },
+    {
+        "index": 158,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y=\\frac{x}{x^2+9}$",
+      "answersa": [
+        "$(3;\\frac{1}{6})$",
+        "$(-3;\\frac{1}{6})$",
+        "$(3;-\\frac{1}{6})$",
+        "$(\\frac{1}{6};3)$",
+        "$(\\frac{1}{6};-3)$"
+      ]
+    },
+    {
+        "index": 159,
+        "rightPos": 0,
+        "questiona": "Найдите точку минимума функции $y=\\frac{x}{x^2+9}$",
+      "answersa": [
+        "$(-3;-\\frac{1}{6})$",
+        "$(3;-\\frac{1}{6})$",
+        "$(\\frac{1}{6};3)$",
+        "$(\\frac{1}{6};-3)$",
+        "$(3;\\frac{1}{6})$"
+      ]
+    },
+    {
+        "index": 160,
+        "rightPos": 0,
+        "questiona": "Найти точку максимума функции $y=x^2e^{-x}$",
+      "answersa": [
+        "$(2;\\frac{4}{e^2})$",
+        "$(0;\\frac{4}{e^2})$",
+        "$(0;0)$",
+        "$(0;2)$",
+        "$(-2;\\frac{2}{e^2})$"
+      ]
+    },
+    {
+        "index": 161,
+        "rightPos": 0,
+        "questiona": "Найдите точку минимума функции $y=x^2e^{-x}$",
+      "answersa": [
+        "$(0;0)$",
+        "$(0;\\frac{4}{e^2})$",
+        "$(2;\\frac{4}{e^2})$",
+        "$(0;2)$",
+        "$(-2;\\frac{2}{e^2})$"
+      ]
+    },
+    {
+        "index": 162,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y=x^2e^x$",
+      "answersa": [
+        "$(-2;\\frac{4}{e^2})$",
+        "$(0;\\frac{4}{e^2})$",
+        "$(0;0)$",
+        "$(0;2)$",
+        "$(2;\\frac{2}{e^2})$"
+      ]
+    },
+    {
+        "index": 163,
+        "rightPos": 0,
+        "questiona": "Найдите точку минимума функции $y=x^2e^x$",
+      "answersa": [
+        "$(0;0)$",
+        "$(0;\\frac{4}{e^2})$",
+        "$(2;\\frac{4}{e^2})$",
+        "$(0;2)$",
+        "$(-2;\\frac{2}{e^2})$"
+      ]
+    },
+    {
+        "index": 164,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y=x^3-3x^2-9x+4$",
+        "answersa": [
+            "$(-1;9)$",
+            "$(3;-20)$",
+            "$(-1;20)$",
+            "$(1;3)$",
+            "$(3;-9)$"
+        ]
+    },
+    {
+        "index": 165,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y=x^3-3x^2-9x+7$",
+      "answersa": [
+        "$(-1;12)$",
+        "$(-1;9)$",
+        "$(-1;20)$",
+        "$(1;3)$",
+        "$(3;-9)$"
+      ]
+    },
+    {
+        "index": 166,
+        "rightPos": 0,
+        "questiona": "Найдите точку максимума функции $y=x^3-3x^2-24x+3$",
+        "answersa": [
+            "$(-2;31)$",
+            "$(2;31)$",
+            "$(4;-89)$",
+            "$(-4;89)$",
+            "$(4;-31)$"
+        ]
+    },
+    {
+        "index": 167,
+        "rightPos": 0,
+        "questiona": "Найдите точку минимума функции $y=x^3-3x^2-24x-9$",
+      "answersa": [
+        "$(4;-89)$",
+        "$(2;31)$",
+        "$(-2;31)$",
+        "$(-4;89)$",
+        "$(4;-31)$"
+      ]
+    },
+    {
+        "index": 168,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^x-x-1}{x^2}}$",
+        "answersa": [
+            "$\\frac{1}{2}$",
+            "$1$",
+            "$0$",
+            "$\\frac{2}{3}$",
+            "$-1$"
+        ]
+    },
+    {
+        "index": 169,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^x-cosx}{x}}$",
+      "answersa": [
+        "$1$",
+        "$\\frac{1}{2}$",
+        "$0$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 170,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^x-x-1}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 171,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^x-sinx-1}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 172,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{e^x+cosx-2}{x}}$",
+      "answersa": [
+        "$1$",
+        "$\\frac{1}{2}$",
+        "$0$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 173,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\pi}{\\frac{1+cosx}{sinx}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 174,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow\\frac{\\pi}{4}}{\\frac{sinx-cosx}{cos2x}}$",
+      "answersa": [
+        "$-\\frac{\\sqrt{2}}{2}$",
+        "$\\frac{\\sqrt{2}}{2}$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$",
+        "$-\\frac{2}{3}$"
+      ]
+    },
+    {
+        "index": 175,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1+x)-x}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 176,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(cosx)}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 177,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{\\frac{\\ln(x)}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$\\infty$",
+        "$\\frac{2}{3}$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 178,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{\\frac{e^x}{x}}$",
+      "answersa": [
+        "$\\infty$",
+        "$\\frac{1}{2}$",
+        "$0$",
+        "$\\frac{2}{3}$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 179,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{\\frac{e^x}{x^2}}$",
+      "answersa": [
+        "$\\infty$",
+        "$\\frac{1}{2}$",
+        "$0$",
+        "$\\frac{2}{3}$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 180,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow+\\infty}{\\frac{e^{sinx}-1}{x}}$",
+      "answersa": [
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$\\infty$",
+        "$\\frac{2}{3}$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 181,
+        "rightPos": 0,
+        "questiona": "Вычислите предел. $\\lim\\limits_{x\\rightarrow0}{\\frac{\\ln(1+sinx)}{x}}$",
+      "answersa": [
+        "$1$",
+        "$\\frac{1}{2}$",
+        "$\\infty$",
+        "$\\frac{2}{3}$",
+        "$-\\infty$"
+      ]
+    },
+    {
+        "index": 182,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{(x^2-\\frac{1}{x}})dx$",
+      "answersa": [
+        "$\\frac{x^3}{3}-ln|x|+C$",
+        "$x^3-2ln|x|+C$",
+        "$\\frac{x^3}{3}-2ln|x|+C$",
+        "$\\frac{x^3}{2}+ln|x|+C$",
+        "$\\frac{x^3}{3}+x+C$"
+      ]
+    },
+    {
+        "index": 183,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{x+1}{\\sqrt x}dx$",
+      "answersa": [
+        "$\\frac{2}{3}x^{\\frac{3}{2}}+{2x}^{\\frac{1}{2}}+C$",
+        "$x^{\\frac{3}{2}}+\\frac{2}{x^{\\frac{1}{2}}}+C$",
+        "$\\frac{2}{3}x+{2x}^{\\frac{1}{2}}+C$",
+        "${2x}^{\\frac{3}{2}}+x^{-\\frac{1}{2}}+C$",
+        "$\\frac{2}{3}x^{\\frac{3}{2}}-{2x}^{\\frac{1}{2}}+C$"
+      ]
+    },
+    {
+        "index": 184,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\left(3x-1\\right)^9dx$",
+      "answersa": [
+        "$\\frac{{3x-1}^{10}}{30}+C$",
+        "$\\frac{{3x-1}^{10}}{9}+C$",
+        "$\\frac{{3x-1}^{11}}{33}+C$",
+        "$\\frac{{3x-1}^9}{27}+C$",
+        "$\\frac{{3x-1}^{10}}{3}+C$"
+      ]
+    },
+    {
+        "index": 185,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\sqrt{3x+1}dx$",
+      "answersa": [
+        "$\\frac{2}{9}{(3x+1)}^{\\frac{3}{2}}+C$",
+        "$\\frac{2}{3}(3x+1)^{\\frac{3}{2}}+C$",
+        "$\\frac{1}{9}(3x+1)^{\\frac{3}{2}}+C$",
+        "$\\frac{3}{2}(3x+1)^{\\frac{3}{2}}+C$",
+        "$\\frac{2}{9}(3x+1)^{\\frac{5}{2}}+C$"
+      ]
+    },
+    {
+        "index": 186,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{(5x+2)}^5dx$",
+      "answersa": [
+        "$\\frac{{(5x+2)}^6}{30}+C$",
+        "$\\frac{{(5x+2)}^5}{15}+C$",
+        "$\\frac{{(5x+2)}^4}{25}+C$",
+        "$\\frac{{(5x+2)}^6}{20}+C$",
+        "$\\frac{{(5x+2)}^7}{35}+C$"
+      ]
+    },
+    {
+        "index": 187,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\sqrt{1-2x}dx$",
+      "answersa": [
+        "$-\\frac{1}{3}{(1-2x)}^{\\frac{3}{2}}+C$",
+        "$-\\frac{1}{4}{(1-2x)}^{\\frac{3}{2}}+C$",
+        "$\\frac{1}{3}{(1-2x)}^{\\frac{3}{2}}+C$",
+        "$-\\frac{1}{2}{(1-2x)}^{\\frac{3}{2}}+C$",
+        "$-\\frac{1}{3}{(1+2x)}^{\\frac{3}{2}}+C$"
+      ]
+    },
+    {
+        "index": 188,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{10}^xdx$",
+        "answersa": [
+            "$\\frac{{10}^x}{\\ln(10)}+C$",
+            "${10}^x+C$",
+            "$\\frac{{10}^x}{x}+C$",
+            "${10}^{x+1}+C$",
+            "$\\frac{{10}^x}{\\ln(10)^2}+C$"
+        ]
+    },
+    {
+        "index": 189,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{10}^{-x}dx$",
+      "answersa": [
+        "$-\\frac{{10}^{-x}}{\\ln(10)}+C$",
+        "${10}^x+C$",
+        "$\\frac{{10}^{-x}}{x}+C$",
+        "${10}^{x+1}+C$",
+        "$\\frac{{10}^{-x}}{\\ln(10)^2}+C$"
+      ]
+    },
+    {
+        "index": 190,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{3x-1}$",
+      "answersa": [
+        "$\\frac{1}{3}\\ln|3x-1|+C$",
+        "$\\ln|3x-1|+C$",
+        "$\\frac{1}{3x-1}+C$",
+        "$\\frac{1}{3}\\ln|3x+1|+C$",
+        "$\\frac{1}{3}\\ln|x-1|+C$"
+      ]
+    },
+    {
+        "index": 191,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{2x+5}$",
+      "answersa": [
+        "$\\frac{1}{2}\\ln|2x+5|+C$",
+        "$\\ln|2x+5|+C$",
+        "$\\frac{1}{2x+5}+C$",
+        "$\\frac{1}{2}\\ln|2x-5|+C$",
+        "$\\frac{1}{2}\\ln|x+5|+C$"
+      ]
+    },
+    {
+        "index": 192,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int ctgx dx$",
+      "answersa": [
+        "$\\ln|sin(x)|+C$",
+        "$\\ln|cos(x)|+C$",
+        "$\\ln|tg(x)|+C$",
+        "$\\frac{1}{2}\\ln|sin(x)|+C$",
+        "$\\frac{\\sqrt{2}}{2}\\ln|sin(x)|+C$"
+      ]
+    },
+    {
+        "index": 193,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{1-2x}$",
+      "answersa": [
+        "$-\\frac{1}{2}\\ln|1-2x|+C$",
+        "$\\frac{1}{3}\\ln|1-3x|+C$",
+        "$\\frac{1}{2}\\ln|2x+1|+C$",
+        "$\\ln|1-2x|+C$",
+        "$-\\ln|1-2x|+C$"
+      ]
+    },
+    {
+        "index": 194,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int2cosxcos3xdx$",
+      "answersa": [
+        "$\\frac{sin(2x)}{2}+\\frac{sin(4x)}{4}+C$",
+        "$\\frac{sin(2x)}{2}+\\frac{sin(4x)}{2}+C$",
+        "$\\frac{sin(2x)}{2}+C$",
+        "$\\frac{sin(4x)}{4}+C$",
+        "$\\frac{cos(2x)}{2}-\\frac{cos(4x)}{4}+C$"
+      ]
+    },
+    {
+        "index": 195,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int2sinxsin3xdx$",
+      "answersa": [
+        "$\\frac{sin(2x)}{2}-\\frac{sin(4x)}{4}+C$",
+        "$\\frac{sin(2x)}{2}+\\frac{sin(4x)}{2}+C$",
+        "$\\frac{sin(2x)}{2}+C$",
+        "$\\frac{sin(4x)}{4}+C$",
+        "$\\frac{sin(2x)}{2}+\\frac{sin(4x)}{4}+C$"
+      ]
+    },
+    {
+        "index": 196,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{3+x^2}$",
+      "answersa": [
+        "$\\frac{1}{\\sqrt{3}}\\arctan(\\frac{x}{\\sqrt{3}})+C$",
+        "$\\frac{1}{3}\\arctan(\\frac{x}{3})+C$",
+        "$\\frac{1}{6}\\arctan(\\frac{x}{6})+C$",
+        "$\\frac{1}{9}\\arctan(\\frac{x}{9})+C$",
+        "$\\frac{1}{\\sqrt{3}}+\\arctan(\\frac{x}{\\sqrt{3}})+C$"
+      ]
+    },
+    {
+        "index": 197,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{2+x^2}$",
+      "answersa": [
+        "$\\frac{1}{\\sqrt{2}}\\arctan(\\frac{x}{\\sqrt{2}})+C$",
+        "$\\frac{1}{2}\\arctan(\\frac{x}{2})+C$",
+        "$\\frac{1}{6}\\arctan(\\frac{x}{6})+C$",
+        "$\\frac{1}{9}\\arctan(\\frac{x}{9})+C$",
+        "$\\frac{1}{\\sqrt{2}}+\\arctan(\\frac{x}{\\sqrt{2}})+C$"
+      ]
+    },
+    {
+        "index": 198,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{\\sqrt{1-4x^2}}$",
+      "answersa": [
+        "$\\arcsin(2x)+C$",
+        "$\\arccos(2x)+C$",
+        "$\\tan(2x)+C$",
+        "$\\cos(2x)+C$",
+        "$\\arccos(4x)+C$"
+      ]
+    },
+    {
+        "index": 199,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{\\sqrt{1-9x^2}}$",
+      "answersa": [
+        "$\\arcsin(3x)+C$",
+        "$\\arccos(3x)+C$",
+        "$\\tan(3x)+C$",
+        "$\\cos(3x)+C$",
+        "$\\arccos(9x)+C$"
+      ]
+    },
+    {
+        "index": 200,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{tg}^2xdx$",
+      "answersa": [
+        "$tg(x)-x+C$",
+        "$ctg(x)-x+C$",
+        "$sin(x)cosx()-x+C$",
+        "$ctg(x)+x+C$",
+        "$sin(x)cos(x)+x+C$"
+      ]
+    },
+    {
+        "index": 201,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{c{tg}^2}xdx$",
+      "answersa": [
+        "$ctg(x)-x+C$",
+        "$tg(x)-x+C$",
+        "$sin(x)cosx()-x+C$",
+        "$ctg(x)+x+C$",
+        "$sin(x)cos(x)+x+C$"
+      ]
+    },
+    {
+        "index": 202,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{\\frac{sinx}{1+cosx}dx}$",
+      "answersa": [
+        "$-\\ln|1+cos(x)|+C$",
+        "$\\ln|1-cos(x)|+C$",
+        "$-\\ln|1+sin(x)|+C$",
+        "$\\ln|1+sin(x)|+C$",
+        "$-\\frac{1}{3}\\ln|1+cos(x)|+C$"
+      ]
+    },
+    {
+        "index": 203,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{\\frac{cosx}{1+sinx}dx}$",
+      "answersa": [
+        "$\\ln|1+sin(x)|+C$",
+        "$\\ln|1-cos(x)|+C$",
+        "$-\\ln|1+sin(x)|+C$",
+        "$\\ln|1+cos(x)|+C$",
+        "$-\\frac{1}{3}\\ln|1+cos(x)|+C$"
+      ]
+    },
+    {
+        "index": 204,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{x^2-5x+6}$",
+      "answersa": [
+        "$\\ln|\\frac{x-3}{x-2}|+C$",
+        "$\\ln|x-3|+C$",
+        "$\\frac{1}{4}\\ln|\\frac{x-1}{x+3}|+C$",
+        "$\\frac{1}{2}\\ln|\\frac{x-3}{x-2}|+C$",
+        "$-\\frac{1}{2}\\ln|\\frac{x-3}{x-2}|+C$"
+      ]
+    },
+    {
+        "index": 205,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{x^2+2x-3}$",
+      "answersa": [
+        "$\\frac{1}{4}\\ln|\\frac{x-1}{x+3}|+C$",
+        "$\\ln|x-3|+C$",
+        "$\\ln|\\frac{x-3}{x-2}|+C$",
+        "$\\frac{1}{2}\\ln|\\frac{x-3}{x-2}|+C$",
+        "$-\\frac{1}{2}\\ln|\\frac{x-3}{x-2}|+C$"
+      ]
+    },
+    {
+        "index": 206,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{1+\\sqrt x}$",
+      "answersa": [
+        "$2\\sqrt{x}-2\\ln|1+\\sqrt{x}|+C$",
+        "$\\sqrt{2x}-2\\ln|1+\\sqrt{2x}|+C$",
+        "$\\frac{1}{x}-2\\ln|1+\\sqrt{x}|+C$",
+        "$2\\sqrt{x}-2arctg(\\sqrt{x})+C$",
+        "$2\\sqrt{x}-\\frac{1}{2}arctg(\\sqrt{x})+C$"
+      ]
+    },
+    {
+        "index": 207,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{\\sqrt x}{1+x}dx$",
+      "answersa": [
+        "$2\\sqrt{x}-2arctg(\\sqrt{x})+C$",
+        "$2\\sqrt{x}-\\frac{1}{2}arctg(\\sqrt{x})+C$",
+        "$2\\sqrt{x}-2\\ln|1+\\sqrt{x}|+C$",
+        "$\\sqrt{2x}-2\\ln|1+\\sqrt{2x}|+C$",
+        "$\\frac{1}{x}-2\\ln|1+\\sqrt{x}|+C$"
+      ]
+    },
+    {
+        "index": 208,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{e^{\\sqrt x}}{\\sqrt x}dx$",
+      "answersa": [
+        "$2e^{\\sqrt{x}}+C$",
+        "$e^{\\sqrt{x}}+C$",
+        "$2e^{x}+C$",
+        "$e^{x}+C$",
+        "$e^{\\frac{x}{2}}+C$"
+      ]
+    },
+    {
+        "index": 209,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{sin\\sqrt x}{\\sqrt x}dx$",
+      "answersa": [
+        "$-2cos(\\sqrt{x})+C$",
+        "$-2sin(\\sqrt{x})+C$",
+        "$2cos(x)+C$",
+        "$2sin(x)+C$",
+        "$-\\frac{1}{2}sin(\\sqrt{x})+C$"
+      ]
+    },
+    {
+        "index": 210,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{cos\\sqrt x}{\\sqrt x}dx$",
+      "answersa": [
+        "$2sin(\\sqrt{x})+C$",
+        "$-2cos(\\sqrt{x})+C$",
+        "$2cos(x)+C$",
+        "$2sin(x)+C$",
+        "$-\\frac{1}{2}sin(\\sqrt{x})+C$"
+      ]
+    },
+    {
+        "index": 211,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{(1+x)\\sqrt x}$",
+      "answersa": [
+        "$2\\arctan(\\sqrt{x})+C$",
+        "$-\\arccot(\\sqrt{x})+C$",
+        "$\\sqrt{x}+C$",
+        "$\\arctan(\\frac{1}{sqrt{x}})+C$",
+        "$\\frac{1}{2}\\arctan(\\frac{1}{sqrt{x}})+C$"
+      ]
+    },
+    {
+        "index": 212,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{(4+x)\\sqrt x}$",
+      "answersa": [
+        "$\\arctan(\\frac{\\sqrt{x}}{2})+C$",
+        "$-\\arccot(\\sqrt{x})+C$",
+        "$\\sqrt{x}+C$",
+        "$\\arctan(\\frac{1}{sqrt{x}})+C$",
+        "$\\frac{1}{2}\\arctan(\\frac{1}{sqrt{x}})+C$"
+      ]
+    },
+    {
+        "index": 213,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int l n x d x$",
+      "answersa": [
+        "$x\\ln(x)-x+C$",
+        "$\\ln(x)-x+C$",
+        "$x\\ln(\\frac{x}{2})+C$",
+        "$\\ln(\\frac{x}{2})+C$",
+        "$-\\ln(\\frac{x}{2})+C$"
+      ]
+    },
+    {
+        "index": 214,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int x l n x d x$",
+      "answersa": [
+        "$\\frac{x^2}{2}(\\ln(x)-\\frac{1}{2})+C$",
+        "$x^2(\\ln(x)-\\frac{1}{2})+C$",
+        "$-\\frac{x^2}{2}(\\ln(x)-\\frac{1}{2})+C$",
+        "$x^2(\\ln(x)+\\frac{1}{2})+C$",
+        "$\\frac{x^2}{2}(\\ln(x)-\\frac{1}{4})+C$"
+      ]
+    },
+    {
+        "index": 215,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{xe^x}dx$",
+      "answersa": [
+        "$e^x(x-1)+C$",
+        "$e^x(x+1)+C$",
+        "$e^{x^2+x}+C$",
+        "$e^x$",
+        "$e^x(x+1)+C$"
+      ]
+    },
+    {
+        "index": 216,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int x s i n x dx$",
+      "answersa": [
+        "$-xcos(x)+sin(x)+C$",
+        "$-xcos(\\frac{1}{x})+sin(\\frac{1}{x})+C$",
+        "$xcos(\\frac{1}{x})+sin(\\frac{1}{x})+C$",
+        "$-xsin(x)+cos(x)+C$",
+        "$xsin(x)+cos(x)+C$"
+      ]
+    },
+    {
+        "index": 217,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{lnx}{x}dx$",
+      "answersa": [
+        "$\\frac{{(\\ln(x))}^2}{2}$",
+        "$\\frac{{(\\ln(x))}^3}{3}$",
+        "$\\frac{\\ln(x)}{2}$",
+        "$\\frac{\\ln(x)}{3}$",
+        "$-\\frac{\\ln(x)}{2}$"
+      ]
+    },
+    {
+        "index": 218,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{sin}^3xcosxdx$",
+      "answersa": [
+        "$\\frac{{sin}^4(x)}{4}+C$",
+        "$\\frac{{sin}^2(x)}{2}+C$",
+        "$-\\frac{{sin}^2(x)}{2}+C$",
+        "$\\frac{{cos}^2(x)}{2}+C$",
+        "$-\\frac{{cos}^2(x)}{2}+C$"
+      ]
+    },
+    {
+        "index": 219,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{x^2e^{x^3}dx}$",
+      "answersa": [
+        "$\\frac{1}{3}e^{x^3}+C$",
+        "$\\frac{1}{2}e^{x^2}+C$",
+        "$-3e^{x^3}+C$",
+        "$-2e^{x^2}+C$",
+        "$\\frac{1}{3}e^3+C$"
+      ]
+    },
+    {
+        "index": 220,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{\\frac{cosx}{1+{sin}^2x}dx}$",
+      "answersa": [
+        "$\\arctan(sin(x))+C$",
+        "$\\arccot(sin(x))+C$",
+        "$-\\arctan(sin(x))+C$",
+        "$\\arctan(cos(x))+C$",
+        "$-\\arctan(cos(x))+C$"
+      ]
+    },
+    {
+        "index": 221,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{xe^{x^2}dx}$",
+      "answersa": [
+        "$\\frac{1}{2}e^{x^2}+C$",
+        "$\\frac{1}{3}e^{x^3}+C$",
+        "$-3e^{x^3}+C$",
+        "$-2e^{x^2}+C$",
+        "$\\frac{1}{3}e^3+C$"
+      ]
+    },
+    {
+        "index": 222,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{e^{sinx}dx}$",
+      "answersa": [
+        "$\\frac{e^{sin(x)}}{sin(x)}+C$",
+        "$\\frac{e^{cos(x)}}{cos(x)}+C$",
+        "$\\frac{e^{sin(x)}}{cos(x)}+C$",
+        "$\\frac{e^{cos(x)}}{sin(x)}+C$",
+        "$-\\frac{e^{sin(x)}}{sin(x)}+C$"
+      ]
+    },
+    {
+        "index": 223,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int2sin4xcos2xdx$",
+      "answersa": [
+        "$-\\frac{1}{6}cos(6x)-\\frac{1}{2}cos(2)+C$",
+        "$\\frac{1}{6}cos(6x)+\\frac{1}{2}cos(2)+C$",
+        "$-\\frac{1}{3}cos(3x)-\\frac{1}{2}cos(2)+C$",
+        "$\\frac{1}{3}cos(6x)+\\frac{1}{2}cos(2)+C$",
+        "$\\frac{1}{3}cos(6x)+\\frac{1}{4}cos(4)+C$"
+      ]
+    },
+    {
+        "index": 224,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{\\sqrt{9-x^2}}$",
+      "answersa": [
+        "$\\arcsin(\\frac{x}{3})+C$",
+        "$\\arcsin(\\frac{x}{2})+C$",
+        "$\\arcsin(\\frac{x}{\\sqrt{3}})+C$",
+        "$\\arccos(\\frac{x}{3})+C$",
+        "$-\\arccos(\\frac{x}{3})+C$"
+      ]
+    },
+    {
+        "index": 225,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{\\sqrt{3-x^2}}$",
+      "answersa": [
+        "$\\arcsin(\\frac{x}{\\sqrt{3}})+C$",
+        "$\\arccos(\\frac{x}{3})+C$",
+        "$-\\arccos(\\frac{x}{3})+C$",
+        "$\\arcsin(\\frac{x}{3})+C$",
+        "$\\arcsin(\\frac{x}{2})+C$"
+      ]
+    },
+    {
+        "index": 226,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{dx}{3-5x}$",
+      "answersa": [
+        "$-\\frac{1}{5}\\ln|3-5x|+C$",
+        "$-\\frac{1}{3}\\ln|3-5x|+C$",
+        "$\\frac{1}{5}\\ln|3-5x|+C$",
+        "$\\frac{1}{3}\\ln|3-5x|+C$",
+        "$\\frac{1}{3}\\ln|5-3x|+C$"
+      ]
+    },
+    {
+        "index": 227,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{\\frac{5x^8-3}{x^4}dx}$",
+      "answersa": [
+        "$x^5+\\frac{1}{x^3}+C$",
+        "$x^3+\\frac{1}{x^3}+C$",
+        "$x^3-\\frac{1}{x^3}+C$",
+        "$x^5-\\frac{1}{x^3}+C$",
+        "$5x+x^3+C$"
+      ]
+    },
+    {
+        "index": 228,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{e^{cosx}sinxdx}$",
+      "answersa": [
+        "$-e^{cos(x)}+C$",
+        "$e^{cos(x)}+C$",
+        "$-e^{sin(x)}+C$",
+        "$e^{sin(x)}+C$",
+        "$-e^{\\tan(x)}+C$"
+      ]
+    },
+    {
+        "index": 229,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{tgx}{{cos}^2x}dx$",
+      "answersa": [
+        "$-\\frac{1}{2{cos}^{2}(x)}+C$",
+        "$\\frac{1}{2{cos}^{2}(x)}+C$",
+        "$-\\frac{1}{4{cos}^{4}(x)}+C$",
+        "$-\\frac{1}{2cos(x)}+C$",
+        "$\\frac{1}{cos^{2}(x)}+C$"
+      ]
+    },
+    {
+        "index": 230,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int2sin3xcos2xdx$",
+      "answersa": [
+        "$-\\frac{1}{5}cos(5x)-cos(x)+C$",
+        "$\\frac{1}{5}cos(x)-cos(5x)+C$",
+        "$cos(x)-\\frac{1}{5}cos(5x)+C$",
+        "$cos(5x)-\\frac{1}{5}cos(x)+C$",
+        "$cos(x)+\\frac{1}{5}cos(5x)+C$"
+      ]
+    },
+    {
+        "index": 231,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int2^{-x}dx$",
+      "answersa": [
+        "$-\\frac{2^{-x}}{\\ln|2|}+C$",
+        "$\\frac{2^{-x}}{\\ln|2|}+C$",
+        "$-\\frac{2^{-x}}{\\2ln|2|}+C$",
+        "$-\\frac{2^{-x}}{\\-2ln|2|}+C$",
+        "$-\\frac{2^{-2x}}{\\2ln|2|}+C$"
+      ]
+    },
+    {
+        "index": 232,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int\\frac{x}{{cos}^2x}dx$",
+      "answersa": [
+        "$x\\tan(x)+\\ln|cos(x)|+C$",
+        "$-x\\tan(x)+\\ln|cos(x)|+C$",
+        "$x\\tan(x)-\\ln|sin(x)|+C$",
+        "$x\\tan(x)+\\ln|sin(x)|+C$",
+        "$x\\tan(x)\\ln|cos(x)|+C$"
+      ]
+    },
+    {
+        "index": 233,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{sin}^2xdx$",
+      "answersa": [
+        "$\\frac{x}{2}-\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}-\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{2}sin(2x)+C$"
+      ]
+    },
+    {
+        "index": 234,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int{cos}^2xdx$",
+      "answersa": [
+        "$\\frac{x}{2}+\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}-\\frac{1}{4}sin(2x)+C$",
+        "$\\frac{x}{2}-\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{4}cos(2x)+C$",
+        "$\\frac{x}{2}+\\frac{1}{2}sin(2x)+C$"
+      ]
+    },
+    {
+        "index": 235,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\frac{1}{2}\\int{\\frac{\\sqrt x}{1+x}dx}$",
+      "answersa": [
+        "$\\sqrt{x}-\\arctan(\\sqrt{x})+C$",
+        "$\\sqrt{x}+\\arctan(\\sqrt{x})+C$",
+        "$x-\\arctan(x)+C$",
+        "$x+\\arctan(x)+C$",
+        "$\\sqrt{x}-\\arctan(x)+C$"
+      ]
+    },
+    {
+        "index": 236,
+        "rightPos": 0,
+        "questiona": "Вычислить интеграл. $\\int x c o s x d x$",
+      "answersa": [
+        "$xsin(x)+cos(x)+C$",
+        "$xsin(x)+sin(x)+C$",
+        "$sin(\\frac{1}{x})+sin(\\frac{1}{x})+C$",
+        "$sin(\\frac{1}{x})-sin(\\frac{1}{x})+C$",
+        "$xcos(x)+cos(x)+C$"
+      ]
+    },
+    {
+        "index": 237,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\sqrt x$, проходящей через точку $(1; \\frac{8}{3})$",
+      "answersa": [
+        "$\\frac{2}{3}x^{\\frac{3}{2}}+2$",
+        "$\\frac{2}{3}x^{\\frac{3}{2}}+\\frac{3}{8}$",
+        "$\\frac{2}{3}x^{\\frac{2}{3}}+2$",
+        "$\\frac{3}{2}x^{\\frac{3}{2}}+2$",
+        "$\\frac{2}{3}x^{\\frac{3}{2}}-2$"
+      ]
+    },
+    {
+        "index": 238,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{\\sqrt{2x-1}}$, проходящей через точку $(5;2)$",
+      "answersa": [
+        "$\\sqrt{2x-1}-1$",
+        "$\\sqrt{x-1}-1$",
+        "$\\sqrt{2x}+1$",
+        "$\\sqrt{x}+1$",
+        "$2x+3$"
+      ]
+    },
+    {
+        "index": 239,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f(x)=(2x-1)^4$, проходящей через точку $(1; 2.1)$",
+      "answersa": [
+        "$\\frac{{(2x-1)}^5}{10}+2$",
+        "$\\frac{{(2x-1)}^5}{10}+5$",
+        "$\\frac{{(2x-1)}^5}{5}+2$",
+        "$\\frac{{(x-1)}^5}{5}+2$",
+        "$\\frac{{(x-1)}^5}{5}+5$"
+      ]
+    },
+    {
+        "index": 240,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{4+x^2}$ , проходящей через точку $(2;\\ \\frac{\\pi}{4})$",
+      "answersa": [
+        "$\\frac{1}{2}\\arctan(\\frac{x}{2})+\\frac{\\pi}{8}$",
+        "$2\\arctan(\\frac{x}{2})+\\frac{\\pi}{8}$",
+        "$\\frac{1}{2}\\arctan(\\frac{x}{2})+\\frac{\\pi}{4}$",
+        "$2\\arctan(\\frac{x}{4})+\\frac{\\pi}{8}$",
+        "$\\frac{1}{2}\\arctan(\\frac{x}{4})+\\frac{\\pi}{8}$"
+      ]
+    },
+    {
+        "index": 241,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)=e^{2x-1}$, проходящей через точку $(\\frac{1}{2};\\ 3\\frac{1}{2}\\ )$",
+      "answersa": [
+        "$\\frac{e^{2x-1}}{2}+3$",
+        "$\\frac{e^{2x+1}}{2}+3$",
+        "$\\frac{e^{2x}}{2}+3$",
+        "$\\frac{e^{2x}}{2}-3$",
+        "$\\frac{e^2}{2}+3$"
+      ]
+    },
+    {
+        "index": 242,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{3x-2}$, проходящей через точку $(1;2)$",
+      "answersa": [
+        "$\\frac{1}{3}\\ln|3x-2|+2$",
+        "$\\frac{1}{2}\\ln|2x-2|+2$",
+        "$\\frac{1}{2}\\ln|3x-2|+4$",
+        "$\\frac{1}{3}\\ln|3x-2|+4$",
+        "$\\frac{1}{2}\\ln|4x-2|+4$"
+      ]
+    },
+    {
+        "index": 243,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)={cos}^2\\frac{x}{2}$, проходящей через точку $(\\pi\\ ;\\frac{3\\pi}{2})$",
+      "answersa": [
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}+\\pi$",
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}+2$",
+        "$\\frac{x}{2}-\\frac{sin(x)}{2}+\\pi$",
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}-2\\pi$",
+        "$\\frac{x}{2}+\\frac{sin(x)}{2}-2$"
+      ]
+    },
+    {
+        "index": 244,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)=\\frac{1}{\\sqrt{1-4x^2}}$  , проходящей через точку $(\\frac{1}{4}\\ ;\\frac{13\\pi}{12})$",
+      "answersa": [
+        "$\\frac{1}{2}\\arcsin(2x)+\\pi$",
+        "$\\frac{1}{4}\\arcsin(4x)+\\pi$",
+        "$\\frac{1}{4}\\arcsin(2x)+\\pi$",
+        "$-\\frac{1}{2}\\arcsin(2x)+\\pi$",
+        "$\\frac{1}{2}\\arcsin(4x)-\\pi$"
+      ]
+    },
+    {
+        "index": 245,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f\\left(x\\right)={sin}^2\\frac{x}{2}$ , проходящей через точку $(\\pi\\ ;\\frac{3\\pi}{2})$",
+      "answersa": [
+        "$\\frac{x}{2}-\\frac{1}{2}sin(x)+\\pi$",
+        "$\\frac{x}{2}+\\frac{1}{2}sin(x)+\\pi$",
+        "$\\frac{x}{4}-\\frac{1}{4}sin(x)+\\pi$",
+        "$\\frac{x}{4}-\\frac{1}{2}sin(x)+\\pi$",
+        "$\\frac{x}{2}-\\frac{1}{4}sin(x)+\\pi$"
+      ]
+    },
+    {
+        "index": 246,
+        "rightPos": 0,
+        "questiona": "Найдите первообразной функции $f(x) = ctgx$, проходящей через точку $(\\frac{\\pi}{2}\\ ;-1)$",
+      "answersa": [
+        "$\\ln|\\sin(\\frac{\\pi}{2})|-1$",
+        "$\\ln|\\sin(\\frac{\\pi}{2})|+1$",
+        "$\\ln|\\cos(\\frac{\\pi}{2})|+1$",
+        "$\\ln|\\cos(\\frac{\\pi}{2})|-1$",
+        "$\\ln|\\cos(\\pi)|+1$"
+      ]
+    },
+    {
+        "index": 247,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{1}^{3}x^3dx$",
+        "answersa": [
+            "$20$",
+            "$14$",
+            "$4$",
+            "$2$",
+            "$5$"
+        ]
+    },
+    {
+        "index": 248,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{1}^{2}{{(3x-4)}^3dx}$",
+      "answersa": [
+        "$\\frac{5}{4}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{5}$",
+        "$5$",
+        "$20$"
+      ]
+    },
+    {
+        "index": 249,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{1}\\frac{dx}{2x-1}$",
+      "answersa": [
+        "$Отсутсвует$",
+        "$5$",
+        "$\\ln|2|$",
+        "$6$",
+        "$2$"
+      ]
+    },
+    {
+        "index": 250,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{2}\\frac{dx}{4+x^2}$",
+      "answersa": [
+        "$\\frac{\\pi}{8}$",
+        "$\\frac{\\pi}{2}$",
+        "$Отсутсвует$",
+        "$\\pi$",
+        "$8$"
+      ]
+    },
+    {
+        "index": 251,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{\\sqrt3}\\frac{dx}{9+x^2}$",
+      "answersa": [
+        "$\\frac{\\pi}{18}$",
+        "$\\frac{\\pi}{22}$",
+        "$Отсутсвует$",
+        "$\\pi$",
+        "$8$"
+      ]
+    },
+    {
+        "index": 252,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{1}{xe^xdx}$",
+        "answersa": [
+            "$1$",
+            "$\\pi$",
+            "$2$",
+            "$-1$",
+            "$-2$"
+        ]
+    },
+    {
+        "index": 253,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{\\frac{-\\pi}{2}}^{\\frac{\\pi}{2}}{\\ \\ xcosxdx}$",
+      "answersa": [
+        "$0$",
+        "$\\pi$",
+        "$2$",
+        "$-1$",
+        "$-2$"
+      ]
+    },
+    {
+        "index": 254,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{\\frac{\\pi}{8}}cos4xdx$",
+      "answersa": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{8}$",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 255,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{\\frac{\\pi}{8}}sin4xdx$",
+      "answersa": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{8}$",
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 256,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{a}{(x^3-ax^2})dx$",
+      "answersa": [
+        "$-\\frac{a^4}{12}$",
+        "$-\\frac{a^2}{12}$",
+        "$\\frac{a^4}{6}$",
+        "$-\\frac{a^2}{2}$",
+        "$\\frac{a^4}{12}$"
+      ]
+    },
+    {
+        "index": 257,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{4}\\frac{dx}{\\sqrt x+1}$",
+      "answersa": [
+        "$4-2\\ln|3|$",
+        "$2-\\ln|3|$",
+        "$4-2\\ln|6|$",
+        "$2-2\\ln|3|$",
+        "$2+2\\ln|3|$"
+      ]
+    },
+    {
+        "index": 258,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{4}\\frac{x-1}{\\sqrt x+1}dx$",
+      "answersa": [
+        "$\\frac{4}{3}$",
+        "$\\frac{1}{3}$",
+        "$-\\frac{1}{3}$",
+        "$-\\frac{4]{3}$",
+        "$\\frac{2}{3}$"
+      ]
+    },
+    {
+        "index": 259,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{9}\\frac{x-1}{\\sqrt x+1}$",
+      "answersa": [
+        "$9$",
+        "$3$",
+        "$0$",
+        "$\\frac{1}{9}$",
+        "$\\frac{1}{3}$"
+      ]
+    },
+    {
+        "index": 260,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{\\frac{\\pi}{2}}{\\ \\ xsinxdx}$",
+        "answersa": [
+            "$1$",
+            "$-1$",
+            "$2$",
+            "$-2$",
+            "$\\frac{1}{2}$"
+        ]
+    },
+    {
+        "index": 261,
+        "rightPos": 0,
+        "questiona": "Вычислить определенный интеграл. $\\int_{0}^{\\frac{\\pi}{2}}{\\ \\ cosxcos3xdx}$",
+        "answersa": [
+            "$0$",
+            "$1$",
+            "$-1$",
+            "$\\pi$",
+            "$2\\pi$"
+        ]
+    },
+    {
+        "index": 262,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=-x^2+2x+3$  и $y= 0$",
+      "answersa": [
+        "$10\\frac{2}{3}$",
+        "$5\\frac{2}{3}$",
+        "$\\frac{2}{3}$",
+        "$10$",
+        "$11$"
+      ]
+    },
+    {
+        "index": 263,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=3x-x^{2\\ }$ и $y=0$",
+        "answersa": [
+            "$\\frac{9}{2}$",
+            "$\\frac{3}{2}$",
+            "$9$",
+            "$3$",
+            "$-\\frac{9}{2}$"
+        ]
+    },
+    {
+        "index": 264,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $xy=2$, $x=1$ и $x=e$",
+      "answersa": [
+        "$2$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$-\\frac{2}{3}$",
+        "$-1$"
+      ]
+    },
+    {
+        "index": 265,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=x^2+2x$ и $y=x+2$",
+      "answersa": [
+        "$\\frac{9}{2}$",
+        "$\\frac{3}{2}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{6}$"
+      ]
+    },
+    {
+        "index": 266,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=sinx$, $y=0$ и $x= \\frac{\\pi}{3}$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{2}$",
+        "$2$",
+        "$-2$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 267,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=cosx (x>0)$, $y=0$ и $x= \\frac{\\pi}{6}$",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{2}$",
+        "$2$",
+        "$-2$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 268,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=lnx$, $y=0$ и $x=e$",
+        "answersa": [
+            "$1$",
+            "$-1$",
+            "$\\frac{1}{2}$",
+            "$e$",
+            "$e^2$"
+        ]
+    },
+    {
+        "index": 269,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=e^x$, $y=0$, $x=ln2$ и $x=ln5$",
+        "answersa": [
+            "$3$",
+            "$5$",
+            "$\\frac{3}{5}$",
+            "$e^2$",
+            "$e^3$"
+        ]
+    },
+    {
+        "index": 270,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=x^2+1$ и $y=10$",
+        "answersa": [
+            "$36$",
+            "$54$",
+            "$64$",
+            "$-36$",
+            "$-54$"
+        ]
+    },
+    {
+        "index": 271,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=e^x$, $x=0$, $x=\\ln3$ и $y=\\ln5$",
+      "answersa": [
+        "$\\frac{15}{2}$",
+        "$\\frac{11}{2}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{15}{11}$",
+        "$\\frac{15}{7}$"
+      ]
+    },
+    {
+        "index": 272,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=x^2$ и $y=2x$",
+      "answersa": [
+        "$\\frac{4}{3}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{3}$",
+        "$-\\frac{4}{3}$"
+      ]
+    },
+    {
+        "index": 273,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=x^2$ и  $y=-x^2+2$",
+      "answersa": [
+        "$\\frac{8}{3}$",
+        "$\\frac{8}{5}$",
+        "$\\frac{3}{5}$",
+        "$-\\frac{8}{3}$",
+        "$-\\frac{3}{5}$"
+      ]
+    },
+    {
+        "index": 274,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=x^3$ и $y=4x$",
+        "answersa": [
+            "$0$",
+            "$1$",
+            "$\\frac{2}{3}$",
+            "$\\frac{3}{2}$",
+            "$-1$"
+        ]
+    },
+    {
+        "index": 275,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=e^x$, $x=0$, $x=ln3$ и $y=0$",
+        "answersa": [
+            "$2$",
+            "$1$",
+            "$\\frac{1}{2}$",
+            "$-\\frac{1}{2}$",
+            "$0$"
+        ]
+    },
+    {
+        "index": 276,
+        "rightPos": 0,
+        "questiona": "Найдите площадь фигуры, ограниченную линиями $y=lnx$, $y=0$, $x=e$",
+        "answersa": [
+            "$1$",
+            "$-1$",
+            "$2$",
+            "$\\frac{1}{2}$",
+            "$-2$"
+        ]
+    },
+    {
+        "index": 277,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=x^3+2xy^2-\\frac{2}{3}y^3$",
+      "answersa": [
+        "$3x^2+4xy$",
+        "$6x^2+3xy$",
+        "$3$",
+        "$6x$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 278,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}$ для функций $u=e^\\frac{x}{y}$",
+      "answersa": [
+        "$0$",
+        "$e^x$",
+        "$e^{\\frac{x}{y}}$",
+        "$6x$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 279,
+        "rightPos": 0,
+        "questiona": "Найдите $\\frac{\\partial u}{\\partial x}:\\frac{\\partial u}{\\partial y}$ для функций $u=e^{x^2-y^2}$",
+      "answersa": [
+        "$-\\frac{x}{y}$",
+        "$\\frac{x}{y}$",
+        "$e^{\\frac{x}{y}}$",
+        "$e^{\\frac{y}{x}}$",
+        "$\\frac{x}{y}e^x$"
+      ]
+    },
+    {
+        "index": 280,
+        "rightPos": 0,
+        "questiona": "Найдите $\\frac{\\partial u}{\\partial x}:\\frac{\\partial u}{\\partial y}$ для функций $u=\\ln(xy)$",
+      "answersa": [
+        "$\\frac{y}{x}$",
+        "$\\frac{x}{y}$",
+        "$e^{\\frac{x}{y}}$",
+        "$e^{\\frac{y}{x}}$",
+        "$\\frac{x}{y}e^x$"
+      ]
+    },
+    {
+        "index": 281,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=x^3-2xy^2-\\frac{2}{3}y^3$",
+      "answersa": [
+        "$3x^2-4xy-4y^2$",
+        "$6x^2+3xy$",
+        "$3$",
+        "$6x$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 282,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=ln(x^2 – y^2)$",
+      "answersa": [
+        "$\\frac{2(x-y)}{x^2-y^2}$",
+        "$\\frac{2(x+y)}{x^2+y^2}$",
+        "$0$",
+        "$\\frac{x-y}{x^2-y^2}$",
+        "$-\\frac{x+y}{x^2+y^2}$"
+      ]
+    },
+    {
+        "index": 283,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=ln(x-y)$",
+      "answersa": [
+        "$0$",
+        "$\\frac{2(x+y)}{x^2+y^2}$",
+        "$\\frac{2(x-y)}{x^2-y^2}$",
+        "$\\frac{x-y}{x^2-y^2}$",
+        "$-\\frac{x+y}{x^2+y^2}$"
+      ]
+    },
+    {
+        "index": 284,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=sin(x-y)$",
+      "answersa": [
+        "$0$",
+        "$-\\cos(x-y)$",
+        "$\\cos(x-y)$",
+        "$-\\sin(x-y)$",
+        "$\\sin(x-y)$"
+      ]
+    },
+    {
+        "index": 285,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=sin(2x-3y)$",
+      "answersa": [
+        "$-\\cos(2x-3y)$",
+        "$0$",
+        "$\\cos(2x-3y)$",
+        "$-\\sin(2x-3y)$",
+        "$\\sin(2x-3y)$"
+      ]
+    },
+    {
+        "index": 286,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=cos(x-y)$",
+      "answersa": [
+        "$0$",
+        "$-\\cos(x-y)$",
+        "$\\cos(x-y)$",
+        "$-\\sin(x-y)$",
+        "$\\sin(x-y)$"
+      ]
+    },
+    {
+        "index": 287,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=cos (2x-3y)$",
+      "answersa": [
+        "$\\sin(2x-3y)$",
+        "$0$",
+        "$-\\cos(2x-3y)$",
+        "$-\\sin(2x-3y)$",
+        "$\\cos(2x-3y)$"
+      ]
+    },
+    {
+        "index": 288,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u={sin}^2(x-y)$",
+      "answersa": [
+        "$0",
+        "$-\\frac{\\cos2(x-y)}{2}$",
+        "$\\frac{\\cos(x-y)}{2}$",
+        "$-\\sin(x-y)$",
+        "$\\sin(x-y)$"
+      ]
+    },
+    {
+        "index": 289,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функций $u=e^{3x-y}$",
+      "answersa": [
+        "$2e^{3x-y}$",
+        "$-3e^{3x-y}$",
+        "$-2e^{3x-y}$",
+        "$3e^{3x-y}$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 290,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}$ для функции $u=arctg\\frac{x}{y}$",
+      "answersa": [
+        "$0$",
+        "$-\\frac{1}{2}$",
+        "$1$",
+        "$-\\sin(x-y)$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 291,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}$ для функции $u=arcctg\\frac{x}{y}$",
+      "answersa": [
+        "$0$",
+        "$-1$",
+        "$1$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 292,
+        "rightPos": 0,
+        "questiona": "Найдите $\\frac{\\partial u}{\\partial y}-\\frac{\\partial u}{\\partial x}$ для функции $u=x^3y+xy^3$",
+      "answersa": [
+        "$x^3+3xy^2-3x^2y-y^3$",
+        "$x^3+3xy^2+3x^2y-y^3$",
+        "$x^3+6xy^2-6x^2y-y^3$",
+        "$x^1+3xy^2+3x^2y-y^1$",
+        "$x^3-3xy^2-3x^2y-y^3$"
+      ]
+    },
+    {
+        "index": 293,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$ для функции $u=x^2y-xy^2$",
+      "answersa": [
+        "$x^2-y^2$",
+        "$x^2y-y^2x$",
+        "$x^2+y^2$",
+        "$x^2y+y^2x$",
+        "$x^2y$"
+      ]
+    },
+    {
+        "index": 294,
+        "rightPos": 0,
+        "questiona": "Найдите $\\frac{\\partial u}{\\partial y}-\\frac{\\partial u}{\\partial x}$ для функции $u=x^2y+xy^2$",
+      "answersa": [
+        "$x^2-y^2$",
+        "$x^2y-y^2x$",
+        "$x^2+y^2$",
+        "$x^2y+y^2x$",
+        "$x^2y$"
+      ]
+    },
+    {
+        "index": 295,
+        "rightPos": 0,
+        "questiona": "Найдите $x\\frac{\\partial u}{\\partial x}-y\\frac{\\partial u}{\\partial y}$ для функции $u=arctg(xy)$",
+      "answersa": [
+        "$0$",
+        "$-1$",
+        "$1$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 296,
+        "rightPos": 0,
+        "questiona": "Найдите $y\\frac{\\partial u}{\\partial x}-x\\frac{\\partial u}{\\partial y}$ для функции $u=\\ln(x^2+y^2)$",
+      "answersa": [
+        "$0$",
+        "$-1$",
+        "$1$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 297,
+        "rightPos": 0,
+        "questiona": "Найдите $\\frac{\\partial u}{\\partial x}-\\frac{\\partial u}{\\partial y}$ для функции $u=x\\ln{\\left(x+y\\right)}$",
+        "answersa": [
+            "$\\ln|x+y|$",
+            "$0$",
+            "$1$",
+            "$2\\ln|x+y|$",
+            "$\\ln|x-y|$"
+        ]
+    },
+    {
+        "index": 298,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial z}{\\partial x}+y\\frac{\\partial z}{\\partial y}$  для функции  $z=e^{-\\frac{x}{y}}$",
+      "answersa": [
+        "$0$",
+        "$e^2$",
+        "$e^{-\\frac{x}{y}}$",
+        "$-e^{-\\frac{x}{y}}$",
+        "$e^{\\frac{x}{y}}$"
+      ]
+    },
+    {
+        "index": 299,
+        "rightPos": 0,
+        "questiona": "Найдите $y\\frac{\\partial z}{\\partial y}-x\\frac{\\partial z}{\\partial x}$ для функции $z=e^{-\\frac{x}{y}}$",
+      "answersa": [
+        "$0$",
+        "$e^2$",
+        "$e^{-\\frac{x}{y}}$",
+        "$-e^{-\\frac{x}{y}}$",
+        "$e^{\\frac{x}{y}}$"
+      ]
+    },
+    {
+        "index": 300,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\left(\\frac{\\partial z}{\\partial x}\\right)^2+\\left(\\frac{\\partial z}{\\partial y}\\right)^2$ для функции $z=\\sqrt{x^2+y^2}$",
+        "answersa": [
+            "$1$",
+            "$0$",
+            "$-1$",
+            "$2$",
+            "$\\frac{1}{2}$"
+        ]
+    },
+    {
+        "index": 301,
+        "rightPos": 0,
+        "questiona": "Найдите $x\\frac{\\partial z}{\\partial y}-y\\frac{\\partial z}{\\partial x}$ для функции $z=\\sin{(xy)}$",
+      "answersa": [
+        "$(x^2-y^2)\\cos(xy)$",
+        "$(x-y)\\cos(xy)$",
+        "$(x^2+y^2)\\cos(xy)$",
+        "$(x+y)\\cos(xy)$",
+        "$\\cos(xy)$"
+      ]
+    },
+    {
+        "index": 302,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial z}{\\partial x}+y\\frac{\\partial z}{\\partial y}$ для функции $z=arcsin\\frac{x}{y}$",
+      "answersa": [
+        "$0$",
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 303,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial z}{\\partial x}+y\\frac{\\partial z}{\\partial y}$ для функции $z=e^\\frac{x}{y}lny$",
+      "answersa": [
+        "$e^{\\frac{x}{y}}$",
+        "$e^x$",
+        "$e^{xy}$",
+        "$e^y$",
+        "$e^2$"
+      ]
+    },
+    {
+        "index": 304,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $x\\frac{\\partial z}{\\partial x}+y\\frac{\\partial z}{\\partial y}$ для функции $z=\\frac{x}{y}lny$",
+      "answersa": [
+        "$\\frac{x}{y}$",
+        "$\\frac{y}{x}$",
+        "$-\\frac{y}{x}$",
+        "$-\\frac{x}{y}$",
+        "$-y$"
+      ]
+    },
+    {
+        "index": 305,
+        "rightPos": 0,
+        "questiona": "Найдите сумму $\\frac{\\partial z}{\\partial x}+\\frac{\\partial z}{\\partial y}$  для функции $z=\\frac{xy}{x-y}$",
+      "answersa": [
+        "$\\frac{x+y}{x-y}$",
+        "$\\frac{x-y}{x+y}$",
+        "$-\\frac{x+y}{x-y}$",
+        "$\\frac{x-y}{x-y}$",
+        "$\\frac{x+y}{x+y}$"
+      ]
+    },
+    {
+        "index": 306,
+        "rightPos": 0,
+        "questiona": "Найти дифференциал функции $u=x^2y$",
+      "answersa": [
+        "$2xy\\partial x +x^2\\partial y$",
+        "$xy\\partial x +x^2\\partial y$",
+        "$2xy\\partial x -x^2\\partial y$",
+        "$y^2\\partial x +x^2\\partial y$",
+        "$y^2\\partial x -x^2\\partial y$"
+      ]
+    },
+    {
+        "index": 307,
+        "rightPos": 0,
+        "questiona": "Найти дифференциал функции $u=x^2y^2$",
+      "answersa": [
+        "$2xy^2\\partial x +2x^{2}y\\partial y$",
+        "$xy\\partial x +x^2\\partial y$",
+        "$2xy^2\\partial x -x^2\\partial y$",
+        "$y^2\\partial x +x^2\\partial y$",
+        "$y^2\\partial x -x^2\\partial y$"
+      ]
+    },
+    {
+        "index": 308,
+        "rightPos": 0,
+        "questiona": "Найти дифференциал функции $u=xlny$",
+      "answersa": [
+        "$\\ln|y|\\partial x +\\frac{x}{y}\\partial y$",
+        "$\\ln|y|\\partial x -\\frac{x}{y}\\partial y$",
+        "$\\ln|y|\\partial x +y^2\\partial y$",
+        "$y^2\\partial x +x\\partial y$",
+        "$y^2\\partial x -x\\partial y$"
+      ]
+    },
+    {
+        "index": 309,
+        "rightPos": 0,
+        "questiona": "Найти дифференциал функции $u=e^{xy}$",
+      "answersa": [
+        "$ye^{xy}\\partial x +xe^{xy}\\partial y$",
+        "$xe^{xy}\\partial x +ye^{xy}\\partial y$",
+        "$xe^{xy}\\partial x -ye^{xy}\\partial y$",
+        "$ye^{2xy}\\partial x +xe^{2xy}\\partial y$",
+        "$2e^{xy}\\partial x -2e^{xy}\\partial y$"
+      ]
+    },
+    {
+        "index": 310,
+        "rightPos": 0,
+        "questiona": "Найти дифференциал функции $u=e^\\frac{x}{y}$",
+      "answersa": [
+        "$\\frac{e^{\\frac{x}{y}}}{y}\\partial x-\\frac{xe^{\\frac{x}{y}}}{y^2}\\partial y$",
+        "$\\frac{e^{\\frac{y}{x}}}{y}\\partial x-\\frac{xe^{\\frac{y}{x}}}{y^2}\\partial y$",
+        "$\\frac{e^x}{y}\\partial x-\\frac{e^x}{y^2}\\partial y$",
+        "$\\frac{e^x}{y}\\partial x+\\frac{e^x}{y^2}\\partial y$",
+        "$\\frac{e^{\\frac{x}{y}}}{y}\\partial x+\\frac{xe^{\\frac{x}{y}}}{y^2}\\partial y$"
+      ]
+    },
+    {
+        "index": 311,
+        "rightPos": 0,
+        "questiona": "Вычислить производную $\\frac{\\partial^2z}{\\partial x\\partial y}$ для функции $z=xy^2-x^2y$",
+      "answersa": [
+        "$2y-2x$",
+        "$2y+2x$",
+        "$y+x$",
+        "$yx^2+xy^2$",
+        "$yx^2-xy^2$"
+      ]
+    },
+    {
+        "index": 312,
+        "rightPos": 0,
+        "questiona": "Вычислить производную $\\frac{\\partial^2z}{\\partial x\\partial y}$ для функции $z=e^{xy}$",
+      "answersa": [
+        "$e^{xy}(1+xy)$",
+        "$e^{x}(1+y)$",
+        "$e^{xy}(1+x)$",
+        "$\\frac{1}{2}e^{2xy}$",
+        "$e^{xy}(1-xy)$"
+      ]
+    },
+    {
+        "index": 313,
+        "rightPos": 0,
+        "questiona": "Вычислить производную $\\frac{\\partial^2z}{{\\partial x}^2}$  для функции $z=xy^3-x^3y$",
+      "answersa": [
+        "$-6xy$",
+        "$y^3-3x^2y$",
+        "$y^3+3x^2y$",
+        "$y^2-3x^2y$",
+        "$y-3xy$"
+      ]
+    },
+    {
+        "index": 314,
+        "rightPos": 0,
+        "questiona": "Вычислить производную $x\\frac{\\partial^2z}{{\\partial x}^2}+y\\frac{\\partial^2z}{{\\partial y}^2}$ для функции $z=xy^2-x^2y$",
+      "answersa": [
+        "$0$",
+        "$y^2-2xy$",
+        "$2xy-x^2$",
+        "$-2y$",
+        "$1$"
+      ]
+    },
+    {
+        "index": 315,
+        "rightPos": 0,
+        "questiona": "Какой ряд сходится?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{n^2}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{n}{n+1}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{n+1}{n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{n-1}{n}$"
+        ]
+    },
+    {
+        "index": 316,
+        "rightPos": 0,
+        "questiona": "Какой ряд сходится?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{\\sqrt[n]{n}}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{\\sqrt n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{n}{n+1}$",
+            "$\\sum_{n=1}^{+\\infty}\\left(-1\\right)^n$"
+        ]
+    },
+    {
+        "index": 317,
+        "rightPos": 0,
+        "questiona": "Какой ряд сходится?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{3^n}$",
+            "$\\sum_{n=1}^{+\\infty}\\left(\\frac{3}{2}\\right)^n$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{\\sqrt n}$",
+            "$\\sum_{n=1}^{+\\infty}2^n$"
+        ]
+    },
+    {
+        "index": 318,
+        "rightPos": 0,
+        "questiona": "Какой ряд сходится?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}\\left(\\frac{2}{3}\\right)^n$",
+            "$\\sum_{n=1}^{+\\infty}\\left(\\frac{3}{2}\\right)^n$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{\\sqrt n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{n+1}{n}$"
+        ]
+    },
+    {
+        "index": 319,
+        "rightPos": 0,
+        "questiona": "Какой ряд является степенным?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}{\\frac{n}{n+1}x}^n$",
+            "$\\sum_{n=1}^{+\\infty}\\sin{nx}$",
+            "$\\sum_{n=1}^{+\\infty}e^{nx}$",
+            "$\\sum_{n=1}^{+\\infty}\\left(\\frac{x}{x+1}\\right)^n$",
+            "$\\sum_{n=1}^{+\\infty}n^2$"
+        ]
+    },
+    {
+        "index": 320,
+        "rightPos": 0,
+        "questiona": " Какой ряд является степенным?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}{\\left(n^2+1\\right)x}^n$",
+            "$\\sum_{n=1}^{+\\infty}\\cos{nx}$",
+            "$\\sum_{n=1}^{+\\infty}e^{-nx}$",
+            "$\\sum_{n=1}^{+\\infty}\\left(\\frac{x-1}{x+1}\\right)^n$",
+            "$\\sum_{n=1}^{+\\infty}2^n$"
+        ]
+    },
+    {
+        "index": 321,
+        "rightPos": 0,
+        "questiona": "Какой ряд является степенным?",
+        "answersa": [
+            "$\\sum_{n=1}^{+\\infty}{\\sqrt n x}^n$",
+            "$\\sum_{n=1}^{+\\infty}x^n\\sin{nx}$",
+            "$\\sum_{n=1}^{+\\infty}{x^ncosnx}$",
+            "$\\sum_{n=1}^{+\\infty}{e^{nx}x^n}$",
+            "$\\sum_{n=1}^{+\\infty}\\frac{1}{2^n}$"
+        ]
+    },
+    {
+        "index": 322,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{2^nx^n}$?",
+        "answersa": [
+            "$\\frac{1}{2}$",
+            "$\\infty$",
+            "$0$",
+            "$-\\frac{1}{2}$",
+            "$2$"
+        ]
+    },
+    {
+        "index": 323,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{2^n}$?",
+      "answersa": [
+        "$2$",
+        "$\\infty$",
+        "$0$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 324,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{\\frac{n}{n+1}x^n}$?",
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 325,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{nx}^n$?",
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 326,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{n^2x}^n$?",
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 327,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n}$?",
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 328,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{n!x}^n$?",
+      "answersa": [
+        "$0$",
+        "$\\infty$",
+        "$1$",
+        "$2$",
+        "$\\frac{1}{2}$"
+      ]
+    },
+    {
+        "index": 329,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}{{10}^nx}^n$?",
+      "answersa": [
+        "$\\frac{1}{10}$",
+        "$\\infty$",
+        "$1$",
+        "$2$",
+        "$-\\frac{1}{10}$"
+      ]
+    },
+    {
+        "index": 330,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n\\left(n+1\\right)}$?",
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
+    },
+    {
+        "index": 331,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n^2}$?",
+      "answersa": [
+        "$1$",
+        "$\\infty$",
+        "$0$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
+    },
+    {
+        "index": 332,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{x^n}{n!}$?",
+      "answersa": [
+        "$\\infty$",
+        "$1$",
+        "$0$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
+    },
+    {
+        "index": 333,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{n}{2^n}x^n$?",
+      "answersa": [
+        "$2$",
+        "$1$",
+        "$\\infty$",
+        "$-\\frac{1}{10}$",
+        "$\\frac{1}{10}$"
+      ]
+    },
+    {
+        "index": 334,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{2^n}{n}x^n$?",
+      "answersa": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\infty$",
+        "$-\\frac{1}{2}$",
+        "$0$"
+      ]
+    },
+    {
+        "index": 335,
+        "rightPos": 0,
+        "questiona": "Найти радиус сходимости степенного ряда $\\sum_{n=1}^{+\\infty}\\frac{n!}{3^n}x^n$?",
+      "answersa": [
+        "$0$",
+        "$1$",
+        "$\\infty$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$"
+      ]
+    }
+]
