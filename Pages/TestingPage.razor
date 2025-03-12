@@ -170,9 +170,8 @@
         BaseQuestion[] bases = BaseQuestion.Trans(serializationHandler.Questions, this.min, this.max);
 
         if (random) bases.Shuffle();
-
-        for (int i = 0; i < this.num; i++) bases[i] = bases[i].Shuffle;
-        this.baseQuestions = bases;
+        Array.Copy(bases, this.baseQuestions = new BaseQuestion[this.num], this.num);
+        foreach (BaseQuestion q in this.baseQuestions) q.Shuffle();
 
         ///////////////////////////////////////////////////////
 

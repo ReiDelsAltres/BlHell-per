@@ -25,18 +25,24 @@ public class BaseQuestion : Question
     }*/
 
     public Question Immutable { get; }
-    public BaseQuestion Shuffle
+    /*public BaseQuestion Shuffle
     {
         get
         {
             base.Answers.Shuffle();
             return this;
         }
-    }
+    }*/
 
     public BaseQuestion(Question question) : 
         base(question.Id, question.RId, question.Title,question.Answers) =>
         this.Immutable = question;
+
+    public BaseQuestion Shuffle()
+    {
+        base.Answers.Shuffle();
+        return this;
+    }
 
     public static BaseQuestion[] Trans(Question[] questions)
     {
