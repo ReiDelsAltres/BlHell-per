@@ -1,0 +1,50 @@
+﻿<div class="question border" role="gridcell" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@QuestionIndex.</span>
+            <input type="text" class="form-control" placeholder="Question" aria-label="Question" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="toast-body">
+        @foreach (AnswerContext context in this.contexts)
+        {
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="radio" @bind-value="context.right" name="flexRadioDefault" aria-label="is Right">
+                </div>
+                <input type="text" class="form-control" placeholder="Answer" aria-label="Answer" aria-describedby="basic-addon1" @bind-value="context.text">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" @onclick="@(arg => this.onClickDelete(context,arg))">Delete</button>
+            </div>
+        }
+
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @onclick="@(arg => this.onClick(arg))">Add Answer</button>
+    </div>
+</div>
+@code {
+    public record AnswerContext(bool right, string? text)
+    {
+        public bool right { get; set; }
+        public string? text { get; set; }
+    }
+
+    [Parameter]
+    public int QuestionIndex { get; set; } = 0;
+
+    List<AnswerContext> contexts = new();
+
+    internal async void onClick(MouseEventArgs args)
+    {
+        this.contexts.Add(new AnswerContext(false,""));
+    }
+    internal async void onClickDelete(AnswerContext context,MouseEventArgs args)
+    {
+        this.contexts.Remove(context);
+    }
+    internal async void onClickEnsureOne(AnswerContext context,MouseEventArgs args)
+    {
+        foreach (AnswerContext ctx in this.contexts)
+        {
+            ctx.right = ctx == context ? ctx.right : false;
+        }
+    }
+}

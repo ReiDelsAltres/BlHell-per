@@ -1,0 +1,28 @@
+﻿@page "/Constructor"
+@inherits MathJaxContentComponentFixed;
+
+@using BlHell_per.Base.Questions;
+@using BlHell_per.Base.Compat;
+@using BlHell_per.BlazorClasses;
+@using MathJaxBlazor;
+
+@inject NavigationManager Navigation
+<PageTitle>Constructor</PageTitle>
+
+<div class="question-grid" style="display:grid">
+    @for (int i = 0;i<this.mutableQuestions.Count;i++)
+    {
+        MutableQuestion question = this.mutableQuestions[i];
+        <MutableQuestion @ref="question" />
+    }
+
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" @onclick="@(arg => this.onClick(arg))">Add Answer</button>
+</div>
+
+@code {
+    private List<MutableQuestion> mutableQuestions = new();
+
+    internal async void onClick(MouseEventArgs args)
+    {
+    }
+}

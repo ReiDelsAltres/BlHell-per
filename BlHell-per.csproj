@@ -15,8 +15,4 @@
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\resources\" />
-  </ItemGroup>
-
 </Project>
