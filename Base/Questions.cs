@@ -38,6 +38,7 @@ public class Question : IQuestion<Question>
     {
         var str = await client.GetStringAsync(path);
         return Question.Deserialize(str);
+
         /*await client.GetFromJsonAsync<SerializationHandler<Question>>(path, SerializationHandler._options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");*/
     }
