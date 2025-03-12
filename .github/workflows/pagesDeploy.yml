@@ -26,7 +26,7 @@ jobs:
       # Publish the site
       - name: Publish
         # run: dotnet publish BlHell-per.sln -c:Release -o:publish -p:GHPages=true
-        run: dotnet publish /p:PublishProfile=PagesProfile.pubxml -p:GHPages=true
+        run: dotnet publish /p:PublishProfile=PagesProfile.pubxml -o:publish -p:GHPages=true
 
       # Deploy the site
       - name: Deploy
