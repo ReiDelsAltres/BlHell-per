@@ -169,9 +169,15 @@
         SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http);
         BaseQuestion[] bases = BaseQuestion.Trans(serializationHandler.Questions, this.min, this.max);
 
+
         if (random) bases.Shuffle();
         Array.Copy(bases, this.baseQuestions = new BaseQuestion[this.num], this.num);
-        foreach (BaseQuestion q in this.baseQuestions) q.Shuffle();
+        for (int i = 0; i<this.baseQuestions.Length;i++)
+        {
+            BaseQuestion q = this.baseQuestions[i];
+            q.Shuffle();
+            this.baseQuestions[i] = q.InsertAnswer("Пропустить вопрос");
+        }
 
         ///////////////////////////////////////////////////////
 

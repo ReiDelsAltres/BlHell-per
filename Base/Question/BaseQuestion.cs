@@ -23,7 +23,6 @@ public class BaseQuestion : Question
             return strs;
         }
     }*/
-
     public Question Immutable { get; }
     /*public BaseQuestion Shuffle
     {
@@ -43,7 +42,14 @@ public class BaseQuestion : Question
         base.Answers.Shuffle();
         return this;
     }
+    public BaseQuestion InsertAnswer(string answer)
+    {
+        string[] remembrance = new string[this.Answers.Length + 1];
+        Array.Copy(this.Answers, remembrance, this.Answers.Length);
+        remembrance[this.Answers.Length] = answer;
 
+        return new(new(this.Id, this.RId, this.Title, remembrance));
+    }
     public static BaseQuestion[] Trans(Question[] questions)
     {
         BaseQuestion[] bases = new BaseQuestion[questions.Length];
