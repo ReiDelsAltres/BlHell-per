@@ -1,0 +1,37 @@
+﻿@page "/Archive"
+@using BlHell_per.BlazorClasses
+@inject NavigationManager Navigation
+
+<PageTitle>Archive</PageTitle>
+
+<h1>BlHell-per</h1>
+
+<h2>Выберите предмет для проверки</h2>
+<div class="container px-4 border-secondary">
+    <SmartButton @ref="this.smartButtons[0]" name="History" Count="517" Text="История" onClickCallback="@(arg => onClickUnited(arg,0))"/>
+    <SmartButton @ref="this.smartButtons[1]" name="AzerDil" Count="357" Text="Азерб" onClickCallback="@(arg => onClickUnited(arg,1))"/>
+    <SmartButton @ref="this.smartButtons[2]" name="Inform" Count="361" Text="Информатика (Эльчин)" onClickCallback="@(arg => onClickUnited(arg,2))"/>
+    <SmartButton @ref="this.smartButtons[3]" name="Biznes" Count="200" Text="Biznes" onClickCallback="@(arg => onClickUnited(arg,3))"/>
+    <SmartButton @ref="this.smartButtons[4]" name="Ginekologiya" Count="135" Text="Ginekologiya" onClickCallback="@(arg => onClickUnited(arg,4))"/>
+    <SmartButton style="background-color:darkslateblue" @ref="this.smartButtons[5]" name="Math" Count="334" Text="(LaTeX) Math" onClickCallback="@(arg => onClickUnited(arg,5))"/>
+</div>
+
+@code {
+    private SmartButton[] smartButtons = new SmartButton[6];
+
+    private void onClickUnited(SmartButton.MouseEventArgsLocal args, Int32 index)
+    {
+        for (int i = 0; i < this.smartButtons.Length; i++)
+        {
+            SmartButton button = this.smartButtons[i];
+            if (button.popupRef.isVisible())
+            {
+                button.popupRef.Close();
+            }
+            else if (index == i)
+            {
+                button.popupRef.Show();
+            }
+        }
+    }
+}
