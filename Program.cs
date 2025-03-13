@@ -1,3 +1,4 @@
+using BlazorDownloadFile;
 using BlHell_per;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -8,6 +9,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 Static.HttpClient = new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) };
 builder.Services.AddScoped(sp => Static.HttpClient);
+builder.Services.AddBlazorDownloadFile(ServiceLifetime.Scoped);
 
 await builder.Build().RunAsync();
 
