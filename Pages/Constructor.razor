@@ -13,26 +13,29 @@
 <PageTitle>Constructor</PageTitle>
 
 <div class="question-grid" style="display:grid">
-    @for (int i = 0;i<this.mutableQuestions.Count;i++)
+    @{
+        int i = 0;
+    }
+    @foreach(var model in this.models) 
     {
-        MutableQuestionContext question = this.mutableQuestions[i];
-        <MutableQuestion QuestionIndex="i+1" Answers="@question.Answers"
-                         OnTitleChanged="@(val => question.Title = val)"
-                         OnRightAnswerChanged="@(val => question.RightAnswer = val)" />
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="background-color:orangered"
-                @onclick="@(arg => this.onClickDelete(question,arg))">
-                Delete
+        int reserve = i++;
+        model.QuestionIndex = i;
+        <MutableQuestion Model="model" />
+
+        <button class="btn btn-outline-secondary" type="button" id="@reserve" style="background-color:orangered"
+                @onclick="@(async arg => this.onClickDelete(model,arg))">
+            Delete
         </button>
     }
 
     <button class="btn btn-outline-secondary" type="button" id="button-addon2" 
-            @onclick="@(arg => this.onClick(arg))">
+    @onclick="@(async arg => this.onClick(arg))">
         Add Question
     </button>
-    @if(this.mutableQuestions.Count > 0) 
+    @if(this.models.Count > 0) 
     {
         <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                @onclick="@(async arg => await this.DownloadFileFromStream())">
+        @onclick="@(async arg => await this.DownloadFileFromStream())">
             Download Constructed
         </button>
     }
@@ -40,32 +43,19 @@
 
 @code {
     [Inject] IBlazorDownloadFileService BlazorDownloadFileService { get; set; }
-    public record MutableQuestionContext() 
-    {
-        public int RightAnswer { get; set; } = 0;
-        public string Title { get; set; } = "";
-        public List<string> Answers { get; set; } = new();
-
-        public Question CreateQuestion() 
-        {
-            int? rrid = (this.RightAnswer == -1 || this.RightAnswer == 0) ? null : this.RightAnswer;
-
-            return new(null, rrid, this.Title, this.Answers.ToArray());
-        }
-    }
-    private List<MutableQuestionContext> mutableQuestions = new();
+    private List<MutableQuestion.DataModel> models = new();
 
     internal async void onClick(MouseEventArgs args)
     {
-        this.mutableQuestions.Add(new());
+        this.models.Add(new());
     }
-    internal async void onClickDelete(MutableQuestionContext question, MouseEventArgs args)
+    internal async void onClickDelete(MutableQuestion.DataModel question, MouseEventArgs args)
     {
-        this.mutableQuestions.Remove(question);
+        this.models.Remove(question);
     }
     internal async Task DownloadFileFromStream()
     {
-        Question[] questions = this.mutableQuestions.ConvertAll(mt => mt.CreateQuestion()).ToArray();
+        Question[] questions = this.models.ConvertAll(mt => mt.CreateQuestion()).ToArray();
         bool isRid = questions.Any(q=>q.RId>0);
         SerializationHandler<Question> var = new(false,isRid,questions);
 

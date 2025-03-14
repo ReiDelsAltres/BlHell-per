@@ -1,73 +1,61 @@
-﻿<div class="question border" role="gridcell" aria-live="assertive" aria-atomic="true">
+﻿@using BlHell_per.Base.Questions;
+
+<div class="question border" role="gridcell" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
         <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@QuestionIndex.</span>
-            <input type="text" class="form-control" @bind-value="this.title" placeholder="Question" aria-label="Question" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">@this.Model.QuestionIndex.</span>
+            <input type="text" class="form-control" @bind-value="this.Model.Title" placeholder="Question" aria-label="Question" aria-describedby="basic-addon1">
         </div>
     </div>
     <div class="toast-body">
-        @for(int i = 0;i<this.Answers.Count;i++) 
+        @for(int i = 0;i<this.Model.Answers.Count;i++) 
         {
             int reserve = i;
 
             <div class="input-group mb-3">
                 <div class="input-group-text">
-                    <InputRadioGroup @bind-Value="@this.rightAnswer">
+                    <InputRadioGroup @bind-Value="@this.Model.RightAnswer">
                         <InputRadio Value="reserve" class="form-check-input mt-0" aria-label="is Right"></InputRadio>
                     </InputRadioGroup>
                 </div>
-                <input type="text" class="form-control" placeholder="Answer" aria-label="Answer" aria-describedby="basic-addon1" @bind-value="this.Answers[reserve]">
+                <input type="text" class="form-control" placeholder="Answer" aria-label="Answer" aria-describedby="basic-addon1" @bind-value="this.Model.Answers[reserve]">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="background-color:orangered"
-                        @onclick="@(arg => this.onClickDelete(this.Answers[reserve],arg))">
+                @onclick="@(arg => this.onClickDelete(this.Model.Answers[reserve],arg))">
                     Delete
                 </button>
             </div>
         }
         <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                @onclick="@(arg => this.onClick(arg))">
+        @onclick="@(arg => this.onClick(arg))">
             Add Answer
         </button>
     </div>
 </div>
 @code {
     [Parameter]
-    public EventCallback<int> OnRightAnswerChanged { get; set; }
-    [Parameter]
-    public EventCallback<string> OnTitleChanged { get; set; }
-
-    [Parameter]
-    public int QuestionIndex { get; set; } = 0;
-    [Parameter]
-    public List<string> Answers { get; set; } = new();
-
-    private string _title;
-    private string title 
-    {
-        get => _title;
-        set 
-        {
-            _title = value;
-            OnTitleChanged.InvokeAsync(_title);
-        }
-    }
-
-    private int _rightAnswer;
-    private int rightAnswer 
-    {
-        get => _rightAnswer;
-        set 
-        {
-            _rightAnswer = value;
-            OnRightAnswerChanged.InvokeAsync(_rightAnswer);
-        }
-    }
+    public DataModel Model { get; set; }
 
     internal async void onClick(MouseEventArgs args)
     {
-        this.Answers.Add("");
+        this.Model.Answers.Add("");
     }
     internal async void onClickDelete(string answer,MouseEventArgs args)
     {
-        this.Answers.Remove(answer);
+        this.Model.Answers.Remove(answer);
+    }
+
+    public record DataModel 
+    {
+        public string Title { get; set; }
+        public int RightAnswer { get; set; }
+        public int QuestionIndex { get; set; } = 0;
+        public List<string> Answers { get; set; } = new();
+
+        public Question CreateQuestion()
+        {
+            int? rrid = (this.RightAnswer == -1 || this.RightAnswer == 0) ? null : this.RightAnswer;
+
+            return new(null, rrid, this.Title, this.Answers.ToArray());
+        }
     }
 }
