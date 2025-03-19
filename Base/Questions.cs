@@ -98,6 +98,17 @@ public class SerializationHandler<Q> : SerializationHandler where Q : IQuestion<
         Q.Deserialize(JSON);
     public static async Task<SerializationHandler<Q>> DeserializeAsync(string path, HttpClient client) =>
         await Q.DeserializeAsync(path, client);
+    public SerializationHandler<Q> Merge(SerializationHandler<Q> serialization) => 
+        SerializationHandler<Q>.Merge(this, serialization);
+    public static SerializationHandler<Q> Merge(SerializationHandler<Q> h0,SerializationHandler<Q> h1)
+    {
+        bool id = h0.UseIndex || h1.UseIndex;
+        bool rid = h0.UseRId || h1.UseRId;
+        Q[] qs = new Q[h0.Questions.Length + h1.Questions.Length];
+        Array.Copy(h0.Questions, qs, h0.Questions.Length);
+        Array.Copy(h1.Questions, 0, qs, h0.Questions.Length, h1.Questions.Length);
+        return new(id, rid, qs);
+    }
     public override string ToString()
     {
         string questions = "\n";
