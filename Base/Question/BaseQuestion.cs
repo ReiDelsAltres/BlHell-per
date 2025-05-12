@@ -39,8 +39,19 @@ public class BaseQuestion : Question
 
     public BaseQuestion Shuffle()
     {
-        base.Answers.Shuffle();
-        return this;
+        string st = this.Answers[this.RId ?? 0];
+        int rid = this.RId ?? 0;
+
+        this.Answers.Shuffle();
+
+        for (int i = 0; i < Answers.Length; i++)
+            if (this.Answers[i].Equals(st)) 
+            { 
+                rid = i; 
+                break; 
+            }
+
+        return new(new(this.Id,rid,this.Title,this.Answers));
     }
     public BaseQuestion InsertAnswer(string answer)
     {
