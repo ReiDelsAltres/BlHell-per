@@ -1,19 +1,18 @@
-﻿@page "/Test/{name}/{num:int}/{min:int}/{max:int}/{random:bool}"
+﻿@page "/Subject/Test/{Name}/{num:int}/{min:int}/{max:int}/{random:bool}"
 @inherits MathJaxContentComponentFixed;
 
-@using System.Web;
 @using System.Text.RegularExpressions;
-@using OpenAI.Chat;
+@using System.Web;
+@using BlHell_per.Components;
+@using BlHell_per.Core.Compat
+@using BlHell_per.Core.Questions
 @using MathJaxBlazor;
-@using BlHell_per.BlazorClasses;
-@using BlHell_per.Base.Compat;
-@using BlHell_per.Base.Questions;
 
 @inject HttpClient Http
 
 <h3>TestingPage - @name @num</h3>
 
-@if (baseQuestions == null || baseQuestions.Length == 0) 
+@if (questionsArray == null || questionsArray.Length == 0) 
 {
     <div class="d-flex justify-content-center">
         <div class="spinner-border text-primary" role="status">
@@ -23,67 +22,33 @@
 } else 
 {
     <div class="question-grid" style="display:grid">
-        @for (int j = 0; j < baseQuestions.Length; j++)
+        @for(int i = 0; i < questionsArray.Length; i++)
         {
-            Question question = baseQuestions[j];
-            int ind = j + 1;
+            int local_i = i;
+            Question question = questionsArray[local_i];
 
-            <div class="question border" role="gridcell" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <strong class="me-auto" style="white-space: pre-line">@ind.(@question.Id).@question.Title</strong>
+            <MudPaper>
+                <QuestionView Index="local_i" QuestionModel="@question" QuestionAnsweredCallback="@(status => this.onQuestionAnswered(status))" />
+            </MudPaper>
 
-                </div>
-
-                <div class="toast-body">
-                    @for (int i = 0; i < question.Answers.Length; i++)
-                    {
-                        string? answer = question.Answers[i];
-                        if (answer == null || answer == "") continue;
-
-                        List<ButtonContext> contexts = doubleContextsList[j];
-                        ButtonContext context = contexts[i];
-
-                        int js = j;
-
-                        <button class="btn btn-primary" 
-                        style="white-space: pre-line; background-color:@context.color; border-color:@context.color" 
-                        disabled="@context.isDisabled" @onclick="@(e => questionAnswered(context,contexts,js))">
-                            @question.Answers[i]
-                        </button>
-                    }
-                </div>
-
-                @switch (statuses[j])
-                {
-                    case 0:
-                        <div class="local-result" style="color:@colors[0]">Верно</div>
-                        break;
-                    case 2:
-                        <div class="local-result" style="color:@colors[2]">Неверно</div>
-                        break;
-                    case 1:
-                        <div class="local-result" style="color:@colors[1]">Пропущено</div>
-                        break;
-                    default: break;
-
-                }
-            </div>
         }
 
-        @if (statuses.FindAll(e => e == -1).Count == 0) 
+        @if (Array.FindAll(statuses,e => e == -1).Count() == 0) 
         {
-            int right = statuses.FindAll(e => e == 0).Count;
-            int wrong = statuses.FindAll(e => e == 2).Count;
-            int skip = statuses.FindAll(e => e == 1).Count;
+            int wrong = Array.FindAll(statuses, e => e == 0).Count();
+            int right = Array.FindAll(statuses,e => e == 1).Count();
+            int skip = Array.FindAll(statuses, e => e == 2).Count();
 
-            <div class="result" style="color:@colors[0]">Верно: @right</div>
-            <div class="result" style="color:@colors[2]">Ошибочно: @wrong</div>
-            <div class="result" style="color:@colors[1]">Пропущено: @skip</div>
+            <div class="result" style="color:@colors[0]">Ошибочно: @wrong</div>
+            <div class="result" style="color:@colors[1]">Верно: @right</div>
+            <div class="result" style="color:@colors[2]">Пропущено: @skip</div>
 
-            if (statuses.Count == 25) 
+            if (statuses.Count() == 25) 
             {
                 int score = Math.Max((right * 2) - wrong,0);
-                <div class="result" style="color:#8e44ad">Набранный балл: @score</div>
+                <MudPaper>
+                    <div class="result" style="color:#8e44ad">Набранный балл: @score</div>
+                </MudPaper>
             }
         }
 
@@ -91,20 +56,6 @@
 }
 
 @code {
-    private record ButtonContext {
-        public required int index { get; set; }
-        public required string color { get; set; }
-        public required bool isDisabled { get; set; }
-        public required Question question { get; set; }
-    }
-    private string[] colors =
-    {
-        "#2ecc71",
-        "#d4ac0d",
-        "#c0392b"
-    };
-    [Parameter]
-    public bool random { get; set; }
     [Parameter]
     public string name { get; set; }
 
@@ -115,43 +66,21 @@
     [Parameter]
     public int max { get; set; }
 
-    private int answeredNum;
+    [Parameter]
+    public bool random { get; set; }
 
-    private BaseQuestion[] baseQuestions;
-    private List<List<ButtonContext>> doubleContextsList;
-    private List<int> statuses;
-
-    private void questionAnswered(ButtonContext context, List<ButtonContext> contexts,int idx)
+    private string[] colors =
     {
-        int crunchStatus = -1;
-        foreach (ButtonContext buttonContext in contexts) 
-        {
-            if (buttonContext == context) 
-            {
-                if (buttonContext.index == buttonContext.question.RId) 
-                {
-                    buttonContext.color = "#2ecc71";
-                    crunchStatus = 0;
-                } else if (buttonContext.index == 5) 
-                {
-                    buttonContext.color = "#d4ac0d";
-                    crunchStatus = 1;
-                } else
-                {
-                    buttonContext.color = "#c0392b";
-                    crunchStatus = 2;
-                }
-            } else 
-            {
-                buttonContext.color = buttonContext.index == buttonContext.question.RId ? "#2ecc71" : buttonContext.color;
-            }
+        "#c0392b",
+        "#2ecc71",
+        "#d4ac0d"
+    };
 
-            buttonContext.isDisabled = true;
-        }
-        this.statuses[idx] = crunchStatus;
+    private Question[] questionsArray;
 
-        this.answeredNum++;
-    }
+    private int statusesCounter;
+    private int[] statuses;
+
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
         Task task = new Task(()=> { });
@@ -167,41 +96,26 @@
     protected override async Task OnInitializedAsync()
     {
         SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http);
-        BaseQuestion[] bases = BaseQuestion.Trans(serializationHandler.Questions, this.min, this.max);
 
+        Question[] questions = serializationHandler.Questions.Extract(this.min,this.max);
+        if (random) questions.Shuffle();
 
-        if (random) bases.Shuffle();
-        Array.Copy(bases, this.baseQuestions = new BaseQuestion[this.num], this.num);
-        for (int i = 0; i<this.baseQuestions.Length;i++)
+        this.questionsArray = new Question[this.num];
+        Array.Copy(questions,this.questionsArray,this.num);
+
+        this.statuses = new int[this.num];
+        Array.Fill(this.statuses,-1);
+
+        //this.questionsArray.Shuffle();
+        for (int i = 0; i<this.questionsArray.Length;i++)
         {
-            BaseQuestion q = this.baseQuestions[i];
-            q = q.Shuffle();
-            this.baseQuestions[i] = q.InsertAnswer("Пропустить вопрос");
-        }
-
-        ///////////////////////////////////////////////////////
-
-        this.doubleContextsList = new List<List<ButtonContext>>();
-        this.statuses = new List<int>();
-        for (int j = 0; j < this.baseQuestions.Length; j++) 
-        {
-            this.statuses.Add(-1);
-            Question question = this.baseQuestions[j];
-            List<ButtonContext> contexts = new List<ButtonContext>();
-
-            for (int i = 0; i < 6; i++) 
-            {
-                contexts.Add(new ButtonContext
-                    {
-                        color = "#7fb3d5",
-                        index = i,
-                        isDisabled = false,
-                        question = question
-                    });
-            }
-            this.doubleContextsList.Add(contexts);
+            Question q = this.questionsArray[i];
+            q.Shuffle();
+            q.InsertAnswer("Пропустить вопрос");
         }
 
         await base.OnInitializedAsync();
     }
+    private async void onQuestionAnswered(int status) =>
+        this.statuses[this.statusesCounter++] = status;
 }

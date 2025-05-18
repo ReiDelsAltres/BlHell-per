@@ -1,5 +1,4 @@
-﻿using OpenAI.Assistants;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
@@ -9,11 +8,11 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Xml.Linq;
 
-namespace BlHell_per.Base.Questions;
+namespace BlHell_per.Core.Questions;
 public interface IQuestion<Q> where Q : IQuestion<Q>
 {
-    public int? Id { get; init; }
-    public int? RId { get; init; }
+    public int? Id { get; }
+    public int? RId { get; }
     public string Title { get; }
     public string[] Answers { get; }
     public static abstract SerializationHandler<Q> Deserialize(string JSON);
@@ -23,14 +22,35 @@ public interface IQuestion<Q> where Q : IQuestion<Q>
 public class Question : IQuestion<Question>
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] public int? Id { get; init; }
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] public int? RId { get; init; }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] public int? RId { get; set; }
     public string Title { get; }
-    public string[] Answers { get; }
+    public string[] Answers { get; set; }
     [JsonConstructor] public Question(int? id, int? rid, string title, string[] answers) =>
         (Id, RId, Title, Answers) = (id, rid, title, answers);
     public Question(string title, string[] answers) =>
         (Title, Answers) = (title, answers);
+    public void Shuffle()
+    {
+        string st = this.Answers[this.RId ?? 0];
+        int rid = this.RId ?? 0;
 
+        this.Answers.Shuffle();
+
+        for (int i = 0; i < Answers.Length; i++)
+            if (this.Answers[i].Equals(st))
+            {
+                rid = i;
+                break;
+            };
+        this.RId = rid;
+    }
+    public void InsertAnswer(string answer)
+    {
+        string[] remembrance = new string[this.Answers.Length + 1];
+        Array.Copy(this.Answers, remembrance, this.Answers.Length);
+        remembrance[this.Answers.Length] = answer;
+        this.Answers = remembrance;
+    }
     public static SerializationHandler<Question> Deserialize(string JSON) =>
         JsonSerializer.Deserialize<SerializationHandler<Question>>(JSON, SerializationHandler._options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
@@ -42,7 +62,6 @@ public class Question : IQuestion<Question>
         /*await client.GetFromJsonAsync<SerializationHandler<Question>>(path, SerializationHandler._options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");*/
     }
-
     public static string Serialize(SerializationHandler<Question> handler)
     {
         bool doSomething = handler.UseIndex || handler.UseRId;

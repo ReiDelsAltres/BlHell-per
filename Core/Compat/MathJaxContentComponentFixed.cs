@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.JSInterop;
 
-namespace BlHell_per.Base.Compat;
+namespace BlHell_per.Core.Compat;
 public class MathJaxContentComponentFixed : ComponentBase, IAsyncDisposable
 {
     private IJSObjectReference? module;

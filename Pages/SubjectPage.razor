@@ -1,0 +1,151 @@
+﻿@page "/Subject/{Name}/"
+
+@using BlHell_per.Core.Questions
+@using BlHell_per.Core;
+
+@inject NavigationManager Navigation
+@inject HttpClient Http
+
+@{
+}
+@if (this._subject == null)
+{
+
+} else
+{
+	<MudGrid>
+		<MudItem xs="12">
+			<MudPaper Class="align-center justify-center mud-width-full py-8">
+				<div class="page-header" align="center">
+					<h1>
+						@this._subject?.TranslatedName
+					</h1>
+				</div>
+				<p align="center">
+					<MudText Typo="Typo.subtitle1">
+						Группа:
+						@foreach (string str in this._subject?.Groups)
+						{
+							<MudChip T="string" Variant="Variant.Text">@str</MudChip>
+						}
+					</MudText>
+				</p>
+			</MudPaper>
+		</MudItem>
+		<MudItem xs="12">
+			<MudStack Row="true">
+				<MudPaper Width="85%">
+					<MudToggleGroup Style="height: 100px;" Class="mud-width-full" T="int" SelectedClass="@cst" Color="@color" @bind-Value="this._num">
+						<MudToggleItem Value="@(5)">
+							<div class="mud-width-full mud-height-full">
+								<div class="d-flex align-center justify-space-between flex-wrap">
+									<MudText Class="ellipsis">Быстрый тест</MudText>
+									<MudChip Color="@(context ? Color.Success : Color.Transparent)" Icon="@(context ? Icons.Material.Filled.Check : "")">5</MudChip>
+								</div>
+								<MudText Typo="Typo.subtitle2">Ты школьник</MudText>
+							</div>
+						</MudToggleItem>
+						<MudToggleItem Value="@(25)">
+							<div class="mud-width-full mud-height-full">
+								<div class="d-flex align-center justify-space-between flex-wrap">
+									<MudText Class="ellipsis">Экзамен</MudText>
+									<MudChip Color="@(context ? Color.Warning : Color.Transparent)" Icon="@(context ? Icons.Material.Filled.Check : "")">25</MudChip>
+								</div>
+								<MudText Typo="Typo.subtitle2">Ты студент</MudText>
+							</div>
+						</MudToggleItem>
+						<MudToggleItem Value="@(this._max)">
+							<div class="mud-width-full mud-height-full">
+								<div class="d-flex align-center justify-space-between flex-wrap">
+									<MudText Class="ellipsis">Мазохизм</MudText>
+									<MudChip Color="@(context ? Color.Error : Color.Transparent)" Icon="@(context ? Icons.Material.Filled.Check : "")">@this._max</MudChip>
+								</div>
+								<MudText Typo="Typo.subtitle2">Ты адекватный?</MudText>
+							</div>
+						</MudToggleItem>
+					</MudToggleGroup>
+					<MudDivider DividerType="DividerType.Middle" />
+					<MudCollapse Expanded="_expanded">
+						<MudStack Row Spacing="4">
+							<MudCheckBox @bind-Value="this._random" Color="@color">
+								Перемешать? @(this._random ? " Да" : "Нет")
+							</MudCheckBox>
+							<MudNumericField Immediate="false" Label="Min" T="int" @bind-Value="this._min" HelperText="@this._min.ToString()" Min="0" Max="this._max" />
+							<MudNumericField Immediate="false" Label="Num" T="int" @bind-Value="this._num" HelperText="@this._num.ToString()" Min="1" Max="this._max - this._min" />
+							<MudNumericField Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
+						</MudStack>
+					</MudCollapse>
+					<MudButton Style="height: 80px;" Variant="Variant.Outlined" Color="@color" FullWidth="true" @onclick="@(x => onClick())">Запустить</MudButton>
+					@*<MudNumericField @bind-Value="IntValue" Label="Standard" Variant="Variant.Text" Min="this._min" Max="this._max" />*@
+				</MudPaper>
+				<MudPaper Width="15%" Height="100px">
+					<MudButton Class="align-self-stretch" Variant="Variant.Outlined" Color="@color" StartIcon="@Icons.Material.Outlined.Settings" Title="Settings" Style="height: 100px" FullWidth="true" OnClick="OnExpandCollapseClick" />
+				</MudPaper>
+			</MudStack>
+		</MudItem>
+	</MudGrid>
+}
+
+@code 
+{
+	[Parameter]
+	public string Name { get; set; }
+
+	private Info.Subject? _subject { get; set; }
+
+	private bool _expanded = false;
+
+	private int _ultimateMax;
+
+	private int _max { get; set; }
+	private int _min { get; set; }
+
+	private int _num { get; set; } = 25;
+
+	private bool _random = true;
+
+	private string cst
+	{
+		get => this._num switch
+		{
+			5 => "custom-striped-easy",
+			25 => "custom-striped-medium",
+			var n when n == this._max => "custom-striped-hard",
+			_ => "custom-striped"
+		};
+	}
+	private Color color
+	{
+		get => this._num switch
+		{
+			5 => Color.Success,
+			25 => Color.Warning,
+			var n when n == this._max => Color.Error,
+			_ => Color.Primary
+		};
+	}
+	private int height
+	{
+		get => this._expanded ? 270 : 180;
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		SerializationHandler<Question> serializationHandler = 
+			await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http);
+
+		this._subject = Info.Subject.getSubject(Name);
+		this._max = serializationHandler.Questions.Length;
+		this._ultimateMax = this._max;
+	}
+
+	internal async void onClick()
+	{
+		Navigation.NavigateTo($"Subject/Test/{this.Name}/{this._num}/{this._min}/{this._max}/{this._random}");
+	}
+
+	private void OnExpandCollapseClick()
+	{
+		_expanded = !_expanded;
+	}
+}

@@ -1,0 +1,81 @@
+﻿.custom-gradient {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: white !important;
+}
+.custom-gradient-opacity75 {
+    background-image: linear-gradient(to right top, #05193775, #004d7a75, #00879375, #00bf7275, #a8eb1275);
+    color: white !important;
+}
+
+.custom-striped {
+    background: repeating-linear-gradient( 45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px );
+    color: white !important;
+}
+.custom-easy {
+    background-color: #71f077;
+    color: white !important;
+}
+.custom-easy-opacity75 {
+    background-color: #71f07775;
+    color: white !important;
+}
+
+.custom-striped-easy {
+    background: repeating-linear-gradient( 45deg, #71f077, #71f077 10px, #4db052 10px, #4db052 20px );
+    color: white !important;
+}
+
+.custom-striped-medium {
+    background: repeating-linear-gradient( 45deg, #fa871b, #fa871b 10px, #cf7016 10px, #cf7016 20px );
+    color: white !important;
+}
+
+.custom-striped-hard {
+    background: repeating-linear-gradient( 45deg, #f54545, #f54545 10px, #b32d2d 10px, #b32d2d 20px );
+    color: white !important;
+}
+.custom-striped-opacity75 {
+    background: repeating-linear-gradient( 45deg, #606dbc75, #606dbc75 10px, #46529875 10px, #46529875 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity75-easy {
+    background: repeating-linear-gradient( 45deg, #71f07775, #71f07775 10px, #4db05275 10px, #4db05275 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity75-medium {
+    background: repeating-linear-gradient( 45deg, #fa871b75, #fa871b75 10px, #cf701675 10px, #cf701675 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity75-hard {
+    background: repeating-linear-gradient( 45deg, #f5454575, #f5454575 10px, #b32d2d75 10px, #b32d2d75 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity50 {
+    background: repeating-linear-gradient( 45deg, #606dbc50, #606dbc50 10px, #46529850 10px, #46529850 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity50-easy {
+    background: repeating-linear-gradient( 45deg, #71f07750, #71f07750 10px, #4db05250 10px, #4db05250 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity50-medium {
+    background: repeating-linear-gradient( 45deg, #fa871b50, #fa871b50 10px, #cf701650 10px, #cf701650 20px );
+    color: white !important;
+}
+
+.custom-striped-opacity50-hard {
+    background: repeating-linear-gradient( 45deg, #f5454550, #f5454550 10px, #b32d2d50 10px, #b32d2d50 20px );
+    color: white !important;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
