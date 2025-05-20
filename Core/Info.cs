@@ -46,7 +46,7 @@ public class Info
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Ализаде Лейла Эльдар кызы",
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
-            RedAllerts = ["Тесты незакончены"]
+            RedAllerts = []
         };
 
         private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics];
