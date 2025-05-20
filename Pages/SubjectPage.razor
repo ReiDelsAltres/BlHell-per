@@ -29,6 +29,14 @@
 							<MudChip T="string" Variant="Variant.Text">@str</MudChip>
 						}
 					</MudText>
+					@foreach (string alert in this._subject?.YellowAllerts)
+					{
+						<MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
+					}
+					@foreach (string alert in this._subject?.RedAllerts)
+					{
+						<MudAlert Severity="Severity.Error" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
+					}
 				</p>
 			</MudPaper>
 		</MudItem>
