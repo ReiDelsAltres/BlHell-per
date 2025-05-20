@@ -31,8 +31,15 @@ public class Info
             Groups = ["759 ITS"],
             Teacher = "Гасанова Вюсаля Рамиз кызы"
         };
+        public static Subject Physics = new()
+        {
+            Name = "Physics",
+            TranslatedName = "Физика",
+            Groups = ["759 ITS", "759 KM"],
+            Teacher = "Ализаде Лейла Эльдар кызы"
+        };
 
-        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms];
+        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics];
 
         public static Subject getSubject(string name) =>
             Array.Find(_subjects, subj => subj.Name.Equals(name));

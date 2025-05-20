@@ -25,7 +25,7 @@
 
                     ButtonContext context = _contexts[local_i];
 
-                    <MudButton Class="@context.Style" Variant="Variant.Outlined" Disabled="context.isDisabled" @onclick="@(e => OnAnswerClick(context))">
+                    <MudButton id="answer" Class="@context.Style" Variant="Variant.Outlined" Disabled="context.isDisabled" @onclick="@(e => OnAnswerClick(context))">
                         <MudText Typo="Typo.body1">@answer</MudText>
                     </MudButton>
                 }
@@ -150,6 +150,6 @@
             }
 
         }
-        QuestionAnsweredCallback.InvokeAsync(Status);
+        await QuestionAnsweredCallback.InvokeAsync(Status);
     }
 }

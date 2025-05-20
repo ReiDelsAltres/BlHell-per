@@ -28,12 +28,12 @@
             Question question = questionsArray[local_i];
 
             <MudPaper>
-                <QuestionView Index="local_i" QuestionModel="@question" QuestionAnsweredCallback="@(status => this.onQuestionAnswered(status))" />
+                <QuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" />
             </MudPaper>
 
         }
 
-        @if (Array.FindAll(statuses,e => e == -1).Count() == 0) 
+        @if (Array.FindAll(statuses, e => e == -1).Count() == 0)
         {
             int wrong = Array.FindAll(statuses, e => e == 0).Count();
             int right = Array.FindAll(statuses,e => e == 1).Count();
@@ -81,6 +81,9 @@
     private int statusesCounter;
     private int[] statuses;
 
+    private bool shouldRender = true;
+
+
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
         Task task = new Task(()=> { });
@@ -95,7 +98,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http);
+        SerializationHandler<Question> serializationHandler = 
+        await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http);
 
         Question[] questions = serializationHandler.Questions.Extract(this.min,this.max);
         if (random) questions.Shuffle();
@@ -116,6 +120,23 @@
 
         await base.OnInitializedAsync();
     }
-    private async void onQuestionAnswered(int status) =>
+    private async void onQuestionAnswered(int status)
+    {
         this.statuses[this.statusesCounter++] = status;
+        this.shouldRender = Array.FindAll(statuses, e => e == -1).Count() == 0;
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+    }
+    protected override bool ShouldRender()
+    {
+        if (!this.shouldRender)
+        {
+            this.shouldRender = true;
+            return false;
+        }
+        return base.ShouldRender();
+    }
 }
