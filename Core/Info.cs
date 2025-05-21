@@ -30,6 +30,15 @@ public class Info
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
             RedAllerts = []
         };
+        public static Subject LinearAlgebra = new()
+        {
+            Name = "LinearAlgebra",
+            TranslatedName = "Линейная Алгебра",
+            Groups = ["759 ITS", "759 KM"],
+            Teacher = "Quliyeva Fatimə Ağayar qızı",
+            YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
+            RedAllerts = ["Тест не закончен"]
+        };
         public static Subject InstrumentalPrograms = new()
         {
             Name = "Vusala",
@@ -49,7 +58,7 @@ public class Info
             RedAllerts = []
         };
 
-        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics];
+        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics,LinearAlgebra];
 
         public static Subject getSubject(string name) =>
             Array.Find(_subjects, subj => subj.Name.Equals(name));
