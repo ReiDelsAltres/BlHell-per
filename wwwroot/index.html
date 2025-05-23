@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlHell-per</title>
     <base href="/" />
+
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
 
@@ -39,7 +44,11 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
+    <!--<script>navigator.serviceWorker.register('service-worker.js');</script> -->
+    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js"></script>
+
     <script>
         window.saveFile = async (file, Content) => {
             var link = document.createElement('a');
@@ -53,4 +62,4 @@
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
 </body>
 
-</html>
+    </html>

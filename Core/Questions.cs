@@ -13,6 +13,7 @@ public interface IQuestion<Q> where Q : IQuestion<Q>
 {
     public int? Id { get; }
     public int? RId { get; }
+    public string[]? Tags { get; }
     public string Title { get; }
     public string[] Answers { get; }
     public static abstract SerializationHandler<Q> Deserialize(string JSON);
@@ -23,10 +24,11 @@ public class Question : IQuestion<Question>
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] public int? Id { get; init; }
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] public int? RId { get; set; }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] public string[]? Tags { get; set; }
     public string Title { get; }
     public string[] Answers { get; set; }
-    [JsonConstructor] public Question(int? id, int? rid, string title, string[] answers) =>
-        (Id, RId, Title, Answers) = (id, rid, title, answers);
+    [JsonConstructor] public Question(int? id, int? rid, string[]? tags, string title, string[] answers) =>
+        (Id, RId, Tags, Title, Answers) = (id, rid, tags, title, answers);
     public Question(string title, string[] answers) =>
         (Title, Answers) = (title, answers);
     public void Shuffle()

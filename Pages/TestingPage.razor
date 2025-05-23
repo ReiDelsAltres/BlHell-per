@@ -30,7 +30,6 @@
             <MudPaper>
                 <QuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" />
             </MudPaper>
-
         }
 
         @if (Array.FindAll(statuses, e => e == -1).Count() == 0)

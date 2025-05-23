@@ -6,12 +6,21 @@
     <MudStack Spacing="2">
         <MudPaper Class="@cst">
             <MudStack Row>
-                @if (Index != null)
-                {
-                    <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@color" Size="Size.Large">@this.Index</MudChip>
-                }
-                <MudText Typo="Typo.h6">@QuestionModel.Title</MudText>
+                <MudText Typo="Typo.h6">
+                    @if (Index != null)
+                    {
+                        <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@color" Size="Size.Large">@this.Index</MudChip>
+                    }
+                    @QuestionModel.Title
+                </MudText>
             </MudStack>
+            @if (QuestionModel.Tags != null)
+            {
+                @foreach (string tag in QuestionModel.Tags)
+                {
+                    <MudChip T="string" Style="font-size:1rem" Variant="Variant.Filled" Color="@color" Size="Size.Medium">@tag</MudChip>
+                }
+            }
         </MudPaper>
         <MudPaper>
             <MudDivider DividerType="DividerType.Middle" />

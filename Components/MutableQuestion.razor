@@ -55,7 +55,7 @@
         {
             int? rrid = (this.RightAnswer == -1 || this.RightAnswer == 0) ? null : this.RightAnswer;
 
-            return new(null, rrid, this.Title, this.Answers.ToArray());
+            return new(null, rrid, null, this.Title, this.Answers.ToArray());
         }
     }
 }

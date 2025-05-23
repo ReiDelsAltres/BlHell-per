@@ -1,23 +1,58 @@
 ﻿@page "/"
 @using BlHell_per.Components
 @using BlHell_per.Core;
+@using BlHell_per.Core.Questions
 
 @inject NavigationManager Navigation
+@inject HttpClient Http
 
 <PageTitle>Home</PageTitle>
 
 <h1>BlHell-per</h1>
 
 <h2>Выберите предмет для проверки</h2>
-<div class="container px-4 border-secondary">
-    <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.DifferentialEquations))">@Info.Subject.DifferentialEquations.TranslatedName</MudButton>
-    <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.Programming))">@Info.Subject.Programming.TranslatedName</MudButton>
-    <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.InformationalTechnology))">@Info.Subject.InformationalTechnology.TranslatedName</MudButton>
-    <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.Physics))">@Info.Subject.Physics.TranslatedName</MudButton>
-    <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.LinearAlgebra))">@Info.Subject.LinearAlgebra.TranslatedName</MudButton>
-</div>
+<MudGrid>
+    <MudItem xs="12" sm="6" lg="3">
+        <MudPaper>
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.DifferentialEquations))" FullWidth>@Info.Subject.DifferentialEquations.TranslatedName</MudButton>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" lg="3">
+        <MudPaper>
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.Programming))" FullWidth>@Info.Subject.Programming.TranslatedName</MudButton>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" lg="3">
+        <MudPaper>
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.InformationalTechnology))" FullWidth>@Info.Subject.InformationalTechnology.TranslatedName</MudButton>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" lg="3">
+        <MudPaper>
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.Physics))" FullWidth>@Info.Subject.Physics.TranslatedName</MudButton>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" lg="3">
+        <MudPaper>
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.LinearAlgebra))" FullWidth>@Info.Subject.LinearAlgebra.TranslatedName</MudButton>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" lg="3">
+    </MudItem>
+</MudGrid>
 
 @code {
+    private int _subjects;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        _subjects = Http
+
+        SerializationHandler<Question> serializationHandler =
+            await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http);
+    }
+
     internal async void onClick(Info.Subject subject) =>
             Navigation.NavigateTo($"Subject/{subject.Name}");
 }

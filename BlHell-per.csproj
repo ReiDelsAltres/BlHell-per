@@ -6,14 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>9378e7d5-30a2-4a57-8123-d430cdd23236</UserSecretsId>
     <PublishAot>False</PublishAot>
+	  
+	  
+	<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <RunAOTCompilation>True</RunAOTCompilation>
+    <RunAOTCompilation>False</RunAOTCompilation>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <RunAOTCompilation>True</RunAOTCompilation>
+    <RunAOTCompilation>False</RunAOTCompilation>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,10 +31,16 @@
     <PackageReference Include="MudBlazor" Version="8.6.0" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
     <PackageReference Include="Toolbelt.Blazor.FileDropZone" Version="3.0.1" />
+    <PackageReference Include="Toolbelt.Blazor.PWA.Updater" Version="3.0.1" />
+    <PackageReference Include="Toolbelt.Blazor.PWA.Updater.Service" Version="3.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Core\Question\" />
   </ItemGroup>
+
+	<ItemGroup>
+		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+	</ItemGroup>
 
 </Project>
