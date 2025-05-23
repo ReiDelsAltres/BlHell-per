@@ -47,10 +47,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _subjects = Http
-
-        SerializationHandler<Question> serializationHandler =
-            await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http);
+        //SerializationHandler<Question> serializationHandler =
+            //await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http);
     }
 
     internal async void onClick(Info.Subject subject) =>
