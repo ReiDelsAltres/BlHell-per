@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\resources" />
+    <Folder Include="wwwroot\sample-data\" />
   </ItemGroup>
 
 	<ItemGroup>
