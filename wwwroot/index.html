@@ -22,8 +22,8 @@
 
     <link rel="stylesheet" href="css/extended.css" />
 
-    <link href="_content/Toolbelt.Blazor.PWA.Updater/Toolbelt.Blazor.PWA.Updater.bundle.scp.css"
-          rel="stylesheet" />
+    <!---<link href="_content/Toolbelt.Blazor.PWA.Updater/Toolbelt.Blazor.PWA.Updater.bundle.scp.css"
+          rel="stylesheet" />--->
 
     <script type="text/javascript"
             src="_content/MathJaxBlazor/mathJaxBlazor.js">
@@ -49,7 +49,7 @@
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>
-    <!--<script>navigator.serviceWorker.register('service-worker.js');</script> -->
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
 
     <script>
         window.saveFile = async (file, Content) => {
@@ -62,13 +62,13 @@
         }
     </script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
-    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js" no-register></script>
+    <!---<script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js" no-register></script>
     <script>
         navigator.serviceWorker.register('service-worker.js').then(registration => {
             // 👇 Invoke this manually.
             Toolbelt.Blazor.PWA.Updater.handleRegistration(registration);
         });
-    </script>
+    </script>--->
 </body>
 
     </html>
