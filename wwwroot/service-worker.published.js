@@ -12,10 +12,6 @@ self.addEventListener('message', event => { if (event.data?.type === 'SKIP_WAITI
 // Check connectivity when the page loads
 self.addEventListener("load", checkConnectivity);
 
-// Listen for changes in connectivity
-self.addEventListener("online", () => alert("Back Online: Your connection has been restored."));
-self.addEventListener("offline", () => alert("Offline: Your internet connection is lost."));
-
 const cacheNamePrefix = 'offline-cache-';
 const cacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
 const offlineAssetsInclude = [/\.dll$/, /\.pdb$/, /\.wasm/, /\.html/, /\.js$/, /\.json$/, /\.css$/, /\.woff$/, /\.png$/, /\.jpe?g$/, /\.gif$/, /\.ico$/, /\.blat$/, /\.dat$/];
@@ -56,6 +52,8 @@ async function onFetch(event) {
         const request = shouldServeIndexHtml ?
             (new URL(event.request.url)).pathname.replace(/\/$/, '') + '/index.html' :
             event.request;
+
+        console.info(request);
 
         const cache = await caches.open(cacheName);
         cachedResponse = await cache.match(request);
