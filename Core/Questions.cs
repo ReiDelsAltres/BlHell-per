@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.JSInterop;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
@@ -17,7 +18,7 @@ public interface IQuestion<Q> where Q : IQuestion<Q>
     public string Title { get; }
     public string[] Answers { get; }
     public static abstract SerializationHandler<Q> Deserialize(string JSON);
-    public static abstract Task<SerializationHandler<Q>> DeserializeAsync(string path,HttpClient client);
+    public static abstract Task<SerializationHandler<Q>> DeserializeAsync(string path,HttpClient client,IJSRuntime js);
     public static abstract string Serialize(SerializationHandler<Q> handler);
 }
 public class Question : IQuestion<Question>
@@ -56,9 +57,17 @@ public class Question : IQuestion<Question>
     public static SerializationHandler<Question> Deserialize(string JSON) =>
         JsonSerializer.Deserialize<SerializationHandler<Question>>(JSON, SerializationHandler._options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
-    public static async Task<SerializationHandler<Question>> DeserializeAsync(string path, HttpClient client)
+    public static async Task<SerializationHandler<Question>> DeserializeAsync(string path, HttpClient client, IJSRuntime js)
     {
-        var str = await client.GetStringAsync(path);
+        string str;
+        try
+        {
+            str = await client.GetStringAsync(path);
+        }
+        catch (Exception e)
+        {
+            str = await PWA.DeserializeResource(js, path);
+        }
         return Question.Deserialize(str);
 
         /*await client.GetFromJsonAsync<SerializationHandler<Question>>(path, SerializationHandler._options) ??
@@ -117,8 +126,8 @@ public class SerializationHandler<Q> : SerializationHandler where Q : IQuestion<
         Q.Serialize(this);
     public static SerializationHandler<Q> Deserialize(string JSON) => 
         Q.Deserialize(JSON);
-    public static async Task<SerializationHandler<Q>> DeserializeAsync(string path, HttpClient client) =>
-        await Q.DeserializeAsync(path, client);
+    public static async Task<SerializationHandler<Q>> DeserializeAsync(string path, HttpClient? client, IJSRuntime? js) =>
+        await Q.DeserializeAsync(path, client, js);
     public SerializationHandler<Q> Merge(SerializationHandler<Q> serialization) => 
         SerializationHandler<Q>.Merge(this, serialization);
     public static SerializationHandler<Q> Merge(SerializationHandler<Q> h0,SerializationHandler<Q> h1)

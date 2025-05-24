@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Question\" />
+    <Folder Include="wwwroot\resources" />
   </ItemGroup>
 
 	<ItemGroup>

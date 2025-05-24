@@ -49,7 +49,20 @@
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Ошибка регистрации сервис-воркера:', error);
+                    });
+            });
+        }
+    </script>
+    <!---<script>navigator.serviceWorker.register('service-worker.js');</script>--->
 
     <script>
         window.saveFile = async (file, Content) => {

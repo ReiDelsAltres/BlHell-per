@@ -17,3 +17,32 @@ function saveFile(file, Content) {
     link.click();
     document.body.removeChild(link);
 }
+
+async function loadJSON(url) {
+    if (navigator.onLine) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Ошибка загрузки: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("Загруженные данные:", data);
+            return data;
+        } catch (error) {
+            console.error("Ошибка запроса:", error);
+            alert("Не удалось загрузить данные из сети. Попробуйте позже.");
+            return null;
+        }
+    } else {
+        // Пытаемся получить данные из кэша, если нет интернета
+        const cachedResponse = await caches.match(url);
+        if (cachedResponse) {
+            const data = await cachedResponse.json();
+            console.log("Данные из кэша:", data);
+            return data;
+        } else {
+            alert("Вы офлайн, и данных в кэше не найдено.");
+            return null;
+        }
+    }
+}

@@ -5,6 +5,7 @@
 
 @inject NavigationManager Navigation
 @inject HttpClient Http
+@inject IJSRuntime JS
 
 @{
 }
@@ -140,7 +141,7 @@
 	protected override async Task OnInitializedAsync()
 	{
 		SerializationHandler<Question> serializationHandler = 
-			await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http);
+			await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http, JS);
 
 		this._subject = Info.Subject.getSubject(Name);
 		this._max = serializationHandler.Questions.Length;

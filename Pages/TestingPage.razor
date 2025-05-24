@@ -9,6 +9,7 @@
 @using MathJaxBlazor;
 
 @inject HttpClient Http
+@inject IJSRuntime JS
 
 <h3>TestingPage - @name @num</h3>
 
@@ -98,7 +99,7 @@
     protected override async Task OnInitializedAsync()
     {
         SerializationHandler<Question> serializationHandler = 
-        await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http);
+        await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http, JS);
 
         Question[] questions = serializationHandler.Questions.Extract(this.min,this.max);
         if (random) questions.Shuffle();

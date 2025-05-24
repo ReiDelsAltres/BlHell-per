@@ -56,3 +56,18 @@ async function onFetch(event) {
 
     return cachedResponse || fetch(event.request);
 }
+
+function checkConnectivity() {
+    if (navigator.onLine) {
+        console.log("Online: You have an internet connection.");
+    } else {
+        alert("Offline: Your internet connection is lost. Please check your connection.");
+    }
+}
+
+// Check connectivity when the page loads
+window.addEventListener("load", checkConnectivity);
+
+// Listen for changes in connectivity
+window.addEventListener("online", () => alert("Back Online: Your connection has been restored."));
+window.addEventListener("offline", () => alert("Offline: Your internet connection is lost."));
