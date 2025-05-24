@@ -8,6 +8,12 @@ self.addEventListener('fetch', event => event.respondWith(onFetch(event)));
 
 // ADD THIS MESSAGE HANDLER.
 self.addEventListener('message', event => { if (event.data?.type === 'SKIP_WAITING') self.skipWaiting() });
+// Check connectivity when the page loads
+self.addEventListener("load", checkConnectivity);
+
+// Listen for changes in connectivity
+self.addEventListener("online", () => alert("Back Online: Your connection has been restored."));
+self.addEventListener("offline", () => alert("Offline: Your internet connection is lost."));
 
 const cacheNamePrefix = 'offline-cache-';
 const cacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
@@ -64,10 +70,3 @@ function checkConnectivity() {
         alert("Offline: Your internet connection is lost. Please check your connection.");
     }
 }
-
-// Check connectivity when the page loads
-window.addEventListener("load", checkConnectivity);
-
-// Listen for changes in connectivity
-window.addEventListener("online", () => alert("Back Online: Your connection has been restored."));
-window.addEventListener("offline", () => alert("Offline: Your internet connection is lost."));
