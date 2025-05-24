@@ -62,7 +62,13 @@
         }
     </script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
-    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js"></script>
+    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js" no-register></script>
+    <script>
+        navigator.serviceWorker.register('service-worker.js').then(registration => {
+            // 👇 Invoke this manually.
+            Toolbelt.Blazor.PWA.Updater.handleRegistration(registration);
+        });
+    </script>
 </body>
 
     </html>
