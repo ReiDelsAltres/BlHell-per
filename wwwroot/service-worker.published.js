@@ -26,11 +26,10 @@ async function onInstall(event) {
         .filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
         .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url))) 
 
-    assets.foreach((asset) => {
-        console.info(asset);
+    const assetsRequests = assets.map(asset => {
+        console.info(asset)
+        return new Request(asset.url, { integrity: asset.hash, cache: 'no-cache' })
     });
-
-    const assetsRequests = assets.map(asset => new Request(asset.url, { integrity: asset.hash, cache: 'no-cache' }));
 
     await caches.open(cacheName).then(cache => cache.addAll(assetsRequests));
 
