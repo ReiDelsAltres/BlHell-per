@@ -52,7 +52,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/{repository}/service-worker.js', { scope: '/{repository}/' })
+                navigator.serviceWorker.register('/BlHell-per/service-worker.js', { scope: '/BlHell-per/' })
                     .then(registration => {
                         console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
                     })
