@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlHell-per</title>
+    <base href="/BlHell-per/" />
+
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="BlHell-per.styles.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/extended.css" />
+
+    <!---<link href="_content/Toolbelt.Blazor.PWA.Updater/Toolbelt.Blazor.PWA.Updater.bundle.scp.css"
+          rel="stylesheet" />--->
+
+    <script type="text/javascript"
+            src="_content/MathJaxBlazor/mathJaxBlazor.js">
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/BlHell-per/service-worker.js', { scope: '/BlHell-per/' })
+                    .then(registration => {
+                        console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Ошибка регистрации сервис-воркера:', error);
+                    });
+            });
+        }
+    </script>
+    <!---<script>navigator.serviceWorker.register('service-worker.js');</script>--->
+
+    <script>
+        window.saveFile = async (file, Content) => {
+            var link = document.createElement('a');
+            link.download = name;
+            link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(Content)
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        window.loadJSON = async (url) => {
+            if (navigator.onLine) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Ошибка загрузки: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    console.log("Загруженные данные:", data);
+                    return data;
+                } catch (error) {
+                    console.error("Ошибка запроса:", error);
+                    alert("Не удалось загрузить данные из сети. Попробуйте позже.");
+                    return null;
+                }
+            } else {
+                // Пытаемся получить данные из кэша, если нет интернета
+                const cachedResponse = await caches.match(url);
+                if (cachedResponse) {
+                    const data = await cachedResponse.json();
+                    console.log("Данные из кэша:", data);
+                    return data;
+                } else {
+                    alert("Вы офлайн, и данных в кэше не найдено.");
+                    return null;
+                }
+            }
+        }
+    </script>
+    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+    <!---<script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js" no-register></script>
+    <script>
+        navigator.serviceWorker.register('service-worker.js').then(registration => {
+            // 👇 Invoke this manually.
+            Toolbelt.Blazor.PWA.Updater.handleRegistration(registration);
+        });
+    </script>--->
+    <script src="brotliloader.min.js" type="module"></script>
+</body>
+
+    </html>
