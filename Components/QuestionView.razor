@@ -1,18 +1,23 @@
 ﻿@using BlHell_per.Core.Questions
+@using BlHell_per.Core.KaTeX
+@using Markdig.Renderers.MudBlazor.Components
+@using Markdig;
+@using Markdig.Renderers.RazorComponent
+@using Markdig.Renderers.RazorComponent.Components
+@using Markdig.Renderers.RazorComponent.Katex
+@using Markdig.Renderers.MudBlazor
 
-@{
-}
 <MudCard Outlined="true" style="@($"background-color:{this.colorBackground}")">
     <MudStack Spacing="2">
         <MudPaper Class="@cst">
             <MudStack Row>
-                <MudText Typo="Typo.h6">
-                    @if (Index != null)
-                    {
-                        <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@color" Size="Size.Large">@this.Index</MudChip>
-                    }
-                    @QuestionModel.Title
-                </MudText>
+                @if (Index != null)
+                {
+                    <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@color" Size="Size.Large">@this.Index</MudChip>
+                }
+                <div class="markdown-wrapper">
+                    <MudMarkdown Value="@QuestionModel.Title" Pipeline="@MarkdownPipeline" />
+                </div>
             </MudStack>
             @if (QuestionModel.Tags != null)
             {
@@ -35,7 +40,9 @@
                     ButtonContext context = _contexts[local_i];
 
                     <MudButton id="answer" Class="@context.Style" Variant="Variant.Outlined" Disabled="context.isDisabled" @onclick="@(e => OnAnswerClick(context))">
-                        <MudText Typo="Typo.body1">@answer</MudText>
+                        <div class="markdown-wrapper">
+                            <MudMarkdown Value="@answer" Pipeline="@MarkdownPipeline" />
+                        </div>
                     </MudButton>
                 }
             </MudStack>
@@ -47,6 +54,12 @@
         </MudPaper>
     </MudStack>
 </MudCard>
+
+<style>
+    .markdown-wrapper * {
+       @*font-size: 1.5rem !important;*@
+    }
+</style>
 
 @code {
     [Parameter]
@@ -68,6 +81,8 @@
         public string Style { get; set; }
         public bool isDisabled { get; set; } = false;
     }
+
+    private static MarkdownPipeline MarkdownPipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().UseMathematics().UseMudBlazor().UseKatex().Build();
 
     private ButtonContext[] _contexts;
 
@@ -123,6 +138,10 @@
                     Status = i == this.QuestionModel.RId ? 1 : i == 5? 2 : 0
                 };
         }
+    }
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        return base.OnAfterRenderAsync(firstRender);
     }
     private string getClassByStatus(int status)
     {

@@ -1,6 +1,6 @@
-﻿@using MathJaxBlazor 
+﻿<!---@using MathJaxBlazor--> 
 ﻿
-<MathJaxSettings Tex="texSettings" />
+<!--<MathJaxSettings Tex="texSettings" />-->
 
 <Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
@@ -17,11 +17,11 @@
 
 @code {
 
-    TexInputSettings texSettings = new TexInputSettings();
+    //TexInputSettings texSettings = new TexInputSettings();
 
     protected override Task OnInitializedAsync()
     {
-        texSettings.InlineMath.Add(new string[] { "$", "$" });
+        //texSettings.InlineMath.Add(new string[] { "$", "$" });
         return base.OnInitializedAsync();
     }
 

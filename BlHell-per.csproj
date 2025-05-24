@@ -25,12 +25,12 @@
 
   <ItemGroup>
     <PackageReference Include="BlazorDownloadFile" Version="2.4.0.2" />
-    <PackageReference Include="MathJaxBlazor" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.5" PrivateAssets="all" />
     <PackageReference Include="MudBlazor" Version="8.6.0" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
-    <PackageReference Include="Toolbelt.Blazor.FileDropZone" Version="3.0.1" />
+    <PackageReference Include="RamType0.Markdig.Renderers.MudBlazor" Version="0.11.0" />
+    <PackageReference Include="RamType0.Markdig.Renderers.RazorComponent.Katex" Version="0.11.3" />
   </ItemGroup>
 
   <ItemGroup>
