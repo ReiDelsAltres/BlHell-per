@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,10 @@ namespace BlHell_per
             Array.Copy(source, fromIndex, result, 0, result.Length);
 
             return result;
+        }
+        public static void ReloadPage(this NavigationManager manager)
+        {
+            manager.NavigateTo(manager.Uri, true);
         }
     }
 }

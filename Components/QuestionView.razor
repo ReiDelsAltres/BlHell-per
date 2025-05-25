@@ -6,7 +6,7 @@
     <MudStack Spacing="2">
         <MudPaper Class="@cst">
             <MudStack Row>
-                <MudText Typo="Typo.h6">
+                <MudText class="ml-4 mb-2" Style="white-space: pre-line;" Typo="Typo.h6">
                     @if (Index != null)
                     {
                         <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@color" Size="Size.Large">@this.Index</MudChip>
@@ -24,7 +24,7 @@
         </MudPaper>
         <MudPaper>
             <MudDivider DividerType="DividerType.Middle" />
-            <MudStack Row Wrap="Wrap.Wrap" Spacing="1">
+            <MudStack class="ma-4" Row Wrap="Wrap.Wrap" Spacing="1">
                 @for (int i = 0; i < QuestionModel.Answers.Length; i++)
                 {
                     int local_i = i;
@@ -42,7 +42,7 @@
             @if (this.Status != -1)
             {
                 <MudDivider DividerType="DividerType.Middle" />
-                <MudChip align="center" T="string" Style="font-size:1.5rem" Variant="Variant.Text" Color="@color" Size="Size.Large">@_resultText</MudChip>
+                <MudChip T="string" Class="d-flex align-center" Style="font-size:1.5rem" Variant="Variant.Text" Color="@color" Size="Size.Large">@_resultText</MudChip>
             }
         </MudPaper>
     </MudStack>

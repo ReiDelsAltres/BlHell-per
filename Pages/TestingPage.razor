@@ -8,6 +8,7 @@
 @using BlHell_per.Core.Questions
 @using MathJaxBlazor;
 
+@inject NavigationManager Navigation
 @inject HttpClient Http
 @inject IJSRuntime JS
 
@@ -23,34 +24,50 @@
 } else 
 {
     <div class="question-grid" style="display:grid">
-        @for(int i = 0; i < questionsArray.Length; i++)
-        {
-            int local_i = i;
-            Question question = questionsArray[local_i];
-
-            <MudPaper>
-                <QuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" />
-            </MudPaper>
-        }
-
-        @if (Array.FindAll(statuses, e => e == -1).Count() == 0)
-        {
-            int wrong = Array.FindAll(statuses, e => e == 0).Count();
-            int right = Array.FindAll(statuses,e => e == 1).Count();
-            int skip = Array.FindAll(statuses, e => e == 2).Count();
-
-            <div class="result" style="color:@colors[0]">Ошибочно: @wrong</div>
-            <div class="result" style="color:@colors[1]">Верно: @right</div>
-            <div class="result" style="color:@colors[2]">Пропущено: @skip</div>
-
-            if (statuses.Count() == 25) 
+        <MudGrid class="pb-20">
+            @for (int i = 0; i < questionsArray.Length; i++)
             {
-                int score = Math.Max((right * 2) - wrong,0);
-                <MudPaper>
-                    <div class="result" style="color:#8e44ad">Набранный балл: @score</div>
-                </MudPaper>
+                int local_i = i;
+                Question question = questionsArray[local_i];
+
+                <MudItem xs="12" sm="6" lg="4">
+                    <MudPaper>
+                        <QuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" />
+                    </MudPaper>
+                </MudItem>
             }
-        }
+        </MudGrid>
+
+        <MudDialog Visible="_testEndDialogVisible">
+            <TitleContent>
+                <MudText Typo="Typo.h5">
+                    Результат
+                </MudText>
+            </TitleContent>
+            <DialogContent>
+                @{
+                    int wrong = Array.FindAll(statuses, e => e == 0).Count();
+                    int right = Array.FindAll(statuses, e => e == 1).Count();
+                    int skip = Array.FindAll(statuses, e => e == 2).Count();
+
+                    <MudText Typo="Typo.h6">Ошибочно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Error">@wrong</MudChip> </MudText>
+                    <MudText Typo="Typo.h6">Верно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Success">@right</MudChip> </MudText>
+                    <MudText Typo="Typo.h6">Пропущено: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Warning">@skip</MudChip> </MudText>
+
+                    if (statuses.Count() == 25)
+                    {
+                        int score = Math.Max((right * 2) - wrong, 0);
+                        <MudDivider />
+                        <MudText Typo="Typo.h6">Набранный балл: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Primary">@score</MudChip> </MudText>
+                        <MudProgressLinear Color="Color.Primary" Value="@(score * 2)" Size="Size.Medium" />
+                    }
+                }
+            </DialogContent>
+            <DialogActions>
+                <MudButton OnClick="@(e => this._testEndDialogVisible = false)">Закрыть</MudButton>
+                <MudButton OnClick="@(e => this.Navigation.ReloadPage())">Повторить</MudButton>
+            </DialogActions>
+        </MudDialog>
 
     </div>
 }
@@ -82,6 +99,7 @@
     private int[] statuses;
 
     private bool shouldRender = true;
+    private bool _testEndDialogVisible = false;
 
 
     protected override Task OnAfterRenderAsync(bool firstRender)
@@ -124,6 +142,8 @@
     {
         this.statuses[this.statusesCounter++] = status;
         this.shouldRender = Array.FindAll(statuses, e => e == -1).Count() == 0;
+
+        if (this.shouldRender) _testEndDialogVisible = true;
     }
 
     protected override void OnParametersSet()

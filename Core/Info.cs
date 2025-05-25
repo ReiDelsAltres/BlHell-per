@@ -37,7 +37,7 @@ public class Info
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Quliyeva Fatimə Ağayar qızı",
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
-            RedAllerts = ["Тест не закончен"]
+            RedAllerts = []
         };
         public static Subject InstrumentalPrograms = new()
         {
@@ -45,7 +45,7 @@ public class Info
             TranslatedName = "Инструментальные и прикладные программы",
             Groups = ["759 ITS"],
             Teacher = "Гасанова Вюсаля Рамиз кызы",
-            YellowAllerts = [],
+            YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
             RedAllerts = []
         };
         public static Subject Physics = new()
