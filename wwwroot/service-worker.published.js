@@ -59,7 +59,7 @@ async function onFetch(event) {
             (new URL(event.request.url)).pathname.replace(/\/$/, '') + '/index.html' :
             event.request;
 
-        console.info(request);
+        //console.info(request);
 
         const cache = await caches.open(cacheName);
         cachedResponse = await cache.match(request);

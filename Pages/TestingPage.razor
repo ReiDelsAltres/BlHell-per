@@ -8,7 +8,6 @@
 @using BlHell_per.Core.Questions
 @using MathJaxBlazor;
 
-@inject NavigationManager Navigation
 @inject HttpClient Http
 @inject IJSRuntime JS
 
@@ -38,37 +37,7 @@
             }
         </MudGrid>
 
-        <MudDialog Visible="_testEndDialogVisible">
-            <TitleContent>
-                <MudText Typo="Typo.h5">
-                    Результат
-                </MudText>
-            </TitleContent>
-            <DialogContent>
-                @{
-                    int wrong = Array.FindAll(statuses, e => e == 0).Count();
-                    int right = Array.FindAll(statuses, e => e == 1).Count();
-                    int skip = Array.FindAll(statuses, e => e == 2).Count();
-
-                    <MudText Typo="Typo.h6">Ошибочно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Error">@wrong</MudChip> </MudText>
-                    <MudText Typo="Typo.h6">Верно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Success">@right</MudChip> </MudText>
-                    <MudText Typo="Typo.h6">Пропущено: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Warning">@skip</MudChip> </MudText>
-
-                    if (statuses.Count() == 25)
-                    {
-                        int score = Math.Max((right * 2) - wrong, 0);
-                        <MudDivider />
-                        <MudText Typo="Typo.h6">Набранный балл: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Primary">@score</MudChip> </MudText>
-                        <MudProgressLinear Color="Color.Primary" Value="@(score * 2)" Size="Size.Medium" />
-                    }
-                }
-            </DialogContent>
-            <DialogActions>
-                <MudButton OnClick="@(e => this._testEndDialogVisible = false)">Закрыть</MudButton>
-                <MudButton OnClick="@(e => this.Navigation.ReloadPage())">Повторить</MudButton>
-            </DialogActions>
-        </MudDialog>
-
+        <TestinPage_TestEndDialog @ref="_dialog" Statuses="statuses"/>
     </div>
 }
 
@@ -99,8 +68,7 @@
     private int[] statuses;
 
     private bool shouldRender = true;
-    private bool _testEndDialogVisible = false;
-
+    private TestinPage_TestEndDialog _dialog;
 
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
@@ -141,9 +109,9 @@
     private async void onQuestionAnswered(int status)
     {
         this.statuses[this.statusesCounter++] = status;
-        this.shouldRender = Array.FindAll(statuses, e => e == -1).Count() == 0;
+        this.shouldRender = false;
 
-        if (this.shouldRender) _testEndDialogVisible = true;
+        if (Array.FindAll(statuses, e => e == -1).Count() == 0) this._dialog.changeVisiblity(true);
     }
 
     protected override void OnParametersSet()

@@ -1,0 +1,49 @@
+﻿@inject NavigationManager Navigation
+
+<MudDialog Visible="this.Visible">
+    <TitleContent>
+        <MudText Typo="Typo.h5">
+            Результат
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        @{
+            int wrong = Array.FindAll(this.Statuses, e => e == 0).Count();
+            int right = Array.FindAll(this.Statuses, e => e == 1).Count();
+            int skip = Array.FindAll(this.Statuses, e => e == 2).Count();
+
+            <MudText Typo="Typo.h6">Ошибочно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Error">@wrong</MudChip> </MudText>
+            <MudText Typo="Typo.h6">Верно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Success">@right</MudChip> </MudText>
+            <MudText Typo="Typo.h6">Пропущено: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Warning">@skip</MudChip> </MudText>
+
+            if (this.Statuses.Count() == 25)
+            {
+                int score = Math.Max((right * 2) - wrong, 0);
+                <MudDivider />
+                <MudText Typo="Typo.h6">Набранный балл: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Primary">@score</MudChip> </MudText>
+                <MudProgressLinear Color="Color.Primary" Value="@(score * 2)" Size="Size.Medium" />
+            }
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="@(e => this.Visible = false)">Закрыть</MudButton>
+        <MudButton OnClick="@(e => this.Navigation.ReloadPage())">Повторить</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? InputAttributes { get; set; }
+
+    [Parameter]
+    public bool Visible { get; set; }
+
+    [Parameter]
+    public int[] Statuses { get; set; }
+
+    public async void changeVisiblity(bool visible)
+    {
+        this.Visible = visible;
+        this.StateHasChanged();
+    }
+}
