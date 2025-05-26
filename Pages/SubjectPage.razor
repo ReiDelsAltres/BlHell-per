@@ -30,6 +30,10 @@
 							<MudChip T="string" Variant="Variant.Text">@str</MudChip>
 						}
 					</MudText>
+					<MudText Typo="Typo.subtitle1">
+						Преподаватель:
+						<MudChip T="string" Variant="Variant.Text">@this._subject?.Teacher</MudChip>
+					</MudText>
 					@foreach (string alert in this._subject?.YellowAllerts)
 					{
 						<MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
