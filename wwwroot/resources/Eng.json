@@ -379,11 +379,11 @@
       "Id": 35,
       "Title": "Fill in the gap: Have you got ______ friends?",
       "Answers": [
-        "any friends",
-        "some friends",
-        "a few friends",
-        "many friends",
-        "several friends"
+        "any",
+        "some",
+        "a few",
+        "many",
+        "several"
       ]
     },
     {
@@ -2128,8 +2128,8 @@
       "Id": 194,
       "Title": "Choose the correct tense form: He ______ before I arrived.",
       "Answers": [
-        "left",
         "had left",
+        "left",
         "was leaving",
         "goes",
         "departs"
@@ -2711,8 +2711,8 @@
       "Id": 247,
       "Title": "Choose the appropriate answer: We shall ………. the theatre.",
       "Answers": [
-        "go",
-        "come",
+        "go to",
+        "come to",
         "enter",
         "visit",
         "attend"
