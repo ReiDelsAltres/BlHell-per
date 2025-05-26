@@ -1,0 +1,4416 @@
+{
+  "UseIndex": true,
+  "Questions": [
+    {
+      "Id": 1,
+      "Title": "Translate: Какие продукты вы обычно покупаете в Интернете?",
+      "Answers": [
+        "What products do you usually buy online?",
+        "What websites do you usually visit?",
+        "Where do you buy clothes?",
+        "What is your favorite store?",
+        "What payment methods do you use?"
+      ]
+    },
+    {
+      "Id": 2,
+      "Title": "Choose the correct translation: Онлайн-продажи растут",
+      "Answers": [
+        "Online sales are growing",
+        "Online stores are closing",
+        "People prefer physical shops",
+        "Digital payments are decreasing",
+        "Shipping costs are increasing"
+      ]
+    },
+    {
+      "Id": 3,
+      "Title": "Translate: Компании осуществляют оптовые сделки",
+      "Answers": [
+        "Companies carry out wholesale transactions",
+        "Companies buy individual items",
+        "Retail stores focus on small sales",
+        "Businesses refuse large orders",
+        "Customers negotiate prices directly"
+      ]
+    },
+    {
+      "Id": 4,
+      "Title": "Translate: Компании продают товары через Интернет",
+      "Answers": [
+        "Companies sell goods online",
+        "Companies avoid online platforms",
+        "Businesses reject digital sales",
+        "Internet sales are illegal",
+        "Physical stores only allow purchases"
+      ]
+    },
+    {
+      "Id": 5,
+      "Title": "Translate: Каковы особенности этого веб-сайта?",
+      "Answers": [
+        "What are the features of this website?",
+        "How much does this product cost?",
+        "What is your favorite color?",
+        "Where do you live?",
+        "What is your phone number?"
+      ]
+    },
+    {
+      "Id": 6,
+      "Title": "Translate: Клиент открывает счет",
+      "Answers": [
+        "The client opens an account",
+        "The client closes a transaction",
+        "The customer cancels an order",
+        "The user rejects all purchases",
+        "The shopper deletes their history"
+      ]
+    },
+    {
+      "Id": 7,
+      "Title": "Choose the correct translation: надежный сервис",
+      "Answers": [
+        "Reliable service",
+        "Untrustworthy provider",
+        "Slow connection",
+        "Dangerous transaction",
+        "Unsecure communication"
+      ]
+    },
+    {
+      "Id": 8,
+      "Title": "Choose the correct translation: безопасность сделки",
+      "Answers": [
+        "Transaction security",
+        "Hacking prevention",
+        "Payment failure",
+        "Data breach risk",
+        "Financial instability"
+      ]
+    },
+    {
+      "Id": 9,
+      "Title": "Choose the correct translation: функции безопасности",
+      "Answers": [
+        "Security features",
+        "Shipping options",
+        "Customer reviews",
+        "Price comparison tool",
+        "Social media integration"
+      ]
+    },
+    {
+      "Id": 10,
+      "Title": "Choose the correct translation: кибератака",
+      "Answers": [
+        "Cyberattack",
+        "Online survey",
+        "Product listing",
+        "User registration",
+        "Retail discount"
+      ]
+    },
+    {
+      "Id": 11,
+      "Title": "Choose the appropriate answer: 2FA",
+      "Answers": [
+        "Two-factor authentication",
+        "Single-step verification",
+        "Open network access",
+        "Unprotected login method",
+        "Weak password storage"
+      ]
+    },
+    {
+      "Id": 12,
+      "Title": "Choose the correct translation: зашифрованный",
+      "Answers": [
+        "Encrypted",
+        "Visible to all",
+        "Publicly available",
+        "Easily decoded",
+        "Unprotected"
+      ]
+    },
+    {
+      "Id": 13,
+      "Title": "Choose the correct translation: меры безопасности",
+      "Answers": [
+        "Security measures",
+        "User preferences",
+        "Product recommendations",
+        "Shopping cart features",
+        "Payment options"
+      ]
+    },
+    {
+      "Id": 14,
+      "Title": "Choose the correct translation: информация о пользователе",
+      "Answers": [
+        "User information",
+        "Retail discounts",
+        "Store promotions",
+        "Purchase history",
+        "Shipping policies"
+      ]
+    },
+    {
+      "Id": 15,
+      "Title": "Choose the correct translation: система безопасности",
+      "Answers": [
+        "Security system",
+        "Payment portal",
+        "Shipping details",
+        "Website design",
+        "Customer reviews"
+      ]
+    },
+    {
+      "Id": 16,
+      "Title": "Choose the correct translation: локальная сеть",
+      "Answers": [
+        "Local network",
+        "Global marketplace",
+        "Online retail store",
+        "Public Wi-Fi",
+        "Open internet"
+      ]
+    },
+    {
+      "Id": 17,
+      "Title": "Choose the correct translation: ограниченный",
+      "Answers": [
+        "Restricted",
+        "Unlimited",
+        "Always accessible",
+        "Publicly available",
+        "No restrictions"
+      ]
+    },
+    {
+      "Id": 18,
+      "Title": "Choose the correct translation: подключение к сети",
+      "Answers": [
+        "Network connection",
+        "Closed circuit",
+        "Manual transaction",
+        "Offline shopping",
+        "Paper-based system"
+      ]
+    },
+    {
+      "Id": 19,
+      "Title": "Choose the correct translation: ошибка подключения к сети",
+      "Answers": [
+        "Network connection error",
+        "Successful login",
+        "Perfect transaction",
+        "Instant payment approval",
+        "Secure authentication"
+      ]
+    },
+    {
+      "Id": 20,
+      "Title": "Choose the correct translation: прием платежей",
+      "Answers": [
+        "Payment processing",
+        "Shipping management",
+        "Product advertisement",
+        "Customer feedback",
+        "Website navigation"
+      ]
+    },
+    {
+      "Id": 21,
+      "Title": "Fill in the gap: Can you explain how a customer ______ an online transaction?",
+      "Answers": [
+        "completes",
+        "initiates",
+        "cancels",
+        "aborts",
+        "denies"
+      ]
+    },
+    {
+      "Id": 22,
+      "Title": "Choose the correct translation: ответ сервера",
+      "Answers": [
+        "server response",
+        "client response",
+        "server request",
+        "server output",
+        "client query"
+      ]
+    },
+    {
+      "Id": 23,
+      "Title": "Choose the correct translation: шаблон предложения",
+      "Answers": [
+        "proposal template",
+        "sentence template",
+        "offer outline",
+        "template letter",
+        "quotation format"
+      ]
+    },
+    {
+      "Id": 24,
+      "Title": "Choose the correct translation: аутентификация",
+      "Answers": [
+        "authentication",
+        "authorization",
+        "identification",
+        "validation",
+        "encryption"
+      ]
+    },
+    {
+      "Id": 25,
+      "Title": "Choose the correct translation: процесс транзакции",
+      "Answers": [
+        "transaction process",
+        "transaction procedure",
+        "trade process",
+        "payment process",
+        "transaction mechanism"
+      ]
+    },
+    {
+      "Id": 26,
+      "Title": "Fill in the gap: He hasn’t got ______ money.",
+      "Answers": [
+        "much",
+        "many",
+        "a little",
+        "some",
+        "plenty"
+      ]
+    },
+    {
+      "Id": 27,
+      "Title": "Fill in the gap: How ______ food did they eat?",
+      "Answers": [
+        "much",
+        "many",
+        "a lot of",
+        "plenty of",
+        "several"
+      ]
+    },
+    {
+      "Id": 28,
+      "Title": "Fill in the gap: She’s got ______ luggage.",
+      "Answers": [
+        "a little",
+        "much",
+        "many",
+        "a few",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 29,
+      "Title": "Fill in the gap: They need ______ equipment.",
+      "Answers": [
+        "some",
+        "many",
+        "a few",
+        "much",
+        "several"
+      ]
+    },
+    {
+      "Id": 30,
+      "Title": "Fill in the gap: How ______ people were at the party?",
+      "Answers": [
+        "many",
+        "much",
+        "a few",
+        "little",
+        "some"
+      ]
+    },
+    {
+      "Id": 31,
+      "Title": "Fill in the gap: She gave me ______ information.",
+      "Answers": [
+        "some information",
+        "many",
+        "a few",
+        "much",
+        "several"
+      ]
+    },
+    {
+      "Id": 32,
+      "Title": "Fill in the gap: He hasn’t seen ______ interesting films.",
+      "Answers": [
+        "any",
+        "many",
+        "a few",
+        "some",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 33,
+      "Title": "Fill in the gap: How ______ do you earn?",
+      "Answers": [
+        "much",
+        "many",
+        "a lot",
+        "enough",
+        "plenty"
+      ]
+    },
+    {
+      "Id": 34,
+      "Title": "Fill in the gap: I like England very ______.",
+      "Answers": [
+        "much",
+        "many",
+        "a little",
+        "a lot",
+        "so"
+      ]
+    },
+    {
+      "Id": 35,
+      "Title": "Fill in the gap: Have you got ______ friends?",
+      "Answers": [
+        "any friends",
+        "some friends",
+        "a few friends",
+        "many friends",
+        "several friends"
+      ]
+    },
+    {
+      "Id": 36,
+      "Title": "Fill in the gap: She is unhappy because she earns ______ money.",
+      "Answers": [
+        "little",
+        "much",
+        "many",
+        "a little",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 37,
+      "Title": "Fill in the gap: She knows a lot about Cambridge because she’s been there ______ times.",
+      "Answers": [
+        "many times",
+        "few times",
+        "several times",
+        "a lot of times",
+        "some times"
+      ]
+    },
+    {
+      "Id": 38,
+      "Title": "Fill in the gap: Do you have ______ information about the school?",
+      "Answers": [
+        "any information",
+        "much information",
+        "some information",
+        "a little information",
+        "plenty of information"
+      ]
+    },
+    {
+      "Id": 39,
+      "Title": "Fill in the gap: It’s a bad school. It has ______ good teachers.",
+      "Answers": [
+        "few good teachers",
+        "a few good teachers",
+        "many good teachers",
+        "several good teachers",
+        "no good teachers"
+      ]
+    },
+    {
+      "Id": 40,
+      "Title": "Fill in the gap: I didn’t feel lonely because I met ______ friends at the disco.",
+      "Answers": [
+        "many friends",
+        "any friends",
+        "few friends",
+        "a few friends",
+        "several friends"
+      ]
+    },
+    {
+      "Id": 41,
+      "Title": "Fill in the gap: He is poor, so he has ............ new clothes.",
+      "Answers": [
+        "no",
+        "some",
+        "a few",
+        "several",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 42,
+      "Title": "Fill in the gap: Please help me. I need ............ money to buy a train ticket.",
+      "Answers": [
+        "a little",
+        "a few",
+        "much",
+        "many",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 43,
+      "Title": "Fill in the gap: We need …. users to test this.",
+      "Answers": [
+        "a few",
+        "a little",
+        "much",
+        "many",
+        "some"
+      ]
+    },
+    {
+      "Id": 44,
+      "Title": "Fill in the gap: We don’t have …. customers.",
+      "Answers": [
+        "many",
+        "a few",
+        "much",
+        "some",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 45,
+      "Title": "Fill in the gap: We have …. money for online shopping.",
+      "Answers": [
+        "enough",
+        "a lot of",
+        "some",
+        "little",
+        "much"
+      ]
+    },
+    {
+      "Id": 46,
+      "Title": "Fill in the gap: I don’t have ….. knowledge on that subject.",
+      "Answers": [
+        "much",
+        "a little",
+        "many",
+        "some",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 47,
+      "Title": "Fill in the gap: …. shops have online presence.",
+      "Answers": [
+        "Many",
+        "Few",
+        "a little",
+        "much",
+        "some"
+      ]
+    },
+    {
+      "Id": 48,
+      "Title": "Fill in the gap: This computer company sells …. products online.",
+      "Answers": [
+        "many",
+        "much",
+        "a few",
+        "little",
+        "some"
+      ]
+    },
+    {
+      "Id": 49,
+      "Title": "Fill in the gap: …. companies offer customer service on their website.",
+      "Answers": [
+        "Many",
+        "Few",
+        "a little",
+        "much",
+        "some"
+      ]
+    },
+    {
+      "Id": 50,
+      "Title": "Fill in the gap: I don’t have … knowledge of computers.",
+      "Answers": [
+        "much",
+        "a little",
+        "many",
+        "some",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 51,
+      "Title": "Fill in the gap: Companies spend …. money on website security.",
+      "Answers": [
+        "a lot of",
+        "much",
+        "some",
+        "little",
+        "many"
+      ]
+    },
+    {
+      "Id": 52,
+      "Title": "Fill in the gap: …. computers",
+      "Answers": [
+        "Many",
+        "much",
+        "a few",
+        "several",
+        "little"
+      ]
+    },
+    {
+      "Id": 53,
+      "Title": "Fill in the gap: only …. money",
+      "Answers": [
+        "a little",
+        "some",
+        "much",
+        "enough",
+        "no"
+      ]
+    },
+    {
+      "Id": 54,
+      "Title": "Fill in the gap: I’m sure I made …. mistakes on the exam.",
+      "Answers": [
+        "a few",
+        "many",
+        "several",
+        "little",
+        "no"
+      ]
+    },
+    {
+      "Id": 55,
+      "Title": "Fill in the gap: My friend didn’t make …. mistakes on the exam.",
+      "Answers": [
+        "any",
+        "a few",
+        "many",
+        "several",
+        "some"
+      ]
+    },
+    {
+      "Id": 56,
+      "Title": "Fill in the gap: You shouldn’t take ….. medicine without reading the information first.",
+      "Answers": [
+        "any",
+        "some",
+        "much",
+        "a little",
+        "many"
+      ]
+    },
+    {
+      "Id": 57,
+      "Title": "Complete the sentences: We can’t have …. omelet. There aren’t …… eggs.",
+      "Answers": [
+        "any; any",
+        "a; few",
+        "some; some",
+        "many; many",
+        "a few; a few"
+      ]
+    },
+    {
+      "Id": 58,
+      "Title": "Complete the sentences: 'Can I have ….. sandwich, please?' 'Sorry. There isn’t …….. bread.'",
+      "Answers": [
+        "a; any",
+        "any; a",
+        "a few; some",
+        "the; any",
+        "some; the"
+      ]
+    },
+    {
+      "Id": 59,
+      "Title": "Complete the sentences: 'I’m hungry.' 'Do you want __________ apple?'",
+      "Answers": [
+        "an",
+        "a",
+        "the",
+        "some",
+        "many"
+      ]
+    },
+    {
+      "Id": 60,
+      "Title": "Complete the sentences: 'I can make …………. pasta this evening.'",
+      "Answers": [
+        "some",
+        "any",
+        "much",
+        "a few",
+        "many"
+      ]
+    },
+    {
+      "Id": 61,
+      "Title": "Complete the sentences: 'Are there __________ bananas?' 'No, I had the last one.'",
+      "Answers": [
+        "any",
+        "many",
+        "a few",
+        "some",
+        "much"
+      ]
+    },
+    {
+      "Id": 62,
+      "Title": "Complete the sentences: 'I’m a vegetarian. I don’t want ….. meat.'",
+      "Answers": [
+        "any",
+        "some",
+        "much",
+        "a little",
+        "many"
+      ]
+    },
+    {
+      "Id": 63,
+      "Title": "Complete the sentences: 'There’s ….. pineapple in the fridge.'",
+      "Answers": [
+        "some",
+        "any",
+        "much",
+        "a few",
+        "no"
+      ]
+    },
+    {
+      "Id": 64,
+      "Title": "Complete the sentences: 'How …… coffee do you drink?'",
+      "Answers": [
+        "much",
+        "many",
+        "a little",
+        "some",
+        "few"
+      ]
+    },
+    {
+      "Id": 65,
+      "Title": "Complete the sentences: 'We don’t eat …… bananas in our house.'",
+      "Answers": [
+        "many",
+        "much",
+        "a few",
+        "some",
+        "few"
+      ]
+    },
+    {
+      "Id": 66,
+      "Title": "Complete the sentences: 'I didn’t eat ……. cake. I wasn’t hungry.'",
+      "Answers": [
+        "any",
+        "much",
+        "a little",
+        "some",
+        "few"
+      ]
+    },
+    {
+      "Id": 67,
+      "Title": "Complete the sentences: 'She eats …… biscuits. She loves them.'",
+      "Answers": [
+        "many",
+        "a few",
+        "much",
+        "some",
+        "few"
+      ]
+    },
+    {
+      "Id": 68,
+      "Title": "Complete the sentences: 'Mark buys…… fruit. He’s very healthy.'",
+      "Answers": [
+        "a lot of",
+        "much",
+        "many",
+        "a few",
+        "some"
+      ]
+    },
+    {
+      "Id": 69,
+      "Title": "Complete the sentences: 'I don’t have …… free time. I work very hard.'",
+      "Answers": [
+        "much",
+        "a lot of",
+        "some",
+        "many",
+        "a little"
+      ]
+    },
+    {
+      "Id": 70,
+      "Title": "Complete the sentences: 'How much chocolate do you eat? ……..'",
+      "Answers": [
+        "a little",
+        "many",
+        "some",
+        "a lot",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 71,
+      "Title": "Complete the sentences: How many cups of tea do you drink? …….",
+      "Answers": [
+        "two",
+        "few",
+        "a few",
+        "several",
+        "many"
+      ]
+    },
+    {
+      "Id": 72,
+      "Title": "Complete the sentences: Are there …. onions?",
+      "Answers": [
+        "any",
+        "some",
+        "many",
+        "a few",
+        "few"
+      ]
+    },
+    {
+      "Id": 73,
+      "Title": "Complete the sentences: We don’t need …. bread",
+      "Answers": [
+        "any",
+        "much",
+        "a little",
+        "some",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 74,
+      "Title": "Complete the sentences: I drink quite …… coffee",
+      "Answers": [
+        "a lot of",
+        "much",
+        "some",
+        "a little",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 75,
+      "Title": "Complete the sentences: Ann doesn’t drink …. water",
+      "Answers": [
+        "any",
+        "some",
+        "much",
+        "a little",
+        "plenty of"
+      ]
+    },
+    {
+      "Id": 76,
+      "Title": "Translate: типы сети",
+      "Answers": [
+        "Types of networks",
+        "Network cables",
+        "Network protocols",
+        "Internet services",
+        "Computer systems"
+      ]
+    },
+    {
+      "Id": 77,
+      "Title": "Translate: Какие сетевые решения вы бы порекомендовали?",
+      "Answers": [
+        "What network solutions would you recommend?",
+        "Which network problems would you fix?",
+        "What IT services do you offer?",
+        "Which network designs are popular?",
+        "What security measures should be taken?"
+      ]
+    },
+    {
+      "Id": 78,
+      "Title": "Translate: Напишите описание сетевого решения.",
+      "Answers": [
+        "Write a description of the network solution",
+        "Draft a network proposal",
+        "Outline the network requirements",
+        "List the network components",
+        "Design a network map"
+      ]
+    },
+    {
+      "Id": 79,
+      "Title": "Translate: быть готовым",
+      "Answers": [
+        "to be ready",
+        "to prepare",
+        "to be set",
+        "to be available",
+        "to be willing"
+      ]
+    },
+    {
+      "Id": 80,
+      "Title": "Choose the correct translation: рекомендации",
+      "Answers": [
+        "recommendations",
+        "suggestions",
+        "instructions",
+        "advice",
+        "requirements"
+      ]
+    },
+    {
+      "Id": 81,
+      "Title": "Translate: общедоступная сеть",
+      "Answers": [
+        "public network",
+        "private network",
+        "local network",
+        "wireless network",
+        "secured network"
+      ]
+    },
+    {
+      "Id": 82,
+      "Title": "Translate: Вы можете обмениваться устройствами между пользователями",
+      "Answers": [
+        "You can exchange devices between users",
+        "You can share devices with other users",
+        "You can sell devices to users",
+        "You can borrow devices from users",
+        "You can transfer devices to users"
+      ]
+    },
+    {
+      "Id": 83,
+      "Title": "Translate: шифрование",
+      "Answers": [
+        "encryption",
+        "decryption",
+        "encoding",
+        "compression",
+        "authentication"
+      ]
+    },
+    {
+      "Id": 84,
+      "Title": "Find the correct translation: описание сетевого решения",
+      "Answers": [
+        "description of the network solution",
+        "network solution overview",
+        "network specification",
+        "network summary",
+        "network analysis"
+      ]
+    },
+    {
+      "Id": 85,
+      "Title": "Find the correct translation: сетевые разъемы",
+      "Answers": [
+        "network jacks",
+        "network cables",
+        "network ports",
+        "network connectors",
+        "power sockets"
+      ]
+    },
+    {
+      "Id": 86,
+      "Title": "Complete: I have a problem with the network download …. .",
+      "Answers": [
+        "speed",
+        "rate",
+        "process",
+        "connection",
+        "time"
+      ]
+    },
+    {
+      "Id": 87,
+      "Title": "Complete: Why don’t you …. the hub?",
+      "Answers": [
+        "try",
+        "use",
+        "check",
+        "restart",
+        "replace"
+      ]
+    },
+    {
+      "Id": 88,
+      "Title": "Fill in the gap: You …. look at the specifications.",
+      "Answers": [
+        "should",
+        "must",
+        "could",
+        "might",
+        "can"
+      ]
+    },
+    {
+      "Id": 89,
+      "Title": "Translate: компания программное обеспечение",
+      "Answers": [
+        "software company",
+        "computer company",
+        "technology company",
+        "IT company",
+        "hardware company"
+      ]
+    },
+    {
+      "Id": 90,
+      "Title": "Find the correct translation: беспроводная сеть",
+      "Answers": [
+        "wireless network",
+        "wired network",
+        "local network",
+        "public network",
+        "cellular network"
+      ]
+    },
+    {
+      "Id": 91,
+      "Title": "Find the correct answer: There is not a cloud in the sky, but it (be) cloudy in the morning.",
+      "Answers": [
+        "was",
+        "is",
+        "were",
+        "has been",
+        "will be"
+      ]
+    },
+    {
+      "Id": 92,
+      "Title": "Find the correct answer: We (invite) them to the party yesterday.",
+      "Answers": [
+        "invited",
+        "invite",
+        "will invite",
+        "are inviting",
+        "have invited"
+      ]
+    },
+    {
+      "Id": 93,
+      "Title": "Find the correct answer: I got up early in the morning and (have) a shower.",
+      "Answers": [
+        "had",
+        "have",
+        "will have",
+        "has",
+        "am having"
+      ]
+    },
+    {
+      "Id": 94,
+      "Title": "Find the correct answer: He (not/play) tennis yesterday.",
+      "Answers": [
+        "didn't play",
+        "doesn't play",
+        "won't play",
+        "hasn't played",
+        "isn't playing"
+      ]
+    },
+    {
+      "Id": 95,
+      "Title": "Find the correct answer: The weather is nice today, but it (be) bad yesterday.",
+      "Answers": [
+        "was",
+        "is",
+        "will be",
+        "were",
+        "has been"
+      ]
+    },
+    {
+      "Id": 96,
+      "Title": "Find the correct answer: I sleep well, but last night I (not/sleep) at all.",
+      "Answers": [
+        "didn't sleep",
+        "don't sleep",
+        "haven't slept",
+        "won't sleep",
+        "wasn't sleeping"
+      ]
+    },
+    {
+      "Id": 97,
+      "Title": "Find the correct answer: My husband (speak) to his boss last week.",
+      "Answers": [
+        "spoke",
+        "speaks",
+        "is speaking",
+        "has spoken",
+        "was speaking"
+      ]
+    },
+    {
+      "Id": 98,
+      "Title": "Find the correct answer: Ten minutes ago I (hear) a strange noise.",
+      "Answers": [
+        "heard",
+        "hear",
+        "had heard",
+        "was hearing",
+        "have heard"
+      ]
+    },
+    {
+      "Id": 99,
+      "Title": "Find the correct answer: We ……… the Channel yesterday.",
+      "Answers": [
+        "watched",
+        "watch",
+        "will watch",
+        "are watching",
+        "have watched"
+      ]
+    },
+    {
+      "Id": 100,
+      "Title": "Find the correct answer: Tom ………… some new clothes yesterday.",
+      "Answers": [
+        "bought",
+        "buys",
+        "has bought",
+        "is buying",
+        "will buy"
+      ]
+    },
+    {
+      "Id": 101,
+      "Title": "Find the correct answer: Yesterday, I …. my lunch to school.",
+      "Answers": [
+        "brought",
+        "bring",
+        "brang",
+        "have brought",
+        "broughted"
+      ]
+    },
+    {
+      "Id": 102,
+      "Title": "Find the correct answer: We …. a good film last week.",
+      "Answers": [
+        "saw",
+        "seen",
+        "sawed",
+        "see",
+        "have seen"
+      ]
+    },
+    {
+      "Id": 103,
+      "Title": "Find the correct answer: Yesterday, I ………… in Geneva.",
+      "Answers": [
+        "was",
+        "am",
+        "were",
+        "stayed",
+        "have been"
+      ]
+    },
+    {
+      "Id": 104,
+      "Title": "Find the correct answer: She …………. her work at seven o'clock.",
+      "Answers": [
+        "finished",
+        "finishes",
+        "finish",
+        "had finished",
+        "was finishing"
+      ]
+    },
+    {
+      "Id": 105,
+      "Title": "Find the correct answer: I ………… to the theatre last night.",
+      "Answers": [
+        "went",
+        "go",
+        "gone",
+        "am going",
+        "was going"
+      ]
+    },
+    {
+      "Id": 106,
+      "Title": "Find the correct answer: I …… in Japan last year.",
+      "Answers": [
+        "lived",
+        "live",
+        "have lived",
+        "was living",
+        "live"
+      ]
+    },
+    {
+      "Id": 107,
+      "Title": "Find the correct answer: She ……. a headache yesterday.",
+      "Answers": [
+        "had",
+        "has",
+        "have",
+        "got",
+        "gotten"
+      ]
+    },
+    {
+      "Id": 108,
+      "Title": "Find the correct answer: We ……. our homework last night.",
+      "Answers": [
+        "did",
+        "do",
+        "done",
+        "were doing",
+        "has done"
+      ]
+    },
+    {
+      "Id": 109,
+      "Title": "Find the correct answer: They……. in Rio last summer.",
+      "Answers": [
+        "were",
+        "was",
+        "are",
+        "lived",
+        "have been"
+      ]
+    },
+    {
+      "Id": 110,
+      "Title": "Find the correct answer: We …… any money.",
+      "Answers": [
+        "didn't have",
+        "don't have",
+        "haven't had",
+        "hadn't",
+        "won't have"
+      ]
+    },
+    {
+      "Id": 111,
+      "Title": "Fill in the gap: Last year I …. to London.",
+      "Answers": [
+        "went",
+        "go",
+        "wented",
+        "have gone",
+        "am going"
+      ]
+    },
+    {
+      "Id": 112,
+      "Title": "Fill in the gap: We ………. our exercises 47 minutes ago.",
+      "Answers": [
+        "finished",
+        "finish",
+        "had finished",
+        "are finishing",
+        "have finished"
+      ]
+    },
+    {
+      "Id": 113,
+      "Title": "Fill in the gap: Kate ………. television yesterday evening.",
+      "Answers": [
+        "watched",
+        "watches",
+        "watch",
+        "was watching",
+        "has watched"
+      ]
+    },
+    {
+      "Id": 114,
+      "Title": "Fill in the gap: It was hot in the room, so I …… the window.",
+      "Answers": [
+        "opened",
+        "open",
+        "was opening",
+        "have opened",
+        "shut"
+      ]
+    },
+    {
+      "Id": 115,
+      "Title": "Fill in the gap: He …… to a club 2 days ago.",
+      "Answers": [
+        "went",
+        "go",
+        "has gone",
+        "was going",
+        "goes"
+      ]
+    },
+    {
+      "Id": 116,
+      "Title": "Fill in the gap: My parents …… to visit me last July.",
+      "Answers": [
+        "came",
+        "went",
+        "come",
+        "are coming",
+        "had come"
+      ]
+    },
+    {
+      "Id": 117,
+      "Title": "Fill in the gap: We …… because it was raining.",
+      "Answers": [
+        "stayed",
+        "went",
+        "left",
+        "ran",
+        "moved"
+      ]
+    },
+    {
+      "Id": 118,
+      "Title": "Fill in the gap: …… he come to your party last week?",
+      "Answers": [
+        "Did",
+        "Does",
+        "Was",
+        "Has",
+        "Will"
+      ]
+    },
+    {
+      "Id": 119,
+      "Title": "Fill in the gap: It …… yesterday.",
+      "Answers": [
+        "rained",
+        "rains",
+        "was raining",
+        "has rained",
+        "is raining"
+      ]
+    },
+    {
+      "Id": 120,
+      "Title": "Fill in the gap: Angela …… TV yesterday.",
+      "Answers": [
+        "watched",
+        "watches",
+        "watch",
+        "is watching",
+        "has watched"
+      ]
+    },
+    {
+      "Id": 121,
+      "Title": "Fill in the gap: John ……… to go to the museum 4 days ago.",
+      "Answers": [
+        "decided",
+        "decides",
+        "was deciding",
+        "will decide",
+        "has decided"
+      ]
+    },
+    {
+      "Id": 122,
+      "Title": "Fill in the gap: …… you go to work yesterday?",
+      "Answers": [
+        "Did",
+        "Do",
+        "Does",
+        "Have",
+        "Will"
+      ]
+    },
+    {
+      "Id": 123,
+      "Title": "Fill in the gap: I ……. about a yellow unicorn last night.",
+      "Answers": [
+        "dreamed",
+        "dream",
+        "dreams",
+        "was dreaming",
+        "will dream"
+      ]
+    },
+    {
+      "Id": 124,
+      "Title": "Fill in the gap: Anna … to class yesterday because she was at the hospital.",
+      "Answers": [
+        "didn't go",
+        "went",
+        "goes",
+        "doesn't go",
+        "had gone"
+      ]
+    },
+    {
+      "Id": 125,
+      "Title": "Fill in the gap: Lucy …. her mother's watch, so she bought a new one.",
+      "Answers": [
+        "lost",
+        "found",
+        "kept",
+        "broke",
+        "sold"
+      ]
+    },
+    {
+      "Id": 126,
+      "Title": "Fill in the gap: We … at the library last week.",
+      "Answers": [
+        "were",
+        "went",
+        "stayed",
+        "studied",
+        "are"
+      ]
+    },
+    {
+      "Id": 127,
+      "Title": "Fill in the gap: I … an e-mail to the company but they never answered.",
+      "Answers": [
+        "sent",
+        "send",
+        "was sending",
+        "have sent",
+        "will send"
+      ]
+    },
+    {
+      "Id": 128,
+      "Title": "Complete the sentence: The two cousins … at the airport for the first time.",
+      "Answers": [
+        "met",
+        "meet",
+        "are meeting",
+        "have met",
+        "were meeting"
+      ]
+    },
+    {
+      "Id": 129,
+      "Title": "Fill in the gap: The dog … in the middle of the kitchen floor, looking at the door.",
+      "Answers": [
+        "lay",
+        "sat",
+        "slept",
+        "rolled",
+        "jumped"
+      ]
+    },
+    {
+      "Id": 130,
+      "Title": "Fill in the gap: You … in Australia last year.",
+      "Answers": [
+        "lived",
+        "live",
+        "have lived",
+        "are living",
+        "was living"
+      ]
+    },
+    {
+      "Id": 131,
+      "Title": "Complete the sentence: Last Saturday, we … a big art gallery in New York.",
+      "Answers": [
+        "visited",
+        "visit",
+        "see",
+        "go",
+        "have visited"
+      ]
+    },
+    {
+      "Id": 132,
+      "Title": "Complete the sentence: Seurat was a French painter. He … in Paris.",
+      "Answers": [
+        "lived",
+        "lives",
+        "is living",
+        "has lived",
+        "was living"
+      ]
+    },
+    {
+      "Id": 133,
+      "Title": "Complete the sentence: … you visit the art gallery last weekend?",
+      "Answers": [
+        "Did",
+        "Do",
+        "Have",
+        "Will",
+        "Are"
+      ]
+    },
+    {
+      "Id": 134,
+      "Title": "Complete the sentence: Yesterday I … to the playground near my house.",
+      "Answers": [
+        "went",
+        "go",
+        "have gone",
+        "am going",
+        "goes"
+      ]
+    },
+    {
+      "Id": 135,
+      "Title": "Complete the sentence: My grandparents … us last week.",
+      "Answers": [
+        "visited",
+        "arrived",
+        "came",
+        "saw",
+        "called"
+      ]
+    },
+    {
+      "Id": 136,
+      "Title": "Complete the sentence: Last weekend I … an email to my friend.",
+      "Answers": [
+        "sent",
+        "send",
+        "was sending",
+        "have sent",
+        "will send"
+      ]
+    },
+    {
+      "Id": 137,
+      "Title": "Complete the sentence: My brother … any computer games last night.",
+      "Answers": [
+        "didn't play",
+        "played",
+        "doesn't play",
+        "won't play",
+        "has played"
+      ]
+    },
+    {
+      "Id": 138,
+      "Title": "Complete the sentence: I … my favorite TV programme yesterday.",
+      "Answers": [
+        "watched",
+        "watch",
+        "am watching",
+        "have watched",
+        "will watch"
+      ]
+    },
+    {
+      "Id": 139,
+      "Title": "Complete the sentence: I … a little bit hungry 11 minutes ago.",
+      "Answers": [
+        "was",
+        "am",
+        "were",
+        "have been",
+        "had been"
+      ]
+    },
+    {
+      "Id": 140,
+      "Title": "Complete the sentence: No, she … at school 2 days ago.",
+      "Answers": [
+        "wasn't",
+        "isn't",
+        "was",
+        "hasn't been",
+        "didn't go"
+      ]
+    },
+    {
+      "Id": 141,
+      "Title": "Complete the sentence: Yes, my mum was at work. But my dad … at work yesterday.",
+      "Answers": [
+        "wasn't",
+        "didn't",
+        "isn't",
+        "was",
+        "hasn't been"
+      ]
+    },
+    {
+      "Id": 142,
+      "Title": "Complete the sentence: Peter and Bill … my best friends 3 years ago.",
+      "Answers": [
+        "became",
+        "are",
+        "were",
+        "had been",
+        "become"
+      ]
+    },
+    {
+      "Id": 143,
+      "Title": "Fill in the gap: Yesterday he told us many stories. The stories … very interesting.",
+      "Answers": [
+        "were",
+        "was",
+        "are",
+        "have been",
+        "is"
+      ]
+    },
+    {
+      "Id": 144,
+      "Title": "Complete the sentence: When I was a boy I … a mile to school every day.",
+      "Answers": [
+        "walked",
+        "ran",
+        "run",
+        "am walking",
+        "have walked"
+      ]
+    },
+    {
+      "Id": 145,
+      "Title": "Complete the sentence: I … abroad for ten years.",
+      "Answers": [
+        "lived",
+        "live",
+        "have lived",
+        "am living",
+        "was living"
+      ]
+    },
+    {
+      "Id": 146,
+      "Title": "Complete the sentence: She … a lot of tennis when she was younger.",
+      "Answers": [
+        "played",
+        "plays",
+        "is playing",
+        "will play",
+        "has played"
+      ]
+    },
+    {
+      "Id": 147,
+      "Title": "Choose the appropriate answer: I … my wife a long time ago.",
+      "Answers": [
+        "met",
+        "see",
+        "know",
+        "found",
+        "am meeting"
+      ]
+    },
+    {
+      "Id": 148,
+      "Title": "Choose the appropriate answer: They … to Spain this year.",
+      "Answers": [
+        "went",
+        "go",
+        "are going",
+        "have gone",
+        "travelled"
+      ]
+    },
+    {
+      "Id": 149,
+      "Title": "Choose the appropriate answer: We … home last night.",
+      "Answers": [
+        "went",
+        "go",
+        "are going",
+        "have gone",
+        "returned"
+      ]
+    },
+    {
+      "Id": 150,
+      "Title": "Choose the appropriate answer: I … you yesterday.",
+      "Answers": [
+        "saw",
+        "see",
+        "am seeing",
+        "have seen",
+        "was seeing"
+      ]
+    },
+    {
+      "Id": 151,
+      "Title": "Choose the appropriate answer: I ….. my wife in 1983.",
+      "Answers": [
+        "met",
+        "encountered",
+        "was introduced to",
+        "became acquainted with",
+        "experienced"
+      ]
+    },
+    {
+      "Id": 152,
+      "Title": "Choose the appropriate answer: I ……. in London 11 days ago.",
+      "Answers": [
+        "was",
+        "resided",
+        "remained",
+        "abided",
+        "dwelled"
+      ]
+    },
+    {
+      "Id": 153,
+      "Title": "Choose the sentence in the Past Simple: I (to go) to school.",
+      "Answers": [
+        "I went to school.",
+        "I go to school.",
+        "I have gone to school.",
+        "I was going to school.",
+        "I had gone to school."
+      ]
+    },
+    {
+      "Id": 154,
+      "Title": "Choose the sentence in the Past Simple: She (to eat) ice-cream.",
+      "Answers": [
+        "She ate ice-cream.",
+        "She eats ice-cream.",
+        "She is eating ice-cream.",
+        "She has eaten ice-cream.",
+        "She was eating ice-cream."
+      ]
+    },
+    {
+      "Id": 155,
+      "Title": "Choose the sentence in the Past Simple: We (to finish) his homework.",
+      "Answers": [
+        "We finished his homework.",
+        "We finish his homework.",
+        "We have finished his homework.",
+        "We were finishing his homework.",
+        "We had finished his homework."
+      ]
+    },
+    {
+      "Id": 156,
+      "Title": "Choose the sentence in the Past Simple: He (to attend) the English language class.",
+      "Answers": [
+        "He attended the English language class.",
+        "He attends the English language class.",
+        "He has attended the English language class.",
+        "He was attending the English language class.",
+        "He had attended the English language class."
+      ]
+    },
+    {
+      "Id": 157,
+      "Title": "Choose the sentence in the Past Simple: He (to take) dinner.",
+      "Answers": [
+        "He took dinner.",
+        "He takes dinner.",
+        "He is taking dinner.",
+        "He has taken dinner.",
+        "He had taken dinner."
+      ]
+    },
+    {
+      "Id": 158,
+      "Title": "Choose the sentence in the Past Simple: She (to complete) her work.",
+      "Answers": [
+        "She completed her work.",
+        "She completes her work.",
+        "She is completing her work.",
+        "She has completed her work.",
+        "She was completing her work."
+      ]
+    },
+    {
+      "Id": 159,
+      "Title": "Choose the sentence in the Past Simple: He (to cook) food.",
+      "Answers": [
+        "He cooked food.",
+        "He cooks food.",
+        "He is cooking food.",
+        "He has cooked food.",
+        "He was cooking food."
+      ]
+    },
+    {
+      "Id": 160,
+      "Title": "Choose the sentence in the Past Simple: She (to make) cake.",
+      "Answers": [
+        "She made cake.",
+        "She makes cake.",
+        "She is making cake.",
+        "She has made cake.",
+        "She was making cake."
+      ]
+    },
+    {
+      "Id": 161,
+      "Title": "Choose the sentence in the Past Simple: He (to learn) English.",
+      "Answers": [
+        "He learned English.",
+        "He learns English.",
+        "He is learning English.",
+        "He has learned English.",
+        "He was learning English."
+      ]
+    },
+    {
+      "Id": 162,
+      "Title": "Choose the correct Past Participle form of the verb - “drive”",
+      "Answers": [
+        "driven",
+        "drove",
+        "drived",
+        "drivn",
+        "drivven"
+      ]
+    },
+    {
+      "Id": 163,
+      "Title": "Choose the correct Past Participle form of the verb - “ride”",
+      "Answers": [
+        "ridden",
+        "rode",
+        "rided",
+        "riden",
+        "rid"
+      ]
+    },
+    {
+      "Id": 164,
+      "Title": "Choose the correct Past Participle form of the verb “fly”",
+      "Answers": [
+        "flown",
+        "flew",
+        "flyed",
+        "flied",
+        "flowned"
+      ]
+    },
+    {
+      "Id": 165,
+      "Title": "Choose the correct Past Participle form of the verb “eat”",
+      "Answers": [
+        "eaten",
+        "ate",
+        "eated",
+        "eatened",
+        "eats"
+      ]
+    },
+    {
+      "Id": 166,
+      "Title": "Choose the correct Past Participle form of the verb “see”",
+      "Answers": [
+        "seen",
+        "saw",
+        "seed",
+        "sene",
+        "sead"
+      ]
+    },
+    {
+      "Id": 167,
+      "Title": "Choose the correct Past Participle form of the verb “meet”",
+      "Answers": [
+        "met",
+        "meet",
+        "meeted",
+        "mete",
+        "moot"
+      ]
+    },
+    {
+      "Id": 168,
+      "Title": "Choose the correct Past Participle form of the verb “fall”",
+      "Answers": [
+        "fallen",
+        "fell",
+        "falled",
+        "fall",
+        "falld"
+      ]
+    },
+    {
+      "Id": 169,
+      "Title": "Choose the correct Past Participle form of the verb “know”",
+      "Answers": [
+        "known",
+        "knew",
+        "knowed",
+        "know",
+        "knowen"
+      ]
+    },
+    {
+      "Id": 170,
+      "Title": "Choose the correct Past Participle form of the verb “swim”",
+      "Answers": [
+        "swum",
+        "swam",
+        "swimed",
+        "swumm",
+        "swammm"
+      ]
+    },
+    {
+      "Id": 171,
+      "Title": "Choose the correct Past Participle form of the verb “speak”",
+      "Answers": [
+        "spoken",
+        "speaked",
+        "spoke",
+        "speaking",
+        "speaken"
+      ]
+    },
+    {
+      "Id": 172,
+      "Title": "Choose the correct Past Participle form of the verb “wake”",
+      "Answers": [
+        "woken",
+        "waked",
+        "awoke",
+        "woke",
+        "woken up"
+      ]
+    },
+    {
+      "Id": 173,
+      "Title": "Choose the correct Past Participle form of the verb “write”",
+      "Answers": [
+        "written",
+        "writed",
+        "wrote",
+        "writ",
+        "writen"
+      ]
+    },
+    {
+      "Id": 174,
+      "Title": "Choose the correct Past Participle form of the verb ”sing”",
+      "Answers": [
+        "sung",
+        "singed",
+        "sang",
+        "sinned",
+        "sunged"
+      ]
+    },
+    {
+      "Id": 175,
+      "Title": "Choose the correct Past Participle form of the verb ”take”",
+      "Answers": [
+        "taken",
+        "took",
+        "teken",
+        "taked",
+        "take"
+      ]
+    },
+    {
+      "Id": 176,
+      "Title": "Choose the correct Past Participle form of the verb “give”",
+      "Answers": [
+        "given",
+        "gave",
+        "gived",
+        "givven",
+        "granted"
+      ]
+    },
+    {
+      "Id": 177,
+      "Title": "Choose the correct tense form: Can I have this newspaper? Yes, I ______ with it",
+      "Answers": [
+        "am finished",
+        "have finished",
+        "finished",
+        "am done",
+        "had finished"
+      ]
+    },
+    {
+      "Id": 178,
+      "Title": "Choose the correct tense form: Where is Liz? She_______ out",
+      "Answers": [
+        "has gone",
+        "went",
+        "is",
+        "has been",
+        "had gone"
+      ]
+    },
+    {
+      "Id": 179,
+      "Title": "Choose the correct tense form: Margaret has bought a new dress but she_________ it yet.",
+      "Answers": [
+        "hasn't tried",
+        "didn't try",
+        "hasn't worn",
+        "hasn't put",
+        "didn't wear"
+      ]
+    },
+    {
+      "Id": 180,
+      "Title": "Choose the correct tense form: _______ to Australia? Yes, once",
+      "Answers": [
+        "Have you been",
+        "Did you go",
+        "Have you gone",
+        "Are you been",
+        "Do you go"
+      ]
+    },
+    {
+      "Id": 181,
+      "Title": "Choose the correct tense form: Have you been to France?______",
+      "Answers": [
+        "Yes, I have.",
+        "Yes, I did.",
+        "No, I haven't.",
+        "Yes, I was.",
+        "No, I was not."
+      ]
+    },
+    {
+      "Id": 182,
+      "Title": "Choose the correct tense form: I’ve never______ a horse.",
+      "Answers": [
+        "ridden",
+        "rode",
+        "riden",
+        "ride",
+        "rided"
+      ]
+    },
+    {
+      "Id": 183,
+      "Title": "Choose the correct tense form: Who is that man? I don’t know, I have never________ him before.",
+      "Answers": [
+        "met",
+        "seen",
+        "known",
+        "encountered",
+        "greeted"
+      ]
+    },
+    {
+      "Id": 184,
+      "Title": "Choose the correct tense form: My mother has never________ by air.",
+      "Answers": [
+        "flown",
+        "flew",
+        "flied",
+        "been flown",
+        "traveled"
+      ]
+    },
+    {
+      "Id": 185,
+      "Title": "Choose the correct tense form: Has Ann ever________ to Australia?",
+      "Answers": [
+        "been",
+        "went",
+        "gone",
+        "was",
+        "traveled"
+      ]
+    },
+    {
+      "Id": 186,
+      "Title": "Choose the correct tense form: I’ve_______ that woman before but I can’t remember where.",
+      "Answers": [
+        "met",
+        "seen",
+        "known",
+        "encountered",
+        "saw"
+      ]
+    },
+    {
+      "Id": 187,
+      "Title": "Choose the correct tense form: Bill is on holiday at the moment. He’s______ to Spain",
+      "Answers": [
+        "gone",
+        "went",
+        "has been",
+        "is going",
+        "traveled"
+      ]
+    },
+    {
+      "Id": 188,
+      "Title": "Choose the correct tense form: Where’s Jill? She’s not here. I think she’s________ to the bank",
+      "Answers": [
+        "gone",
+        "went",
+        "been",
+        "departed",
+        "set off"
+      ]
+    },
+    {
+      "Id": 189,
+      "Title": "Choose the correct tense form: __________ your father been on a long-haul flight? Yes, he_______",
+      "Answers": [
+        "Has ... has",
+        "Did ... did",
+        "Was ... was",
+        "Does ... does",
+        "Had ... had"
+      ]
+    },
+    {
+      "Id": 190,
+      "Title": "Choose the correct tense form: ________ you been to a rock concert? No, I ____.",
+      "Answers": [
+        "Have ... haven't",
+        "Did ... didn't",
+        "Do ... don't",
+        "Are ... aren't",
+        "Will ... won't"
+      ]
+    },
+    {
+      "Id": 191,
+      "Title": "Choose the correct tense form: _________ you been on an adventure holiday?",
+      "Answers": [
+        "Have",
+        "Did",
+        "Has",
+        "Are",
+        "Do"
+      ]
+    },
+    {
+      "Id": 192,
+      "Title": "Choose the correct tense form: I ______ happy with the results yesterday.",
+      "Answers": [
+        "was",
+        "am",
+        "were",
+        "have been",
+        "had been"
+      ]
+    },
+    {
+      "Id": 193,
+      "Title": "Choose the correct tense form: They ______ the project last week.",
+      "Answers": [
+        "completed",
+        "complete",
+        "are completing",
+        "have completed",
+        "were completing"
+      ]
+    },
+    {
+      "Id": 194,
+      "Title": "Choose the correct tense form: He ______ before I arrived.",
+      "Answers": [
+        "left",
+        "had left",
+        "was leaving",
+        "goes",
+        "departs"
+      ]
+    },
+    {
+      "Id": 195,
+      "Title": "Find the correct answer: I have …. to Spain three times.",
+      "Answers": [
+        "been",
+        "gone",
+        "traveled",
+        "visited",
+        "journeyed"
+      ]
+    },
+    {
+      "Id": 196,
+      "Title": "Choose the appropriate answer: We can’t find our luggage. …… ?",
+      "Answers": [
+        "Have you seen it?",
+        "Did you see it?",
+        "Are you looking for it?",
+        "Have you found it?",
+        "Did you check it?"
+      ]
+    },
+    {
+      "Id": 197,
+      "Title": "Choose the appropriate answer: Mike …. in Azerbaijan for 3 years.",
+      "Answers": [
+        "has lived ",
+        "lives",
+        "was living",
+        "has been living",
+        "lived"
+      ]
+    },
+    {
+      "Id": 198,
+      "Title": "Choose the appropriate answer: I … that movie twenty times.",
+      "Answers": [
+        "have seen",
+        "saw",
+        "see",
+        "had seen",
+        "was seeing"
+      ]
+    },
+    {
+      "Id": 199,
+      "Title": "Choose the appropriate answer: Have you ….. the book yet?",
+      "Answers": [
+        "read",
+        "perused",
+        "finished",
+        "scanned",
+        "studied"
+      ]
+    },
+    {
+      "Id": 200,
+      "Title": "Choose the appropriate answer: Nobody has ever ….. that mountain.",
+      "Answers": [
+        "climbed",
+        "ascended",
+        "scaled",
+        "conquered",
+        "surmounted"
+      ]
+    },
+    {
+      "Id": 201,
+      "Title": "Choose the appropriate answer: I have never …….. to France.",
+      "Answers": [
+        "been",
+        "went",
+        "gone",
+        "visited",
+        "traveled"
+      ]
+    },
+    {
+      "Id": 202,
+      "Title": "Choose the appropriate answer: I ……. never been to France.",
+      "Answers": [
+        "have",
+        "has",
+        "did",
+        "do",
+        "was"
+      ]
+    },
+    {
+      "Id": 203,
+      "Title": "Choose the appropriate answer: He has never ……. by train.",
+      "Answers": [
+        "traveled",
+        "ridden",
+        "gone",
+        "taken",
+        "commuted"
+      ]
+    },
+    {
+      "Id": 204,
+      "Title": "Choose the appropriate answer: He …….. never traveled by train.",
+      "Answers": [
+        "has",
+        "have",
+        "did",
+        "is",
+        "was"
+      ]
+    },
+    {
+      "Id": 205,
+      "Title": "Choose the appropriate answer: This year Joan …… two foreign languages.",
+      "Answers": [
+        "has learned",
+        "learned",
+        "studied",
+        "picked up",
+        "knows"
+      ]
+    },
+    {
+      "Id": 206,
+      "Title": "Choose the appropriate answer: This year Joan has …… two foreign languages.",
+      "Answers": [
+        "learned",
+        "studied",
+        "picked up",
+        "acquired",
+        "mastered"
+      ]
+    },
+    {
+      "Id": 207,
+      "Title": "Choose the appropriate answer: James has not finished his homework …. .",
+      "Answers": [
+        "yet",
+        "already",
+        "soon",
+        "now",
+        "ever"
+      ]
+    },
+    {
+      "Id": 208,
+      "Title": "Choose the appropriate answer: James …… his homework yet.",
+      "Answers": [
+        "hasn't finished",
+        "has finished",
+        "didn't finish",
+        "was finishing",
+        "won't finish"
+      ]
+    },
+    {
+      "Id": 209,
+      "Title": "Choose the appropriate answer: Bill …… already arrived.",
+      "Answers": [
+        "has",
+        "have",
+        "did",
+        "is",
+        "was"
+      ]
+    },
+    {
+      "Id": 210,
+      "Title": "Complete the sentence: Bill has still not ……. .",
+      "Answers": [
+        "arrived",
+        "come",
+        "shown up",
+        "started",
+        "left"
+      ]
+    },
+    {
+      "Id": 211,
+      "Title": "Complete the sentence: The army …… that city five times.",
+      "Answers": [
+        "has taken",
+        "captured",
+        "invaded",
+        "entered",
+        "attacked"
+      ]
+    },
+    {
+      "Id": 212,
+      "Title": "Complete the sentence: I have already ……… breakfast.",
+      "Answers": [
+        "had",
+        "eaten",
+        "made",
+        "prepared",
+        "taken"
+      ]
+    },
+    {
+      "Id": 213,
+      "Title": "Fill in the gap: Have you ……. the essay yet?",
+      "Answers": [
+        "written",
+        "read",
+        "done",
+        "typed",
+        "composed"
+      ]
+    },
+    {
+      "Id": 214,
+      "Title": "Fill in the gap: I haven’t …… Susan since Sunday.",
+      "Answers": [
+        "seen",
+        "met",
+        "visited",
+        "called",
+        "spoken to"
+      ]
+    },
+    {
+      "Id": 215,
+      "Title": "Complete the sentence: Hasn’t my mother cooked the dinner .… ?",
+      "Answers": [
+        "yet",
+        "already",
+        "now",
+        "before",
+        "today"
+      ]
+    },
+    {
+      "Id": 216,
+      "Title": "Fill in the gap: Hasn’t my mother …… the dinner yet?",
+      "Answers": [
+        "cooked",
+        "made",
+        "prepared",
+        "fixed",
+        "done"
+      ]
+    },
+    {
+      "Id": 217,
+      "Title": "Fill in the gap: I ……. in Texas for 10 years.",
+      "Answers": [
+        "have lived",
+        "lived",
+        "am living",
+        "have been living",
+        "resided"
+      ]
+    },
+    {
+      "Id": 218,
+      "Title": "Fill in the gap: I have … in Texas for 10 years.",
+      "Answers": [
+        "lived",
+        "stayed",
+        "resided",
+        "been",
+        "dwelt"
+      ]
+    },
+    {
+      "Id": 219,
+      "Title": "Fill in the gap: Tom …….. just come to the office.",
+      "Answers": [
+        "has",
+        "had",
+        "did",
+        "is",
+        "was"
+      ]
+    },
+    {
+      "Id": 220,
+      "Title": "Fill in the gap: I have …… finished my project.",
+      "Answers": [
+        "already",
+        "just",
+        "yet",
+        "finally",
+        "slowly"
+      ]
+    },
+    {
+      "Id": 221,
+      "Title": "Fill in the gap: My son ……. since Monday.",
+      "Answers": [
+        "has been",
+        "is",
+        "was",
+        "had been",
+        "has stayed"
+      ]
+    },
+    {
+      "Id": 222,
+      "Title": "Fill in the gap: My son …… sick since Monday.",
+      "Answers": [
+        "has been",
+        "is",
+        "was",
+        "had been",
+        "remained"
+      ]
+    },
+    {
+      "Id": 223,
+      "Title": "Fill in the gap: My son …….. been sick since Monday.",
+      "Answers": [
+        "has",
+        "did",
+        "was",
+        "had",
+        "is"
+      ]
+    },
+    {
+      "Id": 224,
+      "Title": "Fill in the gap: We …. that movie three times.",
+      "Answers": [
+        "have seen",
+        "saw",
+        "watched",
+        "viewed",
+        "noticed"
+      ]
+    },
+    {
+      "Id": 225,
+      "Title": "Complete the sentence: We have watched that movie …. .",
+      "Answers": [
+        "many times",
+        "once",
+        "twice",
+        "a few times",
+        "often"
+      ]
+    },
+    {
+      "Id": 226,
+      "Title": "Fill in the gap: We have … that movie three times.",
+      "Answers": [
+        "seen",
+        "watched",
+        "viewed",
+        "observed",
+        "noticed"
+      ]
+    },
+    {
+      "Id": 227,
+      "Title": "Fill in the gap: I …… David several times.",
+      "Answers": [
+        "have met",
+        "met",
+        "saw",
+        "encountered",
+        "greeted"
+      ]
+    },
+    {
+      "Id": 228,
+      "Title": "Fill in the gap: Have you ever …… Sushi before?",
+      "Answers": [
+        "eaten",
+        "tried",
+        "had",
+        "sampled",
+        "tasted"
+      ]
+    },
+    {
+      "Id": 229,
+      "Title": "Fill in the gaps: …….. you ever …… Sushi before?",
+      "Answers": [
+        "Have; eaten",
+        "Did; eat",
+        "Have; tried",
+        "Do; eat",
+        "Had; eaten"
+      ]
+    },
+    {
+      "Id": 230,
+      "Title": "Fill in the gap: I have …… done it.",
+      "Answers": [
+        "already",
+        "just",
+        "yet",
+        "finally",
+        "recently"
+      ]
+    },
+    {
+      "Id": 231,
+      "Title": "Complete the sentence: It hasn’t stopped snowing …. .",
+      "Answers": [
+        "yet",
+        "already",
+        "now",
+        "soon",
+        "ever"
+      ]
+    },
+    {
+      "Id": 232,
+      "Title": "Fill in the gap: I have ….. been to America.",
+      "Answers": [
+        "never",
+        "always",
+        "often",
+        "sometimes",
+        "already"
+      ]
+    },
+    {
+      "Id": 233,
+      "Title": "Fill in the gaps: I …… never …… to America.",
+      "Answers": [
+        "have; been",
+        "had; gone",
+        "have; gone",
+        "has; been",
+        "did; go"
+      ]
+    },
+    {
+      "Id": 234,
+      "Title": "Fill in the gap: Nick …… his shoes yet.",
+      "Answers": [
+        "hasn't put on",
+        "didn't put on",
+        "has put on",
+        "was wearing",
+        "did put on"
+      ]
+    },
+    {
+      "Id": 235,
+      "Title": "Complete the sentence: Has Aliya seen a film? Yes, …. ",
+      "Answers": [
+        "Yes, she has.",
+        "Yes, she did.",
+        "Yes, she is.",
+        "Yes, she was.",
+        "Yes, she had."
+      ]
+    },
+    {
+      "Id": 236,
+      "Title": "Complete the sentence: Have Ali and Fatima spoken English? Yes, ….. ",
+      "Answers": [
+        "Yes, they have.",
+        "Yes, they did.",
+        "Yes, they are.",
+        "Yes, they were.",
+        "Yes, they had."
+      ]
+    },
+    {
+      "Id": 237,
+      "Title": "Complete the sentence: Has Leman swum in the sea? No, …… .",
+      "Answers": [
+        "No, she hasn't.",
+        "No, she didn't.",
+        "No, she was not.",
+        "No, she hadn't.",
+        "No, she won't."
+      ]
+    },
+    {
+      "Id": 238,
+      "Title": "Complete the sentence: Has Harry visited the Acropolis? Yes, ……. ",
+      "Answers": [
+        "Yes, he has.",
+        "Yes, he did.",
+        "Yes, he went.",
+        "Yes, he is.",
+        "Yes, he was."
+      ]
+    },
+    {
+      "Id": 239,
+      "Title": "Complete the sentence: Have Kate and Ali driven a car? No, ….. ",
+      "Answers": [
+        "No, they haven't.",
+        "No, they didn't.",
+        "No, they are not.",
+        "No, they won't.",
+        "No, they hadn't."
+      ]
+    },
+    {
+      "Id": 240,
+      "Title": "Fill in the gaps: Kate …… just ……… in bed.",
+      "Answers": [
+        "has; gone",
+        "has; got",
+        "had; gone",
+        "is; going",
+        "has; moved"
+      ]
+    },
+    {
+      "Id": 241,
+      "Title": "Fill in the gap: Winter comes …. autumn.",
+      "Answers": [
+        "after",
+        "before",
+        "during",
+        "in",
+        "with"
+      ]
+    },
+    {
+      "Id": 242,
+      "Title": "Choose the appropriate preposition: He lives ………. Azerbaijan.",
+      "Answers": [
+        "in",
+        "on",
+        "at",
+        "by",
+        "over"
+      ]
+    },
+    {
+      "Id": 243,
+      "Title": "Choose the appropriate preposition: My book is …….. the table.",
+      "Answers": [
+        "on",
+        "in",
+        "at",
+        "over",
+        "under"
+      ]
+    },
+    {
+      "Id": 244,
+      "Title": "Choose the appropriate preposition: Our house is …….. the forest.",
+      "Answers": [
+        "in",
+        "on",
+        "at",
+        "by",
+        "over"
+      ]
+    },
+    {
+      "Id": 245,
+      "Title": "Choose the appropriate preposition: to be good ….",
+      "Answers": [
+        "at",
+        "in",
+        "on",
+        "for",
+        "with"
+      ]
+    },
+    {
+      "Id": 246,
+      "Title": "Choose the appropriate preposition: There is a chair ………. the door.",
+      "Answers": [
+        "by",
+        "on",
+        "in",
+        "at",
+        "beside"
+      ]
+    },
+    {
+      "Id": 247,
+      "Title": "Choose the appropriate answer: We shall ………. the theatre.",
+      "Answers": [
+        "go",
+        "come",
+        "enter",
+        "visit",
+        "attend"
+      ]
+    },
+    {
+      "Id": 248,
+      "Title": "Choose the appropriate preposition: He went …….. of the room.",
+      "Answers": [
+        "out",
+        "in",
+        "to",
+        "from",
+        "over"
+      ]
+    },
+    {
+      "Id": 249,
+      "Title": "Choose the appropriate preposition: Our lessons begin ………. nine.",
+      "Answers": [
+        "at",
+        "in",
+        "on",
+        "by",
+        "around"
+      ]
+    },
+    {
+      "Id": 250,
+      "Title": "Choose the appropriate preposition: Winter begins ………. December.",
+      "Answers": [
+        "in",
+        "at",
+        "on",
+        "by",
+        "from"
+      ]
+    },
+    {
+      "Id": 251,
+      "Title": "Choose the appropriate preposition: He was born ……… 2008.",
+      "Answers": [
+        "in",
+        "on",
+        "at",
+        "by",
+        "since"
+      ]
+    },
+    {
+      "Id": 252,
+      "Title": "Choose the appropriate preposition: I found the pen ……… the table.",
+      "Answers": [
+        "on",
+        "in",
+        "at",
+        "under",
+        "beside"
+      ]
+    },
+    {
+      "Id": 253,
+      "Title": "Choose the appropriate preposition: We are going ……. the market.",
+      "Answers": [
+        "to",
+        "in",
+        "at",
+        "on",
+        "by"
+      ]
+    },
+    {
+      "Id": 254,
+      "Title": "Choose the appropriate preposition: to be satisfied ….",
+      "Answers": [
+        "with",
+        "at",
+        "by",
+        "of",
+        "in"
+      ]
+    },
+    {
+      "Id": 255,
+      "Title": "Choose the appropriate preposition: That is something I cannot agree …… .",
+      "Answers": [
+        "with",
+        "to",
+        "at",
+        "on",
+        "about"
+      ]
+    },
+    {
+      "Id": 256,
+      "Title": "Choose the appropriate preposition: The picture is …… the wall.",
+      "Answers": [
+        "on",
+        "in",
+        "at",
+        "over",
+        "under"
+      ]
+    },
+    {
+      "Id": 257,
+      "Title": "Choose the appropriate preposition: My pen is …… my pencil box.",
+      "Answers": [
+        "in",
+        "on",
+        "at",
+        "under",
+        "beside"
+      ]
+    },
+    {
+      "Id": 258,
+      "Title": "Choose the appropriate preposition: He went …… the room.",
+      "Answers": [
+        "into",
+        "in",
+        "to",
+        "on",
+        "through"
+      ]
+    },
+    {
+      "Id": 259,
+      "Title": "Choose the appropriate preposition: ……7 o'clock we go to the university.",
+      "Answers": [
+        "At",
+        "In",
+        "On",
+        "By",
+        "From"
+      ]
+    },
+    {
+      "Id": 260,
+      "Title": "Choose the appropriate preposition: What is this text ……. ?",
+      "Answers": [
+        "about",
+        "for",
+        "in",
+        "on",
+        "by"
+      ]
+    },
+    {
+      "Id": 261,
+      "Title": "Choose the appropriate answer: WWW",
+      "Answers": [
+        "World Wide Web",
+        "World Wireless Web",
+        "Worldwide Web",
+        "World Web Wide",
+        "Wide World Web"
+      ]
+    },
+    {
+      "Id": 262,
+      "Title": "Choose the correct translation: устройство",
+      "Answers": [
+        "device",
+        "apparatus",
+        "gadget",
+        "tool",
+        "instrument"
+      ]
+    },
+    {
+      "Id": 263,
+      "Title": "Choose the correct translation: база данных",
+      "Answers": [
+        "database",
+        "data bank",
+        "data storage",
+        "information base",
+        "record bank"
+      ]
+    },
+    {
+      "Id": 264,
+      "Title": "Choose the correct translation: программное обеспечение",
+      "Answers": [
+        "software",
+        "programs",
+        "application",
+        "code",
+        "computer programs"
+      ]
+    },
+    {
+      "Id": 265,
+      "Title": "Choose the correct translation: вместимость",
+      "Answers": [
+        "capacity",
+        "volume",
+        "size",
+        "capability",
+        "limit"
+      ]
+    },
+    {
+      "Id": 266,
+      "Title": "Choose the correct translation: столбец",
+      "Answers": [
+        "column",
+        "pillar",
+        "bar",
+        "line",
+        "cell"
+      ]
+    },
+    {
+      "Id": 267,
+      "Title": "Choose the correct translation: командная кнопка",
+      "Answers": [
+        "command button",
+        "control button",
+        "push button",
+        "action button",
+        "menu button"
+      ]
+    },
+    {
+      "Id": 268,
+      "Title": "Choose the correct translation: удалить файл",
+      "Answers": [
+        "delete file",
+        "remove file",
+        "erase file",
+        "clear file",
+        "discard file"
+      ]
+    },
+    {
+      "Id": 269,
+      "Title": "Choose the correct translation: клавиатура",
+      "Answers": [
+        "keyboard",
+        "mouse",
+        "monitor",
+        "printer",
+        "scanner"
+      ]
+    },
+    {
+      "Id": 270,
+      "Title": "Choose the correct translation: подтвержденные элементы",
+      "Answers": [
+        "confirmed items",
+        "approved items",
+        "verified items",
+        "accepted items",
+        "validated items"
+      ]
+    },
+    {
+      "Id": 271,
+      "Title": "Choose the correct translation: пароль",
+      "Answers": [
+        "password",
+        "passcode",
+        "code",
+        "PIN",
+        "key"
+      ]
+    },
+    {
+      "Id": 272,
+      "Title": "Translate: device",
+      "Answers": [
+        "устройство",
+        "прибор",
+        "гаджет",
+        "инструмент",
+        "аппарат"
+      ]
+    },
+    {
+      "Id": 273,
+      "Title": "Translate: database",
+      "Answers": [
+        "база данных",
+        "данные",
+        "информационная система",
+        "система данных",
+        "архив"
+      ]
+    },
+    {
+      "Id": 274,
+      "Title": "Translate: software",
+      "Answers": [
+        "программное обеспечение",
+        "ПО",
+        "программы",
+        "системное обеспечение",
+        "компьютерные программы"
+      ]
+    },
+    {
+      "Id": 275,
+      "Title": "Translate: capacity",
+      "Answers": [
+        "вместимость",
+        "объем",
+        "емкость",
+        "способность",
+        "размер"
+      ]
+    },
+    {
+      "Id": 276,
+      "Title": "Translate: column",
+      "Answers": [
+        "столбец",
+        "строка",
+        "ячейка",
+        "блок",
+        "колонна"
+      ]
+    },
+    {
+      "Id": 277,
+      "Title": "Translate: command button",
+      "Answers": [
+        "командная кнопка",
+        "кнопка команды",
+        "управляющая кнопка",
+        "функциональная кнопка",
+        "кнопка управления"
+      ]
+    },
+    {
+      "Id": 278,
+      "Title": "Translate: to delete file",
+      "Answers": [
+        "удалить файл",
+        "стереть файл",
+        "удалить данные",
+        "очистить файл",
+        "исключить файл"
+      ]
+    },
+    {
+      "Id": 279,
+      "Title": "Translate: keyboard",
+      "Answers": [
+        "клавиатура",
+        "мышь",
+        "монитор",
+        "планшет",
+        "трекпад"
+      ]
+    },
+    {
+      "Id": 280,
+      "Title": "Translate: mouse",
+      "Answers": [
+        "мышь",
+        "трекпад",
+        "указатель",
+        "джойстик",
+        "контроллер"
+      ]
+    },
+    {
+      "Id": 281,
+      "Title": "Translate: password",
+      "Answers": [
+        "пароль",
+        "код",
+        "ключ",
+        "секрет",
+        "пин-код"
+      ]
+    },
+    {
+      "Id": 282,
+      "Title": "Translate: language",
+      "Answers": [
+        "язык",
+        "речь",
+        "лексика",
+        "система",
+        "диалект"
+      ]
+    },
+    {
+      "Id": 283,
+      "Title": "Choose the appropriate equivalent: столбец таблицы",
+      "Answers": [
+        "table column",
+        "column",
+        "table row",
+        "row",
+        "table cell"
+      ]
+    },
+    {
+      "Id": 284,
+      "Title": "Choose the appropriate equivalent: языки программирования",
+      "Answers": [
+        "programming languages",
+        "coding languages",
+        "computer languages",
+        "software languages",
+        "script languages"
+      ]
+    },
+    {
+      "Id": 285,
+      "Title": "Choose the appropriate equivalent: языки высокого уровня",
+      "Answers": [
+        "high-level languages",
+        "advanced languages",
+        "elevated languages",
+        "upper-level languages",
+        "modern languages"
+      ]
+    },
+    {
+      "Id": 286,
+      "Title": "Choose the appropriate equivalent: функциональные клавиши",
+      "Answers": [
+        "function keys",
+        "shortcut keys",
+        "control keys",
+        "special keys",
+        "menu keys"
+      ]
+    },
+    {
+      "Id": 287,
+      "Title": "Choose the appropriate equivalent: левая кнопка",
+      "Answers": [
+        "left button",
+        "left-click",
+        "left-side button",
+        "primary button",
+        "main button"
+      ]
+    },
+    {
+      "Id": 288,
+      "Title": "Choose the appropriate equivalent: правая кнопка",
+      "Answers": [
+        "right button",
+        "right-click",
+        "secondary button",
+        "alternate button",
+        "right-sided button"
+      ]
+    },
+    {
+      "Id": 289,
+      "Title": "Choose the appropriate equivalent: открыть",
+      "Answers": [
+        "open",
+        "unseal",
+        "unlock",
+        "expose",
+        "release"
+      ]
+    },
+    {
+      "Id": 290,
+      "Title": "Choose the appropriate equivalent: закрыть",
+      "Answers": [
+        "close",
+        "shut",
+        "seal",
+        "lock",
+        "finish"
+      ]
+    },
+    {
+      "Id": 291,
+      "Title": "Choose the appropriate equivalent: восстановить",
+      "Answers": [
+        "restore",
+        "recover",
+        "repair",
+        "revive",
+        "reinstate"
+      ]
+    },
+    {
+      "Id": 292,
+      "Title": "Choose the appropriate equivalent: распечатать",
+      "Answers": [
+        "print",
+        "copy",
+        "scan",
+        "fax",
+        "duplicate"
+      ]
+    },
+    {
+      "Id": 293,
+      "Title": "Choose the appropriate equivalent: вход",
+      "Answers": [
+        "login",
+        "entrance",
+        "entry",
+        "access",
+        "admission"
+      ]
+    },
+    {
+      "Id": 294,
+      "Title": "Translate: выход",
+      "Answers": [
+        "exit",
+        "entry",
+        "inlet",
+        "output",
+        "departure"
+      ]
+    },
+    {
+      "Id": 295,
+      "Title": "Translate: заголовок",
+      "Answers": [
+        "title",
+        "header",
+        "caption",
+        "label",
+        "heading"
+      ]
+    },
+    {
+      "Id": 296,
+      "Title": "Translate: пространство",
+      "Answers": [
+        "space",
+        "area",
+        "zone",
+        "room",
+        "void"
+      ]
+    },
+    {
+      "Id": 297,
+      "Title": "Translate: скачать",
+      "Answers": [
+        "download",
+        "upload",
+        "transfer",
+        "install",
+        "copy"
+      ]
+    },
+    {
+      "Id": 298,
+      "Title": "Translate: загрузить",
+      "Answers": [
+        "upload",
+        "download",
+        "transfer",
+        "send",
+        "copy"
+      ]
+    },
+    {
+      "Id": 299,
+      "Title": "Translate: найти",
+      "Answers": [
+        "find",
+        "search",
+        "look for",
+        "seek",
+        "locate"
+      ]
+    },
+    {
+      "Id": 300,
+      "Title": "Translate: источник питания",
+      "Answers": [
+        "power supply",
+        "power source",
+        "battery",
+        "electric source",
+        "energy supply"
+      ]
+    },
+    {
+      "Id": 301,
+      "Title": "Translate: рабочий стол",
+      "Answers": [
+        "desktop",
+        "table",
+        "work table",
+        "office desk",
+        "counter"
+      ]
+    },
+    {
+      "Id": 302,
+      "Title": "Translate: кабель",
+      "Answers": [
+        "cable",
+        "wire",
+        "cord",
+        "rope",
+        "tube"
+      ]
+    },
+    {
+      "Id": 303,
+      "Title": "Translate: компьютерная безопасность",
+      "Answers": [
+        "computer security",
+        "computer safety",
+        "cyber security",
+        "data security",
+        "network security"
+      ]
+    },
+    {
+      "Id": 304,
+      "Title": "Translate: учетная запись",
+      "Answers": [
+        "account",
+        "profile",
+        "record",
+        "login",
+        "user account"
+      ]
+    },
+    {
+      "Id": 305,
+      "Title": "Translate: клавиши со стрелками",
+      "Answers": [
+        "arrow keys",
+        "arrow buttons",
+        "cursor keys",
+        "direction keys",
+        "navigation keys"
+      ]
+    },
+    {
+      "Id": 306,
+      "Title": "Translate: оборудование",
+      "Answers": [
+        "equipment",
+        "hardware",
+        "tools",
+        "machinery",
+        "devices"
+      ]
+    },
+    {
+      "Id": 307,
+      "Title": "Translate: вставлять",
+      "Answers": [
+        "to insert",
+        "to add",
+        "to put in",
+        "to include",
+        "to embed"
+      ]
+    },
+    {
+      "Id": 308,
+      "Title": "Translate: цифровой замок",
+      "Answers": [
+        "digital lock",
+        "electronic lock",
+        "code lock",
+        "keypad lock",
+        "numeric lock"
+      ]
+    },
+    {
+      "Id": 309,
+      "Title": "Translate: стрелка",
+      "Answers": [
+        "arrow",
+        "pointer",
+        "mark",
+        "sign",
+        "icon"
+      ]
+    },
+    {
+      "Id": 310,
+      "Title": "Translate: страница",
+      "Answers": [
+        "page",
+        "sheet",
+        "leaf",
+        "paper",
+        "document"
+      ]
+    },
+    {
+      "Id": 311,
+      "Title": "Translate: пауза",
+      "Answers": [
+        "pause",
+        "break",
+        "stop",
+        "rest",
+        "halt"
+      ]
+    },
+    {
+      "Id": 312,
+      "Title": "What does \"VPN\" stand for?",
+      "Answers": [
+        "Virtual Private Network",
+        "Virtual Personal Network",
+        "Virtual Public Network",
+        "Virtual Protected Network",
+        "Verified Private Network"
+      ]
+    },
+    {
+      "Id": 313,
+      "Title": "What does \"CPU\" stand for?",
+      "Answers": [
+        "Central Processing Unit",
+        "Computer Processing Unit",
+        "Central Processor Unit",
+        "Core Processing Unit",
+        "Central Process Unit"
+      ]
+    },
+    {
+      "Id": 314,
+      "Title": "What does \"BIOS\" stand for?",
+      "Answers": [
+        "Basic Input/Output System",
+        "Binary Input/Output System",
+        "Basic Internal Operating System",
+        "Basic Integrated Operating System",
+        "Basic Interactive Operating System"
+      ]
+    },
+    {
+      "Id": 315,
+      "Title": "What does \"E-mail\" stand for?",
+      "Answers": [
+        "electronic mail",
+        "electronic message",
+        "email message",
+        "e-mail system",
+        "electronic correspondence"
+      ]
+    },
+    {
+      "Id": 316,
+      "Title": "What does \"USB\" stand for?",
+      "Answers": [
+        "Universal Serial Bus",
+        "Universal System Bus",
+        "Unified Serial Bus",
+        "Universal Signal Bus",
+        "Universal Standard Bus"
+      ]
+    },
+    {
+      "Id": 317,
+      "Title": "What does \"HDD\" stand for?",
+      "Answers": [
+        "Hard Disk Drive",
+        "Hard Drive Disk",
+        "Hard Disk Device",
+        "Heavy Disk Drive",
+        "Hard Drive Device"
+      ]
+    },
+    {
+      "Id": 318,
+      "Title": "What does \"RAM\" stand for?",
+      "Answers": [
+        "Random Access Memory",
+        "Rapid Access Memory",
+        "Read Access Memory",
+        "Random Allocated Memory",
+        "Readily Available Memory"
+      ]
+    },
+    {
+      "Id": 319,
+      "Title": "What does \"DSL\" stand for?",
+      "Answers": [
+        "Digital Subscriber Line",
+        "Digital Service Line",
+        "Direct Subscriber Line",
+        "Data Service Line",
+        "Direct Service Line"
+      ]
+    },
+    {
+      "Id": 320,
+      "Title": "What does \"CAD\" stand for?",
+      "Answers": [
+        "Computer-Aided Design",
+        "Computer-Assisted Design",
+        "Computer-Automated Design",
+        "Computer-Advanced Design",
+        "Computer Aided Drafting"
+      ]
+    },
+    {
+      "Id": 321,
+      "Title": "What does \"DV\" stand for?",
+      "Answers": [
+        "Digital Video",
+        "Digital Voice",
+        "Digital Version",
+        "Digital View",
+        "Double Video"
+      ]
+    },
+    {
+      "Id": 322,
+      "Title": "What does \"ISP\" stand for?",
+      "Answers": [
+        "Internet Service Provider",
+        "Internet Solution Provider",
+        "Internet Supply Provider",
+        "Internet Support Provider",
+        "International Service Provider"
+      ]
+    },
+    {
+      "Id": 323,
+      "Title": "Complete: The other name of Computer Assisted Translation is ….",
+      "Answers": [
+        "CAT",
+        "MT",
+        "TMS",
+        "PAT",
+        "ATL"
+      ]
+    },
+    {
+      "Id": 324,
+      "Title": "Complete: The other name of Motherboard is ….",
+      "Answers": [
+        "mainboard",
+        "system board",
+        "logic board",
+        "baseboard",
+        "control board"
+      ]
+    },
+    {
+      "Id": 325,
+      "Title": "Fill in the gap: What …. of computer do you have?",
+      "Answers": [
+        "kind",
+        "type",
+        "model",
+        "brand",
+        "sort"
+      ]
+    },
+    {
+      "Id": 326,
+      "Title": "Fill in the gap: I …. my computer off yesterday.",
+      "Answers": [
+        "turned",
+        "switched",
+        "shut",
+        "powered",
+        "hit"
+      ]
+    },
+    {
+      "Id": 327,
+      "Title": "Fill in the gap: Have you …. the battery?",
+      "Answers": [
+        "charged",
+        "replaced",
+        "checked",
+        "tested",
+        "removed"
+      ]
+    },
+    {
+      "Id": 328,
+      "Title": "Fill in the gap: Has he …. the file?",
+      "Answers": [
+        "saved",
+        "opened",
+        "deleted",
+        "sent",
+        "copied"
+      ]
+    },
+    {
+      "Id": 329,
+      "Title": "Fill in the gap: Has she …. her username and password?",
+      "Answers": [
+        "forgotten",
+        "remembered",
+        "saved",
+        "changed",
+        "used"
+      ]
+    },
+    {
+      "Id": 330,
+      "Title": "Fill in the gap: Have they …. the Internet Service Provider?",
+      "Answers": [
+        "switched",
+        "contacted",
+        "called",
+        "chosen",
+        "subscribed"
+      ]
+    },
+    {
+      "Id": 331,
+      "Title": "Fill in the gap: Has he …. the drivers recently?",
+      "Answers": [
+        "updated",
+        "installed",
+        "downloaded",
+        "checked",
+        "replaced"
+      ]
+    },
+    {
+      "Id": 332,
+      "Title": "Translate: сервисный отчет",
+      "Answers": [
+        "service report",
+        "maintenance report",
+        "support report",
+        "tech report",
+        "repair report"
+      ]
+    },
+    {
+      "Id": 333,
+      "Title": "Translate: техник службы поддержки",
+      "Answers": [
+        "support technician",
+        "help desk technician",
+        "IT technician",
+        "service technician",
+        "tech support"
+      ]
+    },
+    {
+      "Id": 334,
+      "Title": "Translate: временные файлы",
+      "Answers": [
+        "temporary files",
+        "temp files",
+        "cached files",
+        "short-term files",
+        "transient files"
+      ]
+    },
+    {
+      "Id": 335,
+      "Title": "Translate: возможные решения",
+      "Answers": [
+        "possible solutions",
+        "potential solutions",
+        "alternative solutions",
+        "options",
+        "answers"
+      ]
+    },
+    {
+      "Id": 336,
+      "Title": "Translate: починить компьютер",
+      "Answers": [
+        "fix the computer",
+        "build the computer",
+        "upgrade the computer",
+        "restart the computer",
+        "charge the computer"
+      ]
+    },
+    {
+      "Id": 337,
+      "Title": "Fill in the gap: ……. are used to hold small objects",
+      "Answers": [
+        "tweezers",
+        "tongs",
+        "pliers",
+        "scissors",
+        "clamps"
+      ]
+    },
+    {
+      "Id": 338,
+      "Title": "Translate: вредоносные файлы",
+      "Answers": [
+        "malicious files",
+        "safe files",
+        "temporary files",
+        "important files",
+        "secure files"
+      ]
+    },
+    {
+      "Id": 339,
+      "Title": "Translate: запрет",
+      "Answers": [
+        "ban",
+        "allow",
+        "approve",
+        "permit",
+        "support"
+      ]
+    },
+    {
+      "Id": 340,
+      "Title": "Translate: Я не могу подключиться к сети",
+      "Answers": [
+        "I can't connect to the network",
+        "I cannot access the network",
+        "I can't join the network",
+        "I cannot log into the network",
+        "I can't link to the network"
+      ]
+    },
+    {
+      "Id": 341,
+      "Title": "Translate: рабочая поверхность",
+      "Answers": [
+        "work surface",
+        "desktop",
+        "tabletop",
+        "countertop",
+        "workspace"
+      ]
+    },
+    {
+      "Id": 342,
+      "Title": "Translate: процедуры безопасности",
+      "Answers": [
+        "security procedures",
+        "safety procedures",
+        "security protocols",
+        "safety rules",
+        "protection procedures"
+      ]
+    },
+    {
+      "Id": 343,
+      "Title": "Translate: интернет- соединение",
+      "Answers": [
+        "internet connection",
+        "online connection",
+        "web connection",
+        "network connection",
+        "digital connection"
+      ]
+    },
+    {
+      "Id": 344,
+      "Title": "Complete the sentence: She has already …… .",
+      "Answers": [
+        "finished",
+        "started",
+        "left",
+        "arrived",
+        "completed"
+      ]
+    },
+    {
+      "Id": 345,
+      "Title": "Complete the sentence: She’s a nice ……….. .",
+      "Answers": [
+        "person",
+        "woman",
+        "lady",
+        "individual",
+        "friend"
+      ]
+    },
+    {
+      "Id": 346,
+      "Title": "Translate: офисное оборудование",
+      "Answers": [
+        "office equipment",
+        "office supplies",
+        "office furniture",
+        "office tools",
+        "office devices"
+      ]
+    },
+    {
+      "Id": 347,
+      "Title": "Choose the correct translation: нажмите мышкой",
+      "Answers": [
+        "click the mouse",
+        "press the mouse",
+        "tap the mouse",
+        "double-click the mouse",
+        "hit the mouse"
+      ]
+    },
+    {
+      "Id": 348,
+      "Title": "Translate: переслать",
+      "Answers": [
+        "to forward",
+        "to send",
+        "to route",
+        "to transfer",
+        "to dispatch"
+      ]
+    },
+    {
+      "Id": 349,
+      "Title": "VPN means:",
+      "Answers": [
+        "Virtual Private Network",
+        "Virtual Public Network",
+        "Virtual Protected Network",
+        "Virtual Personal Network",
+        "Verified Private Network"
+      ]
+    },
+    {
+      "Id": 350,
+      "Title": "CW means:",
+      "Answers": [
+        "Continuous Wave",
+        "Clockwise",
+        "Control Word",
+        "Computer Window",
+        "Central Work"
+      ]
+    },
+    {
+      "Id": 351,
+      "Title": "PC means:",
+      "Answers": [
+        "Personal Computer",
+        "Professional Computer",
+        "Public Computer",
+        "Portable Computer",
+        "Personal Calculator"
+      ]
+    },
+    {
+      "Id": 352,
+      "Title": "DV means:",
+      "Answers": [
+        "Digital Video",
+        "Digital Voice",
+        "Data Video",
+        "Desktop Video",
+        "Digital Version"
+      ]
+    },
+    {
+      "Id": 353,
+      "Title": "IT means:",
+      "Answers": [
+        "Information Technology",
+        "Internet Technology",
+        "Innovative Technology",
+        "Integrated Technology",
+        "Internal Technology"
+      ]
+    },
+    {
+      "Id": 354,
+      "Title": "B2B means:",
+      "Answers": [
+        "Business-to-Business",
+        "Business to Business",
+        "Business for Business",
+        "Between Business",
+        "Back-to-Business"
+      ]
+    },
+    {
+      "Id": 355,
+      "Title": "B2C means:",
+      "Answers": [
+        "Business-to-Consumer",
+        "Business to Consumer",
+        "Business for Consumers",
+        "Between Consumers",
+        "Business with Consumers"
+      ]
+    },
+    {
+      "Id": 356,
+      "Title": "HR means:",
+      "Answers": [
+        "Human Resources",
+        "Human Relations",
+        "Hiring Resources",
+        "Human Rights",
+        "Health Resources"
+      ]
+    },
+    {
+      "Id": 357,
+      "Title": "LAN means:",
+      "Answers": [
+        "Local Area Network",
+        "Long Area Network",
+        "Local Access Network",
+        "Large Area Network",
+        "Local Automated Network"
+      ]
+    },
+    {
+      "Id": 358,
+      "Title": "WAN means:",
+      "Answers": [
+        "Wide Area Network",
+        "Wireless Area Network",
+        "World Area Network",
+        "Wide Access Network",
+        "Wide Automated Network"
+      ]
+    },
+    {
+      "Id": 359,
+      "Title": "RAM means:",
+      "Answers": [
+        "Random Access Memory",
+        "Rapid Access Memory",
+        "Read Access Memory",
+        "Run-time Access Memory",
+        "Random Application Memory"
+      ]
+    },
+    {
+      "Id": 360,
+      "Title": "A firewall",
+      "Answers": [
+        "a network security system that monitors and controls network traffic",
+        "a device that cools the computer",
+        "a software program for editing photos",
+        "a tool for managing files",
+        "a protection against computer viruses"
+      ]
+    },
+    {
+      "Id": 361,
+      "Title": "Finance",
+      "Answers": [
+        "finance",
+        "accounting",
+        "economics",
+        "banking",
+        "investment"
+      ]
+    },
+    {
+      "Id": 362,
+      "Title": "Traffic",
+      "Answers": [
+        "traffic",
+        "congestion",
+        "flow",
+        "crowd",
+        "commute"
+      ]
+    },
+    {
+      "Id": 363,
+      "Title": "Choose the correct conjunction. I was late for class this morning… the bus was late.",
+      "Answers": [
+        "because",
+        "and",
+        "but",
+        "or",
+        "so"
+      ]
+    },
+    {
+      "Id": 364,
+      "Title": "Choose the correct conjunction. My classmate studies very hard, … she always gets good marks.",
+      "Answers": [
+        "so",
+        "because",
+        "and",
+        "but",
+        "or"
+      ]
+    },
+    {
+      "Id": 365,
+      "Title": "Choose the correct conjunction. Henry didn’t eat the ice-cream … he was on a diet.",
+      "Answers": [
+        "because",
+        "but",
+        "so",
+        "and",
+        "or"
+      ]
+    },
+    {
+      "Id": 366,
+      "Title": "Choose the correct conjunction. I was very sick yesterday … I didn’t go to work.",
+      "Answers": [
+        "so",
+        "because",
+        "and",
+        "but",
+        "or"
+      ]
+    },
+    {
+      "Id": 367,
+      "Title": "Choose the correct conjunction. I fell off my bicycle … I wasn’t careful.",
+      "Answers": [
+        "because",
+        "so",
+        "and",
+        "but",
+        "or"
+      ]
+    },
+    {
+      "Id": 368,
+      "Title": "Choose the correct answer. What is e-commerce?",
+      "Answers": [
+        "the buying and selling of goods and services online",
+        "a type of online gaming",
+        "a social network",
+        "a digital marketing strategy",
+        "a computer programming method"
+      ]
+    },
+    {
+      "Id": 369,
+      "Title": "Choose the correct answer. Which of these is an example of a B2C e-commerce website?",
+      "Answers": [
+        "Amazon",
+        "Alibaba",
+        "Craigslist",
+        "LinkedIn",
+        "eBay"
+      ]
+    },
+    {
+      "Id": 370,
+      "Title": "Choose the correct answer. Which payment gateway is commonly used in e-commerce?",
+      "Answers": [
+        "PayPal",
+        "Stripe",
+        "Square",
+        "Visa",
+        "MasterCard"
+      ]
+    },
+    {
+      "Id": 371,
+      "Title": "Choose the correct answer. What does COD stand for in e-commerce?",
+      "Answers": [
+        "Cash on Delivery",
+        "Cost of Delivery",
+        "Cash on Demand",
+        "Cash on Discount",
+        "Credit on Delivery"
+      ]
+    },
+    {
+      "Id": 372,
+      "Title": "Choose the correct answer. What can you do on an e-commerce website?",
+      "Answers": [
+        "buy products online",
+        "chat with friends",
+        "watch TV shows",
+        "browse social media",
+        "read news articles"
+      ]
+    },
+    {
+      "Id": 373,
+      "Title": "Choose the correct answer. What do you need to shop online?",
+      "Answers": [
+        "an internet connection and a payment method",
+        "a telephone and a cable",
+        "a printer and a computer",
+        "a scanner and a modem",
+        "a webcam and headphones"
+      ]
+    },
+    {
+      "Id": 374,
+      "Title": "Choose the correct answer. What is the internet?",
+      "Answers": [
+        "a global network of networks",
+        "a type of computer",
+        "a programming language",
+        "a search engine",
+        "a social media site"
+      ]
+    },
+    {
+      "Id": 375,
+      "Title": "Choose the correct answer. What device helps connect computers to the internet?",
+      "Answers": [
+        "modem",
+        "printer",
+        "keyboard",
+        "monitor",
+        "scanner"
+      ]
+    },
+    {
+      "Id": 376,
+      "Title": "Choose the correct answer. What is a username used for?",
+      "Answers": [
+        "to identify a user on a computer system",
+        "to control computer hardware",
+        "to secure the network",
+        "to store personal data",
+        "to protect against viruses"
+      ]
+    },
+    {
+      "Id": 377,
+      "Title": "Choose the appropriate word. The internet …………… people to send messages to each other.",
+      "Answers": [
+        "allows",
+        "prevents",
+        "stops",
+        "ignores",
+        "blocks"
+      ]
+    },
+    {
+      "Id": 378,
+      "Title": "Choose the appropriate word. A router …………… connect devices to the internet.",
+      "Answers": [
+        "connects",
+        "disconnects",
+        "replaces",
+        "limits",
+        "stores"
+      ]
+    },
+    {
+      "Id": 379,
+      "Title": "Choose the appropriate word. Wi‑Fi is used to …… devices to the internet without using wires.",
+      "Answers": [
+        "connect",
+        "disconnect",
+        "separate",
+        "isolate",
+        "restrict"
+      ]
+    },
+    {
+      "Id": 380,
+      "Title": "Choose the appropriate word. You shouldn’t …………… your password with friends.",
+      "Answers": [
+        "share",
+        "create",
+        "update",
+        "save",
+        "reset"
+      ]
+    },
+    {
+      "Id": 381,
+      "Title": "Choose the appropriate word. Computers can …………… to each other in a network.",
+      "Answers": [
+        "communicate",
+        "compete",
+        "process",
+        "store",
+        "download"
+      ]
+    },
+    {
+      "Id": 382,
+      "Title": "Choose the appropriate word. A ________ is a group of computers connected together.",
+      "Answers": [
+        "network",
+        "server",
+        "database",
+        "program",
+        "protocol"
+      ]
+    },
+    {
+      "Id": 383,
+      "Title": "Choose the appropriate word. A ________ is used to connect computers to the internet wirelessly.",
+      "Answers": [
+        "router",
+        "modem",
+        "switch",
+        "hub",
+        "cable"
+      ]
+    },
+    {
+      "Id": 384,
+      "Title": "Choose the appropriate word. To visit a website, you need an ______ browser.",
+      "Answers": [
+        "Internet",
+        "local",
+        "desktop",
+        "virtual",
+        "encrypted"
+      ]
+    },
+    {
+      "Id": 385,
+      "Title": "Choose the appropriate word. Wi‑Fi is a ______ connection.",
+      "Answers": [
+        "wireless",
+        "wired",
+        "analog",
+        "digital",
+        "cellular"
+      ]
+    },
+    {
+      "Id": 386,
+      "Title": "Choose the appropriate word. We should keep our ______ private and not share it online.",
+      "Answers": [
+        "passwords",
+        "usernames",
+        "addresses",
+        "emails",
+        "contacts"
+      ]
+    },
+    {
+      "Id": 387,
+      "Title": "Choose the appropriate word. Which device is used to input data into a computer?",
+      "Answers": [
+        "keyboard",
+        "monitor",
+        "printer",
+        "speaker",
+        "scanner"
+      ]
+    },
+    {
+      "Id": 388,
+      "Title": "Choose the appropriate word. What is the purpose of antivirus software?",
+      "Answers": [
+        "to protect the computer from viruses",
+        "to speed up the computer",
+        "to update the operating system",
+        "to cool the computer",
+        "to manage files"
+      ]
+    },
+    {
+      "Id": 389,
+      "Title": "Choose the appropriate word. You should always ………… your software when updates are available.",
+      "Answers": [
+        "update",
+        "uninstall",
+        "ignore",
+        "reset",
+        "modify"
+      ]
+    },
+    {
+      "Id": 390,
+      "Title": "Choose the appropriate word. A …………. is an output device.",
+      "Answers": [
+        "monitor",
+        "keyboard",
+        "mouse",
+        "scanner",
+        "microphone"
+      ]
+    },
+    {
+      "Id": 391,
+      "Title": "Choose the appropriate word. Rebooting a ……….. means turning it off and on again.",
+      "Answers": [
+        "computer",
+        "phone",
+        "tablet",
+        "printer",
+        "router"
+      ]
+    },
+    {
+      "Id": 392,
+      "Title": "Choose the appropriate word. ___________ is a message sent electronically from one person to another.",
+      "Answers": [
+        "email",
+        "letter",
+        "memo",
+        "text",
+        "telegram"
+      ]
+    },
+    {
+      "Id": 393,
+      "Title": "Choose the appropriate word. Microsoft Word is an example of a __________ program.",
+      "Answers": [
+        "word processing",
+        "spreadsheet",
+        "database",
+        "graphics",
+        "presentation"
+      ]
+    },
+    {
+      "Id": 394,
+      "Title": "Choose the appropriate word. The __________ key is used to delete characters to the left of the cursor.",
+      "Answers": [
+        "backspace",
+        "delete",
+        "enter",
+        "shift",
+        "control"
+      ]
+    },
+    {
+      "Id": 395,
+      "Title": "Choose the appropriate word. Saving your work often helps to prevent __________.",
+      "Answers": [
+        "data loss",
+        "software error",
+        "virus infection",
+        "hardware failure",
+        "network outage"
+      ]
+    },
+    {
+      "Id": 396,
+      "Title": "Choose the correct answer. What should you do if you receive a suspicious email?",
+      "Answers": [
+        "delete it and do not click any links",
+        "open it to check",
+        "forward it to a friend",
+        "reply for more information",
+        "mark it as read"
+      ]
+    },
+    {
+      "Id": 397,
+      "Title": "Choose the correct answer. What does antivirus software do?",
+      "Answers": [
+        "detects and removes viruses",
+        "creates viruses",
+        "speeds up the computer",
+        "stores data",
+        "updates the operating system"
+      ]
+    },
+    {
+      "Id": 398,
+      "Title": "Choose the appropriate word. A __________ is a harmful program that can damage your files or steal your data.",
+      "Answers": [
+        "malware",
+        "software",
+        "firmware",
+        "application",
+        "driver"
+      ]
+    },
+    {
+      "Id": 399,
+      "Title": "Choose the appropriate word. Always __________ your software to keep it safe and secure.",
+      "Answers": [
+        "update",
+        "uninstall",
+        "downgrade",
+        "ignore",
+        "delete"
+      ]
+    },
+    {
+      "Id": 400,
+      "Title": "Choose the appropriate word. …….. is a method of verifying your identity using two steps.",
+      "Answers": [
+        "Two-factor authentication",
+        "Biometric verification",
+        "Single-factor authentication",
+        "Password verification",
+        "Email confirmation"
+      ]
+    },
+    {
+      "Id": 401,
+      "Title": "Choose the appropriate word. Never leave your computer __________ in a public place.",
+      "Answers": [
+        "unattended",
+        "on",
+        "running",
+        "connected",
+        "open"
+      ]
+    }
+  ]
+}

@@ -33,10 +33,6 @@
     <PackageReference Include="Toolbelt.Blazor.FileDropZone" Version="3.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\resources" />
-  </ItemGroup>
-
 	<ItemGroup>
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>

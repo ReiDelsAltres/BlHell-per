@@ -57,8 +57,17 @@ public class Info
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
             RedAllerts = []
         };
+        public static Subject English = new()
+        {
+            Name = "Eng",
+            TranslatedName = "Английский",
+            Groups = ["759 ITS", "759 KM"],
+            Teacher = "Ismayılova Aybəniz Arif",
+            YellowAllerts = ["Вопросы соответствуют экзаменационным, но ответы могут различатся"],
+            RedAllerts = []
+        };
 
-        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics,LinearAlgebra];
+        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics,LinearAlgebra,English];
 
         public static Subject getSubject(string name) =>
             Array.Find(_subjects, subj => subj.Name.Equals(name));
