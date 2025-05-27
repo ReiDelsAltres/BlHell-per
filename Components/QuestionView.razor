@@ -1,4 +1,5 @@
 ﻿@using BlHell_per.Core.Questions
+@using BlHell_per.Core;
 
 @{
 }
@@ -18,7 +19,7 @@
             {
                 @foreach (string tag in QuestionModel.Tags)
                 {
-                    <MudChip T="string" Style="font-size:1rem" Variant="Variant.Filled" Color="@color" Size="Size.Medium">@tag</MudChip>
+                    <MudChip Class="ml-4" T="string" Style="font-size:1rem" Variant="Variant.Filled" Color="@color" Size="Size.Medium">@tag</MudChip>
                 }
             }
         </MudPaper>
@@ -58,9 +59,6 @@
 
     [Parameter]
     public EventCallback<int> QuestionAnsweredCallback { get; set; }
-
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object>? InputAttributes { get; set; }
 
     private record ButtonContext
     {

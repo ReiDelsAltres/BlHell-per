@@ -88,7 +88,9 @@
 							<MudNumericField Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
 						</MudStack>
 					</MudCollapse>
-					<MudButton Style="height: 80px;" Variant="Variant.Outlined" Color="@color" FullWidth="true" @onclick="@(x => onClick())">Запустить</MudButton>
+					<MudButton Style="height: 80px;" Variant="Variant.Outlined" Color="@color" FullWidth="true" @onclick="@(x => OnStartTest())">Запустить</MudButton>
+					<MudDivider DividerType="DividerType.Middle" />
+					<MudButton Style="@($"color:{Colors.Gray.Lighten4}; height: 80px;")" Variant="Variant.Outlined" FullWidth="true" @onclick="@(x => OnOpenQuestions())">Все вопросы</MudButton>
 					@*<MudNumericField @bind-Value="IntValue" Label="Standard" Variant="Variant.Text" Min="this._min" Max="this._max" />*@
 				</MudPaper>
 				<MudPaper Width="15%" Height="100px">
@@ -152,9 +154,13 @@
 		this._ultimateMax = this._max;
 	}
 
-	internal async void onClick()
+	internal async void OnStartTest()
 	{
 		Navigation.NavigateTo($"Subject/Test/{this.Name}/{this._num}/{this._min}/{this._max}/{this._random}");
+	}
+	internal async void OnOpenQuestions()
+	{
+		Navigation.NavigateTo($"/QuestionViewPage/{this.Name}");
 	}
 
 	private void OnExpandCollapseClick()

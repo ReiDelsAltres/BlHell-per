@@ -1,0 +1,32 @@
+﻿@inherits QuestionViewBase;
+
+@using BlHell_per.Core;
+
+<MudStack class="ma-4" Wrap="Wrap.Wrap" Spacing="1">
+	@for(int i = 0; i<QuestionModel.Answers.Length; i++)
+	{
+		string answer = QuestionModel.Answers[i];
+
+		int fallProff = QuestionModel.RId ?? 0;
+
+		<MudPaper Outlined Style="@(i == fallProff ? this.CssStyle : "")">
+
+			<MudText class="ma-2">
+				<MudHighlighter Text="@answer" HighlightedText="@HighlitedText" />
+			</MudText>
+		</MudPaper>
+	}
+</MudStack>
+
+@code {
+	protected override RenderFragment BaseContent => (builder) => base.BuildRenderTree(builder);
+
+	protected override Task OnInitializedAsync()
+	{
+		this.Color = Color.Default;
+		this.BackgroundColor = "";
+		this.CssStyle = CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css;
+
+		return base.OnInitializedAsync();
+	}
+}

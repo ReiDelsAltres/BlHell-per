@@ -1,0 +1,140 @@
+﻿@page "/QuestionViewPage"
+@page "/QuestionViewPage/{SubjectName}"
+
+@inherits MathJaxContentComponentFixed;
+
+@using System.ComponentModel.DataAnnotations
+@using System.Threading
+
+@using System.Text.RegularExpressions;
+@using System.Web;
+@using BlHell_per.Components;
+@using BlHell_per.Core.Compat
+@using BlHell_per.Core.Questions
+@using BlHell_per.Core;
+@using MathJaxBlazor;
+
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<MudStack>
+    <MudText Typo="Typo.h3" Align="Align.Center">AllQuestionPage</MudText>
+    <MudPaper Class="pa-2">
+        <MudGrid>
+            <MudItem xs="12" sm="6" lg="4">
+                <MudSelect Placeholder="Выберите предмет" T="Info.Subject" ToStringFunc="x => x.TranslatedName" Value="_SelectedSubject" ValueChanged="@(this.SubejctChanged)" >
+                    @foreach (var subject in Info.Subject.Subjects)
+                    {
+                        <MudSelectItem Value="subject">@subject.TranslatedName</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="12" sm="6" lg="4">
+                <MudTextField @bind-Value="_searchValue" Label="Поиск" Variant="Variant.Text"></MudTextField>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+    <MudPaper>
+        @if (this.questionsArray != null)
+        {
+            <MudGrid class="pb-20">
+                @for (int i = 0; i < questionsArray.Length; i++)
+                {
+                    int local_i = i;
+                    Question question = questionsArray[local_i];
+
+                    bool valid = this._searchValue != null;
+                    if (valid)
+                    {
+                        bool titleContain = question.Title.Contains(this._searchValue, StringComparison.OrdinalIgnoreCase);
+                        bool answersContain = false;
+                        bool tagsContain = false;
+
+                        foreach (string answer in question.Answers)
+                        {
+                            answersContain = answer.Contains(this._searchValue, StringComparison.OrdinalIgnoreCase);
+                            if (answersContain) break;
+                        }
+                        if (question.Tags != null)
+                        {
+                            foreach (string tag in question.Tags)
+                            {
+                                tagsContain = tag.Contains(this._searchValue, StringComparison.OrdinalIgnoreCase);
+                                if (tagsContain) break;
+                            }
+                        }
+
+                        if (!(titleContain || answersContain || tagsContain)) continue;
+                    }
+                    <MudItem xs="12" sm="6" lg="4">
+                        <MudPaper>
+                            <DataQuestionView Index="local_i" QuestionModel="@question" HighlitedText="@_searchValue">
+                            </DataQuestionView>
+                        </MudPaper>
+                    </MudItem>
+                }
+            </MudGrid>
+        }
+    </MudPaper>
+</MudStack>
+
+@code {
+    [Parameter]
+    public string? SubjectName { get; set; }
+
+    private Info.Subject _SelectedSubject { get; set; }
+
+    private Question[]? questionsArray;
+
+    private string? _searchValue { get; set; }
+
+    private bool shouldRender = true;
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        Task task = new Task(() => { });
+        try
+        {
+            task = base.OnAfterRenderAsync(firstRender);
+        }
+        catch (Exception _) { }
+        return task;
+    }
+
+    protected async Task SubejctChanged(Info.Subject subject)
+    {
+        this._SelectedSubject = subject;
+
+        Task.Run(async () =>
+        {
+            SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{_SelectedSubject.Name}.json", Http, JS);
+
+            this.questionsArray = serializationHandler.Questions;
+            this.StateHasChanged();
+        });
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(SubjectName != null)
+        {
+            this._SelectedSubject = Info.Subject.getSubject(SubjectName);
+
+            SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{_SelectedSubject.Name}.json", Http, JS);
+
+            this.questionsArray = serializationHandler.Questions;
+        }
+
+        await base.OnInitializedAsync();
+    }
+    protected override bool ShouldRender()
+    {
+        if (!this.shouldRender)
+        {
+            this.shouldRender = true;
+            return false;
+        }
+        return base.ShouldRender();
+    }
+}

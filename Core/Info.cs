@@ -1,7 +1,7 @@
 ﻿namespace BlHell_per.Core;
 public class Info
 {
-    public struct Subject
+    public struct Subject : IEquatable<Subject>
     {
         public static Subject InformationalTechnology = new()
         {
@@ -67,10 +67,21 @@ public class Info
             RedAllerts = []
         };
 
-        private static Subject[] _subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics,LinearAlgebra,English];
+        public static Subject[] Subjects = [InformationalTechnology,Programming,DifferentialEquations,InstrumentalPrograms,Physics,LinearAlgebra,English];
 
         public static Subject getSubject(string name) =>
-            Array.Find(_subjects, subj => subj.Name.Equals(name));
+            Array.Find(Subjects, subj => subj.Name.Equals(name));
+
+        public bool Equals(Subject other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+
+            return Name == other.Name;
+        }
+
+        public override bool Equals(object? obj) => 
+            obj is Subject state && Equals(state);
 
         public required string Name { get; init; }
         public required string TranslatedName { get; init; }
