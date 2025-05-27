@@ -1601,7 +1601,7 @@
       "Title": "Закону Фика",
       "Answers": [
         "$J_{mx} = D\\frac{dp}{dx}$",
-        "$J = p_oe^{-\\frac{\\mugh}{RT}}$",
+        "$J = p_oe^{-\\frac{\\mu gh}{RT}}$",
         "$J_{mx} = nkT$",
         "[Нет Ответа]",
         "$J_{mx} = 0$"
