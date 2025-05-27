@@ -225,10 +225,10 @@
       "Id": 21,
       "Title": "Покажите уравнения Угловая скорость",
       "Answers": [
-        "$\\overrightarrow{\\omega} = \\frac{d\\\\overrightarrow{\\varphi}}{dт}$",
-        "$\\overrightarrow{\\omega} = \\frac{d\\\\overrightarrow{a}}{dт}$",
-        "$\\overrightarrow{\\omega} = \\frac{d\\\\overrightarrow{F}}{dт}$",
-        "$\\overrightarrow{\\omega} = \\frac{d\\\\overrightarrow{\\varphi}}{dF}$",
+        "$\\overrightarrow{\\omega} = \\frac{d\\overrightarrow{\\varphi}}{dт}$",
+        "$\\overrightarrow{\\omega} = \\frac{d\\overrightarrow{a}}{dт}$",
+        "$\\overrightarrow{\\omega} = \\frac{d\\overrightarrow{F}}{dт}$",
+        "$\\overrightarrow{\\omega} = \\frac{d\\overrightarrow{\\varphi}}{dF}$",
         "$\\overrightarrow{\\omega} = 0$"
       ]
     },
