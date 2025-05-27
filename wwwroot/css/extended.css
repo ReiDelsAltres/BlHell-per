@@ -7,6 +7,16 @@
     color: white !important;
 }
 
+.custom-easy {
+    background-color: #71f077;
+    color: white !important;
+}
+
+.custom-easy.op75 {
+    background-color: #71f07775;
+    color: white !important;
+}
+
 /* || STORE PAGES */
 .custom-striped {
     --first-color-strip: #606dbc;
