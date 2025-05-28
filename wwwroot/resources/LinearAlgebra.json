@@ -1081,6 +1081,9 @@
     },
     {
       "Id": 99,
+      "Tags": [
+        "В задании есть ошибка"
+      ],
       "Title": "Найдите обратную матрицу \\(\\begin{pmatrix} 3 & 7 \\\\ 2 & 5 \\end{pmatrix}\\).",
       "Answers": [
         "\\(\\begin{pmatrix} 5 & 7 \\\\ -2 & 3 \\end{pmatrix}\\)",
