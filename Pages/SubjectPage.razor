@@ -83,6 +83,9 @@
 							<MudCheckBox @bind-Value="this._random" Color="@color">
 								Перемешать? @(this._random ? " Да" : "Нет")
 							</MudCheckBox>
+							<MudCheckBox @bind-Value="this._allowJsonView" Color="@color">
+								Разрешить показ JSON? @(this._allowJsonView ? " Да" : "Нет")
+							</MudCheckBox>
 							<MudNumericField Immediate="false" Label="Min" T="int" @bind-Value="this._min" HelperText="@this._min.ToString()" Min="0" Max="this._max" />
 							<MudNumericField Immediate="false" Label="Num" T="int" @bind-Value="this._num" HelperText="@this._num.ToString()" Min="1" Max="this._max - this._min" />
 							<MudNumericField Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
@@ -118,6 +121,7 @@
 	private int _num { get; set; } = 25;
 
 	private bool _random = true;
+	private bool _allowJsonView = false;
 
 	private string cst
 	{
@@ -156,7 +160,7 @@
 
 	internal async void OnStartTest()
 	{
-		Navigation.NavigateTo($"Subject/Test/{this.Name}/{this._num}/{this._min}/{this._max}/{this._random}");
+		Navigation.NavigateTo($"Subject/Test/{this.Name}/{this._num}/{this._min}/{this._max}/{this._random}/{this._allowJsonView}");
 	}
 	internal async void OnOpenQuestions()
 	{

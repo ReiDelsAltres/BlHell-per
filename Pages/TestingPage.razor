@@ -1,5 +1,4 @@
-﻿@page "/Subject/Test/{Name}/{num:int}/{min:int}/{max:int}/{random:bool}"
-@inherits MathJaxContentComponentFixed;
+﻿@page "/Subject/Test/{Name}/{num:int}/{min:int}/{max:int}/{random:bool}/{allowjsonview:bool}"
 
 @using System.Text.RegularExpressions;
 @using System.Web;
@@ -31,7 +30,7 @@
 
                 <MudItem xs="12" sm="6" lg="4">
                     <MudPaper>
-                        <QuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" />
+                        <TestQuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" AllowJsonView="allowjsonview" />
                     </MudPaper>
                 </MudItem>
             }
@@ -54,6 +53,9 @@
 
     [Parameter]
     public bool random { get; set; }
+
+    [Parameter]
+    public bool allowjsonview { get; set; }
 
     private string[] colors =
     {
@@ -97,12 +99,6 @@
         Array.Fill(this.statuses,-1);
 
         //this.questionsArray.Shuffle();
-        for (int i = 0; i<this.questionsArray.Length;i++)
-        {
-            Question q = this.questionsArray[i];
-            q.Shuffle();
-            q.InsertAnswer("Пропустить вопрос");
-        }
 
         await base.OnInitializedAsync();
     }

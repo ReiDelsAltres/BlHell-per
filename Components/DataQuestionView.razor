@@ -21,12 +21,12 @@
 @code {
 	protected override RenderFragment BaseContent => (builder) => base.BuildRenderTree(builder);
 
-	protected override Task OnInitializedAsync()
+	protected override async Task OnInitializedAsync()
 	{
+		await base.OnInitializedAsync();
+
 		this.Color = Color.Default;
 		this.BackgroundColor = "";
 		this.CssStyle = CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css;
-
-		return base.OnInitializedAsync();
 	}
 }

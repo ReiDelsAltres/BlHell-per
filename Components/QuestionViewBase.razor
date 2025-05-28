@@ -1,11 +1,32 @@
-﻿@inherits TemplateComponentBase
-@using BlHell_per.Core.Questions
+﻿@inherits MathJaxContentTemplateComponentFixed
 
-<MudCard Outlined="true" style="@($"background-color:{this.BackgroundColor}")">
+@using BlHell_per.Core.Compat;
+@using BlHell_per.Core.Questions
+@using System.Text.Json;
+@using System.Text.Json.Serialization;
+
+<MudCard Outlined="true" style="@($"background-color:{this.BackgroundColor};")">
+    @if(this.AllowJsonView)
+    {
+        <div style="position: relative">
+            <MudChip T="string" Color="@Color" Style="position: absolute; right: -20px; top: -20px;" OnClick="@(this.SwitchView)">
+                <MudIcon Icon="@Icons.Material.Filled.DataObject"></MudIcon>
+            </MudChip>
+        </div>
+    }
+    @if(this._IsJsonView)
+    {
+        <MudPaper>
+            <pre class="ma-4" style="white-space: pre-wrap;">
+                @this._JsonOriginate
+            </pre>
+        </MudPaper>
+        return;   
+    }
     <MudStack Spacing="2">
         <MudPaper Class="@this.Class" Style="@CssStyle">
             <MudStack Row>
-                <MudText @key="QuestionModel.Title" class="ml-4 mb-2" Style="white-space: pre-line;" Typo="Typo.h6">
+                <MudText @key="QuestionModel.Title" class="ml-4 mr-4 mb-2" Style="white-space: pre-line;" Typo="Typo.h6">
                     @if (Index != null)
                     {
                         <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@this.Color" Size="Size.Large">@this.Index</MudChip>
@@ -38,6 +59,9 @@
     public required Question QuestionModel { get; set; }
 
     [Parameter]
+    public bool AllowJsonView { get; set; } = false;
+
+    [Parameter]
     public string? HighlitedText { get; set; }
 
     [Parameter] 
@@ -47,4 +71,19 @@
     protected string? BackgroundColor { get; set; }
     protected string? Class { get; set; }
     protected string? CssStyle { get; set; }
+
+
+    private string _JsonOriginate { get; set; }
+    private bool _IsJsonView = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        this._JsonOriginate = JsonSerializer.Serialize(QuestionModel, SerializationHandler._options);
+    }
+    protected async Task SwitchView()
+    {
+        this._IsJsonView = !this._IsJsonView;
+    }
 }
