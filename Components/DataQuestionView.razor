@@ -2,21 +2,23 @@
 
 @using BlHell_per.Core;
 
-<MudStack class="ma-4" Wrap="Wrap.Wrap" Spacing="1">
-	@for(int i = 0; i<QuestionModel.Answers.Length; i++)
-	{
-		string answer = QuestionModel.Answers[i];
+<div id="@("latexContainerAnswers" + Index)">
+	<MudStack class="ma-4" Wrap="Wrap.Wrap" Spacing="1">
+		@for (int i = 0; i < QuestionModel.Answers.Length; i++)
+		{
+			string answer = QuestionModel.Answers[i];
 
-		int fallProff = QuestionModel.RId ?? 0;
+			int fallProff = QuestionModel.RId ?? 0;
 
-		<MudPaper Outlined Style="@(i == fallProff ? this.CssStyle : "")">
+			<MudPaper Outlined Style="@(i == fallProff ? this.CssStyle : "")">
 
-			<MudText class="ma-2">
-				<MudHighlighter Text="@answer" HighlightedText="@HighlitedText" />
-			</MudText>
-		</MudPaper>
-	}
-</MudStack>
+				<MudText class="ma-2">
+					<MudHighlighter Text="@answer" HighlightedText="@HighlitedText" />
+				</MudText>
+			</MudPaper>
+		}
+	</MudStack>
+</div>
 
 @code {
 	protected override RenderFragment BaseContent => (builder) => base.BuildRenderTree(builder);
@@ -24,6 +26,8 @@
 	protected override async Task OnInitializedAsync()
 	{
 		await base.OnInitializedAsync();
+
+		this.LatexContainerIds = new string[] { "latexContainerAnswers" + Index };
 
 		this.Color = Color.Default;
 		this.BackgroundColor = "";

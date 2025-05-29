@@ -25,12 +25,9 @@
     <!---<link href="_content/Toolbelt.Blazor.PWA.Updater/Toolbelt.Blazor.PWA.Updater.bundle.scp.css"
           rel="stylesheet" />--->
 
-    <script type="text/javascript"
-            src="_content/MathJaxBlazor/mathJaxBlazor.js">
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <!-- Подключаем KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" 
+          integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
 </head>
 
 <body>
@@ -48,20 +45,6 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <script src="_framework/blazor.webassembly.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/BlHell-per/service-worker.js', { scope: '/BlHell-per/' })
-                    .then(registration => {
-                        console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
-                    })
-                    .catch(error => {
-                        console.error('Ошибка регистрации сервис-воркера:', error);
-                    });
-            });
-        }
-    </script>
     <!---<script>navigator.serviceWorker.register('service-worker.js');</script>--->
 
     <script>
@@ -104,6 +87,31 @@
     </script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
     <script src="_content/BlazorAnimation/blazorAnimationInterop.js"></script>
+
+    <!-- Библиотека KaTeX -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+
+    <!-- Ваш скрипт для вызова авто-рендера (опционально) -->
+    <script src="KaTeX.cs.js"></script>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/BlHell-per/service-worker.js', { scope: '/BlHell-per/' })
+                    .then(registration => {
+                        console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Ошибка регистрации сервис-воркера:', error);
+                    });
+            });
+        }
+    </script>
+
+
+
     <!---<script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js" no-register></script>
     <script>
         navigator.serviceWorker.register('service-worker.js').then(registration => {

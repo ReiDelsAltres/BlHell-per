@@ -1,4 +1,6 @@
-﻿@inherits MathJaxContentTemplateComponentFixed
+﻿@inherits TemplateComponentBase
+
+@inject IJSRuntime JS
 
 @using BlHell_per.Core.Compat;
 @using BlHell_per.Core.Questions
@@ -10,7 +12,7 @@
     @if(this.AllowJsonView)
     {
         <div style="position: relative">
-            <MudChip T="string" Color="@Color" Style="position: absolute; right: -20px; top: -20px;" OnClick="@(this.SwitchView)">
+            <MudChip T="string" Color="@Color" Style="position: absolute; right: -20px; top: -20px; z-index:1" OnClick="@(this.SwitchView)">
                 <MudIcon Icon="@Icons.Material.Filled.DataObject"></MudIcon>
             </MudChip>
         </div>
@@ -18,7 +20,7 @@
     @if(this._IsJsonView)
     {
         <Animation Enabled="this.AllowJsonView" Effect="@Effect.FlipInY" Speed="@Speed.Fast" Delay="@Delay.None" IterationCount="1">
-            <MudPaper Style="transition-property: all; transition-property: transform;">
+            <MudPaper Class="ma-2" Style="transition-property: all; transition-property: transform;">
                 <pre class="ma-4" style="white-space: pre-wrap;">
                     @this._JsonOriginate
                 </pre>
@@ -31,11 +33,15 @@
             <MudPaper Class="@this.Class" Style="@CssStyle">
                 <MudStack Row>
                     <MudText @key="QuestionModel.Title" class="ml-4 mr-4 mb-2" Style="white-space: pre-line;" Typo="Typo.h6">
-                        @if (Index != null)
-                        {
-                            <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@this.Color" Size="Size.Large">@this.Index</MudChip>
-                        }
-                        <MudHighlighter Text="@QuestionModel.Title" HighlightedText="@HighlitedText" />
+                        <MudStack Row>
+                            @if (Index != null)
+                            {
+                                <MudChip T="string" Style="font-size:1.5rem" Variant="Variant.Filled" Color="@this.Color" Size="Size.Large">@this.Index</MudChip>
+                            }
+                            <div id="@("latexContainer" + Index)">
+                                <MudHighlighter Text="@(QuestionModel.Title)" HighlightedText="@HighlitedText"/>
+                            </div>
+                        </MudStack>
                     </MudText>
                 </MudStack>
                 @if (QuestionModel.Tags != null)
@@ -72,6 +78,7 @@
     [Parameter] 
     public int? Index { get; set; }
 
+    protected string[] LatexContainerIds { get; set; }
     protected Color Color { get; set; } = Color.Default;
     protected string? BackgroundColor { get; set; }
     protected string? Class { get; set; }
@@ -90,5 +97,19 @@
     protected async Task SwitchView()
     {
         this._IsJsonView = !this._IsJsonView;
+    }
+
+    // HTML-строка, полученная через KaTeX
+    private string formatedTitle;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("renderLatexText", "latexContainer" + Index);
+        foreach (string id in LatexContainerIds)
+        {
+            await JS.InvokeVoidAsync("renderLatexText", id);
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
     }
 }
