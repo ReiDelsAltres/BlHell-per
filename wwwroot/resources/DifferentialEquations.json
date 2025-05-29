@@ -1051,7 +1051,7 @@
       "Title": "Найдите общее решение уравнения: $yy' = 2y - x$",
       "Answers": [
         "$y - x = Ce^{\\frac{x}{y - x}}$",
-        "$y + x = Ce^{\\frac{x}{y - x}$",
+        "$y + x = Ce^{\\frac{x}{y - x}}$",
         "$y - x = Ce^{\\frac{x}{x - y}}$",
         "$y - x = Ce^x$",
         "$y + x = Ce^x$"
