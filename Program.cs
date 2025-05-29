@@ -1,3 +1,4 @@
+using BlazorAnimation;
 using BlazorDownloadFile;
 using BlHell_per;
 using Microsoft.AspNetCore.Components.Web;
@@ -14,6 +15,7 @@ builder.Services.AddScoped(sp => Static.HttpClient);
 builder.Services.AddBlazorDownloadFile(ServiceLifetime.Scoped);
 //builder.Services.AddPWAUpdater();
 builder.Services.AddMudServices();
+builder.Services.Configure<AnimationOptions>(Guid.NewGuid().ToString(), c => { });
 
 await builder.Build().RunAsync();
 
