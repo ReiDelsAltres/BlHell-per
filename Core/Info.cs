@@ -6,6 +6,7 @@ public class Info
         public static Subject InformationalTechnology = new()
         {
             Name = "FunOfIT",
+            TranslatedNameAz = "Informasiya texnologiyalarının əsasları",
             TranslatedName = "Информационные технологии",
             Groups = ["759 ITS"],
             Teacher = "Həsənov Elçin Qafar oğlu",
@@ -15,6 +16,7 @@ public class Info
         public static Subject Programming = new()
         {
             Name = "Programming",
+            TranslatedNameAz = "Proqramlaşdırmanın əsasları",
             TranslatedName = "Основы программирования",
             Groups = ["759 ITS"],
             Teacher = "Həsənov Elçin Qafar oğlu",
@@ -24,6 +26,7 @@ public class Info
         public static Subject DifferentialEquations = new()
         {
             Name = "DifferentialEquations",
+            TranslatedNameAz = "Differensial tənliklər",
             TranslatedName = "Дифференциальные уравнения",
             Groups = ["759 ITS","759 KM"],
             Teacher = "Quliyeva Fatimə Ağayar qızı",
@@ -33,6 +36,7 @@ public class Info
         public static Subject LinearAlgebra = new()
         {
             Name = "LinearAlgebra",
+            TranslatedNameAz = "Xətti cəbr və analtik həndisə",
             TranslatedName = "Линейная Алгебра",
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Quliyeva Fatimə Ağayar qızı",
@@ -42,6 +46,7 @@ public class Info
         public static Subject InstrumentalPrograms = new()
         {
             Name = "Vusala",
+            TranslatedNameAz = "İnstrumental və tətbiqi programlar",
             TranslatedName = "Инструментальные и прикладные программы",
             Groups = ["759 ITS"],
             Teacher = "Гасанова Вюсаля Рамиз кызы",
@@ -51,6 +56,7 @@ public class Info
         public static Subject Physics = new()
         {
             Name = "Physics",
+            TranslatedNameAz = "Fizika",
             TranslatedName = "Физика",
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Ализаде Лейла Эльдар кызы",
@@ -60,6 +66,7 @@ public class Info
         public static Subject English = new()
         {
             Name = "Eng",
+            TranslatedNameAz = "Xarici dildə və akademik kommunikasiya",
             TranslatedName = "Английский",
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Ismayılova Aybəniz Arif",
@@ -84,6 +91,7 @@ public class Info
             obj is Subject state && Equals(state);
 
         public required string Name { get; init; }
+        public required string TranslatedNameAz { get; init; }
         public required string TranslatedName { get; init; }
         public required string[] Groups { get; init; }
         public required string Teacher { get; init; }
