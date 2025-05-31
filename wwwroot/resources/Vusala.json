@@ -333,7 +333,7 @@
     },
     {
       "Id": 31,
-      "Title": "Что выйдет на экран? : Если A= 4 . B=3 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 4 . B=3 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "12",
         "11",
@@ -344,7 +344,7 @@
     },
     {
       "Id": 32,
-      "Title": "Что выйдет на экран? : Если A= 2 . B=6 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 2 . B=6 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "12",
         "11",
@@ -355,7 +355,7 @@
     },
     {
       "Id": 33,
-      "Title": "Что выйдет на экран? : Если A= 1 . B=3 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 1 . B=3 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "3",
         "2",
@@ -366,7 +366,7 @@
     },
     {
       "Id": 34,
-      "Title": "Что выйдет на экран? : Если A= 3 . B=3 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 3 . B=3 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "9",
         "8",
@@ -377,7 +377,7 @@
     },
     {
       "Id": 35,
-      "Title": "Что выйдет на экран? : Если A= 5 . B=3 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 5 . B=3 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "15",
         "14",
@@ -388,7 +388,7 @@
     },
     {
       "Id": 36,
-      "Title": "Что выйдет на экран? : Если A= 2 . B=3 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 2 . B=3 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "6",
         "5",
@@ -399,7 +399,7 @@
     },
     {
       "Id": 37,
-      "Title": "Что выйдет на экран? : Если A= 2 . B=3 \na=int (input()) \nb=int(input()) \nprint(ab)",
+      "Title": "Что выйдет на экран? : Если A= 2 . B=3 \na=int (input()) \nb=int(input()) \nprint(a*b)",
       "Answers": [
         "6",
         "5",
@@ -410,7 +410,7 @@
     },
     {
       "Id": 38,
-      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(aa)+a-a",
+      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*a)+a-a",
       "Answers": [
         "9",
         "8",
@@ -421,9 +421,9 @@
     },
     {
       "Id": 39,
-      "Title": "Что выйдет на экран? : Если A= 3 . B=5 . C=6 \na=int (input()) \nb=int(input()) \nprint(aa)+a-a",
+      "Title": "Что выйдет на экран? : Если A= 3 . B=5 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*a)+a-a",
       "Answers": [
-        "15",
+        "9",
         "14",
         "13",
         "12",
@@ -432,7 +432,7 @@
     },
     {
       "Id": 40,
-      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(aa)+a-a",
+      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*a)+a-a",
       "Answers": [
         "9",
         "8",
@@ -443,7 +443,7 @@
     },
     {
       "Id": 41,
-      "Title": "Что выйдет на экран? : Если A=2  . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(ab)+a-a",
+      "Title": "Что выйдет на экран? : Если A=2  . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*b)+a-a",
       "Answers": [
         "6",
         "5",
@@ -454,7 +454,7 @@
     },
     {
       "Id": 42,
-      "Title": "Что выйдет на экран? : Если A= 6 . B=2 . C=6 \na=int (input()) \nb=int(input()) \nprint(ab)+a-a",
+      "Title": "Что выйдет на экран? : Если A= 6 . B=2 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*b)+a-a",
       "Answers": [
         "12",
         "11",
@@ -465,7 +465,7 @@
     },
     {
       "Id": 43,
-      "Title": "Что выйдет на экран? : Если A= 2 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(ab)+a-a",
+      "Title": "Что выйдет на экран? : Если A= 2 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*b)+a-a",
       "Answers": [
         "6",
         "5",
@@ -476,7 +476,7 @@
     },
     {
       "Id": 44,
-      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint((ab)+a-a)",
+      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint((a*b)+a-a)",
       "Answers": [
         "9",
         "8",
@@ -487,18 +487,18 @@
     },
     {
       "Id": 45,
-      "Title": "Что выйдет на экран? : Если A= 2 . B=7 . C=6 \na=int (input()) \nb=int(input()) \nprint((aa)+b-a)",
+      "Title": "Что выйдет на экран? : Если A= 2 . B=7 . C=6 \na=int (input()) \nb=int(input()) \nprint((a*a)+b-a)",
       "Answers": [
-        "11",
-        "10",
         "9",
+        "10",
+        "11",
         "8",
         "7"
       ]
     },
     {
       "Id": 46,
-      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(ab)+a-a",
+      "Title": "Что выйдет на экран? : Если A= 3 . B=3 . C=6 \na=int (input()) \nb=int(input()) \nprint(a*b)+a-a",
       "Answers": [
         "9",
         "8",

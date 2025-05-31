@@ -79,16 +79,16 @@
 					</MudToggleGroup>
 					<MudDivider DividerType="DividerType.Middle" />
 					<MudCollapse Expanded="_expanded">
-						<MudStack Row Spacing="4">
+						<MudStack Row Spacing="4" Wrap="Wrap.Wrap">
 							<MudCheckBox @bind-Value="this._random" Color="@color">
-								Перемешать? @(this._random ? " Да" : "Нет")
+								Перемешать
 							</MudCheckBox>
 							<MudCheckBox @bind-Value="this._allowJsonView" Color="@color">
-								Разрешить показ JSON? @(this._allowJsonView ? " Да" : "Нет")
+								Расширенный вид
 							</MudCheckBox>
-							<MudNumericField Immediate="false" Label="Min" T="int" @bind-Value="this._min" HelperText="@this._min.ToString()" Min="0" Max="this._max" />
-							<MudNumericField Immediate="false" Label="Num" T="int" @bind-Value="this._num" HelperText="@this._num.ToString()" Min="1" Max="this._max - this._min" />
-							<MudNumericField Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
+							<MudNumericField Class="ml-4 mr-4" Immediate="false" Label="Min" T="int" @bind-Value="this._min" HelperText="@this._min.ToString()" Min="0" Max="this._max" />
+							<MudNumericField Class="ml-4 mr-4" Immediate="false" Label="Num" T="int" @bind-Value="this._num" HelperText="@this._num.ToString()" Min="1" Max="this._max - this._min" />
+							<MudNumericField Class="ml-4 mr-4" Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
 						</MudStack>
 					</MudCollapse>
 					<MudButton Style="height: 80px;" Variant="Variant.Outlined" Color="@color" FullWidth="true" @onclick="@(x => OnStartTest())">Запустить</MudButton>
