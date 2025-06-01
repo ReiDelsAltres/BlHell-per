@@ -1,0 +1,145 @@
+﻿@inherits QuestionViewBase;
+
+@using BlHell_per.Core;
+
+<MudDivider DividerType="DividerType.Middle" />
+<div id="@("latexContainerAnswers" + Index)">
+    <MudStack class="ma-4" Row Wrap="Wrap.Wrap" Spacing="1">
+        @for (int i = 0; i < QuestionModel.Answers.Length; i++)
+        {
+            int local_i = i;
+
+            string? answer = QuestionModel.Answers[local_i];
+            if (answer == null || answer == "") continue;
+
+            ButtonContext context = this._contexts[local_i];
+
+            bool tt = this.Status != -1; 
+
+            <MudButton Style="@(context.Style)" Variant="Variant.Outlined" Disabled="Disabled" @onclick="@(e => OnAnswerClick(context))">
+                <MudText Typo="Typo.body1">@answer</MudText>
+            </MudButton>
+        }
+    </MudStack>
+</div>
+@if (this.Status != -1 && this.Show)
+{
+    <MudDivider DividerType="DividerType.Middle" />
+    <MudChip T="string" Class="d-flex align-center" Style="font-size:1.5rem" Variant="Variant.Text" Color="@Color" Size="Size.Large">@_resultText</MudChip>
+}
+
+@code {
+    protected override RenderFragment BaseContent => (builder) => base.BuildRenderTree(builder);
+
+    [Parameter]
+    public EventCallback<(int,int)> QuestionAnsweredCallback { get; set; }
+
+    [Parameter]
+    public bool Show { get; set; } = false;
+
+    private int Status = -1;
+    private ButtonContext[]? _contexts;
+
+    private string _resultText
+    {
+        get => this.Status switch
+        {
+            0 => "Неверно",
+            1 => "Верно",
+            2 => "Пропущено"
+        };
+    }
+    private async Task Reload() => await this.Reload(null);
+    private async Task Reload(ButtonContext? context)
+    {
+        this.BackgroundColor = this.Status switch
+        {
+            -1 => "",
+            var n when !Show => "",
+            0 => Colors.Red.Accent4,
+            1 => Colors.Green.Accent4,
+            2 => Colors.Amber.Accent4,
+            _ => ""
+        };
+        this.Color = this.Status switch
+        {
+            -1 => Color.Default,
+            var n when !Show => Color.Default,
+            0 => Color.Error,
+            1 => Color.Success,
+            2 => Color.Warning,
+            _ => Color.Default
+        };
+        this.CssStyle = this.Status switch
+        {
+            -1 => "",
+            var n when !Show => CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css,
+            0 => CSS.GetStripedBackground("#f5454575", "#b32d2d75").Css,
+            1 => CSS.GetStripedBackground("#71f07775", "#4db05275").Css,
+            2 => CSS.GetStripedBackground("#fa871b75", "#cf701675").Css,
+            _ => ""
+        };
+        if (this.Status == -1) return;
+        foreach (ButtonContext ctx in this._contexts)
+        {
+            if(ctx.isLastPressed)
+            {
+                ctx.Style = this.CssStyle;
+            }
+            else if(this.Show && ctx.Status == 1)
+            {
+                ctx.Style = "background-color: #71f07775";
+            } else
+            {
+                ctx.Style = "";
+            }
+        }
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        await this.Reload();
+        await base.OnParametersSetAsync();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        this.LatexContainerIds = new string[] { "latexContainerAnswers" + Index };
+
+        QuestionModel.Shuffle();
+        QuestionModel.InsertAnswer("Пропустить вопрос");
+
+        this._contexts = new ButtonContext[QuestionModel.Answers.Length];
+        for (int i = 0; i < this.QuestionModel.Answers.Length; i++)
+        {
+            this._contexts[i] = new ButtonContext()
+                {
+                    Id = i,
+                    Status = i == this.QuestionModel.RId ? 1 : i == 5 ? 2 : 0
+                };
+        }
+    }
+    private async void OnAnswerClick(ButtonContext context)
+    {
+        this.Status = context.Status;
+        foreach (ButtonContext ctx in this._contexts)
+        {
+            ctx.isLastPressed = false;
+        }
+        context.isLastPressed = true;
+        if (this.Show) this.Disabled = true;
+
+        await this.Reload(context);
+        await QuestionAnsweredCallback.InvokeAsync((this.Status, this.Index ?? throw new Exception()));
+    }
+
+
+    private record ButtonContext
+    {
+        public int Id { get; init; }
+        public int Status { get; init; }
+        public string Style { get; set; }
+        public bool isLastPressed { get; set; }
+    }
+}

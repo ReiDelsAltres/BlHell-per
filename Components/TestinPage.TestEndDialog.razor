@@ -16,13 +16,10 @@
             <MudText Typo="Typo.h6">Верно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Success">@right</MudChip> </MudText>
             <MudText Typo="Typo.h6">Пропущено: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Warning">@skip</MudChip> </MudText>
 
-            if (this.Statuses.Count() == 25)
-            {
-                int score = Math.Max((right * 2) - wrong, 0);
-                <MudDivider />
-                <MudText Typo="Typo.h6">Набранный балл: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Primary">@score</MudChip> </MudText>
-                <MudProgressLinear Color="Color.Primary" Value="@(score * 2)" Size="Size.Medium" />
-            }
+            int score = Math.Max((right * 2) - wrong, 0);
+            <MudDivider />
+            <MudText Typo="Typo.h6">Набранный балл: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Primary">@score</MudChip> </MudText>
+            <MudProgressLinear Color="Color.Primary" Value="@(score * 2)" Size="Size.Medium" />
         }
     </DialogContent>
     <DialogActions>

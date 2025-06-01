@@ -14,13 +14,13 @@
 
             ButtonContext context = _contexts[local_i];
 
-            <MudButton Class="@context.Style" Variant="Variant.Outlined" Disabled="context.isDisabled" @onclick="@(e => OnAnswerClick(context))">
+            <MudButton Style="@(context.Style)" Variant="Variant.Outlined" Disabled="Disabled" @onclick="@(e => OnAnswerClick(context))">
                 <MudText Typo="Typo.body1">@answer</MudText>
             </MudButton>
         }
     </MudStack>
 </div>
-@if (this.Status != -1)
+@if (this.Status != -1 && this.Show)
 {
     <MudDivider DividerType="DividerType.Middle" />
     <MudChip T="string" Class="d-flex align-center" Style="font-size:1.5rem" Variant="Variant.Text" Color="@Color" Size="Size.Large">@_resultText</MudChip>
@@ -32,6 +32,17 @@
 
     [Parameter]
     public EventCallback<int> QuestionAnsweredCallback { get; set; }
+
+    private bool _Show = false;
+    [Parameter]
+    public bool Show 
+    {
+        get => this._Show; 
+        set
+        {
+            this._Show = value;
+        }
+    }
 
     private record ButtonContext
     {
@@ -60,6 +71,7 @@
         {
             this.BackgroundColor = value switch
             {
+                var n when !Show => "",
                 0 => Colors.Red.Accent4,
                 1 => Colors.Green.Accent4,
                 2 => Colors.Amber.Accent4,
@@ -67,6 +79,7 @@
             };
             this.Color = value switch
             {
+                var n when !Show => Color.Default,
                 0 => Color.Error,
                 1 => Color.Success,
                 2 => Color.Warning,
@@ -74,6 +87,7 @@
             };
             this.CssStyle = value switch
             {
+                var n when !Show => CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css,
                 0 => CSS.GetStripedBackground("#f5454575", "#b32d2d75").Css,
                 1 => CSS.GetStripedBackground("#71f07775", "#4db05275").Css,
                 2 => CSS.GetStripedBackground("#fa871b75", "#cf701675").Css,
@@ -122,10 +136,16 @@
 
     private async void OnAnswerClick(ButtonContext context)
     {
+        this.Status = context.Status;
+        if (!this.Show)
+        {
+            await QuestionAnsweredCallback.InvokeAsync(Status);
+            return;
+        }
+
         foreach (ButtonContext ctx in this._contexts)
         {
             ctx.isDisabled = true;
-            this.Status = context.Status;
             if (ctx == context)
             {
                 ctx.Style = getClassByStatus(ctx.Status);

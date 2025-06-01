@@ -12,8 +12,8 @@
     @if(this.AllowJsonView)
     {
         <div style="position: relative">
-            <MudChip T="string" Color="@Color" Style="position: absolute; right: -20px; top: -20px; z-index:1" OnClick="@(this.SwitchView)">
-                <MudIcon Icon="@Icons.Material.Filled.DataObject"></MudIcon>
+            <MudChip T="string" Color="@Color" Style="position: absolute; right: -20px; top: -20px; z-index:1" OnClick="@(this.SwitchView)" Disabled="Disabled">
+                <MudIcon Icon="@Icons.Material.Filled.DataObject" Disabled="Disabled"></MudIcon>
             </MudChip>
         </div>
     }
@@ -48,7 +48,7 @@
                 {
                     @foreach (string tag in QuestionModel.Tags)
                     {
-                        <MudChip Class="ml-4" T="string" Style="font-size:1rem" Variant="Variant.Filled" Color="@this.Color" Size="Size.Medium">
+                        <MudChip Class="ml-4" T="string" Style="font-size:1rem" Variant="Variant.Filled" Color="@this.Color" Size="Size.Medium" Disabled="Disabled">
                             <MudHighlighter Text="@tag" HighlightedText="@HighlitedText" />
                         </MudChip>
                     }
@@ -77,6 +77,9 @@
 
     [Parameter] 
     public int? Index { get; set; }
+
+    [Parameter]
+    public bool Disabled { get; set; } = false;
 
     protected string[] LatexContainerIds { get; set; }
     protected Color Color { get; set; } = Color.Default;

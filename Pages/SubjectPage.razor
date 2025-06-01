@@ -51,7 +51,7 @@
 		<MudItem xs="12">
 			<MudStack Row="true">
 				<MudPaper Width="85%">
-					<MudToggleGroup Style="height: 100px;" Class="mud-width-full" T="int" SelectedClass="@cst" Color="@color" @bind-Value="this._num">
+					<MudToggleGroup Style="height: 100px;" Class="mud-width-full" T="int" SelectedClass="@cst" Color="@color" @bind-Value="this._num" Disabled="this.specialMode">
 						<MudToggleItem Value="@(5)">
 							<div class="mud-width-full mud-height-full">
 								<div class="d-flex align-center justify-space-between flex-wrap">
@@ -83,15 +83,18 @@
 					<MudDivider DividerType="DividerType.Middle" />
 					<MudCollapse Expanded="_expanded">
 						<MudStack Row Spacing="4" Wrap="Wrap.Wrap">
-							<MudCheckBox @bind-Value="this._random" Color="@color">
+							<MudCheckBox @bind-Value="this._random" Disabled="this.specialMode" Color="@color">
 								Перемешать
 							</MudCheckBox>
-							<MudCheckBox @bind-Value="this._allowJsonView" Color="@color">
+							<MudCheckBox @bind-Value="this._allowJsonView" Disabled="this.specialMode" Color="@color">
 								Расширенный вид
 							</MudCheckBox>
-							<MudNumericField Class="ml-4 mr-4" Immediate="false" Label="Min" T="int" @bind-Value="this._min" HelperText="@this._min.ToString()" Min="0" Max="this._max" />
-							<MudNumericField Class="ml-4 mr-4" Immediate="false" Label="Num" T="int" @bind-Value="this._num" HelperText="@this._num.ToString()" Min="1" Max="this._max - this._min" />
-							<MudNumericField Class="ml-4 mr-4" Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
+							<MudCheckBox @bind-Value="this.specialMode" Color="@color">
+								Режим Одлара
+							</MudCheckBox>
+							<MudNumericField Disabled="this.specialMode" Class="ml-4 mr-4" Immediate="false" Label="Min" T="int" @bind-Value="this._min" HelperText="@this._min.ToString()" Min="0" Max="this._max" />
+							<MudNumericField Disabled="this.specialMode" Class="ml-4 mr-4" Immediate="false" Label="Num" T="int" @bind-Value="this._num" HelperText="@this._num.ToString()" Min="1" Max="this._max - this._min" />
+							<MudNumericField Disabled="this.specialMode" Class="ml-4 mr-4" Immediate="false" Label="Max" T="int" @bind-Value="this._max" HelperText="@this._max.ToString()" Min="this._num" Max="this._ultimateMax" />
 						</MudStack>
 					</MudCollapse>
 					<MudButton Style="height: 80px;" Variant="Variant.Outlined" Color="@color" FullWidth="true" @onclick="@(x => OnStartTest())">Запустить</MudButton>
@@ -125,6 +128,17 @@
 
 	private bool _random = true;
 	private bool _allowJsonView = false;
+
+	private bool _specialMode = false;
+	private bool specialMode 
+	{
+		get => this._specialMode; 
+		set
+		{
+			this._num = 25;
+			this._specialMode = value;
+		}
+	}
 
 	private string cst
 	{
@@ -163,6 +177,11 @@
 
 	internal async void OnStartTest()
 	{
+		if(this.specialMode)
+		{
+			Navigation.NavigateTo($"Subject/Test/{this.Name}");
+			return;
+		}
 		Navigation.NavigateTo($"Subject/Test/{this.Name}/{this._num}/{this._min}/{this._max}/{this._random}/{this._allowJsonView}");
 	}
 	internal async void OnOpenQuestions()

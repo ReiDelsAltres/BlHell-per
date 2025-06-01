@@ -1,4 +1,5 @@
-﻿@page "/Subject/Test/{Name}/{num:int}/{min:int}/{max:int}/{random:bool}/{allowjsonview:bool}"
+﻿@page "/Subject/Test/{Name}"
+@page "/Subject/Test/{Name}/{num:int}/{min:int}/{max:int}/{random:bool}/{allowjsonview:bool}"
 
 @using System.Text.RegularExpressions;
 @using System.Web;
@@ -29,13 +30,16 @@
 
                 <MudItem xs="12" sm="6" lg="4">
                     <MudPaper>
-                        <TestQuestionView Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" AllowJsonView="allowjsonview" />
+                        <ATestQuestionView Disabled="testEnded" Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" AllowJsonView="allowjsonview" Show="@(!this.specialMode || testEnded)" />
                     </MudPaper>
                 </MudItem>
             }
         </MudGrid>
-
-        <TestinPage_TestEndDialog @ref="_dialog" Statuses="statuses"/>
+        @if(this.specialMode)
+        {
+            <MudButton Class="pa-5 mb-15" Size="Size.Large" Variant="Variant.Outlined" FullWidth="true" @onclick="@(x => onSubmit())">Закончить тест</MudButton>
+        }
+        <TestinPage_TestEndDialog Statuses="statuses" @bind-Visible="showDialog"/>
     </div>
 }
 
@@ -69,7 +73,9 @@
     private int[] statuses;
 
     private bool shouldRender = true;
-    private TestinPage_TestEndDialog _dialog;
+    private bool specialMode = false;
+    private bool showDialog = false;
+    private bool testEnded = false;
 
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
@@ -88,6 +94,16 @@
         SerializationHandler<Question> serializationHandler = 
         await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http, JS);
 
+        this.specialMode = this.num == default;
+        if (this.specialMode)
+        {
+            this.num = 25;
+            this.min = 0;
+            this.max = serializationHandler.Questions.Length;
+            this.random = true;
+            this.allowjsonview = false;
+        }
+
         Question[] questions = serializationHandler.Questions.Extract(this.min,this.max);
         if (random) questions.Shuffle();
 
@@ -101,18 +117,19 @@
 
         await base.OnInitializedAsync();
     }
-    private async void onQuestionAnswered(int status)
+    private async void onQuestionAnswered((int,int) args)
     {
-        this.statuses[this.statusesCounter++] = status;
+        this.statuses[args.Item2-1] = args.Item1;
         this.shouldRender = false;
 
-        if (Array.FindAll(statuses, e => e == -1).Count() == 0) this._dialog.changeVisiblity(true);
+        if (Array.FindAll(statuses, e => e == -1).Count() == 0) this.showDialog = true;
+    }
+    private async Task onSubmit()
+    {
+        this.showDialog = true;
+        this.testEnded = true;
     }
 
-    protected override void OnParametersSet()
-    {
-        base.OnParametersSet();
-    }
     protected override bool ShouldRender()
     {
         if (!this.shouldRender)
