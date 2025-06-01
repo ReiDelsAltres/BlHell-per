@@ -558,7 +558,7 @@
         "$y = Csin x$",
         "$y = \\frac{C}{cos x}$",
         "$y = Ccos x$",
-        "$y = Csin x$",
+        "$y = \\frac{C}{sin x}$",
         "$y = Ctg x$"
       ]
     },
