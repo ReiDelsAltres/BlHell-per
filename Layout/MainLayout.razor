@@ -21,8 +21,10 @@
             </MudAppBar>
         </MudHidden>
         <MudHidden Breakpoint="Breakpoint.Xs">
-            <MudDrawer ClipMode="DrawerClipMode.Docked" Anchor="Anchor.Start" @bind-Open="@_open" Breakpoint="Breakpoint.None"  
-            Elevation="1" Variant="@DrawerVariant.Mini" OpenMiniOnHover="true" Style="position:fixed;">
+            <MudDrawer @onmouseenter="@(async e => {await Task.Delay(1000,source.Token); this._open = true;})" 
+                @onmouseleave="@(e => {this.source.Cancel(); this.source = new(); this._open = false;})"
+                ClipMode="DrawerClipMode.Docked" Anchor="Anchor.Start" Open="_open" Breakpoint="Breakpoint.None"
+                Elevation="1" Variant="@DrawerVariant.Mini" Style="position:fixed;">
                 <MudDrawerHeader>
                     <MudText class="ml-n2">Bl-Hell-per</MudText>
                 </MudDrawerHeader>
@@ -44,17 +46,14 @@
 @code {
     private bool _open = false;
 
-    private void ToggleDrawer()
-    {
-        _open = !_open;
-    }
-
     private MudTheme _theme = new();
     public static bool IsDarkMode { get; set; } = true;
 
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private CancellationTokenSource source = new();
+
 
     private void ToggleNavMenu()
     {
