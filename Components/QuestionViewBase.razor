@@ -87,7 +87,6 @@
     protected string? Class { get; set; }
     protected string? CssStyle { get; set; }
 
-
     private string _JsonOriginate { get; set; }
     private bool _IsJsonView = false;
 
@@ -101,9 +100,6 @@
     {
         this._IsJsonView = !this._IsJsonView;
     }
-
-    // HTML-строка, полученная через KaTeX
-    private string formatedTitle;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

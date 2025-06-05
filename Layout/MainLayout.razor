@@ -1,7 +1,8 @@
 ﻿@inherits LayoutComponentBase
 
 @* Required *@
-<MudThemeProvider />
+<MudThemeProvider @bind-IsDarkMode="@IsDarkMode" Theme="_theme" />
+
 <MudPopoverProvider />
 
 @* Needed for dialogs *@
@@ -10,14 +11,53 @@
 @* Needed for snackbars *@
 <MudSnackbarProvider />
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<MudLayout>
+    <MudDrawerContainer>
+        <MudHidden Breakpoint="Breakpoint.Xs" Invert>
+            <MudAppBar Dense Fixed="false">
+                <MudNavLink Icon="@Icons.Material.Filled.Store" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
+                <MudNavLink Icon="@Icons.Material.Filled.Apps" Match="NavLinkMatch.All" Href="QuestionViewPage">Questions</MudNavLink>
+                <MudToggleIconButton Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
+            </MudAppBar>
+        </MudHidden>
+        <MudHidden Breakpoint="Breakpoint.Xs">
+            <MudDrawer ClipMode="DrawerClipMode.Docked" Anchor="Anchor.Start" @bind-Open="@_open" Breakpoint="Breakpoint.None"  
+            Elevation="1" Variant="@DrawerVariant.Mini" OpenMiniOnHover="true" Style="position:fixed;">
+                <MudDrawerHeader>
+                    <MudText class="ml-n2">Bl-Hell-per</MudText>
+                </MudDrawerHeader>
+                <MudNavMenu Dense Rounded>
+                    <MudNavLink Icon="@Icons.Material.Filled.Store" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
+                    <MudNavLink Icon="@Icons.Material.Filled.Apps" Match="NavLinkMatch.All" Href="QuestionViewPage">Questions</MudNavLink>
+                    <MudToggleIconButton Class="ml-1" Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
+                </MudNavMenu>
+            </MudDrawer>
+        </MudHidden>
+        <MudMainContent>
+            <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="mt-n10">
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudDrawerContainer>
+</MudLayout>
 
-    <main>
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+@code {
+    private bool _open = false;
+
+    private void ToggleDrawer()
+    {
+        _open = !_open;
+    }
+
+    private MudTheme _theme = new();
+    public static bool IsDarkMode { get; set; } = true;
+
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

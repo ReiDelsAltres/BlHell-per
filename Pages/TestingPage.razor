@@ -21,26 +21,25 @@
     </div>
 } else 
 {
-    <div class="question-grid" style="display:grid">
-        <MudGrid class="pb-20">
-            @for (int i = 0; i < questionsArray.Length; i++)
-            {
-                int local_i = i;
-                Question question = questionsArray[local_i];
-
-                <MudItem xs="12" sm="6" lg="4">
-                    <MudPaper>
-                        <ATestQuestionView Disabled="testEnded" Index="local_i + 1" QuestionModel="@question" QuestionAnsweredCallback="@(this.onQuestionAnswered)" AllowJsonView="allowjsonview" Show="@(!this.specialMode || testEnded)" />
-                    </MudPaper>
-                </MudItem>
-            }
-        </MudGrid>
-        @if(this.specialMode)
+    <MudGrid class="pb-20">
+        @for (int i = 0; i < questionsArray.Length; i++)
         {
-            <MudButton Class="pa-5 mb-15" Size="Size.Large" Variant="Variant.Outlined" FullWidth="true" @onclick="@(x => onSubmit())">Закончить тест</MudButton>
+            int local_i = i;
+            Question question = questionsArray[local_i];
+
+            <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
+                <MudPaper>
+                    <TestQuestionView Index="local_i + 1" QuestionModel="@question" OnAnswerClickCallback="@(e => this.onQuestionAnswered(e,local_i))"
+                                      AllowJsonView="allowjsonview" Immediate="@(!specialMode)" IsCompleted="@testEnded" />
+                </MudPaper>
+            </MudItem>
         }
-        <TestinPage_TestEndDialog Statuses="statuses" @bind-Visible="testEnded"/>
-    </div>
+    </MudGrid>
+    @if (this.specialMode)
+    {
+        <MudButton Class="pa-5 mb-15" Size="Size.Large" Variant="Variant.Outlined" FullWidth="true" @onclick="@(x => this.testEnded = true)">Закончить тест</MudButton>
+    }
+    <TestinPage_TestEndDialog Statuses="statuses" Visible="@(testEnded && this.statuses.Length == 25)" />
 }
 
 @code {
@@ -74,7 +73,6 @@
 
     private bool shouldRender = true;
     private bool specialMode = false;
-    private bool showDialog = false;
     private bool testEnded = false;
 
     protected override Task OnAfterRenderAsync(bool firstRender)
@@ -113,25 +111,18 @@
         this.statuses = new int[this.num];
         Array.Fill(this.statuses,-1);
 
-        //this.questionsArray.Shuffle();
-
         await base.OnInitializedAsync();
     }
-    private async void onQuestionAnswered((int,int) args)
+    private async void onQuestionAnswered(int result,int index)
     {
-        this.statuses[args.Item2-1] = args.Item1;
+        this.statuses[index] = result;
         this.shouldRender = false;
 
-        if (Array.FindAll(statuses, e => e == -1).Count() == 0)
+        if (Array.FindAll(statuses, e => e == -1).Count() == 0 && !this.specialMode)
         {
-            await this.onSubmit();
+            this.testEnded = true;
             this.StateHasChanged();
         }
-    }
-    private async Task onSubmit()
-    {
-        this.showDialog = true;
-        this.testEnded = true;
     }
 
     protected override bool ShouldRender()

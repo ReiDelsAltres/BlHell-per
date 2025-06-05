@@ -5,23 +5,23 @@
 <MudDivider DividerType="DividerType.Middle" />
 <div id="@("latexContainerAnswers" + Index)">
     <MudStack class="ma-4" Row Wrap="Wrap.Wrap" Spacing="1">
-        @for (int i = 0; i < QuestionModel.Answers.Length; i++)
+        @foreach(AnswerContext context in this.answerContexts)
         {
-            int local_i = i;
-
-            string? answer = QuestionModel.Answers[local_i];
-            if (answer == null || answer == "") continue;
-
-            ButtonContext context = _contexts[local_i];
-
-            <MudButton Style="@(context.Style)" Variant="Variant.Outlined" Disabled="Disabled" @onclick="@(e => OnAnswerClick(context))">
-                <MudText Typo="Typo.body1">@answer</MudText>
+            <MudButton Style="@context.CssStyle" Variant="Variant.Outlined" Disabled="Disabled" @onclick="@(e => OnAnswerClick(context))">
+                <MudText Typo="Typo.body1">@context.Answer</MudText>
             </MudButton>
         }
     </MudStack>
 </div>
-@if (this.Status != -1 && this.Show)
+@if (this.IsCompleted)
 {
+    string _resultText = this.status switch
+    {
+        0 => "Неверно",
+        1 => "Верно",
+        2 => "Пропущено"
+    };
+
     <MudDivider DividerType="DividerType.Middle" />
     <MudChip T="string" Class="d-flex align-center" Style="font-size:1.5rem" Variant="Variant.Text" Color="@Color" Size="Size.Large">@_resultText</MudChip>
 }
@@ -30,133 +30,163 @@
 @code {
     protected override RenderFragment BaseContent => (builder) => base.BuildRenderTree(builder);
 
+    #region Parameters
     [Parameter]
-    public EventCallback<int> QuestionAnsweredCallback { get; set; }
+    public EventCallback<int> OnAnswerClickCallback { get; set; }
 
-    private bool _Show = false;
+    private bool _IsCompleted;
     [Parameter]
-    public bool Show 
+    public bool IsCompleted
     {
-        get => this._Show; 
+        get => this._IsCompleted;
         set
         {
-            this._Show = value;
+            if (_IsCompleted == value) return;
+            this._IsCompleted = value;
+            this.Disabled = value;
+
+            this.ReApplyStyle();
         }
     }
 
-    private record ButtonContext
-    {
-        public int Status { get; init; } = 0;
-        public string Style { get; set; }
-        public bool isDisabled { get; set; } = false;
-    }
+    [Parameter]
+    public bool Immediate { get; set; } = true;
+    [Parameter]
+    public QuestionStyle Style { get; set; } = QuestionStyle.DEFAULT;
 
-    private ButtonContext[] _contexts;
+    #endregion Parameters
 
-    private string _resultText
-    {
-        get => this.Status switch
-        {
-            0 => "Неверно",
-            1 => "Верно",
-            2 => "Пропущено"
-        };
-    }
+    private AnswerContext[] answerContexts;
 
-    private int _Status = -1;
-    public int Status 
-    {
-        get => this._Status;
-        set
-        {
-            this.BackgroundColor = value switch
-            {
-                var n when !Show => "",
-                0 => Colors.Red.Accent4,
-                1 => Colors.Green.Accent4,
-                2 => Colors.Amber.Accent4,
-                _ => ""
-            };
-            this.Color = value switch
-            {
-                var n when !Show => Color.Default,
-                0 => Color.Error,
-                1 => Color.Success,
-                2 => Color.Warning,
-                _ => Color.Default
-            };
-            this.CssStyle = value switch
-            {
-                var n when !Show => CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css,
-                0 => CSS.GetStripedBackground("#f5454575", "#b32d2d75").Css,
-                1 => CSS.GetStripedBackground("#71f07775", "#4db05275").Css,
-                2 => CSS.GetStripedBackground("#fa871b75", "#cf701675").Css,
-                _ => ""
-            };
-            this._Status = value;
-        }
-    }
+    private int status = -1;
+
+    #region Support
+
+    #endregion Support
+
+    #region Override
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
 
         this.LatexContainerIds = new string[] { "latexContainerAnswers" + Index };
 
-        QuestionModel.Shuffle();
-        QuestionModel.InsertAnswer("Пропустить вопрос");
+        this.QuestionModel.Shuffle();
+        this.QuestionModel.InsertAnswer("Пропустить вопрос");
 
-        this._contexts = new ButtonContext[QuestionModel.Answers.Length];
-        for (int i = 0; i < this.QuestionModel.Answers.Length; i++)
+        this.answerContexts = new AnswerContext[this.QuestionModel.Answers.Length];
+        for (int i = 0; i < this.answerContexts.Length; i++)
         {
-            this._contexts[i] = new ButtonContext()
+            string answer = this.QuestionModel.Answers[i];
+
+            int rid = this.QuestionModel.RId ?? 1;
+            int status = i switch
+            {
+                var n when i == rid => 1,
+                var n when (i+1) == this.answerContexts.Length => 2,
+                _ => 0
+            };
+
+            this.answerContexts[i] = new AnswerContext(status, answer);
+        }
+    }
+    #endregion Override
+
+    private void ReApplyStyle()
+    {
+        this.CssStyle = this.Style.CssStyle(this.status, this.IsCompleted);
+        this.Color = this.Style.Color(this.status, this.IsCompleted);
+        this.BackgroundColor = this.Style.BackgroundColor(this.status, this.IsCompleted);
+        foreach (AnswerContext context in this.answerContexts)
+        {
+            context.CssStyle = this.Style.ButtonCssStyle(context.isLastPressed, context.Status, this.IsCompleted);
+        }
+        var v = "";
+    }
+
+    private async Task OnAnswerClick(AnswerContext context)
+    {
+        foreach (AnswerContext lcontext in this.answerContexts)
+        {
+            lcontext.isLastPressed = false;
+        }
+
+        context.isLastPressed = true;
+        this.status = context.Status;
+
+        await this.OnAnswerClickCallback.InvokeAsync(context.Status);
+
+        if (this.Immediate)
+        {
+            this.IsCompleted = true;
+        } else
+        {
+            this.ReApplyStyle();
+        }
+    }
+
+    #region Structs
+    private record AnswerContext
+    {
+        public AnswerContext(int status, string answer) => 
+            (this.Status,this.Answer) = (status,answer);
+
+        public int Status { get; init; }
+        public string Answer { get; init; }
+
+        public string CssStyle { get; set; } = "";
+
+        public bool isLastPressed { get; set; }
+    }
+    public struct QuestionStyle
+    {
+        public static QuestionStyle DEFAULT = new QuestionStyle()
+        {
+                CssStyle = (status, isCompleted) => status switch
                 {
-                    Status = i == this.QuestionModel.RId ? 1 : i == 5 ? 2 : 0
-                };
-        }
-    }
-    private string getClassByStatus(int status)
-    {
-        return status switch
-        {
-            0 => "custom-striped hard op75",
-            1 => "custom-striped easy op75",
-            2 => "custom-striped medium op75",
-            _ => ""
+                    var n when !isCompleted && status != -1 => CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css,
+
+                    0 => CSS.GetStripedBackground("#f5454575", "#b32d2d75").Css,
+                    1 => CSS.GetStripedBackground("#71f07775", "#4db05275").Css,
+                    2 => CSS.GetStripedBackground("#fa871b75", "#cf701675").Css,
+                    _ => ""
+                },
+                Color = (status, isCompleted) => status switch
+                {
+                    var n when !isCompleted && status != -1 => MudBlazor.Color.Default,
+
+                    0 => MudBlazor.Color.Error,
+                    1 => MudBlazor.Color.Success,
+                    2 => MudBlazor.Color.Warning,
+                    _ => MudBlazor.Color.Default
+                },
+                BackgroundColor = (status, isCompleted) => status switch
+                {
+                    var n when !isCompleted && status != -1 => "",
+
+                    0 => Colors.Red.Accent4,
+                    1 => Colors.Green.Accent4,
+                    2 => Colors.Amber.Accent4,
+                    _ => ""
+                },
+                ButtonCssStyle = (isLastPressed, status, isCompleted) => status switch
+                {
+                    var n when isLastPressed && (!isCompleted && status != -1) => CSS.GetStripedBackground("#fffff550", "#b3b2a450").Css,
+                    var n when (isCompleted && !isLastPressed) && status == 1 => "background-color: #71f07775",
+                    var n when !isLastPressed => "",
+
+                    0 => CSS.GetStripedBackground("#f5454575", "#b32d2d75").Css,
+                    1 => CSS.GetStripedBackground("#71f07775", "#4db05275").Css,
+                    2 => CSS.GetStripedBackground("#fa871b75", "#cf701675").Css,
+                    _ => ""
+                }
         };
+
+        public required Func<bool, int, bool, string> ButtonCssStyle;
+
+        public required Func<int, bool, string> CssStyle;
+        public required Func<int, bool, Color> Color;
+        public required Func<int, bool, string> BackgroundColor;
     }
-    private string getClassByStatus1(int status)
-    {
-        return status switch
-        {
-            1 => "custom-easy op75 ",
-            _ => ""
-        };
-    }
-
-
-    private async void OnAnswerClick(ButtonContext context)
-    {
-        this.Status = context.Status;
-        if (!this.Show)
-        {
-            await QuestionAnsweredCallback.InvokeAsync(Status);
-            return;
-        }
-
-        foreach (ButtonContext ctx in this._contexts)
-        {
-            ctx.isDisabled = true;
-            if (ctx == context)
-            {
-                ctx.Style = getClassByStatus(ctx.Status);
-            }
-            else if (ctx.Status == 1)
-            {
-                ctx.Style = getClassByStatus1(ctx.Status);
-            }
-
-        }
-        await QuestionAnsweredCallback.InvokeAsync(Status);
-    }
-
+    #endregion Structs
 }
