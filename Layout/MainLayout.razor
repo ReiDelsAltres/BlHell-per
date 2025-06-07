@@ -15,7 +15,7 @@
     <MudDrawerContainer>
         <MudHidden Breakpoint="Breakpoint.Xs" Invert>
             <MudAppBar Dense Fixed="false">
-                <MudNavLink Icon="@Icons.Material.Filled.Store" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
+                <MudNavLink Icon="@Icons.Material.Filled.Home" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
                 <MudNavLink Icon="@Icons.Material.Filled.Apps" Match="NavLinkMatch.All" Href="QuestionViewPage">Questions</MudNavLink>
                 <MudToggleIconButton Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
             </MudAppBar>
@@ -49,14 +49,5 @@
     private MudTheme _theme = new();
     public static bool IsDarkMode { get; set; } = true;
 
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
     private CancellationTokenSource source = new();
-
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
 }
