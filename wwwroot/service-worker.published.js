@@ -14,7 +14,7 @@ self.addEventListener("load", checkConnectivity);
 
 const cacheNamePrefix = 'offline-cache-';
 const cacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
-const offlineAssetsInclude = [/\.dll$/, /\.pdb$/, /\.wasm/, /\.html/, /\.js$/, /\.json$/, /\.css$/, /\.woff$/, /\.png$/, /\.jpe?g$/, /\.gif$/, /\.ico$/, /\.blat$/, /\.dat$/, /\.br/];
+const offlineAssetsInclude = [/\.dll$/, /\.pdb$/, /\.wasm/, /\.html/, /\.js$/, /\.json$/, /\.css$/, /\.woff$/, /\.png$/, /\.jpe?g$/, /\.gif$/, /\.ico$/, /\.blat$/, /\.dat$/,];
 const offlineAssetsExclude = [/^service-worker\.js$/];
 
 async function onInstall(event) {
@@ -23,8 +23,8 @@ async function onInstall(event) {
     // Fetch and cache all matching items from the assets manifest
 
     const assets = self.assetsManifest.assets
-        .filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
-        .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url))) 
+        //.filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
+        //.filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url))) 
 
     const assetsRequests = assets.map(asset => {
         console.info(asset)
