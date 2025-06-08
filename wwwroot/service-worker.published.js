@@ -36,7 +36,7 @@ async function onInstall(event) {
     console.info('Service worker: Install - End');
 }
 async function onFetch(event) {
-    console.info('Service worker: Fetch - End');
+    console.info('Service worker: Fetch - Start');
     let cachedResponse = null;
     if (event.request.method === 'GET') {
         // For all navigation requests, try to serve index.html from cache
