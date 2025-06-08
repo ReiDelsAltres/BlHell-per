@@ -5,28 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlHell-per</title>
-    <base href="/" />
+    <base href="/BlHell-per/" />
 
-    <link href="manifest.webmanifest" rel="manifest" />
-    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
-
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icon-512.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="icon-192.png" sizes="192x192" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
-
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="BlHell-per.styles.css" rel="stylesheet" />
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/extended.css" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="BlHell-per.styles.css" />
 
-    <!---<link href="_content/Toolbelt.Blazor.PWA.Updater/Toolbelt.Blazor.PWA.Updater.bundle.scp.css"
-          rel="stylesheet" />--->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="_content/MudBlazor/MudBlazor.min.css" />
 
-    <!-- Подключаем KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
           integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
 </head>
 
@@ -45,79 +38,15 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <!---<script>navigator.serviceWorker.register('service-worker.js');</script>--->
-    <script>
-        window.saveFile = async (file, Content) => {
-            var link = document.createElement('a');
-            link.download = name;
-            link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(Content)
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-        window.loadJSON = async (url) => {
-            if (navigator.onLine) {
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error(`Ошибка загрузки: ${response.status}`);
-                    }
-                    const data = await response.json();
-                    console.log("Загруженные данные:", data);
-                    return data;
-                } catch (error) {
-                    console.error("Ошибка запроса:", error);
-                    alert("Не удалось загрузить данные из сети. Попробуйте позже.");
-                    return null;
-                }
-            } else {
-                // Пытаемся получить данные из кэша, если нет интернета
-                const cachedResponse = await caches.match(url);
-                if (cachedResponse) {
-                    const data = await cachedResponse.json();
-                    console.log("Данные из кэша:", data);
-                    return data;
-                } else {
-                    alert("Вы офлайн, и данных в кэше не найдено.");
-                    return null;
-                }
-            }
-        }
-    </script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
     <script src="_content/BlazorAnimation/blazorAnimationInterop.js"></script>
 
-    <!-- Библиотека KaTeX -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
 
-    <!-- Ваш скрипт для вызова авто-рендера (опционально) -->
-    <script src="KaTeX.cs.js"></script>
-
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/BlHell-per/service-worker.js', { scope: '/BlHell-per/' })
-                    .then(registration => {
-                        console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
-                    })
-                    .catch(error => {
-                        console.error('Ошибка регистрации сервис-воркера:', error);
-                    });
-            });
-        }
-    </script>
-
-
-
-    <!---<script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js" no-register></script>
-    <script>
-        navigator.serviceWorker.register('service-worker.js').then(registration => {
-            // 👇 Invoke this manually.
-            Toolbelt.Blazor.PWA.Updater.handleRegistration(registration);
-        });
-    </script>--->
+    <script src="KaTeX.cs.js"></script>
+    <script src="Uni.js"></script>
 </body>
 
-    </html>
+</html>
