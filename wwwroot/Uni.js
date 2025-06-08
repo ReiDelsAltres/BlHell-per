@@ -1,6 +1,6 @@
 ﻿if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/service-worker.js', { scope: '/BlHell-per/' })
+        navigator.serviceWorker.register('service-worker.js')
             .then(registration => {
                 console.log('Сервис-воркер зарегистрирован c областью:', registration.scope);
             })
