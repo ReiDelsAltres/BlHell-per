@@ -21,7 +21,7 @@
             </MudAppBar>
         </MudHidden>
         <MudHidden Breakpoint="Breakpoint.Xs">
-            <MudDrawer @onmouseenter="@(async e => {await Task.Delay(1000,source.Token); this._open = true;})" 
+            <MudDrawer @onmouseenter="@(async e => {await Task.Delay(350,source.Token); this._open = true;})" 
                 @onmouseleave="@(e => {this.source.Cancel(); this.source = new(); this._open = false;})"
                 ClipMode="DrawerClipMode.Docked" Anchor="Anchor.Start" Open="_open" Breakpoint="Breakpoint.None"
                 Elevation="1" Variant="@DrawerVariant.Mini" Style="position:fixed;">

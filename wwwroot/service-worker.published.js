@@ -35,18 +35,8 @@ async function onInstall(event) {
 
     console.info('Service worker: Install - End');
 }
-
-async function onActivate(event) {
-    console.info('Service worker: Activate');
-
-    // Delete unused caches
-    const cacheKeys = await caches.keys();
-    await Promise.all(cacheKeys
-        .filter(key => key.startsWith(cacheNamePrefix) && key !== cacheName)
-        .map(key => caches.delete(key)));
-}
-
 async function onFetch(event) {
+    console.info('Service worker: Fetch - End');
     let cachedResponse = null;
     if (event.request.method === 'GET') {
         // For all navigation requests, try to serve index.html from cache
@@ -60,12 +50,22 @@ async function onFetch(event) {
             event.request;
 
         //console.info(request);
-
+        console.info(cacheName);
         const cache = await caches.open(cacheName);
         cachedResponse = await cache.match(request);
     }
-
+    console.info('Service worker: Fetch - End');
     return cachedResponse || fetch(event.request);
+}
+
+async function onActivate(event) {
+    console.info('Service worker: Activate');
+
+    // Delete unused caches
+    const cacheKeys = await caches.keys();
+    await Promise.all(cacheKeys
+        .filter(key => key.startsWith(cacheNamePrefix) && key !== cacheName)
+        .map(key => caches.delete(key)));
 }
 
 function checkConnectivity() {
