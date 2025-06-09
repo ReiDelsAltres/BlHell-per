@@ -60,6 +60,7 @@ public class Question : IQuestion<Question>
     public static async Task<SerializationHandler<Question>> DeserializeAsync(string path, HttpClient client, IJSRuntime js)
     {
         string str;
+        bool isBrotli = Path.GetExtension(path).Contains(".br");
         try
         {
             str = await client.GetStringAsync(path);

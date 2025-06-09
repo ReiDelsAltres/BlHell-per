@@ -14,9 +14,4 @@ public static class PWA
             "loadJSON",
             $"https://reidelsaltres.github.io/BlHell-per/{resource}");
     }
-    public static async Task<TResult> AutoDeserialize<TResult>()
-    {
-
-    }
-
 }

@@ -87,14 +87,14 @@
     protected string? Class { get; set; }
     protected string? CssStyle { get; set; }
 
-    private string _JsonOriginate { get; set; }
+    private string _JsonOriginate;
     private bool _IsJsonView = false;
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
 
-        this._JsonOriginate = JsonSerializer.Serialize(QuestionModel, SerializationHandler._options);
+        this._JsonOriginate = JsonSerializer.Serialize(this.QuestionModel, SerializationHandler._options);
     }
     protected async Task SwitchView()
     {

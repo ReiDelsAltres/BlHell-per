@@ -65,7 +65,7 @@
                     }
                     <MudItem xs="12" sm="6" lg="4">
                         <MudPaper>
-                            <DataQuestionView Index="local_i+1" QuestionModel="@question" HighlitedText="@_searchValue" AllowJsonView>
+                            <DataQuestionView @key="question" Index="local_i+1" QuestionModel="@question" HighlitedText="@_searchValue" AllowJsonView>
                             </DataQuestionView>
                         </MudPaper>
                     </MudItem>

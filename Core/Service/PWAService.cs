@@ -1,7 +1,7 @@
 ﻿using Microsoft.JSInterop;
 using System.Runtime.CompilerServices;
 
-namespace Core.Service;
+namespace BlHell_per.Core.Service;
 
 public class PWAService
 {
