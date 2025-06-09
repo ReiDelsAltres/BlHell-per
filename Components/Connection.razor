@@ -1,0 +1,40 @@
+﻿@using BlHell_per.Core;
+
+@inject IJSRuntime _jsRuntime;
+@inject PWAService pWAService;
+@implements IAsyncDisposable
+
+@if (this.pWAService.IsOnline)
+{
+    @Online
+}
+else
+{
+    @Offline
+}
+
+@code {
+
+    [Parameter]
+    public RenderFragment Online { get; set; }
+
+    [Parameter]
+    public RenderFragment Offline { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        await this.pWAService.Listen(_jsRuntime);
+        this.pWAService.OnOnlineChange += (isOnline) =>
+        {
+            this.StateHasChanged();
+        };
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await this.pWAService.DisposeAsync(_jsRuntime);
+    }
+
+}

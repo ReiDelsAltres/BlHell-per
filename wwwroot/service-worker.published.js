@@ -24,7 +24,8 @@ async function onInstall(event) {
 
     const assets = self.assetsManifest.assets
         .filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
-        .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url))) 
+        .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url)))
+        .addAll()
 
     const assetsRequests = assets.map(asset => {
         console.info(asset)
@@ -66,12 +67,4 @@ async function onActivate(event) {
     await Promise.all(cacheKeys
         .filter(key => key.startsWith(cacheNamePrefix) && key !== cacheName)
         .map(key => caches.delete(key)));
-}
-
-function checkConnectivity() {
-    if (navigator.onLine) {
-        console.log("Online: You have an internet connection.");
-    } else {
-        alert("Offline: Your internet connection is lost. Please check your connection.");
-    }
 }

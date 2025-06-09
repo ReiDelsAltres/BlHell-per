@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
+@using BlHell_per.Components
+
 @* Required *@
 <MudThemeProvider @bind-IsDarkMode="@IsDarkMode" Theme="_theme" />
 
@@ -18,7 +20,14 @@
                 <MudNavLink Icon="@Icons.Material.Filled.Home" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
                 <MudNavLink Icon="@Icons.Material.Filled.Apps" Match="NavLinkMatch.All" Href="QuestionViewPage">Questions</MudNavLink>
                 <MudToggleIconButton Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
-                <div id="status" class="online"> ONLINE </div>
+                <Connection>
+                    <Online>
+                        <div style="color: green">Online</div>
+                    </Online>
+                    <Offline>
+                        <div style="color: red">Offline</div>
+                    </Offline>
+                </Connection>
             </MudAppBar>
         </MudHidden>
         <MudHidden Breakpoint="Breakpoint.Xs">
@@ -33,7 +42,14 @@
                     <MudNavLink Icon="@Icons.Material.Filled.Store" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
                     <MudNavLink Icon="@Icons.Material.Filled.Apps" Match="NavLinkMatch.All" Href="QuestionViewPage">Questions</MudNavLink>
                     <MudToggleIconButton Class="ml-1" Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
-                    <div id="status" class="online"> ONLINE </div>
+                    <Connection>
+                        <Online>
+                            <div style="color: green">Online</div>
+                        </Online>
+                        <Offline>
+                            <div style="color: red">Offline</div>
+                        </Offline>
+                    </Connection>
                 </MudNavMenu>
             </MudDrawer>
         </MudHidden>
