@@ -23,7 +23,6 @@ async function onInstall(event) {
     const assets = self.assetsManifest.assets
         .filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
         .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url)))
-        .addAll()
 
     const assetsRequests = assets.map(asset => {
         console.info(asset)
