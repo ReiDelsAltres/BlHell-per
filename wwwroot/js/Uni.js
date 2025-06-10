@@ -42,12 +42,17 @@ window.alert1 = async (string) => {
     }
 }
 window.decompressWithFflate = async (arrayBuffer) => {
+    try {
+        const compressed = new Uint8Array(arrayBuffer);
 
-    const compressed = new Uint8Array(arrayBuffer);
+        //const decompressed = fflate.decompressSync(compressed);
+        const decompressed = fflate.brotliDecompressSync(compressed);
 
-    const decompressed = fflate.decompressSync(compressed);
-
-    return Array.from(decompressed);
+        return Array.from(decompressed);
+    } catch (error) {
+        console.error("Ошибка декомпрессии Brotli:", error);
+        return null;
+    }
 }
 window.loadFromCache = async (url) => {
     try {
