@@ -43,13 +43,17 @@ window.decompressWithFflate = async (arrayBuffer) => {
     return Array.from(decompressed);
 }
 window.loadFromCache = async (url) => {
-    const cachedResponse = await caches.match(url);
-    if (cachedResponse) {
-        const arrayBuffer = await cachedResponse.arrayBuffer();
-
-        const byteArray = Array.from(new Uint8Array(arrayBuffer));
-        return byteArray
+    try {
+        const cachedResponse = await caches.match(url);
+        if (cachedResponse) {
+            const arrayBuffer = await cachedResponse.arrayBuffer();
+            const byteArray = Array.from(new Uint8Array(arrayBuffer));
+            return byteArray;
+        }
+        console.warn("Вы офлайн, и данных в кэше не найдено для URL: " + url);
+        return null;
+    } catch (error) {
+        console.error("Ошибка при загрузке из кэша:", error);
+        return null;
     }
-
-    return null;
 }
