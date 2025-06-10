@@ -9,8 +9,6 @@ self.addEventListener('fetch', event => event.respondWith(onFetch(event)));
 
 // ADD THIS MESSAGE HANDLER.
 self.addEventListener('message', event => { if (event.data?.type === 'SKIP_WAITING') self.skipWaiting() });
-// Check connectivity when the page loads
-self.addEventListener("load", checkConnectivity);
 
 const cacheNamePrefix = 'offline-cache-';
 const cacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
