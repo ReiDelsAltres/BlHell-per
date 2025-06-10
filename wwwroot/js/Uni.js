@@ -35,7 +35,11 @@ window.detectCompressionTypeWithFfflate = async (arrayBuffer) => {
     return 'unknown';
 }
 window.alert1 = async (string) => {
-    console.warn(string);
+    try {
+        console.warn(string);
+    } catch (error) {
+        console.error("Ошибка в alert1:", error);
+    }
 }
 window.decompressWithFflate = async (arrayBuffer) => {
 
