@@ -18,7 +18,7 @@ public interface IQuestion<Q> where Q : IQuestion<Q>
     public string Title { get; }
     public string[] Answers { get; }
     public static abstract SerializationHandler<Q> Deserialize(string JSON);
-    public static abstract Task<SerializationHandler<Q>> DeserializeAsync(string path,HttpClient client,IJSRuntime js);
+    public static abstract Task<SerializationHandler<Q>> DeserializeAsync(string json);
     public static abstract string Serialize(SerializationHandler<Q> handler);
 }
 public class Question : IQuestion<Question>
@@ -57,19 +57,9 @@ public class Question : IQuestion<Question>
     public static SerializationHandler<Question> Deserialize(string JSON) =>
         JsonSerializer.Deserialize<SerializationHandler<Question>>(JSON, SerializationHandler._options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
-    public static async Task<SerializationHandler<Question>> DeserializeAsync(string path, HttpClient client, IJSRuntime js)
+    public static async Task<SerializationHandler<Question>> DeserializeAsync(string json)
     {
-        string str;
-        bool isBrotli = Path.GetExtension(path).Contains(".br");
-        try
-        {
-            str = await client.GetStringAsync(path);
-        }
-        catch (Exception e)
-        {
-            str = await PWA.DeserializeResource(js, path);
-        }
-        return Question.Deserialize(str);
+        return Question.Deserialize(json);
 
         /*await client.GetFromJsonAsync<SerializationHandler<Question>>(path, SerializationHandler._options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");*/
@@ -127,8 +117,8 @@ public class SerializationHandler<Q> : SerializationHandler where Q : IQuestion<
         Q.Serialize(this);
     public static SerializationHandler<Q> Deserialize(string JSON) => 
         Q.Deserialize(JSON);
-    public static async Task<SerializationHandler<Q>> DeserializeAsync(string path, HttpClient? client, IJSRuntime? js) =>
-        await Q.DeserializeAsync(path, client, js);
+    public static async Task<SerializationHandler<Q>> DeserializeAsync(string path) =>
+        await Q.DeserializeAsync(path);
     public SerializationHandler<Q> Merge(SerializationHandler<Q> serialization) => 
         SerializationHandler<Q>.Merge(this, serialization);
     public static SerializationHandler<Q> Merge(SerializationHandler<Q> h0,SerializationHandler<Q> h1)

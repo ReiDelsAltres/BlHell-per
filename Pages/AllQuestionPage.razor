@@ -104,7 +104,7 @@
 
         Task.Run(async () =>
         {
-            SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{_SelectedSubject.Name}.json", Http, JS);
+            SerializationHandler<Question> serializationHandler = await PWA.UniversalDeserializeJson<SerializationHandler<Question>>($"resources/{_SelectedSubject.Name}.json", JS, Http, SerializationHandler._options);
 
             this.questionsArray = serializationHandler.Questions;
             this.StateHasChanged();
@@ -118,7 +118,7 @@
         {
             this._SelectedSubject = Info.Subject.getSubject(SubjectName);
 
-            SerializationHandler<Question> serializationHandler = await SerializationHandler<Question>.DeserializeAsync($"resources/{_SelectedSubject.Name}.json", Http, JS);
+            SerializationHandler<Question> serializationHandler = await PWA.UniversalDeserializeJson<SerializationHandler<Question>>($"resources/{_SelectedSubject.Name}.json", JS, Http, SerializationHandler._options);
 
             this.questionsArray = serializationHandler.Questions;
         }

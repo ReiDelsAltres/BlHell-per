@@ -2,16 +2,87 @@
 using Microsoft.JSInterop;
 using static System.Net.WebRequestMethods;
 using System.Xml.Linq;
+using System.Diagnostics.Metrics;
+using System.IO;
+using System.IO.Compression;
+using System.Text;
+using System.Text.Json;
+using System.Net.Http;
+using System;
+using System.Linq.Expressions;
 
 namespace BlHell_per.Core;
 
 public static class PWA
 {
-    public static async Task<string> DeserializeResource(IJSRuntime jSRuntime,string resource)
+    public static async Task<TResult> UniversalDeserializeJson<TResult>(string path,IJSRuntime jSRuntime, HttpClient client,JsonSerializerOptions options)
     {
-        // Передаем URL JSON-файла в нашу функцию loadJSON
-        return await jSRuntime.InvokeAsync<string>(
-            "loadJSON",
-            $"https://reidelsaltres.github.io/BlHell-per/{resource}");
+        byte[] buffer;
+        try
+        {
+            try
+            {
+                buffer = await client.GetByteArrayAsync(path + ".br");
+                buffer = await PWA.Decompress(buffer, jSRuntime);
+            } catch (Exception _)
+            {
+                buffer = await client.GetByteArrayAsync(path);
+            }
+
+        } catch (Exception _) 
+        {
+            try
+            {
+                buffer = await PWA.LoadFromCache(path + ".br", jSRuntime);
+                buffer = await PWA.Decompress(buffer, jSRuntime);
+            } catch
+            {
+                buffer = await PWA.LoadFromCache(path, jSRuntime);
+            }
+        }
+        string str = Encoding.UTF8.GetString(buffer);
+
+        return JsonSerializer.Deserialize<TResult>(str, options) ??
+        throw new ArgumentNullException("Return of Deserialization NULL");
+    }
+    public static async Task<bool> DoesUrlExist(string url, HttpClient client)
+    {
+        try
+        {
+            HttpResponseMessage response = await client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+            if (response.IsSuccessStatusCode)
+                return true;
+            return false;
+        } catch
+        {
+            return false;
+        }
+    }
+    public static async Task<byte[]> Decompress(byte[] bytes, IJSRuntime jSRuntime) =>
+    await jSRuntime.InvokeAsync<byte[]>("decompressWithFflate", bytes);
+    public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
+        await jSRuntime.InvokeAsync<byte[]>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}");
+
+    private static async Task<bool> DoesUrlExists(String url)
+    {
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                //Do only Head request to avoid download full file
+                var response = await client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //Url is available is we have a SuccessStatusCode
+                    return true;
+                }
+                return false;
+            }
+        }
+        catch
+        {
+            return false;
+        }
     }
 }

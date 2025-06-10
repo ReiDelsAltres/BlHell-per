@@ -168,7 +168,7 @@
 	protected override async Task OnInitializedAsync()
 	{
 		SerializationHandler<Question> serializationHandler = 
-			await SerializationHandler<Question>.DeserializeAsync($"resources/{Name}.json", Http, JS);
+		await PWA.UniversalDeserializeJson<SerializationHandler<Question>>($"resources/{Name}.json", JS, Http, SerializationHandler._options);
 
 		this._subject = Info.Subject.getSubject(Name);
 		this._max = serializationHandler.Questions.Length;

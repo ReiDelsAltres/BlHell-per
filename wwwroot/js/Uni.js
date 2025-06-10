@@ -10,15 +10,7 @@
     });
 }
 
-window.saveFile = async (file, Content) => {
-    var link = document.createElement('a');
-    link.download = name;
-    link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(Content)
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-window.loadJSON = async (url) => {
+/*window.loadJSON = async (url) => {
     if (navigator.onLine) {
         try {
             const response = await fetch(url);
@@ -45,23 +37,51 @@ window.loadJSON = async (url) => {
             return null;
         }
     }
-}
-window.PWA_Initialize = async (interop) => {
-    let handler = function () {
-        interop.invokeMethodAsync("PWAService.StatusChanged", navigator.onLine);
+}*/
+window.detectCompressionTypeWithFfflate = async (arrayBuffer) => {
+    const bytes = new Uint8Array(arrayBuffer);
+
+    if (bytes.length >= 2 && bytes[0] === 0x1F && bytes[1] === 0x8B) {
+        return 'gzip';
     }
 
-    window.addEventListener("online", handler);
-    window.addEventListener("offline", handler);
-
-    handler(navigator.onLine);
-
-    return handler
-}
-window.PWA_Dispose = async (handler) => {
-    if (handler != null) {
-
-        window.removeEventListener("online", handler);
-        window.removeEventListener("offline", handler);
+    try {
+        const brotliResult = fflate.brotliDecompressSync(bytes);
+        if (brotliResult && brotliResult.length > 0) {
+            return 'brotli';
+        }
+    } catch (e) {
+        // Если произошла ошибка – значит, файл не в формате Brotli.
     }
+
+    try {
+        const deflateResult = fflate.decompressSync(bytes);
+        if (deflateResult && deflateResult.length > 0) {
+            return 'deflate';
+        }
+    } catch (e) {
+        // Если ошибка – формат не определён.
+    }
+
+    return 'unknown';
+}
+window.decompressWithFflate = async (arrayBuffer) => {
+
+    const compressed = new Uint8Array(arrayBuffer);
+
+    const decompressed = fflate.decompressSync(compressed);
+
+    return Array.from(decompressed);
+}
+window.loadFromCache = async (url) => {
+    const cachedResponse = await caches.match(url);
+    const byteArray = null;
+    if (cachedResponse) {
+        const arrayBuffer = await cachedResponse.arrayBuffer();
+
+        byteArray = Array.from(new Uint8Array(arrayBuffer));
+
+    }
+
+    return byteArray;
 }
