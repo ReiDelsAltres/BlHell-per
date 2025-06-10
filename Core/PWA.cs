@@ -24,22 +24,25 @@ public static class PWA
         byte[] buffer;
         try
         {
-            if (isBrotli)
+            try
             {
                 buffer = await client.GetByteArrayAsync(path + ".br");
                 buffer = await PWA.Decompress(buffer, jSRuntime);
-            } else
+            }
+            catch (Exception ex) 
             {
                 buffer = await client.GetByteArrayAsync(path);
             }
 
+
         } catch (Exception _) 
         {
-            if (isBrotli)
+            try
             {
                 buffer = await PWA.LoadFromCache(path + ".br", jSRuntime);
                 buffer = await PWA.Decompress(buffer, jSRuntime);
-            } else
+            }
+            catch (Exception ex)
             {
                 buffer = await PWA.LoadFromCache(path, jSRuntime);
             }
