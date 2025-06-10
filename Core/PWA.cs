@@ -49,23 +49,6 @@ public static class PWA
         return JsonSerializer.Deserialize<TResult>(str, options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
     }
-    public static async Task<bool> DoesInternetExist()
-    {
-        try
-        {
-            Ping myPing = new Ping();
-            String host = "google.com";
-            byte[] buffer = new byte[32];
-            int timeout = 1000;
-            PingOptions pingOptions = new PingOptions();
-            PingReply reply = await myPing.SendPingAsync(host, timeout, buffer, pingOptions);
-            return (reply.Status == IPStatus.Success);
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
     public static async Task<bool> DoesUrlExist(string url, HttpClient client)
     {
         try
@@ -82,5 +65,5 @@ public static class PWA
     public static async Task<byte[]> Decompress(byte[] bytes, IJSRuntime jSRuntime) =>
     await jSRuntime.InvokeAsync<byte[]>("decompressWithFflate", bytes);
     public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
-        await jSRuntime.InvokeAsync<byte[]>("loadFromCache", url);
+        await jSRuntime.InvokeAsync<byte[]>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}");
 }
