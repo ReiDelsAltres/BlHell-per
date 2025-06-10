@@ -19,7 +19,7 @@ public static class PWA
     public static async Task<TResult> UniversalDeserializeJson<TResult>(string path,IJSRuntime jSRuntime, HttpClient client,JsonSerializerOptions options)
     {
         bool isBrotli = await PWA.DoesUrlExist(path + ".br",client);
-        Console.WriteLine("IsBrotli: " + isBrotli);
+        await PWA.Alert("IsBrotli: " + isBrotli, jSRuntime);
 
         byte[] buffer;
         try
@@ -62,8 +62,10 @@ public static class PWA
             return false;
         }
     }
+    public static async Task Alert(string str, IJSRuntime jSRuntime) =>
+            await jSRuntime.InvokeAsync<byte[]>("alert1", str);
     public static async Task<byte[]> Decompress(byte[] bytes, IJSRuntime jSRuntime) =>
-    await jSRuntime.InvokeAsync<byte[]>("decompressWithFflate", bytes);
+            await jSRuntime.InvokeAsync<byte[]>("decompressWithFflate", bytes);
     public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
         await jSRuntime.InvokeAsync<byte[]>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}");
 }
