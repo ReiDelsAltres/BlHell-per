@@ -18,9 +18,6 @@ public static class PWA
 {
     public static async Task<TResult> UniversalDeserializeJson<TResult>(string path,IJSRuntime jSRuntime, HttpClient client,JsonSerializerOptions options)
     {
-        bool isBrotli = await PWA.DoesUrlExist(path + ".br",client);
-        await PWA.Alert("IsBrotli: " + isBrotli, jSRuntime);
-
         byte[] buffer;
         try
         {
@@ -48,7 +45,6 @@ public static class PWA
             }
         }
         string str = Encoding.UTF8.GetString(buffer);
-        await PWA.Alert(str, jSRuntime);
 
         return JsonSerializer.Deserialize<TResult>(str, options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
