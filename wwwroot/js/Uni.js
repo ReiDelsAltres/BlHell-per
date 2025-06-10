@@ -44,13 +44,12 @@ window.decompressWithFflate = async (arrayBuffer) => {
 }
 window.loadFromCache = async (url) => {
     const cachedResponse = await caches.match(url);
-    const byteArray = null;
     if (cachedResponse) {
         const arrayBuffer = await cachedResponse.arrayBuffer();
 
-        byteArray = Array.from(new Uint8Array(arrayBuffer));
-
+        const byteArray = Array.from(new Uint8Array(arrayBuffer));
+        return byteArray
     }
 
-    return byteArray;
+    return null;
 }
