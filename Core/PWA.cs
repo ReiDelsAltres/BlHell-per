@@ -61,7 +61,7 @@ public static class PWA
     public static async Task<byte[]> Decompress(byte[] bytes, IJSRuntime jSRuntime) =>
     await jSRuntime.InvokeAsync<byte[]>("decompressWithFflate", bytes);
     public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
-        await jSRuntime.InvokeAsync<byte[]>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}");
+        await jSRuntime.InvokeAsync<byte[]>("loadFromCache", url);
 
     private static async Task<bool> DoesUrlExists(String url)
     {

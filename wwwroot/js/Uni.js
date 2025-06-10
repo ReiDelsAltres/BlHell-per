@@ -9,35 +9,6 @@
             });
     });
 }
-
-/*window.loadJSON = async (url) => {
-    if (navigator.onLine) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Ошибка загрузки: ${response.status}`);
-            }
-            const data = await response.json();
-            console.log("Загруженные данные:", data);
-            return data;
-        } catch (error) {
-            console.error("Ошибка запроса:", error);
-            alert("Не удалось загрузить данные из сети. Попробуйте позже.");
-            return null;
-        }
-    } else {
-        // Пытаемся получить данные из кэша, если нет интернета
-        const cachedResponse = await caches.match(url);
-        if (cachedResponse) {
-            const data = await cachedResponse.json();
-            console.log("Данные из кэша:", data);
-            return data;
-        } else {
-            alert("Вы офлайн, и данных в кэше не найдено.");
-            return null;
-        }
-    }
-}*/
 window.detectCompressionTypeWithFfflate = async (arrayBuffer) => {
     const bytes = new Uint8Array(arrayBuffer);
 
@@ -51,7 +22,6 @@ window.detectCompressionTypeWithFfflate = async (arrayBuffer) => {
             return 'brotli';
         }
     } catch (e) {
-        // Если произошла ошибка – значит, файл не в формате Brotli.
     }
 
     try {
@@ -60,7 +30,6 @@ window.detectCompressionTypeWithFfflate = async (arrayBuffer) => {
             return 'deflate';
         }
     } catch (e) {
-        // Если ошибка – формат не определён.
     }
 
     return 'unknown';
