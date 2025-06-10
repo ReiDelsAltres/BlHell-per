@@ -21,7 +21,8 @@ public static class PWA
         byte[] buffer;
         try
         {
-            try
+            buffer = await client.GetByteArrayAsync(path);
+            /*try
             {
                 buffer = await client.GetByteArrayAsync(path + ".br");
                 buffer = await PWA.Decompress(buffer, jSRuntime);
@@ -29,12 +30,13 @@ public static class PWA
             catch (Exception ex) 
             {
                 buffer = await client.GetByteArrayAsync(path);
-            }
+            }*/
 
 
         } catch (Exception _) 
         {
-            try
+            buffer = await PWA.LoadFromCache(path, jSRuntime);
+            /*try
             {
                 buffer = await PWA.LoadFromCache(path + ".br", jSRuntime);
                 buffer = await PWA.Decompress(buffer, jSRuntime);
@@ -42,7 +44,7 @@ public static class PWA
             catch (Exception ex)
             {
                 buffer = await PWA.LoadFromCache(path, jSRuntime);
-            }
+            }*/
         }
         string str = Encoding.UTF8.GetString(buffer);
 
