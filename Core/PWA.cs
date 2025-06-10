@@ -45,6 +45,7 @@ public static class PWA
             }
         }
         string str = Encoding.UTF8.GetString(buffer);
+        await PWA.Alert(str, jSRuntime);
 
         return JsonSerializer.Deserialize<TResult>(str, options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
