@@ -23,7 +23,7 @@ public static class PWA
         try
         {
             buffer = await client.GetByteArrayAsync(path + ".br");
-        } catch
+        } catch (Exception e)
         {
             buffer = await client.GetByteArrayAsync(path);
         }
