@@ -14,6 +14,13 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v4
 
+      - name: Validate token
+        run: |
+            if [ -z "${{ secrets.DEBUG_DEPLOY_TOKEN }}" ]; then
+            echo "DEBUG_DEPLOY_TOKEN is missing. Please configure it as a secret."
+            exit 1
+            fi
+
       # Шаг 2. Клонируем целевой (destination) репозиторий в подкаталог "destination"
       - name: Checkout destination repository
         uses: actions/checkout@v3
