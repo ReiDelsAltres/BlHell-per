@@ -36,6 +36,7 @@ jobs:
           rsync -av --delete --exclude='.git*' . ./destination/
       
       # Шаг 4. Проводим коммит и пуш в целевой репозиторий
+
       - name: Commit and push changes
         working-directory: destination
         run: |
