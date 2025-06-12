@@ -12,7 +12,7 @@ jobs:
     steps:
       # Шаг 1. Проверяем текущий репозиторий
       - name: Checkout source repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           ref: debug
 
@@ -26,13 +26,13 @@ jobs:
       # Шаг 3. Добавляем целевой репозиторий как дополнительный remote
       - name: Add destination remote
         run: |
-          git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug"
+          git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git"
           # Замените username/destination-repo.git на нужный URL целевого репозитория
 
       # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
       - name: Push changes to destination repository
         run: |
-          git push deploy debug --force
+          git push deploy HEAD:main --force
 
       # Шаг 2. Клонируем целевой (destination) репозиторий в подкаталог "destination"
       # - name: Checkout destination repository
