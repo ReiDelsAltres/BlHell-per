@@ -25,7 +25,7 @@ jobs:
       - name: Add destination remote and push
         run: |
           # Добавляем удалённый репозиторий "deploy"
-          git remote add deploy https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git
+          git remote add deploy https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug
           # Пушим ветку main в удалённый репозиторий
           git push deploy main --force
 
