@@ -33,7 +33,7 @@ jobs:
       # Можно настроить исключения (например, пропускать .git, конфигурационные файлы и т.п.)
       - name: Sync files to destination repository
         run: |
-          rsync -av --delete --exclude='.git*' . ./destination/
+          rsync -av --delete --exclude-from=.gitignore . ./destination/
       
       # Шаг 4. Проводим коммит и пуш в целевой репозиторий
 
