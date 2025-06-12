@@ -39,7 +39,7 @@ jobs:
       # 4) Синхронизируем файлы
       - name: Sync files to target
         run: |
-          rsync -av --delete --exclude-from=.gitignore ./ ./target/
+          rsync -av --delete --exclude-from=.gitignore --exclude='target' ./ ./target/
 
       # 5) Коммитим и пушим в ветку main целевого репозитория
       - name: Commit & Push to BlHell-per-Debug:main
