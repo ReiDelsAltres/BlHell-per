@@ -34,24 +34,36 @@ async function onInstall(event) {
     console.info('Service worker: Install - End');
 }
 async function onFetch(event) {
-    let cachedResponse = null;
-    if (event.request.method === 'GET') {
-        // For all navigation requests, try to serve index.html from cache
-        // If you need some URLs to be server-rendered, edit the following check to exclude those URLs
-        const shouldServeIndexHtml = event.request.mode === 'navigate';
-
-        //const request = shouldServeIndexHtml ? 'index.html' : event.request;
-
-        const request = shouldServeIndexHtml ?
-            (new URL(event.request.url)).pathname.replace(/\/$/, '') + '/index.html' :
-            event.request;
-
-        //console.info(request);
-        console.info("FETCH: " + event.request.url);
-        const cache = await caches.open(cacheName);
-        cachedResponse = await cache.match(request);
+    if (event.request.method !== 'GET') {
+        return fetch(event.request);
     }
-    return cachedResponse || fetch(event.request);
+
+    // Network First
+    try {
+        const networkResponse = await fetch(event.request);
+        // Если ответ успешный — обновляем кэш и возвращаем ответ
+        if (networkResponse && networkResponse.ok) {
+            const cache = await caches.open(cacheName);
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+        }
+        // Если ответ не ок — пробуем из кэша
+        const cache = await caches.open(cacheName);
+        const cachedResponse = await cache.match(event.request);
+        if (cachedResponse) {
+            return cachedResponse;
+        }
+        return networkResponse; // даже если не ok
+    } catch (error) {
+        // Если сеть недоступна — пробуем из кэша
+        const cache = await caches.open(cacheName);
+        const cachedResponse = await cache.match(event.request);
+        if (cachedResponse) {
+            return cachedResponse;
+        }
+        // Можно вернуть кастомный offline-ответ, если нужно
+        return Response.error();
+    }
 }
 
 async function onActivate(event) {
