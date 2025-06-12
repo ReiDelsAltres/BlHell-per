@@ -31,6 +31,8 @@ jobs:
 
       # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
       - name: Push changes to destination repository
+        env:
+          DEBUG_DEPLOY_TOKEN: ${{ secrets.DEBUG_DEPLOY_TOKEN }}
         run: |
           git push deploy HEAD:main --force
 
