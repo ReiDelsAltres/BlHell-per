@@ -13,6 +13,8 @@ jobs:
       # Шаг 1. Проверяем текущий репозиторий
       - name: Checkout source repository
         uses: actions/checkout@v4
+        with:
+          ref: debug
 
       - name: Validate token
         run: |
