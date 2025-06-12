@@ -32,7 +32,7 @@ jobs:
       # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
       - name: Push changes to destination repository
         run: |
-          git push deploy main --force
+          git push deploy debug --force
 
       # Шаг 2. Клонируем целевой (destination) репозиторий в подкаталог "destination"
       # - name: Checkout destination repository
