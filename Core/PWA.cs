@@ -20,38 +20,12 @@ public static class PWA
     {
         byte[] buffer;
 
-        //buffer = await client.GetByteArrayAsync(path);
+        buffer = await client.GetByteArrayAsync(path);
 
-        try
-        {
-            buffer = await client.GetByteArrayAsync(path + ".br");
-        }
-        catch (Exception e)
-        {
-            buffer = await client.GetByteArrayAsync(path);
-        }
+        string str = Encoding.UTF8.GetString(buffer);
 
-        try
-        {
-            string str = Encoding.UTF8.GetString(buffer);
-
-            TResult result = JsonSerializer.Deserialize<TResult>(str, options) ??
-                throw new ArgumentNullException("Return of Deserialization NULL");
-            return result;
-
-        } catch (Exception e)
-        {
-            buffer = await client.GetByteArrayAsync(path + ".br");
-            buffer = await PWA.DecompressBrotli(buffer, jSRuntime);
-
-            string str = Encoding.UTF8.GetString(buffer);
-
-            TResult result = JsonSerializer.Deserialize<TResult>(str, options) ??
-                throw new ArgumentNullException("Return of Deserialization NULL");
-            return result;
-
-        }
-
+        return JsonSerializer.Deserialize<TResult>(str, options) ??
+        throw new ArgumentNullException("Return of Deserialization NULL");
     }
     public static async Task<bool> DoesUrlExist(string url, HttpClient client)
     {
