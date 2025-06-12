@@ -20,33 +20,8 @@ public static class PWA
     {
         byte[] buffer;
 
-        try
-        {
-            //buffer = await client.GetByteArrayAsync(path);
-            try
-            {
-                buffer = await client.GetByteArrayAsync(path + ".br");
-            }
-            catch (Exception ex)
-            {
-                buffer = await client.GetByteArrayAsync(path);
-            }
+        buffer = await client.GetByteArrayAsync(path);
 
-
-        }
-        catch (Exception _)
-        {
-            buffer = await PWA.LoadFromCache(path, jSRuntime);
-            /*try
-            {
-                buffer = await PWA.LoadFromCache(path + ".br", jSRuntime);
-                buffer = await PWA.Decompress(buffer, jSRuntime);
-            }
-            catch (Exception ex)
-            {
-                buffer = await PWA.LoadFromCache(path, jSRuntime);
-            }*/
-        }
         string str = Encoding.UTF8.GetString(buffer);
 
         //buffer = await client.GetByteArrayAsync(path);
