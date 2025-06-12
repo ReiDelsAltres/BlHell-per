@@ -20,22 +20,17 @@ public static class PWA
     {
         byte[] buffer;
 
-        buffer = await client.GetByteArrayAsync(path);
-
-        string str = Encoding.UTF8.GetString(buffer);
-
         //buffer = await client.GetByteArrayAsync(path);
-        /*string str;
+
         try
         {
-            str = await client.GetStringAsync(path);
+            buffer = await client.GetByteArrayAsync(path + ".br");
         } catch(Exception e)
         {
-            throw new Exception($"Error while fetching data from {path}", e);
-            Console.WriteLine(e);
-        }*/
+            buffer = await client.GetByteArrayAsync(path);
+        }
 
-        //string str = Encoding.UTF8.GetString(buffer);
+        string str = Encoding.UTF8.GetString(buffer);
 
         return JsonSerializer.Deserialize<TResult>(str, options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
