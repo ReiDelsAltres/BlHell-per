@@ -19,6 +19,25 @@
     <RunAOTCompilation>False</RunAOTCompilation>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-03-14_22_38_05_035.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_17_37_279.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_19_59_956.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_20_16_818.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_20_28_149.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_20_40_071.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_21_41_030.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_21_52_912.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_22_20_919.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_21_47_48_958.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_22_17_42_012.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_22_18_40_383.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_22_18_52_367.yml" />
+    <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-24_01_02_07_317.yml" />
+    <None Include=".github\workflows\deployToAnotherRepo.yml" />
+    <None Include=".github\workflows\pagesDeploy.yml" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
