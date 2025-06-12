@@ -26,7 +26,7 @@ jobs:
       # Шаг 3. Добавляем целевой репозиторий как дополнительный remote
       - name: Add destination remote
         run: |
-          git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git"
+          git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug"
           # Замените username/destination-repo.git на нужный URL целевого репозитория
 
       # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
