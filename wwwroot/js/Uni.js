@@ -9,51 +9,7 @@
             });
     });
 }
-window.detectCompressionTypeWithFfflate = async (arrayBuffer) => {
-    const bytes = new Uint8Array(arrayBuffer);
 
-    if (bytes.length >= 2 && bytes[0] === 0x1F && bytes[1] === 0x8B) {
-        return 'gzip';
-    }
-
-    try {
-        const brotliResult = fflate.brotliDecompressSync(bytes);
-        if (brotliResult && brotliResult.length > 0) {
-            return 'brotli';
-        }
-    } catch (e) {
-    }
-
-    try {
-        const deflateResult = fflate.decompressSync(bytes);
-        if (deflateResult && deflateResult.length > 0) {
-            return 'deflate';
-        }
-    } catch (e) {
-    }
-
-    return 'unknown';
-}
-window.alert1 = async (string) => {
-    try {
-        console.warn(string);
-    } catch (error) {
-        console.error("Ошибка в alert1:", error);
-    }
-}
-window.decompressWithFflate = async (arrayBuffer) => {
-    try {
-        const compressed = new Uint8Array(arrayBuffer);
-
-        //const decompressed = fflate.decompressSync(compressed);
-        const decompressed = fflate.brotliDecompressSync(compressed);
-
-        return Array.from(decompressed);
-    } catch (error) {
-        console.error("Ошибка декомпрессии Brotli:", error);
-        return null;
-    }
-}
 window.loadFromCache = async (url) => {
     try {
         const cachedResponse = await caches.match(url);

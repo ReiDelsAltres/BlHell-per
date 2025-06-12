@@ -19,33 +19,16 @@ public static class PWA
     public static async Task<TResult> UniversalDeserializeJson<TResult>(string path,IJSRuntime jSRuntime, HttpClient client,JsonSerializerOptions options)
     {
         byte[] buffer;
-        try
+
+        if (await DoesUrlExist(path + ".br", client))
+        {
+            buffer = await client.GetByteArrayAsync(path + ".br");
+        }
+        else
         {
             buffer = await client.GetByteArrayAsync(path);
-            /*try
-            {
-                buffer = await client.GetByteArrayAsync(path + ".br");
-                buffer = await PWA.Decompress(buffer, jSRuntime);
-            }
-            catch (Exception ex) 
-            {
-                buffer = await client.GetByteArrayAsync(path);
-            }*/
-
-
-        } catch (Exception _) 
-        {
-            buffer = await PWA.LoadFromCache(path, jSRuntime);
-            /*try
-            {
-                buffer = await PWA.LoadFromCache(path + ".br", jSRuntime);
-                buffer = await PWA.Decompress(buffer, jSRuntime);
-            }
-            catch (Exception ex)
-            {
-                buffer = await PWA.LoadFromCache(path, jSRuntime);
-            }*/
         }
+
         string str = Encoding.UTF8.GetString(buffer);
 
         return JsonSerializer.Deserialize<TResult>(str, options) ??
@@ -66,8 +49,8 @@ public static class PWA
     }
     public static async Task Alert(string str, IJSRuntime jSRuntime) =>
             await jSRuntime.InvokeAsync<byte[]>("alert1", str);
-    public static async Task<byte[]> Decompress(byte[] bytes, IJSRuntime jSRuntime) =>
-            await jSRuntime.InvokeAsync<byte[]>("decompressWithFflate", bytes);
+    public static async Task<byte[]> DecompressBrotli(byte[] bytes, IJSRuntime jSRuntime) =>
+            await jSRuntime.InvokeAsync<byte[]>("decompressBrotli", bytes);
     public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
         await jSRuntime.InvokeAsync<byte[]>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}");
 }

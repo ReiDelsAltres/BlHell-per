@@ -31,7 +31,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.5" PrivateAssets="all" />
     <PackageReference Include="MudBlazor" Version="8.6.0" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
-    <PackageReference Include="Toolbelt.Blazor.FileDropZone" Version="3.0.1" />
   </ItemGroup>
 	
 </Project>
