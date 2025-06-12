@@ -27,7 +27,7 @@ jobs:
           # Добавляем удалённый репозиторий "deploy"
           git remote add deploy https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug
           # Пушим ветку main в удалённый репозиторий
-          git push deploy main --force
+          git push deploy debug --force
 
       # Шаг 2. Клонируем целевой (destination) репозиторий в подкаталог "destination"
       # - name: Checkout destination repository
