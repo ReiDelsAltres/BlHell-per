@@ -20,11 +20,10 @@ public static class PWA
     {
         byte[] buffer;
 
-        if (await DoesUrlExist(path + ".br", client))
+        try
         {
             buffer = await client.GetByteArrayAsync(path + ".br");
-        }
-        else
+        } catch
         {
             buffer = await client.GetByteArrayAsync(path);
         }

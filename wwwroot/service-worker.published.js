@@ -38,6 +38,11 @@ async function onFetch(event) {
         return fetch(event.request);
     }
 
+    const url = new URL(event.request.url);
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+        return fetch(event.request);
+    }
+
     // Network First
     try {
         const networkResponse = await fetch(event.request);
