@@ -23,13 +23,16 @@ jobs:
             exit 1
             fi
 
-      # Шаг 2. Добавляем целевой репозиторий как дополнительный remote и делаем push
-      - name: Add destination remote and push
+      # Шаг 3. Добавляем целевой репозиторий как дополнительный remote
+      - name: Add destination remote
         run: |
-          # Добавляем удалённый репозиторий "deploy"
-          git remote add deploy https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git
-          # Пушим ветку main в удалённый репозиторий
-          git push deploy debug --force
+          git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git"
+          # Замените username/destination-repo.git на нужный URL целевого репозитория
+
+      # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
+      - name: Push changes to destination repository
+        run: |
+          git push deploy main --force
 
       # Шаг 2. Клонируем целевой (destination) репозиторий в подкаталог "destination"
       # - name: Checkout destination repository
