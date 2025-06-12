@@ -38,8 +38,10 @@ public static class PWA
             TResult result = JsonSerializer.Deserialize<TResult>(str, options) ??
                 throw new ArgumentNullException("Return of Deserialization NULL");
             return result;
+
         } catch (Exception e)
         {
+            buffer = await client.GetByteArrayAsync(path + ".br");
             buffer = await PWA.DecompressBrotli(buffer, jSRuntime);
 
             string str = Encoding.UTF8.GetString(buffer);
@@ -47,6 +49,7 @@ public static class PWA
             TResult result = JsonSerializer.Deserialize<TResult>(str, options) ??
                 throw new ArgumentNullException("Return of Deserialization NULL");
             return result;
+
         }
 
     }
