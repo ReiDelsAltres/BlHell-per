@@ -3,10 +3,13 @@
 on:
   push:
     branches:
-      - fill  # Замените на нужную ветку исходного репозитория
+      - debug  # Замените на нужную ветку исходного репозитория
 
 jobs:
   deploy:
+    permissions:
+      contents: write  # Права на запись в целевой репозиторий
+
     runs-on: ubuntu-latest
 
     steps:

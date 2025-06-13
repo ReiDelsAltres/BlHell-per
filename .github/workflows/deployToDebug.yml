@@ -2,7 +2,7 @@
 on:
   push:
     branches:
-      - debug
+      - fill
 
 # Разрешения нужны только для checkout исходника (destination будет отдельным checkout с PAT)
 permissions:
