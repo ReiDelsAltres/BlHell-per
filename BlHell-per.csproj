@@ -35,6 +35,7 @@
     <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-23_22_18_52_367.yml" />
     <None Include=".github\workflows\.vshistory\pagesDeploy.yml\2025-05-24_01_02_07_317.yml" />
     <None Include=".github\workflows\deployToAnotherRepo.yml" />
+    <None Include=".github\workflows\deployToDebug.yml" />
     <None Include=".github\workflows\pagesDeploy.yml" />
   </ItemGroup>
 
