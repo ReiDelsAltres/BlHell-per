@@ -3,17 +3,16 @@
 on:
   push:
     branches:
-      - debug  # Замените на нужную ветку исходного репозитория
+      - debug
 
 jobs:
   deploy:
     permissions:
-      contents: write  # Права на запись в целевой репозиторий
+      contents: write
 
     runs-on: ubuntu-latest
 
     steps:
-      # Шаг 1. Проверяем текущий репозиторий
       - name: Checkout source repository
         uses: actions/checkout@v3
         with:
@@ -21,23 +20,65 @@ jobs:
 
       - name: Validate token
         run: |
-            if [ -z "${{ secrets.DEBUG_DEPLOY_TOKEN }}" ]; then
+          if [ -z "${{ secrets.DEBUG_DEPLOY_TOKEN }}" ]; then
             echo "DEBUG_DEPLOY_TOKEN is missing. Please configure it as a secret."
             exit 1
-            fi
+          fi
 
-      # Шаг 3. Добавляем целевой репозиторий как дополнительный remote
+      - name: Set up git user
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
       - name: Add destination remote
         run: |
           git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git"
-          # Замените username/destination-repo.git на нужный URL целевого репозитория
 
-      # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
-      - name: Push changes to destination repository
+      - name: Force push all files to destination repository main branch
         env:
           DEBUG_DEPLOY_TOKEN: ${{ secrets.DEBUG_DEPLOY_TOKEN }}
         run: |
+          git fetch deploy main || true
           git push deploy HEAD:main --force
+
+#on:
+#  push:
+#    branches:
+#      - debug  # Замените на нужную ветку исходного репозитория#
+#
+#jobs:
+#  deploy:
+#    permissions:
+#      contents: write  # Права на запись в целевой репозиторий#
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      # Шаг 1. Проверяем текущий репозиторий
+#      - name: Checkout source repository
+#        uses: actions/checkout@v3
+#        with:
+#          ref: debug
+#
+#      - name: Validate token
+#        run: |
+#            if [ -z "${{ secrets.DEBUG_DEPLOY_TOKEN }}" ]; then
+#            echo "DEBUG_DEPLOY_TOKEN is missing. Please configure it as a secret."
+#            exit 1
+#            fi
+
+      # Шаг 3. Добавляем целевой репозиторий как дополнительный remote
+#      - name: Add destination remote
+#        run: |
+#          git remote add deploy "https://x-access-token:${{ secrets.DEBUG_DEPLOY_TOKEN }}@github.com/ReiDelsAltres/BlHell-per-Debug.git"
+#          # Замените username/destination-repo.git на нужный URL целевого репозитория#
+#
+#      # Шаг 4. Пушим изменения в целевой репозиторий (например, ветку main)
+#      - name: Push changes to destination repository
+#        env:
+#          DEBUG_DEPLOY_TOKEN: ${{ secrets.DEBUG_DEPLOY_TOKEN }}
+#        run: |
+#          git push deploy HEAD:main --force
 
       # Шаг 2. Клонируем целевой (destination) репозиторий в подкаталог "destination"
       # - name: Checkout destination repository
