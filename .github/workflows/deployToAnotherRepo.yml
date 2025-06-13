@@ -5,11 +5,11 @@ on:
     branches:
       - debug
 
+permissions:
+  contents: write # Allow write access to the destination repository
+
 jobs:
   deploy:
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
 
     steps:
