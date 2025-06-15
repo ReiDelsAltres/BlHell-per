@@ -21,6 +21,7 @@ public static class PWA
         byte[] buffer;
 
         buffer = await client.GetByteArrayAsync(path + ".br");
+        buffer = await PWA.DecompressBrotli(buffer, jSRuntime);
 
         string str = Encoding.UTF8.GetString(buffer);
 
