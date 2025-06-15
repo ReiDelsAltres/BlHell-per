@@ -19,6 +19,17 @@
     <RunAOTCompilation>False</RunAOTCompilation>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove=".github\workflows\.vshistory\**" />
+    <Content Remove=".github\workflows\.vshistory\**" />
+    <EmbeddedResource Remove=".github\workflows\.vshistory\**" />
+    <None Remove=".github\workflows\.vshistory\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".github\workflows\pagesDeploy.yml" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
