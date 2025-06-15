@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\pagesDeployDebug.yml" />
     <None Include=".github\workflows\pagesDeploy.yml" />
   </ItemGroup>
 
