@@ -20,7 +20,7 @@ public static class PWA
     {
         byte[] buffer;
 
-        buffer = await client.GetByteArrayAsync(path);
+        buffer = await client.GetByteArrayAsync(path + ".br");
 
         string str = Encoding.UTF8.GetString(buffer);
 
