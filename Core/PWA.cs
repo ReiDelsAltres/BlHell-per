@@ -51,7 +51,7 @@ public static class PWA
     public static async Task Alert(string str, IJSRuntime jSRuntime) =>
             await jSRuntime.InvokeAsync<byte[]>("alert1", str);
     public static async Task<byte[]> DecompressBrotli(byte[] bytes, IJSRuntime jSRuntime) =>
-            await jSRuntime.InvokeAsync<byte[]>("decompressBrotli", bytes);
+            await jSRuntime.InvokeAsync<string>("decompressBrotli", bytes).AsTask().FromBase64ToArray();
     public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
-        await jSRuntime.InvokeAsync<byte[]>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}");
+        await jSRuntime.InvokeAsync<string>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}").AsTask().FromBase64ToArray();
 }

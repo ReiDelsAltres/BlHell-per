@@ -16,7 +16,10 @@ window.compressBrotli = (buffer) => {
 
     const result =  window.brotliWasm.compress(jsArray);
 
-    return Array.from(result);
+    let binary = "";
+    result.forEach(b => binary += String.fromCharCode(b));
+    // Преобразуем в Base64
+    return btoa(binary);
 };
 
 // Функция для декомпрессии
@@ -28,6 +31,8 @@ window.decompressBrotli = (buffer) => {
     }
 
     const result =  window.brotliWasm.decompress(jsArray);
-
-    return Array.from(result);
+    let binary = "";
+    result.forEach(b => binary += String.fromCharCode(b));
+    // Преобразуем в Base64
+    return btoa(binary);
 };
