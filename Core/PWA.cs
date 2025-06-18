@@ -20,7 +20,7 @@ public static class PWA
     {
         byte[] buffer;
 
-        if (await PWA.DoesUrlExist(path + ".br", client))
+        if (await PWA.DoesUrlExistIncludingCache(path + ".br", client,jSRuntime))
         {
             Console.WriteLine("Brotli");
             buffer = await PWA.GetBytesArrayAsyncOrCache(path + ".br",client,jSRuntime);
@@ -40,6 +40,24 @@ public static class PWA
         throw new ArgumentNullException("Return of Deserialization NULL");
     }
 
+    public static async Task<bool> DoesUrlExistIncludingCache(string url, HttpClient client, IJSRuntime jSRuntime)
+    {
+        try
+        {
+            if (await PWA.DoesUrlExist(url, client))
+            {
+                return true;
+            }
+            else
+            {
+                await PWA.LoadFromCache(url, jSRuntime);
+                return true;
+            }
+        } catch
+        {
+            return false;
+        }
+    }
     public static async Task<bool> DoesUrlExist(string url, HttpClient client)
     {
         try
