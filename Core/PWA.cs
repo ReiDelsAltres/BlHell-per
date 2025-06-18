@@ -21,9 +21,16 @@ public static class PWA
         byte[] buffer;
 
         buffer = await client.GetByteArrayAsync(path + ".br");
+
+        Console.WriteLine("Before Brotli");
+        Console.WriteLine(buffer);
         buffer = await PWA.DecompressBrotli(buffer, jSRuntime);
+        Console.WriteLine(buffer);
+        Console.WriteLine("After Brotli");
 
         string str = Encoding.UTF8.GetString(buffer);
+        Console.WriteLine("String");
+        Console.WriteLine(str);
 
         return JsonSerializer.Deserialize<TResult>(str, options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
