@@ -27,6 +27,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\css\imported\.vshistory\Roboto.css\2025-06-19_03_13_25_182.css" />
+    <Content Include="wwwroot\css\imported\.vshistory\Roboto.css\2025-06-19_03_13_37_106.css" />
+    <Content Include="wwwroot\css\imported\.vshistory\Roboto.css\2025-06-19_03_13_52_452.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include=".github\workflows\pagesDeployDebug.yml" />
     <None Include=".github\workflows\pagesDeploy.yml" />
   </ItemGroup>
@@ -42,6 +48,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.5" PrivateAssets="all" />
     <PackageReference Include="MudBlazor" Version="8.6.0" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\imported\src\" />
   </ItemGroup>
 	
 </Project>

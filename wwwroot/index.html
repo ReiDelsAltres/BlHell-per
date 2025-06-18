@@ -5,7 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlHell-per</title>
-    <base href="/BlHell-per/" />
+    <script>
+        var baseTag = document.createElement("base");
+        var productionRoot = "/BlHell-per/";
+        var debugRoot = "/BlHell-per-Debug/"
+        var path = document.location.pathname;
+        baseTag.href = path.includes(debugRoot) ? debugRoot : productionRoot;
+        document.head.appendChild(baseTag);
+    </script>
 
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="apple-touch-icon" href="icon-512.png" sizes="512x512" />
