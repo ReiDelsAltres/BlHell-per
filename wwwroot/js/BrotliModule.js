@@ -30,9 +30,15 @@ window.decompressBrotli = (buffer) => {
         throw new Error("brotliWasm не проинициализирован. Проверьте, что модуль загружен.");
     }
 
-    const result =  window.brotliWasm.decompress(jsArray);
-    let binary = "";
-    result.forEach(b => binary += String.fromCharCode(b));
-    // Преобразуем в Base64
-    return btoa(binary);
+    try {
+        const result = window.brotliWasm.decompress(jsArray);
+
+        let binary = "";
+        result.forEach(b => binary += String.fromCharCode(b));
+        // Преобразуем в Base64
+        return btoa(binary);
+    } catch (error) {
+        console.warn(error)
+        return buffer;
+    }
 };
