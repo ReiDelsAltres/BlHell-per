@@ -20,21 +20,26 @@ public static class PWA
     {
         byte[] buffer;
 
-        buffer = await client.GetByteArrayAsync(path + ".br");
+        if (await PWA.DoesUrlExist(path + ".br", client))
+        {
+            Console.WriteLine("Brotli");
+            buffer = await PWA.GetBytesArrayAsyncOrCache(path + ".br",client,jSRuntime);
 
-        Console.WriteLine("Before Brotli");
-        Console.WriteLine(buffer);
-        buffer = await PWA.DecompressBrotli(buffer, jSRuntime);
-        Console.WriteLine(buffer);
-        Console.WriteLine("After Brotli");
+            buffer = await Brotli.TryDecompressBrotli(buffer, jSRuntime);
+
+        } else
+        {
+            Console.WriteLine("NO Brotli");
+            buffer = await PWA.GetBytesArrayAsyncOrCache(path, client, jSRuntime);
+        }
+
 
         string str = Encoding.UTF8.GetString(buffer);
-        Console.WriteLine("String");
-        Console.WriteLine(str);
 
         return JsonSerializer.Deserialize<TResult>(str, options) ??
         throw new ArgumentNullException("Return of Deserialization NULL");
     }
+
     public static async Task<bool> DoesUrlExist(string url, HttpClient client)
     {
         try
@@ -48,10 +53,20 @@ public static class PWA
             return false;
         }
     }
+    public static async Task<byte[]> GetBytesArrayAsyncOrCache(string path, HttpClient client, IJSRuntime jSRuntime)
+    {
+        try
+        {
+            return await client.GetByteArrayAsync(path);
+        }
+        catch
+        {
+            return await PWA.LoadFromCache(path, jSRuntime);
+        }
+    }
+
     public static async Task Alert(string str, IJSRuntime jSRuntime) =>
             await jSRuntime.InvokeAsync<byte[]>("alert1", str);
-    public static async Task<byte[]> DecompressBrotli(byte[] bytes, IJSRuntime jSRuntime) =>
-            await jSRuntime.InvokeAsync<string>("decompressBrotli", bytes).AsTask().FromBase64ToArray();
     public static async Task<byte[]> LoadFromCache(string url, IJSRuntime jSRuntime) =>
-        await jSRuntime.InvokeAsync<string>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}").AsTask().FromBase64ToArray();
+    await jSRuntime.InvokeAsync<string>("loadFromCache", $"https://reidelsaltres.github.io/BlHell-per/{url}").AsTask().FromBase64ToArray();
 }
