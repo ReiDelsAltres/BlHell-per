@@ -38,6 +38,7 @@ window.decompressBrotli = (buffer) => {
         // Преобразуем в Base64
         return btoa(binary);
     } catch (error) {
+
         console.warn(error)
         return buffer;
     }
