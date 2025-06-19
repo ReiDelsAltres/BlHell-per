@@ -7,7 +7,6 @@
     <UserSecretsId>9378e7d5-30a2-4a57-8123-d430cdd23236</UserSecretsId>
     <PublishAot>False</PublishAot>
 	  
-	  
 	<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
   </PropertyGroup>
 
@@ -18,19 +17,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <RunAOTCompilation>False</RunAOTCompilation>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove=".github\workflows\.vshistory\**" />
-    <Content Remove=".github\workflows\.vshistory\**" />
-    <EmbeddedResource Remove=".github\workflows\.vshistory\**" />
-    <None Remove=".github\workflows\.vshistory\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="wwwroot\css\imported\.vshistory\Roboto.css\2025-06-19_03_13_25_182.css" />
-    <Content Include="wwwroot\css\imported\.vshistory\Roboto.css\2025-06-19_03_13_37_106.css" />
-    <Content Include="wwwroot\css\imported\.vshistory\Roboto.css\2025-06-19_03_13_52_452.css" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include=".github\workflows\pagesDeployDebug.yml" />
