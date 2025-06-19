@@ -35,9 +35,5 @@
     <PackageReference Include="MudBlazor" Version="8.6.0" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\css\imported\src\" />
-  </ItemGroup>
 	
 </Project>
