@@ -2,28 +2,30 @@
   "profiles": {
     "http": {
       "commandName": "Project",
-      "commandLineArgs": "--pathbase= /BlHell-per",
+      //"commandLineArgs": "--pathbase= /BlHell-per",
       "launchBrowser": true,
-      "launchUrl": "BlHell-per",
+      //"launchUrl": "BlHell-per",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
       "hotReloadEnabled": false,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      //"inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/BlHell-per/_framework/debug/ws-proxy?browser={browserInspectUri}",
       "applicationUrl": "http://localhost:5261"
     },
     "https": {
       "commandName": "Project",
-      "commandLineArgs": "--pathbase=/BlHell-per",
+      //"commandLineArgs": "--pathbase=/BlHell-per",
       "launchBrowser": true,
-      "launchUrl": "BlHell-per",
+      //"launchUrl": "BlHell-per",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
       "hotReloadEnabled": false,
-      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/BlHell-per/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      //"inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/BlHell-per/_framework/debug/ws-proxy?browser={browserInspectUri}",
       "applicationUrl": "https://localhost:7142;http://localhost:5261"
     },
     "IIS Express": {
