@@ -19,13 +19,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\css\imported\Новая папка\**" />
-    <Content Remove="wwwroot\css\imported\Новая папка\**" />
-    <EmbeddedResource Remove="wwwroot\css\imported\Новая папка\**" />
-    <None Remove="wwwroot\css\imported\Новая папка\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include=".github\workflows\pagesDeployDebug.yml" />
     <None Include=".github\workflows\pagesDeploy.yml" />
   </ItemGroup>
