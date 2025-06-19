@@ -22,10 +22,14 @@
                 <MudToggleIconButton Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
                 <Connection>
                     <Online>
-                        <div style="color: green">Online</div>
+                        <MudPaper Class="d-flex align-center justify-center">
+                            <MudIcon Icon="@Icons.Material.Filled.WifiTethering" Color="Color.Success"></MudIcon>
+                        </MudPaper>
                     </Online>
                     <Offline>
-                        <div style="color: red">Offline</div>
+                        <MudPaper Class="d-flex align-center justify-center">
+                            <MudIcon Icon="@Icons.Material.Filled.WifiTetheringOff" Color="Color.Error"></MudIcon>
+                        </MudPaper>
                     </Offline>
                 </Connection>
             </MudAppBar>
@@ -39,15 +43,19 @@
                     <MudText class="ml-n2">Bl-Hell-per</MudText>
                 </MudDrawerHeader>
                 <MudNavMenu Dense Rounded>
-                    <MudNavLink Icon="@Icons.Material.Filled.Store" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
+                    <MudNavLink Icon="@Icons.Material.Filled.Home" Match="NavLinkMatch.All" Href="">Home</MudNavLink>
                     <MudNavLink Icon="@Icons.Material.Filled.Apps" Match="NavLinkMatch.All" Href="QuestionViewPage">Questions</MudNavLink>
                     <MudToggleIconButton Class="ml-1" Ripple @bind-Toggled="MainLayout.IsDarkMode" ToggledIcon="@Icons.Material.Filled.LightMode" Icon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
                     <Connection>
                         <Online>
-                            <div style="color: green">Online</div>
+                            <MudPaper Class="d-flex align-center justify-center">
+                                <MudIcon Icon="@Icons.Material.Filled.WifiTethering" Color="Color.Success"></MudIcon>
+                            </MudPaper>
                         </Online>
                         <Offline>
-                            <div style="color: red">Offline</div>
+                            <MudPaper Class="d-flex align-center justify-center">
+                                <MudIcon Icon="@Icons.Material.Filled.WifiTetheringOff" Color="Color.Error"></MudIcon>
+                            </MudPaper>
                         </Offline>
                     </Connection>
                 </MudNavMenu>
