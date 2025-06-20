@@ -50,7 +50,6 @@ window.renderLatexText = (elementId) => {
                 { left: '\\[', right: '\\]', display: true }
             ]
         });
-        console.info("ahhh");
     } else {
         console.error("Функция renderMathInElement не определена.");
     }
