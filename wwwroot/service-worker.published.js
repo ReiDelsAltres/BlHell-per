@@ -16,6 +16,16 @@ const offlineAssetsExclude = [/^service-worker\.js$/];
 async function onInstall(event) {
     self.skipWaiting(); // Force the service worker to take control immediately
 
+    const expectedCacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
+
+    const cacheNames = await caches.keys();
+    const alreadyCached = cacheNames.includes(expectedCacheName);
+
+    if (alreadyCached) {
+        console.log('[SW] Cache already up to date:', expectedCacheName);
+        return;
+    }
+
     const assets = self.assetsManifest.assets
         .filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
         .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url)))
@@ -27,6 +37,7 @@ async function onInstall(event) {
     });
 
     await caches.open(cacheName).then(cache => cache.addAll(assetsRequests));
+    console.log('[SW] Cached new version:', expectedCacheName);
 }
 
 async function onActivate(event) {
