@@ -1,9 +1,9 @@
 using BlazorAnimation;
-using BlazorDownloadFile;
 using BlHell_per;
 using BlHell_per.Core.Service;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MudBlazor.Extensions;
 using MudBlazor.Services;
 //using Toolbelt.Blazor.Extensions.DependencyInjection;
 
@@ -16,9 +16,9 @@ Static.HttpClient = new HttpClient { BaseAddress = new Uri(builder.HostEnvironme
 builder.Services.AddScoped(sp => Static.HttpClient);
 builder.Services.AddScoped<PWAService>();
 
-builder.Services.AddBlazorDownloadFile(ServiceLifetime.Scoped);
 //builder.Services.AddPWAUpdater();
 builder.Services.AddMudServices();
+builder.Services.AddMudExtensions(c => c.WithoutAutomaticCssLoading());
 builder.Services.Configure<AnimationOptions>(Guid.NewGuid().ToString(), c => { });
 
 await builder.Build().RunAsync();

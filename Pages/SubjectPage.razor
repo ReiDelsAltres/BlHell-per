@@ -16,37 +16,45 @@
 {
 	<MudGrid>
 		<MudItem xs="12">
-			<MudPaper Class="align-center justify-center mud-width-full py-8">
-				<div class="page-header" align="center">
-					<h1>
-						@this._subject?.TranslatedName
-					</h1>
-					<h2>
-						@this._subject?.TranslatedNameAz
-					</h2>
-				</div>
-				<p align="center">
-					<MudText Typo="Typo.subtitle1">
-						Группа:
-						@foreach (string str in this._subject?.Groups)
+			<MudStack Row>
+				@if(this._subject?.IsExtended == true)
+				{
+					<MudPaper Outlined Style=@($"outline-color:{Colors.DeepPurple.Darken2}; top:18%") Elevation="2" Class="position-fixed">
+						<MudIcon Color="Color.Primary" Icon="@ReIcons.MaterialSymbols.Filled.Functions" Size="(Size)BlHell_per.Core.ReMud.Size.Absolute" Title="Присутствуют формулы"></MudIcon>
+					</MudPaper>
+				}
+				<MudPaper Class="align-center justify-center mud-width-full py-8">
+					<div class="page-header" align="center">
+						<h1>
+							@this._subject?.TranslatedName
+						</h1>
+						<h2>
+							@this._subject?.TranslatedNameAz
+						</h2>
+					</div>
+					<p align="center">
+						<MudText Typo="Typo.subtitle1">
+							Группа:
+							@foreach (string str in this._subject?.Groups)
+							{
+								<MudChip T="string" Variant="Variant.Text">@str</MudChip>
+							}
+						</MudText>
+						<MudText Typo="Typo.subtitle1">
+							Преподаватель:
+							<MudChip T="string" Variant="Variant.Text">@this._subject?.Teacher</MudChip>
+						</MudText>
+						@foreach (string alert in this._subject?.YellowAllerts)
 						{
-							<MudChip T="string" Variant="Variant.Text">@str</MudChip>
+							<MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
 						}
-					</MudText>
-					<MudText Typo="Typo.subtitle1">
-						Преподаватель:
-						<MudChip T="string" Variant="Variant.Text">@this._subject?.Teacher</MudChip>
-					</MudText>
-					@foreach (string alert in this._subject?.YellowAllerts)
-					{
-						<MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
-					}
-					@foreach (string alert in this._subject?.RedAllerts)
-					{
-						<MudAlert Severity="Severity.Error" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
-					}
-				</p>
-			</MudPaper>
+						@foreach (string alert in this._subject?.RedAllerts)
+						{
+							<MudAlert Severity="Severity.Error" ContentAlignment="HorizontalAlignment.Center">@alert</MudAlert>
+						}
+					</p>
+				</MudPaper>
+			</MudStack>
 		</MudItem>
 		<MudItem xs="12">
 			<MudStack Row="true">

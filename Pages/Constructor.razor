@@ -3,7 +3,6 @@
 @using BlHell_per.Components;
 @using BlHell_per.Core.Compat
 @using BlHell_per.Core.Questions
-@using BlazorDownloadFile
 
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
@@ -40,7 +39,6 @@
 </div>
 
 @code {
-    [Inject] IBlazorDownloadFileService BlazorDownloadFileService { get; set; }
     private List<MutableQuestion.DataModel> models = new();
 
     internal async void onClick(MouseEventArgs args)
@@ -58,7 +56,6 @@
         SerializationHandler<Question> var = new(false,isRid,questions);
 
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(var.Serialize());
-        await BlazorDownloadFileService.DownloadFile(fileName: "BlHell_per.q.razor.json",bytes: bytes, contentType: "application/octet-stream");
         //await JS.InvokeVoidAsync(identifier: "saveFile", "BlHell_per.q.razor.json", var.Serialize());
     }
 }

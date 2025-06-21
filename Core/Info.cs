@@ -1,4 +1,6 @@
-﻿namespace BlHell_per.Core;
+﻿using MudBlazor;
+
+namespace BlHell_per.Core;
 public class Info
 {
     public struct Subject : IEquatable<Subject>
@@ -31,7 +33,8 @@ public class Info
             Groups = ["759 ITS","759 KM"],
             Teacher = "Quliyeva Fatimə Ağayar qızı",
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
-            RedAllerts = []
+            RedAllerts = [],
+            IsExtended = true
         };
         public static Subject LinearAlgebra = new()
         {
@@ -41,7 +44,8 @@ public class Info
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Quliyeva Fatimə Ağayar qızı",
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
-            RedAllerts = []
+            RedAllerts = [],
+            IsExtended = true
         };
         public static Subject InstrumentalPrograms = new()
         {
@@ -61,7 +65,8 @@ public class Info
             Groups = ["759 ITS", "759 KM"],
             Teacher = "Ализаде Лейла Эльдар кызы",
             YellowAllerts = ["Вопросы могут не соответствовать вопросам на экзаменах"],
-            RedAllerts = []
+            RedAllerts = [],
+            IsExtended = true
         };
         public static Subject English = new()
         {
@@ -78,6 +83,11 @@ public class Info
 
         public static Subject getSubject(string name) =>
             Array.Find(Subjects, subj => subj.Name.Equals(name));
+
+        public Subject()
+        {
+
+        }
 
         public bool Equals(Subject other)
         {
@@ -97,6 +107,7 @@ public class Info
         public required string Teacher { get; init; }
         public string[] YellowAllerts { get; init; }
         public string[] RedAllerts { get; init; }
+        public bool IsExtended = false;
     }
 
 }

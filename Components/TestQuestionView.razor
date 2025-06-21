@@ -7,7 +7,7 @@
     <MudStack class="ma-4" Row Wrap="Wrap.Wrap" Spacing="1">
         @foreach(AnswerContext context in this.answerContexts)
         {
-            <MudButton Style="@context.CssStyle" Variant="Variant.Outlined" Disabled="Disabled" @onclick="@(e => OnAnswerClick(context))">
+            <MudButton Style="@context.CssStyle" Class="border-solid border-1" Variant="Variant.Outlined" Disabled="Disabled" @onclick="@(e => OnAnswerClick(context))">
                 <MudText Typo="Typo.body1">@context.Answer</MudText>
             </MudButton>
         }

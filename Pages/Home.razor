@@ -3,53 +3,60 @@
 @using BlHell_per.Core;
 @using BlHell_per.Core.Questions
 
-@inject NavigationManager Navigation
+@using MudBlazor.Extensions.Helper
+@using MudBlazor.Extensions.Core
+
+@inject NavigationManager Navigation;
 @inject HttpClient Http
 
 <PageTitle>Home</PageTitle>
 
-<h1>BlHell-per</h1>
+<MudExGradientText Animate Typo="Typo.h1" Align="Align.Center">BlHell-per</MudExGradientText>
 
-<h2>Выберите предмет для проверки</h2>
-<MudGrid>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.DifferentialEquations))" FullWidth>@Info.Subject.DifferentialEquations.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.Programming))" FullWidth>@Info.Subject.Programming.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.InformationalTechnology))" FullWidth>@Info.Subject.InformationalTechnology.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.Physics))" FullWidth>@Info.Subject.Physics.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.LinearAlgebra))" FullWidth>@Info.Subject.LinearAlgebra.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.InstrumentalPrograms))" FullWidth>@Info.Subject.InstrumentalPrograms.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" lg="3">
-        <MudPaper>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="@(x => onClick(Info.Subject.English))" FullWidth>@Info.Subject.English.TranslatedName</MudButton>
-        </MudPaper>
-    </MudItem>
+<MudText Typo="Typo.h3" Align="Align.Center" GutterBottom >Выберите предмет для проверки</MudText>
+
+<MudGrid Justify="Justify.Center">
+    @foreach (Info.Subject subject in Info.Subject.Subjects)
+    {
+        <MudItem xs="12" sm="12" md="6" lg="3">
+            <MudButton @onclick="@(x => onClick(subject))" Color="Color.Primary" FullWidth>
+                <MudContainer Gutters="false">
+                    <MudCard Outlined>
+                        <MudCardHeader Style="z-index: 5">
+                            <CardHeaderAvatar>
+                                @if (subject.IsExtended)
+                                {
+                                    <MudPaper Outlined Style=@($"outline-color:{Colors.DeepPurple.Darken2}") Elevation="2">
+                                        <MudIcon Color="Color.Primary" Icon="@ReIcons.MaterialSymbols.Filled.Functions" Size="(Size)BlHell_per.Core.ReMud.Size.Gigantic" Title="Присутствуют формулы"></MudIcon>
+                                    </MudPaper>
+                                }
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6" Color="Color.Primary">
+                                    @subject.TranslatedName
+                                </MudText>
+                            </CardHeaderContent>
+                            <CardHeaderActions>
+                                <MudStack Spacing="-4" Justify="Justify.Center">
+                                    @foreach (string str in subject.Groups)
+                                    {
+                                        <MudChip T="string" Variant="Variant.Text">@str</MudChip>
+                                    }
+                                </MudStack>
+                            </CardHeaderActions>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText Typo="Typo.body2">Преподаватель: @subject.Teacher</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                </MudContainer>
+            </MudButton>
+        </MudItem>
+    }
 </MudGrid>
 
 @code {
+    MudExGradientText component;
     private int _subjects;
 
 

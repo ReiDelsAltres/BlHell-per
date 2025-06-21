@@ -30,8 +30,8 @@
 
             <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
                 <MudPaper>
-                    <TestQuestionView Index="local_i + 1" QuestionModel="@question" OnAnswerClickCallback="@(e => this.onQuestionAnswered(e,local_i))"
-                    AllowJsonView="allowjsonview" Immediate="@(!specialMode)" IsCompleted="@testEnded" />
+                    <TestQuestionView Index="local_i + 1" QuestionModel="@question" OnAnswerClickCallback="@(e => this.onQuestionAnswered(e, local_i))"
+                                      AllowJsonView="allowjsonview" Immediate="@(!specialMode)" IsCompleted="@testEnded" />
                 </MudPaper>
             </MudItem>
         }
