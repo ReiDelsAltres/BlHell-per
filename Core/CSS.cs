@@ -17,7 +17,7 @@ public static class CSS
         public string Css
         {
             get => $"background: repeating-linear-gradient( 45deg, {FirstColor}, {FirstColor} 10px, " +
-                $"{SecondColor} 10px, {SecondColor} 20px );\n";
+                $"{SecondColor} 10px, {SecondColor} 20px ) !important;\n";
         }
     }
     #endregion CSSStructs
