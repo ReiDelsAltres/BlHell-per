@@ -84,6 +84,7 @@ public class Question : IQuestion<Question>
         }
         return JsonSerializer.Serialize(transHandler, SerializationHandler._options);
     }
+
     public override string ToString()
     {
         string answers = "\n";
@@ -93,6 +94,21 @@ public class Question : IQuestion<Question>
                $"RId: {RId} \n" +
                $"Title: {Title} \n" +
                $"Answers: ---{answers}---";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return obj is Question question &&
+               Id == question.Id &&
+               RId == question.RId &&
+               EqualityComparer<string[]?>.Default.Equals(Tags, question.Tags) &&
+               Title == question.Title &&
+               EqualityComparer<string[]>.Default.Equals(Answers, question.Answers);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Id, RId, Tags, Title, Answers);
     }
 }
 public class SerializationHandler

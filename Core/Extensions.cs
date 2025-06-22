@@ -45,9 +45,5 @@ namespace BlHell_per
         }
         public static Task<byte[]> FromBase64ToArray(this Task<string> @string) =>
             @string.ContinueWith(t => Convert.FromBase64String(t.Result), TaskContinuationOptions.OnlyOnRanToCompletion);
-        public static void ReloadPage(this NavigationManager manager)
-        {
-            manager.NavigateTo(manager.Uri, true);
-        }
     }
 }

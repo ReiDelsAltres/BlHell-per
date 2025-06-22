@@ -8,10 +8,13 @@
 @using BlHell_per.Core.Compat;
 @using BlHell_per.Core.Questions;
 
+@using System.Text.Json;
+
 @inject HttpClient Http
 @inject IJSRuntime JS
+@inject NavigationManager Navigation
 
-<h3>TestingPage - @name @num</h3>
+<MudText id="top" Typo="Typo.h3" Align="Align.Center" GutterBottom>@Info.Subject.getSubject(this.name).TranslatedName</MudText>
 
 @if (questionsArray == null || questionsArray.Length == 0) 
 {
@@ -23,24 +26,55 @@
 } else 
 {
     <MudGrid class="pb-20">
-        @for (int i = 0; i < questionsArray.Length; i++)
+        @{
+            int i = 0;
+        }
+        @foreach(Question question in this.questionsArray)
         {
             int local_i = i;
-            Question question = questionsArray[local_i];
-
             <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
                 <MudPaper>
-                    <TestQuestionView Index="local_i + 1" QuestionModel="@question" OnAnswerClickCallback="@(e => this.onQuestionAnswered(e, local_i))"
+                    <TestQuestionView @key="question" Index="local_i + 1" QuestionModel="@question" OnAnswerClickCallback="@(e => this.onQuestionAnswered(e, local_i))"
                                       AllowJsonView="allowjsonview" Immediate="@(!specialMode)" IsCompleted="@testEnded" />
                 </MudPaper>
             </MudItem>
+            i++;
         }
     </MudGrid>
     @if (this.specialMode)
     {
-        <MudButton Class="pa-5 mb-15" Size="Size.Large" Variant="Variant.Outlined" FullWidth="true" @onclick="@(x => this.testEnded = true)">Закончить тест</MudButton>
+        <MudButton Class="pa-5 mb-15" Size="Size.Large" Variant="Variant.Outlined" FullWidth="true" @onclick="@(x => {
+            this.testEnded = true;
+            this.dialogVisible = true;
+            this.StateHasChanged();})">Закончить тест</MudButton>
     }
-    <TestinPage_TestEndDialog Statuses="statuses" Visible="@(testEnded && this.statuses.Length == 25)" />
+<MudDialog Visible="this.dialogVisible">
+    <TitleContent>
+        <MudText Typo="Typo.h5">
+            Результат
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        @{
+            int wrong = Array.FindAll(this.statuses, e => e == 0).Count();
+            int right = Array.FindAll(this.statuses, e => e == 1).Count();
+            int skip = Array.FindAll(this.statuses, e => e == 2).Count();
+
+            <MudText Typo="Typo.h6">Ошибочно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Error">@wrong</MudChip> </MudText>
+            <MudText Typo="Typo.h6">Верно: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Success">@right</MudChip> </MudText>
+            <MudText Typo="Typo.h6">Пропущено: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Warning">@skip</MudChip> </MudText>
+
+            int score = Math.Max((right * 2) - wrong, 0);
+            <MudDivider />
+            <MudText Typo="Typo.h6">Набранный балл: <MudChip T="string" Style="font-size:1.4rem" Variant="Variant.Filled" Color="Color.Primary">@score</MudChip> </MudText>
+            <MudProgressLinear Color="Color.Primary" Value="@(score * 2)" Size="Size.Medium" />
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="@(e => this.dialogVisible = false)">Закрыть</MudButton>
+        <MudButton OnClick="@(async e => {await this.OnParametersSetAsync();this.Navigation.NavigateTo(this.Navigation.Uri+"#top");})">Повторить</MudButton>
+    </DialogActions>
+</MudDialog>
 }
 
 @code {
@@ -59,6 +93,10 @@
 
     [Parameter]
     public bool allowjsonview { get; set; }
+
+    private bool dialogVisible = false;
+
+    private SerializationHandler<Question> serializationHandler;
 
     private string[] colors =
     {
@@ -90,10 +128,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        /*SerializationHandler<Question> serializationHandler = 
-        await SerializationHandler<Question>.DeserializeAsync($"resources/{name}.json", Http, JS);*/
-
-        SerializationHandler<Question> serializationHandler = 
+        this.serializationHandler = 
         await PWA.UniversalDeserializeJson<SerializationHandler<Question>>($"resources/{name}.json", JS, Http, SerializationHandler._options);
 
         this.specialMode = this.num == default;
@@ -106,17 +141,27 @@
             this.allowjsonview = false;
         }
 
-        Question[] questions = serializationHandler.Questions.Extract(this.min,this.max);
-        if (random) questions.Shuffle();
-
-        this.questionsArray = new Question[this.num];
-        Array.Copy(questions,this.questionsArray,this.num);
-
-        this.statuses = new int[this.num];
-        Array.Fill(this.statuses,-1);
-
         await base.OnInitializedAsync();
     }
+    protected override async Task OnParametersSetAsync()
+    {
+        Question[] questions = serializationHandler.Questions.Extract(this.min, this.max);
+        if (random) questions.Shuffle();
+
+        if (questionsArray == null)
+            this.questionsArray = new Question[this.num];
+
+        Array.Copy(questions, this.questionsArray, this.num);
+
+        this.statuses = new int[this.num];
+        Array.Fill(this.statuses, -1);
+
+        this.testEnded = false;
+        this.dialogVisible = false;
+
+        await base.OnParametersSetAsync();
+    }
+
     private async void onQuestionAnswered(int result,int index)
     {
         this.statuses[index] = result;
@@ -125,6 +170,7 @@
         if (Array.FindAll(statuses, e => e == -1).Count() == 0 && !this.specialMode)
         {
             this.testEnded = true;
+            this.dialogVisible = true;
             this.StateHasChanged();
         }
     }

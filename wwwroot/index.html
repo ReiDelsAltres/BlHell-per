@@ -10,32 +10,41 @@
         var productionRoot = "/BlHell-per/";
         var debugRoot = "/BlHell-per-Debug/"
         var path = document.location.pathname;
-        baseTag.href = path.includes(debugRoot) ? debugRoot : path.includes(productionRoot) ? productionRoot : "/";
-        document.head.appendChild(baseTag);
+
+        if (path.startsWith(debugRoot)) {
+            baseTag.href = debugRoot;
+        } else if (path.startsWith(productionRoot)) {
+            baseTag.href = productionRoot;
+        } else {
+            baseTag.href = "/";
+        }
+
+        // Очень важно вставить <base> как первый элемент внутри <head>
+        document.head.insertBefore(baseTag, document.head.firstChild);
     </script>
 
-    <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="apple-touch-icon" href="icon-512.png" sizes="512x512" />
-    <link rel="apple-touch-icon" href="icon-192.png" sizes="192x192" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/extended.css" />
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="BlHell-per.styles.css" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icon-512.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/icon-192.png" sizes="192x192" />
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/extended.css" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/BlHell-per.styles.css" />
 
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" crossorigin="anonymous" /> -->
-    <link rel="stylesheet" href="css/imported/MudBlazor/Roboto.css" />
-    <link rel="stylesheet" href="_content/MudBlazor/MudBlazor.min.css" />
+    <link rel="stylesheet" href="/css/imported/MudBlazor/Roboto.css" />
+    <link rel="stylesheet" href="/_content/MudBlazor/MudBlazor.min.css" />
 
     <!---<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
           integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">--->
-    <link rel="stylesheet" href="css/imported/Katex/Katex.css" />
+    <link rel="stylesheet" href="/css/imported/Katex/Katex.css" />
 
-    <link rel="stylesheet" href="css/ex-app-loading.css" />
-    <link rel="stylesheet" id="mudex-styles" href="_content/MudBlazor.Extensions/mudBlazorExtensions.min.css" />
+    <link rel="stylesheet" href="/css/ex-app-loading.css" />
+    <link rel="stylesheet" href="/_content/MudBlazor.Extensions/mudBlazorExtensions.min.css" id="mudex-styles" />
 
-    <link rel="stylesheet" href="css/imported/GoogleMaterial/GoogleMaterial.css" />
-    <link rel="stylesheet" href="css/ReMud.css" />
+    <link rel="stylesheet" href="/css/imported/GoogleMaterial/GoogleMaterial.css" />
+    <link rel="stylesheet" href="/css/ReMud.css" />
 
 </head>
 
@@ -55,26 +64,26 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
-    <script src="_content/BlazorAnimation/blazorAnimationInterop.js"></script>
+    <script src="/_content/MudBlazor/MudBlazor.min.js"></script>
+    <script src="/_content/BlazorAnimation/blazorAnimationInterop.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
             integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
             integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
 
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="/_framework/blazor.webassembly.js"></script>
 
-    <script src="js/BrotliModule.js"></script>
+    <script src="/js/BrotliModule.js"></script>
 
-    <script src="js/KaTeX.cs.js"></script>
-    <script src="js/Uni.js"></script>
-    <script src="js/PWAService.cs.js"></script>
-    <script src="js/CSSSupport.js"></script>
+    <script src="/js/KaTeX.cs.js"></script>
+    <script src="/js/Uni.js"></script>
+    <script src="/js/PWAService.cs.js"></script>
+    <script src="/js/CSSSupport.js"></script>
 
-    <script src="Pages/Constructor.razor.js"></script>
+    <script src="/Pages/Constructor.razor.js"></script>
 
-    <script src="_content/MudBlazor.Extensions/js/components/MudExAppLoader.min.js"></script>
+    <script src="/_content/MudBlazor.Extensions/js/components/MudExAppLoader.min.js"></script>
 
     <mud-ex-app-loader AccentColor="rgba(119,107,231,1)" MainAppId="app">
     </mud-ex-app-loader>
